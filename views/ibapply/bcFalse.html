@@ -1,0 +1,20 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/ibapply/bcFalse.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="fail-tip">
+  <p class="fail-ico"><span class="iconfont icon-cuowutishi1">&#xe71b;</span></p>
+  {% if isfull %}
+  <p class="fail-tip-msg">对不起，您申请的交易商<br/>数量已达上限！</p>
+  {% else %}
+  <p class="fail-tip-msg">对不起，您的身份存在异常<br/>无法申请成为代理！</p>
+  {% endif %}
+  <p class="fail-tip-msg2">如有疑问，请拨打客服热线：<span>400-8713-007</span></p>
+  <p class="fail-btn"><a href="/traders/shop.html?brokerId={{ brokerId }}" class="become-true-btn">返回</a></p>
+</section>
+{% endblock %}

@@ -1,0 +1,24 @@
+{
+ "apps": [
+ {
+  "name": "fx-wap",
+  "cwd": "",
+  "script": "bin/www",
+  "log_date_format": "YYYY-MM-DD HH:mm Z",
+  "error_file": "./logs/node-app.stderr.log",
+  "out_file": "./logs/node-app.stdout.log",
+  "instances": 3,
+  "exec_mode": "cluster",
+  "min_uptime": "200s",
+  "max_restarts": 10,
+  "max_memory_restart": "512M",
+  "cron_restart": "1 0 * * *",
+  "watch": true,
+  "ignore_watch": ["./node_modules/", "./logs"],
+  "merge_logs": true,
+  "exec_interpreter": "node",
+  "autorestart": true,
+  "vizion": false
+ }
+ ]
+}

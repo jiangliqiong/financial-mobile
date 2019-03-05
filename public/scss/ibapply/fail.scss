@@ -1,0 +1,109 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #fffef8;
+  margin-top: 0;
+}
+.topbar {
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.banner {
+  width: 100%;
+  @include px2rem(height, 380);
+  background: url('/images/ib/svg/fail-banner.svg') no-repeat;
+  background-size: 100%;
+  position: relative;
+  .fail-msg {
+    @include px2rem(font-size, 28);
+    letter-spacing: -0.7px;
+    color: #ffffff;
+    position: absolute;
+    @include px2rem(top, 180);
+    @include px2rem(left, 40);
+    z-index: 2;
+  }
+}
+.condition {
+  @include remCalc(padding, 60 30 0);
+  .condition-title {
+    width: 100%;
+    @include px2rem(font-size, 32);
+    @include px2rem(letter-spacing, -0.8);
+    color: #000000;
+    text-align: center;
+  }
+  .condition-msg {
+    p:first-child {
+      @include px2rem(font-size, 32);
+      @include px2rem(letter-spacing, -0.9);
+      @include px2rem(line-height, 100);
+      color: #ffffff;
+      @include px2rem(height, 100);
+      @include css3(border-radius, 50);
+      @include px2rem(margin-top, 36);
+      background: -webkit-linear-gradient(left, #fcb901 , #ec7e00);
+      background: -o-linear-gradient(right, #fcb901, #ec7e00);
+      background: -moz-linear-gradient(right, #fcb901, #ec7e00);
+      background: linear-gradient(to right, #fcb901 , #ec7e00);
+      text-align: center;
+    }
+    i {
+      width:0;
+      height:0;
+      border-left:torem(14) solid transparent;
+      border-right:torem(14) solid transparent;
+      border-top:torem(14) solid #f49c01;
+      display: block;
+      margin: -1px auto 0;
+    }
+  }
+}
+.condition-more {
+  @include remCalc(padding, 60 30 0);
+  .condition-more-title {
+     @include px2rem(font-size, 32);
+     @include px2rem(letter-spacing, -0.8);
+     color: #000000;
+     i {
+        @include px2rem(width, 9);
+        @include px2rem(height, 9);
+        background-color: #0e83e5;
+        display: inline-block;
+        vertical-align: middle;
+        @include px2rem(margin-right, 21);
+     }
+     span {
+        vertical-align: middle;
+     }
+  }
+  ul {
+     @include px2rem(margin-top, 30);
+     li {
+       @include px2rem(font-size, 30);
+       @include px2rem(letter-spacing, -0.7);
+       @include px2rem(line-height, 42);
+       color: #000000;
+     }
+  }
+  .condition-tip {
+    @include px2rem(font-size, 24);
+    @include px2rem(margin-top, 10);
+    @include px2rem(line-height, 33);
+    @include px2rem(letter-spacing, -0.6);
+    color: #959595;
+  }
+}
+.condition-img {
+  @include px2rem(margin-top, 57.8);
+  width: 100%;
+  @include px2rem(height, 530);
+  @include bg-image('/images/ib/img/fail-banner','jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

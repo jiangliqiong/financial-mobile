@@ -1,0 +1,55 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/identity.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="upload-area">
+  <p class="upload-tip">请上传有效身份证（正反面各一张）</p>
+  <div class="upload-box">
+    <div class="upload-pic first">
+      <div class="upload-cover"></div>
+      <div class="upload-pos">
+        <i class="upload-icon iconfont">&#xe718;</i>
+        <p class="upload-pic-tip">上传人像面</p>
+      </div>
+      <form class="upload-form" action="/api/upload" method="post" id="upload1" target="uploadIframe1" enctype="multipart/form-data">
+        <input type="file" name="file" data-id="1" class="file-pic" accept="image/gif, image/jpeg, image/jpg, image/png">
+      </form>
+      <img class="ib-upload-pic ib-upload-pic1" src="" alt="">
+      <i class="img-loading img-loading1"></i>
+    </div>
+    <div class="upload-pic">
+      <div class="upload-cover"></div>
+      <div class="upload-pos">
+        <i class="upload-icon iconfont">&#xe718;</i>
+        <p class="upload-pic-tip">上传国徽面</p>
+      </div>
+      <form class="upload-form" action="/api/upload" method="post" id="upload2" target="uploadIframe2" enctype="multipart/form-data">
+        <input type="file" name="file" data-id="2" class="file-pic" accept="image/gif, image/jpeg, image/jpg, image/png">
+      </form>
+      <img class="ib-upload-pic ib-upload-pic2" src="" alt="">
+      <i class="img-loading img-loading2"></i>
+    </div>
+  </div>
+</section>
+<section class="upload-demo">
+  <div class="upload-demo-title">照片案例</div>
+  <img class="upload-demo-pic" src="/images/personal/upload-demo.jpg" alt="" width="100%">
+</section>
+<section class="upload-sure-box">
+ <a class="upload-sure disabled" href="javascript:;">认证</a>
+</section>
+<iframe class="uploadIframeBox" data-id="1" id="uploadIframe1" name="uploadIframe1" style="display:none;"></iframe>
+<iframe class="uploadIframeBox" data-id="2" id="uploadIframe2" name="uploadIframe2" style="display:none;"></iframe>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["identity"]);
+</script>
+{% endblock %}

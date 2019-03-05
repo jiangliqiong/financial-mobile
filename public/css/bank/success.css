@@ -1,0 +1,56 @@
+body{
+    background-color: #ffffff;
+}
+/**
+ * 提现成功
+ */
+.contentBox{
+    padding-top: 0.88rem;
+    text-align: center;
+}
+.contentBox .successIcon{
+    display: block;
+    font-size: 0.96rem;
+    color: #1ec118;
+    margin-top: 0.90rem;
+}
+.contentBox .hintText1{
+    display: block;
+    font-size: 0.42rem;
+    letter-spacing: -0.01rem;
+    color: #0c0c0c;
+    margin-top: 0.14rem;
+}
+.contentBox .hintText2{
+    display: block;
+    font-size: 0.28rem;
+    letter-spacing: -0.007rem;
+    color: #000000;
+    height: 0.4rem;
+    line-height: 0.4rem;
+}
+.contentBox .accident{
+    margin-top: 0.4rem;
+    font-size: 0.28rem;
+    letter-spacing: -0.007rem;
+    text-align: center;
+    color: #959595;
+    line-height: 0.4rem;
+}
+.accident .telephone{
+    color: #094290;
+}
+.contentBox .successBackBtn{
+    display: block;
+    width: calc(100% - 0.6rem);
+    height: 0.88rem;
+    line-height: 0.88rem;
+    margin: 0.9rem auto 0 auto;
+    border-radius: 0.04rem;
+    background-color: #094290;
+    border: none;
+    outline: none;
+    font-size: 0.32rem;
+    color: #ffffff;
+    text-align: center;
+}

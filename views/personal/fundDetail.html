@@ -1,0 +1,47 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/personal/fundDetail.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <ul id="fundOutInDetailBox"></ul>
+    <div class="loadingMore" style="display: none;">正在加载，请稍后…</div>
+</div>
+{% include "../common/loading.html" %}
+{% include "../common/loadfail.html" %}
+{% include "../common/nodata.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/personal/fundDetail.js"></script>
+<script id="fundOutInDetailTml" type="text/html">
+    <% for (var i = 0; i < list.length; i++) { %>
+    <li>
+        <div class="head">
+            <p class="date"><%= list[i].operate_time ? list[i].operate_time : '' %></p>
+            <% if( list[i].transaction_type == '申请提现处理中' ){ %>
+                <p class="status yellow"><%= list[i].transaction_type %></p>
+            <% }else if( list[i].transaction_type == '提现失败' ){ %>
+                <p class="status red"><%= list[i].transaction_type %></p>
+            <% }else{ %>
+                <p class="status green"><%= list[i].transaction_type %></p>
+            <% } %>
+        </div>
+        <div class="content">
+            <p class="sum"><%= list[i].temporary_money %></p>
+            <p class="balance"><span>余额：</span><%= list[i].temporary_balance_money %></p>
+        </div>
+        <div class="remark">
+            <p><%= list[i].notice ? list[i].notice : '暂无备注信息' %></p>
+        </div>
+    </li>
+    <% } %>
+</script>
+{% endblock %}
+

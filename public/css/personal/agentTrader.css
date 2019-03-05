@@ -1,0 +1,145 @@
+body{
+    background-color: #efeff4;
+}
+/***************代理商项目******************/
+.contentBox{
+    margin-top: 0.88rem;
+}
+.contentBox ul li{
+    width: calc(100% - 0.6rem);
+    padding: 0 0.3rem;
+    background-color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+.contentBox ul li .head{
+    width: 100%;
+    height: 0.45rem;
+    padding: 0.28rem 0 0.26rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.contentBox ul li .head .necktieIcon{
+    float: left;
+    display: block;
+    margin-top: 0.03rem;
+    font-size: 0.4rem;
+    color: #3564a4;
+}
+.contentBox ul li .head .title{
+    float: left;
+    line-height: 0.45rem;
+    margin-left: 0.08rem;
+    font-size: 0.32rem;
+    text-align: left;
+    color: #094290;
+}
+.contentBox ul li .head .rebate,.contentBox ul li .head .cycle{
+    float: right;
+    display: block;
+    font-size: 0.20rem;
+    text-align: center;
+    color: #f7ab09;
+    padding: 0 0.15rem;
+    height: 0.33rem;
+    line-height: 0.33rem;
+    border-radius: 0.33rem;
+    border: solid 1px #f7ab09;
+    margin-top: 0.05rem;
+}
+.contentBox ul li .head .cycle{
+    margin-left: 0.1rem;
+}
+.contentBox ul li .reward{
+    width: 100%;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.contentBox ul li .reward .rebate{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.28rem;
+    text-align: left;
+    color: #000000;
+}
+.contentBox ul li .reward dl dt{
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+}
+.contentBox ul li .reward .dot{
+    float: left;
+    display: block;
+    width: 0.08rem;
+    height: 0.08rem;
+    border-radius: 0.1rem;
+    background-color: #0e83e5;
+    margin-top: 0.16rem;
+}
+.contentBox ul li .reward dl{
+    margin-top: 0.1rem;
+}
+.contentBox ul li .reward dl dt >span{
+    float: left;
+    display: block;
+    font-size: 0.28rem;
+    text-align: left;
+    color: #959595;
+    margin-left: 0.1rem;
+}
+
+.contentBox ul li .accountCount{
+    position: relative;
+    padding: 0.3rem 0;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    width: calc(100% - 1.02rem);
+    font-size: 0.28rem;
+    color: #000000;
+}
+.contentBox ul li .accountCount .status{
+    float: right;
+    margin-right: 0.15rem;
+}
+.contentBox ul li .accountCount .statusBtn{
+    position: absolute;
+    right: -1rem;
+    bottom: 0.19rem;
+    width: 1.02rem;
+    height: 0.62rem;
+    border-radius: 0.31rem;
+    cursor: pointer;
+}
+.contentBox ul li .accountCount .statusBtn .dotBtn{
+    display: block;
+    width: 0.55rem;
+    height: 0.55rem;
+    background-color: #ffffff;
+    border-radius: 0.30rem;
+    margin-top: 0.03rem;
+    cursor: pointer;
+}
+.contentBox ul li .accountCount .open{
+    background-color: #44db5e;
+}
+.contentBox ul li .accountCount .open .dotLeftDistance{
+    margin-left: 0.42rem;
+    -moz-transition: margin-left 0.15s ease-in;
+    -webkit-transition: margin-left 0.15s ease-in;
+    -o-transition: margin-left 0.15s ease-in;
+    transition: margin-left 0.15s ease-in;
+}
+.contentBox ul li .accountCount .close{
+    background-color: #ececec;
+}
+.contentBox ul li .accountCount .close .dotLeftDistance{
+    margin-left: 0.05rem;
+    -moz-transition: margin-left 0.15s ease-in;
+    -webkit-transition: margin-left 0.15s ease-in;
+    -o-transition: margin-left 0.15s ease-in;
+    transition: margin-left 0.15s ease-in;
+}
+/****************弹框样式覆盖*************/
+.hintMessage1{
+    width: calc(100% - 2rem) !important;
+    padding: 0 1rem !important;
+    text-align: justify !important;
+}

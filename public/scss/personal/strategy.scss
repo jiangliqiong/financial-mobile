@@ -1,0 +1,153 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #efeff4;
+  @include px2rem(margin-top, 88);
+}
+.strategy-list {
+  @include px2rem(padding-bottom, 94);
+  ul {
+    li {
+      @include remCalc(padding,20 30);
+      @include px2rem(margin-bottom, 20);
+      background: #fff;
+      .strategy-time {
+        color: #959595;
+        @include px2rem(font-size, 28);
+        @include px2rem(padding-bottom, 20);
+        border-bottom: 1px solid #e5e5e5;
+        .strategy-del {
+          @include px2rem(font-size, 24);
+          float: right;
+          color: #959595;
+          cursor: pointer;
+        }
+      }
+      .strategy-msg {
+        font-size: 0;
+        @include px2rem(margin-top, 27);
+        p {
+          &:first-child {
+            @include px2rem(margin-bottom, 20);
+            span {
+              vertical-align: middle;
+              &:nth-child(1) {
+                @include px2rem(font-size, 40);
+                @include px2rem(margin-right, 10);
+                color: #000;
+              }
+              &:nth-child(2) {
+                @include px2rem(font-size, 24);
+                @include remCalc(padding,4 6);
+                border: 1px solid #0984ea;
+                @include css3(border-radius, 4);
+                &.empty {
+                  color: #0984ea;
+                }
+                &.more {
+                  color: #f33b49;
+                  border-color: #f33b49;
+                }
+                &.area {
+                  color: #f9a622;
+                  border-color: #f9a622;
+                }
+              }
+            }
+          }
+          &:last-child {
+            @include flexbox();
+            @include px2rem(font-size, 28);
+            color: #959595;
+            span {
+              @include flex();
+              width: 100%;
+              display:inline-block;
+              white-space:nowrap;
+              overflow:hidden;
+              text-overflow:ellipsis;
+              b {
+                font-weight: normal;
+                color: #000;
+                @include px2rem(margin-left, 10);
+              }
+            }
+            &.area {
+              display: block;
+              font-size: 0;
+              span {
+                width: auto;
+                color: #000;
+                vertical-align: top;
+                @include px2rem(font-size, 28);
+                &:last-child {
+                  color: #959595;
+                  @include px2rem(margin-left, 20);
+                  @include px2rem(margin-top, -2);
+                }
+              }
+              b {
+                color: #000;
+                vertical-align: top;
+                @include px2rem(font-size, 28);
+                @include remCalc(margin,0 20);
+                font-weight: normal;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.strategy-add {
+  width: 100%;
+  background: #094290;
+  color: #fff;
+  @include px2rem(font-size, 32);
+  @include px2rem(letter-spacing, -0.8);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  cursor: pointer;
+  display: table-cell;
+  a {
+    @include remCalc(padding, 26 0);
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+    i {
+      @include px2rem(width, 32);
+      @include px2rem(height, 32);
+      display: inline-block;
+      background: url('/images/personal/add.svg') no-repeat;
+      background-size: 100%;
+      @include px2rem(margin-right, 15);
+      vertical-align: middle;
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+}
+.no-strategy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include px2rem(margin-left, -114);
+  @include px2rem(margin-top, -162);
+  img {
+    @include px2rem(width, 206);
+    @include px2rem(height, 268);
+  }
+  p {
+    @include px2rem(font-size, 38);
+    color: #999;
+  }
+}

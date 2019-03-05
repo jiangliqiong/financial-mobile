@@ -1,0 +1,32 @@
+.icon-fanhuianniu {
+  font-size: 0.46rem;
+  float: left;
+  line-height: 0.88rem;
+  margin-left: 0.26rem; }
+
+.icon-gengduo {
+  font-size: 0.32rem;
+  float: right;
+  line-height: 0.88rem;
+  margin-right: 0.19rem; }
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 0.88rem;
+  background: -webkit-linear-gradient(left, #094494, #0a1f61);
+  background: -o-linear-gradient(right, #094494, #0a1f61);
+  background: -moz-linear-gradient(right, #094494, #0a1f61);
+  background: linear-gradient(to right, #094494, #0a1f61);
+  color: #fff;
+  text-align: center;
+  line-height: 0.88rem; }
+
+.title {
+  font-size: 0.36rem; }
+
+body {
+  margin-top: 0.88rem; }

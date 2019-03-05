@@ -1,0 +1,903 @@
+html, body, form, ul, ol, dl, dd, p, h1, h2, h3, h4, h5, h6, img, tbody, thead, tfoot {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body{
+    font-family: Arial,sans-serif;
+}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}
+header, nav, section, footer {
+    display: block;
+}
+li, dd, dt {
+    list-style: none;
+    display: block;
+}
+strong {
+    font-weight: 100;
+}
+a,button  {
+    text-decoration: none;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input, textarea,button {
+    outline: none;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input, select, textarea {
+    vertical-align: middle;
+}
+body {
+    width: 100%;
+}
+input{margin: 0;padding:0;}
+
+a,button {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+@font-face {font-family: "iconfont";
+  src: url('/iconFont/iconfont.eot'); /* IE9*/
+  src: url('/iconFont/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/iconFont/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('/iconFont/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('/iconFont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  /*-webkit-text-stroke-width: 0.002rem;*/
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.box_shadow{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top:0;
+    z-index:2;
+}
+
+.box_shadow .boxcen{
+    position: relative;
+    top:50%;
+    margin:0 1.05rem;
+    background: #fff;
+    border-radius: 0.04rem;
+    text-align: center;
+}
+.boxcen .toptxt{
+    padding:0.4rem 0;
+}
+.boxcen .btn{
+    display: block;
+    padding:0.23rem 0;
+    border-top: 1px solid #e5e5e5;
+    color: #0e83e5;
+    cursor: pointer;
+}
+
+/************************共通头部***************************/
+.topbar {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 0.88rem;
+    background: -webkit-linear-gradient(304deg, #094494, #0a1f61);
+    line-height: 0.88rem;
+    color: #fff;
+    font-size: 0.36rem;
+    z-index: 999;
+}
+.topbar i.backicon {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.42rem;
+    color: #fff;
+    padding: 0 0.3rem 0 0.18rem;
+}
+.topbar i.itemicon {
+    float: right;
+    display: inline-block;
+    width: 0.9rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.32rem;
+    color: #fff;
+}
+.topbar span {
+    display: inline-block;
+    text-align: center;
+    width: calc(100% - 1.82rem);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.headerNav{
+    display: none;
+    position: fixed;
+    top: 0.88rem;
+    left: 0;
+    width: 100%;
+    background-color: #252a36;
+    z-index: 999;
+}
+.headerNav ul li{
+    width: 25%;
+    height:100%;
+    float: left;
+    font-size: 0.20rem;
+    letter-spacing: -0.005rem;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+.headerNav ul li >a{
+    color: #ffffff;
+}
+.headerNav ul li .navIcon{
+    font-size: 0.48rem;
+}
+.headerNav ul li .accountIcon{
+    font-size: 0.4rem;
+    display: inline-block;
+    margin-top: 0.08rem;
+}
+.headerNavMask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 995;
+    cursor: pointer;
+}
+/*****************loading******************/
+.loading{
+    display: none;
+    width: 100%;
+    height: calc(100vh - 0.88rem);
+    text-align: center;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    color: #959595;
+    background-color: #ffffff;
+    margin-top: 0.88rem;
+}
+.loading span{
+    display: inline-block;
+    margin-top: 30vh;
+}
+/********************异常现象出现***************/
+.abnormal{
+    display: none;
+    width: 100%;
+    height: calc(100vh - 0.88rem);
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 0.88rem;
+    font-size: 0.36rem;
+    letter-spacing: -0.009rem;
+    color: #959595;
+}
+/********************暂无数据******************/
+.nodata img{
+    padding-top: 2.4rem;
+    width: 2.32rem;
+    height: 2.32rem;
+}
+.nodata span{
+    display: block;
+    margin-top: 0.22rem;
+}
+/*******************加载失败********************/
+.loadfail img{
+    padding-top: 2.4rem;
+    width: 1.81rem;
+    height: 2.42rem;
+    margin-bottom: 0.20rem;
+}
+.loadfail a{
+    color: #094290;
+    margin-left: 0.1rem;
+}
+/*******************暂无记录*********************/
+.norecord img{
+    padding-top: 1.6rem;
+    width: 2.06rem;
+    height: 2.68rem;
+}
+.norecord span{
+    display: block;
+    margin-top: 0.22rem;
+    padding-left: 0.25rem;
+}
+
+/****************外汇元素隐藏显示*************/
+.fxVisible {
+    display: block;
+}
+.fxHidden {
+    display: none;
+}
+
+/********************个人中心底部导航*******************/
+.footerNav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 8px 0 rgba(14, 131, 229, 0.1);
+    z-index: 10001;
+}
+.footerNav ul li{
+    width: 25%;
+    height:0.98rem;
+    float: left;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+}
+.footerNav ul li >a{
+    display: inline-flex;
+}
+.footerNav ul li >a>img{
+    width: 0.96rem;
+    height: 0.98rem;
+}
+.footerNav ul li i{
+    font-size: 0.48rem;
+}
+.footerNav ul li:nth-child(3) i{
+    font-size: 0.42rem;
+    display: inline-block;
+    margin-top: 0.08rem;
+}
+.footerNav ul li span{
+    display: block;
+}
+/****************滚动条置顶***************/
+.toTopBox{
+    position: fixed;
+    right: 0.3rem;
+    bottom: 1.28rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    opacity: 0.3;
+    background-color: #000000;
+    border-radius: 0.4rem;
+    z-index: 555;
+}
+.toTopBox img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+/*****************轻度提示框******************/
+.mildHintBox{
+    position: fixed;
+    left: calc(50% - 1.4rem);
+    top: 30%;
+    width: 2.8rem;
+    opacity: 0.8;
+    border-radius: 0.12rem;
+    background-color: #000000;
+    z-index: 666;
+    text-align: center;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+.mildHintBox .hintIcon{
+    display: inline-block;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 0.5rem;
+}
+.mildHintBox .hintMessage{
+    margin-top: 0.15rem;
+    font-size: 0.24rem;
+    text-align: center;
+    color: #ffffff;
+    white-space: normal;
+    word-break: break-all;
+    margin-bottom: 0.54rem;
+    padding: 0 0.5rem;
+    width: calc(100% - 1rem);
+}
+/*****************modal对话框******************/
+.confirmBox{
+    position: fixed;
+    left: calc(50% - 2.7rem);
+    top: 30%;
+    width: 5.4rem;
+    border-radius: 0.04rem;
+    background-color: #ffffff;
+    z-index: 1000;
+    text-align: center;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+.confirmBox.on{
+    opacity: 1;
+    transition:bottom 3000ms ease-out 12s;
+    -webkit-animation:bottom 3000ms ease-out 12s;
+    -moz-animation:bottom 3000ms ease-out 12s;
+    -ms-animation:bottom 3000ms ease-out 12s;
+    -o-animation:bottom 3000ms ease-out 12s;
+    transition:opacity 3000ms ease-out 12s,transform 3000ms ease-in-out;
+    -webkit-animation:opacity 3000ms ease-out 12s,transform 3000ms ease-in-out;
+    -moz-animation:opacity 3000ms ease-out 12s,transform 3000ms ease-in-out;
+    -ms-animation:opacity 3000ms ease-out 12s,transform 3000ms ease-in-out;
+    -o-animation:opacity 3000ms ease-out 12s,transform 3000ms ease-in-out;
+}
+
+.confirmMask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    cursor: pointer;
+}
+.confirmBox .title{
+    width: calc(100% - 2.12rem);
+    padding: 0.4rem 1.06rem 0.2rem 1.06rem;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #000000;
+}
+
+.confirmBox .hintMessage1,.confirmBox .hintMessage2{
+    width: calc(100% - 2.12rem);
+    padding: 0 1.06rem;
+    font-size: 0.28rem;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 0.4rem;
+    word-break: break-all;
+    overflow: hidden;
+}
+.confirmBox .hintMessage2{
+    padding-top: 0.4rem;
+}
+.confirmBox .btnBox{
+    width: 100%;
+    height: 0.9rem;
+    border-top:1px solid #e5e5e5;
+    font-size: 0.32rem;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+.confirmBox .btnBox .btn{
+    line-height: 0.9rem;
+    text-align: center;
+    color: #000000;
+}
+.confirmBox .btnBox .cancelBtn{
+    float: left;
+    display: block;
+    border-right: 1px solid #e5e5e5;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    cursor: pointer;
+}
+.confirmBox .btnBox .checkBtn{
+    float: left;
+    display: block;
+    border-right: 1px solid #e5e5e5;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    cursor: pointer;
+    color: #094290;
+}
+.confirmBox .btnBox .confirmBtn1,.confirmBox .btnBox .confirmBtn2{
+    float: left;
+    display: block;
+    color: #094290;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    cursor: pointer;
+}
+.confirmBox .btnBox .confirmBtn3{
+    display: block;
+    width: 100%;
+    line-height: 0.9rem;
+    text-align: center;
+    color: #094290;
+    cursor: pointer;
+}
+.confirmBox .btnBox .confirmBtn4{
+    float: left;
+    display: block;
+    color: #094290;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    cursor: pointer;
+    font-weight: bold;
+}
+.notfound{
+    text-align: center;
+    font-size: 0.32rem;
+    margin-top: 0.88rem;
+}
+.notfound div{
+    position: relative;
+    width:3.8rem;
+    height:2rem;
+    margin:2.69rem auto 0.2rem;
+}
+.notfound div img{
+    max-width: 100%;
+}
+.notfound h3{
+    font-size: 0.32rem;
+    font-weight: 500;
+}
+.notfound p{
+    color: #959595;
+    font-size: 0.28rem;
+    margin-top: 0.2rem;
+}
+.notfound p a{
+    color:#1d4ab1;
+}
+.notfound span{
+    position: absolute;
+    right:0.3rem;
+    top:0.34rem;
+    color:#1d4ab1;
+}
+
+/******************称谓********************/
+.appellationLayerBox .appellationLayer{
+    position: fixed;
+    bottom: -3rem;
+    left: 0;
+    width:100%;
+    background-color: #f5f5f5;
+    z-index: 999;
+    font-size: 0.32rem;
+    text-align: center;
+    color: #094290;
+}
+.appellationLayerBox .appellationLayer .manBtn,.appellationLayerBox .appellationLayer .womanBtn,.appellationLayerBox .appellationLayer .cancelBtn{
+    width: 100%;
+    height: 0.98rem;
+    line-height: 0.98rem;
+    display: block;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.appellationLayerBox .appellationLayer .womanBtn{
+    border-top: 1px solid #e5e5e5;
+    margin-bottom: 0.11rem;
+    cursor: pointer;
+}
+.appellationLayerBox .appellationLayer .cancelBtn{
+    color: #959595;
+    cursor: pointer;
+}
+.appellationLayerBox .appellationMask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    cursor: pointer;
+}
+
+/**
+*同时存在交易返佣和代理返佣
+*/
+.tradeAndIbRebate{
+    position: fixed;
+    bottom: 0.98rem;
+    left: 0;
+    width: 100%;
+    height: 0.52rem;
+    line-height: 0.52rem;
+    background-color: #fff;
+    font-size: 0.24rem;
+    letter-spacing: -0.006rem;
+    color: #000;
+    border-top: 1px solid #e5e5e5;
+}
+.tradeAndIbRebate .val{
+    font-style: normal;
+}
+.tradeAndIbRebate .traderRebate{
+    float: left;
+    display: block;
+    text-align: right;
+    width: calc(50% - 0.15rem);
+    padding-right: 0.15rem;
+}
+.tradeAndIbRebate .ibRebate{
+    float: left;
+    display: block;
+    text-align: left;
+    padding-left: 0.15rem;
+}
+.tradeAndIbRebate .vLine{
+    position: absolute;
+    top: 0.14rem;
+    left:  50%;
+    width:0;
+    height: 0.22rem;
+    border-left: 1px solid #000;
+}
+.tradeAndIbRebate .triangle{
+    width: 0rem;
+    height: 0rem;
+    display: block;
+    margin-left: 47.8%;
+    border-left: 0.12rem solid transparent;
+    border-right: 0.12rem solid transparent;
+    border-top: 0.07rem solid #094494;
+    display: none;
+}
+/**
+*只有交易返佣
+*/
+.tradeRebate{
+    position: fixed;
+    bottom: 0.9rem;
+    left: 0;
+    width: 100%;
+    height:0.57rem;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+}
+.tradeRebate .rebateValue{
+    width:100%;
+    height:0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    background-color: #fff;
+    font-size: 0.24rem;
+    letter-spacing: -0.006rem;
+    color: #000;
+    border-radius: 0.3rem;
+}
+.tradeRebate .val{
+    font-style: normal;
+}
+.tradeRebate .triangle{
+    width: 0rem;
+    height: 0rem;
+    display: block;
+    margin-left: 1.38rem;
+    border-left: 0.12rem solid transparent;
+    border-right: 0.12rem solid transparent;
+    border-top: 0.08rem solid #094494;
+}
+
+/**
+ * 选择银行卡
+ */
+.selectBankCardLayerBox{
+    overflow: hidden;
+}
+.selectBankCardLayerBox .bankCardBox{
+    position: fixed;
+    left: calc(50% - 3.1rem);
+    top: 2rem;
+    width: 6.2rem;
+    border-radius: 0.04rem;
+    background-color: #ffffff;
+    z-index: 1000;
+    text-align: center;
+    /*filter:alpha(opacity=0);*/
+    /*-moz-opacity:0;*/
+    /*-khtml-opacity: 0;*/
+    opacity: 0;
+}
+.selectBankCardLayerBox .bankCardMask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    cursor: pointer;
+}
+.selectBankCardLayerBox .bankCardBox .title{
+    width: 100%;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    text-align: center;
+    border-radius: 0.04rem;
+    background-color: #efeff4;
+    font-size: 0.32rem;
+    color: #000000;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox{
+    width: calc(100% - 0.6rem);
+    padding: 0 0.3rem;
+    height: 5.84rem;
+    overflow-y: scroll;
+}
+
+.selectBankCardLayerBox .bankCardBox .btnBox{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    width: 100%;
+    height: 0.9rem;
+    border-top: 1px solid #e5e5e5;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul{
+    margin-top: 0.3rem;
+    overflow: hidden;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li{
+    float: left;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .selectIcon{
+    display: block;
+    float: left;
+    font-size: 0.30rem;
+    margin-top: 0.4rem;
+    margin-right: 0.07rem;
+    margin-left: 0.01rem;
+    color: #959595;
+    cursor: pointer;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .bankCardInfo{
+    float: left;
+    height: 1.1rem;
+    width: 5.2rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .bankCardInfo .img {
+    float: left;
+    width: 0.8rem;
+    height: 100%;
+    box-shadow: 0 5px 12px 0 rgba(29, 74, 177, 0.27);
+    border-top-left-radius: 0.12rem;
+    border-bottom-left-radius: 0.12rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .bankCardInfo .img >img{
+    float: left;
+    margin-top: 0.28rem;
+    margin-left: 0.15rem;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .bankCardInfo .info{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 4.4rem;
+    background-image: linear-gradient(102deg, #3fa9ff, #257aea);
+    box-shadow: 0 5px 12px 0 rgba(29, 74, 177, 0.27);
+    border-top-right-radius: 0.12rem;
+    border-bottom-right-radius: 0.12rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .bankCardInfo .info .name{
+    display: block;
+    float: left;
+    margin-left: 0.1rem;
+    font-size: 0.28rem;
+    color: #ffffff;
+    line-height: 1.1rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .bankCardInfo .info .account{
+    display: block;
+    float: left;
+    margin-left: 0.1rem;
+    font-size: 0.24rem;
+    color: #ffffff;
+    line-height: 1.1rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .textMask{
+    position: absolute;
+    top: 0;
+    right: 0.021rem;
+    width: 0.9rem;
+    z-index: 8;
+    height: 1.1rem;
+    opacity: 0.1;
+    background-color: #000000;
+    border-top-right-radius: 0.12rem;
+    border-bottom-right-radius: 0.12rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .default{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.9rem;
+    font-size: 0.24rem;
+    color: #ffffff;
+    border-top-right-radius: 0.12rem;
+    border-bottom-right-radius: 0.12rem;
+    z-index: 9;
+    line-height: 0.34rem;
+    cursor: pointer;
+    height: 100%;
+}
+/*.selectBankCardLayerBox .bankCardBox .cardBox ul li .bankCardInfo .info .default span{*/
+    /*display: block;*/
+/*}*/
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .default .setTo{
+    position: absolute;
+    top: 0.2rem;
+    left: 0.21rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .default .defaultIcon{
+    position: absolute;
+    font-size: 0.32rem;
+    top: 0.2rem;
+    left: 0.28rem;
+}
+.selectBankCardLayerBox .bankCardBox .cardBox ul li .default .text{
+    position: absolute;
+    bottom: 0.22rem;
+    left: 0.22rem;
+}
+
+.selectBankCardLayerBox .bankCardBox .btnBox .cancelBtn{
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    line-height: 0.9rem;
+    text-align: center;
+    border-right:1px solid #e5e5e5;
+    font-size: 0.32rem;
+    color: #000000;
+}
+.selectBankCardLayerBox .bankCardBox .btnBox .ensureBtn{
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    line-height: 0.9rem;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #1d4ab1;
+}
+
+.selectBankCardLayerBox .bankCardBox .addBankCardBtn{
+    display: block;
+    width: 5.18rem;
+    height: 0.78rem;
+    line-height: 0.78rem;
+    font-size: 0.28rem;
+    color: #959595;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.12rem;
+    margin-bottom: 0.3rem;
+    margin-left: 0.4rem;
+}
+.selectBankCardLayerBox .bankCardBox .addBankCardBtn .addIcon{
+    font-size: 0.22rem;
+    color: #c1c1c1;
+    margin-right: 0.1rem;
+}
+/**
+ *查看大图
+ */
+.imgLayerBox .imgBox{
+    position: fixed;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    z-index: 1000;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+.imgLayerBox .imgMask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    cursor: pointer;
+}
+/**
+ *满足IB资格的提示框
+ */
+.ibTipsLayerBox .imgBox{
+    position: fixed;
+    left: 0;
+    top: 2.12rem;
+    width: 6.73rem;
+    height: 6.73rem;
+    z-index: 1000;
+    margin-left: 0.4rem;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+.ibTipsLayerBox .imgBox > img{
+    width: 100%;
+    height: 100%;
+}
+.ibTipsLayerBox .imgMask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    cursor: pointer;
+}
+.ibTipsLayerBox .imgBox .tipsBox{
+    position: absolute;
+    top: 3.65rem;
+    left: 0.96rem;
+    text-align: center;
+    width: 4.95rem;
+}
+.ibTipsLayerBox .imgBox .tipsBox .title{
+    font-size: 0.40rem;
+    font-weight: 600;
+    color: #d51431;
+    margin-bottom: 0.15rem;
+}
+.ibTipsLayerBox .imgBox .tipsBox .text{
+    display: block;
+    font-size: 0.24rem;
+    color: #d3072e;
+    line-height: 0.34rem;
+}
+.ibTipsLayerBox .imgBox .cancelBtn{
+    position: absolute;
+    top: 0;
+    right: 0.42rem;
+    display: block;
+    width: 0.56rem;
+    height: 0.56rem;
+}
+.ibTipsLayerBox .imgBox .okBtn{
+    position: absolute;
+    bottom: 0.66rem;
+    left: 1.7rem;
+    display: block;
+    width: 3.40rem;
+    height: 0.80rem;
+}

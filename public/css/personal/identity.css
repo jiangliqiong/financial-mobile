@@ -1,0 +1,143 @@
+@charset "UTF-8";
+body {
+  background: #efeff4; }
+
+.topbar {
+  background: none; }
+
+.upload-area {
+  padding-top: 0.88rem;
+  background: -webkit-linear-gradient(304deg, #094494, #0a1f61);
+  height: 3.6rem; }
+  .upload-area .upload-tip {
+    text-align: center;
+    font-size: 0.28rem;
+    letter-spacing: -0.008rem;
+    color: #ffffff;
+    margin-top: 0.5rem; }
+    .upload-area .upload-tip span {
+      color: #037bfa; }
+  .upload-area .upload-box {
+    text-align: center;
+    font-size: 0;
+    position: relative;
+    margin-top: 0.2rem; }
+    .upload-area .upload-box .upload-cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 22; }
+    .upload-area .upload-box .upload-pic {
+      position: relative;
+      width: 3.4rem;
+      height: 2.2rem;
+      display: inline-block;
+      background: #fff; }
+      .upload-area .upload-box .upload-pic.first {
+        margin-right: 0.1rem; }
+      .upload-area .upload-box .upload-pic .upload-pos {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -0.59rem;
+        margin-left: -0.68rem;
+        z-index: 1; }
+        .upload-area .upload-box .upload-pic .upload-pos .iconfont {
+          font-size: 0.54rem;
+          color: #094494; }
+        .upload-area .upload-box .upload-pic .upload-pos .upload-pic-tip {
+          font-size: 0.28rem;
+          letter-spacing: -0.008rem;
+          margin-top: 0.2rem;
+          color: #094494; }
+      .upload-area .upload-box .upload-pic .ib-upload-pic {
+        width: 2.2rem;
+        height: 3.4rem;
+        display: block;
+        position: absolute;
+        top: -0.6rem;
+        left: 0.6rem;
+        z-index: 2;
+        transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        -moz-transform: rotate(-90deg);
+        /* Firefox */
+        -webkit-transform: rotate(-90deg);
+        /* Safari 和 Chrome */
+        -o-transform: rotate(-90deg);
+        /* Opera */ }
+      .upload-area .upload-box .upload-pic .img-loading {
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url("/images/common/loading.gif") no-repeat;
+        top: 50%;
+        left: 50%;
+        background-size: 100%;
+        margin: -0.75rem 0rem 0rem -0.75rem;
+        z-index: 4;
+        display: none; }
+
+.upload-demo {
+  padding: 0.4rem 0.3rem;
+  background: #fff; }
+  .upload-demo .upload-demo-title {
+    font-size: 0.28rem;
+    letter-spacing: -0.008rem;
+    padding-bottom: 0.1rem;
+    color: #000000;
+    border-bottom: 1px solid #e5e5e5; }
+  .upload-demo .upload-demo-pic {
+    margin-top: 0.2rem; }
+
+.upload-sure-box {
+  margin-top: 0.6rem;
+  padding: 0rem 0.3rem;
+  cursor: pointer;
+  display: none; }
+  .upload-sure-box .upload-sure {
+    background: #094290;
+    display: block;
+    padding: 0.28rem 0rem;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    color: #ffffff;
+    text-align: center;
+    -webkit-border-radius: 0.04rem;
+    -moz-border-radius: 0.04rem;
+    -ms-border-radius: 0.04rem;
+    -o-border-radius: 0.04rem;
+    border-radius: 0.04rem;
+    cursor: pointer; }
+    .upload-sure-box .upload-sure.disabled {
+      background: #d8d8d8; }
+
+#upload1, #upload2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0; }
+  #upload1 input, #upload2 input {
+    width: 100%;
+    height: 100%;
+    display: block; }
+
+.imgLayerBox .imgBox img {
+  width: 100%;
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  /* IE 9 */
+  -moz-transform: rotate(-90deg);
+  /* Firefox */
+  -webkit-transform: rotate(-90deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(-90deg);
+  /* Opera */
+  height: 7.5rem; }

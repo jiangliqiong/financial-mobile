@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="337px" height="160px" viewBox="0 0 337 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>93A8C708-5DFA-4845-90F7-615C750AB472</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="-3.41088435%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#7F8DFF" offset="0%"></stop>
+            <stop stop-color="#2151EA" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="337" height="160" rx="4"></rect>
+        <linearGradient x1="50%" y1="15.9379029%" x2="50%" y2="57.5178913%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.1外汇大课堂首页" transform="translate(-383.000000, -515.000000)">
+            <g id="基本面分析" transform="translate(383.000000, 515.000000)">
+                <g id="底图-基本面">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <polygon id="Rectangle-6-Copy-2" fill="#FFFFFF" opacity="0.199999988" mask="url(#mask-3)" points="69.8480397 56 219.696079 205.84804 69.8480397 355.696079 -80 205.84804"></polygon>
+                    <polygon id="Rectangle-6-Copy-3" fill="url(#linearGradient-4)" opacity="0.099999994" mask="url(#mask-3)" points="70.8480397 -160 70.8480397 106.107158 -79 256.121403 -79 -10.1519603"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

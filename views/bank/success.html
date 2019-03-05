@@ -1,0 +1,26 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/bank/success.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <span class="icon iconfont successIcon">&#xe725;</span>
+    <span class="hintText1">提现申请提交成功</span>
+    <span class="hintText2">提现资金将在2~3个工作日内到账</span>
+    <div class="accident">
+        <span class="accidentText">如资金超过7个工作日未到账，请咨询相关银行或拨打</span><br>
+        <span class="serviceHotLine">客服热线：</span><span class="telephone">400-8713-007</span>
+    </div>
+    <a class="successBackBtn" href="../personal/index.html">完成</a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/bank/success.js"></script>
+{% endblock %}

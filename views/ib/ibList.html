@@ -1,0 +1,142 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/ib/ibList.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<div class="back-cover" style=""></div>
+<section class="ib-list">
+  <div class="ib-top">
+    <div class="ib-condition-box">
+      <div class="ib-condition">
+         <div class="ib-condition-block active">默认排序</div>
+         <div class="ib-condition-block">
+           <p><span>地区</span><i class="ib-down-icon"></i></p>
+         </div>
+         <div class="ib-condition-block">
+           <p><span>代理平台</span><i class="ib-down-icon"></i></p>
+         </div>
+      </div>
+    </div>
+    <div class="ib-area-list ib-select-box">
+      <div class="ib-list-main">
+        <div class="ib-list-box ib-list-box-area">
+           <span class="active" data-id='0'>全部</span>
+           {% for areaObj in area %}
+           <span class="" data-id="{{ areaObj.cityid }}">{{ areaObj.name }}</span>
+           {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="ib-plat-list ib-select-box">
+      <div class="ib-list-main">
+        <div class="ib-list-box">
+           <span data-id='0' class="active">全部</span>
+           {% for platObj in plat %}
+           <span data-id="{{ platObj.broker_id }}" class="">{{ platObj.chinese_name }}</span>
+           {% endfor %}
+        </div>
+         <div class="ib-plat-btn">
+           <div class="">
+             <button type="button" name="button" class="ib-plat-reset">重置</button>
+           </div>
+           <div class="">
+             <button type="button" name="button" class="ib-plat-ok">完成</button>
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div class="ib-list-tab">
+    {% set listLength = listData.length %}
+    {% for i in range(0, listLength) -%}
+    {% set data = listData[i] %}
+    <div class="ib-list-box">
+       <div class="ib-detail-icon">
+         {% if data.logo_url %}
+         <img src="{{ data.logo_url }}" alt="">
+         {% else %}
+         <img src="/images/ib/img/ib-default_logo.png" alt="">
+         {% endif %}
+       </div>
+       <div class="ib-detail-msg">
+         <span class="ib-detail-arrow iconfont">&#xe720;</span>
+         <p class="ib-msg-title">
+           {% if data.authentication_status == '已认证' %}
+           <i class="rz-icon"></i>
+           {% elseif data.authentication_status=='2' %}
+           <i class="rz-icon"></i>
+           {% endif %}
+           <span class="ib-msg-name">{{ data.ib_name }}</span><i class="ib-msg-rt iconfont icon-jiantou"></i>
+         </p>
+         <div class="ib-msg-lable-box">
+           <p class="ib-msg-lable">
+             {% if data.brokerListName %}
+             {% set brokerList = data.brokerListName.split(',') %}
+             {% for item in brokerList %}
+             <span>{{ item }}</span>
+             {% endfor %}
+             {% endif %}
+           </p>
+         </div>
+         <p class="im-msg-area">地区：<span>{{ data.provinceName }}</span></p>
+       </div>
+       <a class="ib-link" href="/ib/index.html?ibId={{ data.ib_id }}"></a>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+{% endblock %}
+{% block script %}
+<script id="ibListTml" type="text/html">
+     <% if(list.length) { %>
+      <% for (var i = 0; i < list.length; i++) { %>
+        <div class="ib-list-box">
+           <div class="ib-detail-icon">
+             <% if(list[i].logo_url) { %>
+             <img src="<%= list[i].logo_url%>" alt="">
+             <% }else{ %>
+             <img src="/images/ib/img/ib-default_logo.png" alt="">
+             <% } %>
+           </div>
+           <div class="ib-detail-msg">
+             <span class="ib-detail-arrow iconfont">&#xe720;</span>
+             <p class="ib-msg-title">
+               <% if(list[i].authentication_status == '已认证'){ %>
+               <i class="rz-icon"></i>
+               <% }else if(list[i].authentication_status=='2'){ %>
+               <i class="rz-icon"></i>
+               <% } %>
+               <span class="ib-msg-name"><%= list[i].ib_name%></span><i class="ib-msg-rt iconfont icon-jiantou"></i>
+             </p>
+             <div class="ib-msg-lable-box">
+               <p class="ib-msg-lable">
+                 <% if(list[i].brokerListName) { %>
+                   <% var brokerList=  list[i].brokerListName.split(','); %>
+                   <% for(item in brokerList){ %>
+                   <span><%= brokerList[item]%></span>
+                   <% } %>
+                 <% } %>
+               </p>
+             </div>
+             <p class="im-msg-area">地区：<span><%= list[i].provinceName%></span></p>
+           </div>
+           <a class="ib-link" href="/ib/index.html?ibId=<%= list[i].ib_id%>"></a>
+        </div>
+      <%}%>
+    <% }else{ %>
+      <div class="no-data">
+        <div class="no-img"><i></i></div>
+        <p>暂无数据</p>
+      </div>
+    <% } %>
+</script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["IbList"]);
+</script>
+{% endblock %}

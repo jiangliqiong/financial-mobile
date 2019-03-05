@@ -1,0 +1,191 @@
+html{
+    background: #fff;
+}
+.container{
+    padding-top: 0.88rem;
+}
+
+.my-con *{
+    box-sizing: border-box;
+}
+.my-con i{
+    font-style: normal;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #dcdcdc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #dcdcdc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #dcdcdc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #dcdcdc;
+}
+
+form ul{
+    background: #fff;
+    padding:0 0.3rem;
+    font-size: 0.32rem;
+}
+form input{
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 0 0 0 1.94rem;
+}
+.input-container{
+    position: relative;
+    line-height: 1.24rem;
+    height: 1.24rem;
+}
+.input-container:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: #e5e5e5;
+    transform: scaleY(0.5);
+    webkitTransform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+}
+.input-container>div {
+    position: absolute;
+    width: 1.94rem;
+    display: inline-block;
+    text-align: left;
+}
+.input-container input{
+    font-size: 0.32rem;
+}
+.input-container.has-btn input{
+    padding-right: 2.24rem;
+}
+.input-container .holder{
+    display: inline-block;
+    position: relative;
+    padding-left: 1.94rem;
+    padding-right: 0.3rem;
+    line-height: 0.36rem;
+    height: 0.36rem;
+    vertical-align: middle;
+    width: 100%;
+}
+.input-container .holder.no-chose{
+    color: #dcdcdc;
+}
+.input-container .holder .arrow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.input-container .holder .arrow img{
+    height: 100%;
+}
+.icon-clean{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    font-size: 0.34rem;
+    color: #b6b6b6;
+    display: none;
+    cursor: pointer;
+}
+.input-container.has-btn .icon-clean{
+    right: 1.9rem;
+}
+.form-last{
+    padding: 0 0.3rem;
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    margin-top: 0.3rem;
+    position: relative;
+}
+.form-last:last-child{
+    height: auto;
+}
+.form-last i{
+    display: inline-block;
+    height: 0.36rem;
+    width: 0.36rem;
+    vertical-align: top;
+    margin-right: 0.2rem;
+    background: url(/static/user/images/icon-default.png) no-repeat;
+    background-size: 100%;
+}
+.form-last i.icon-active{
+    background-image: url(/static/user/images/agree.png);
+}
+.form-last a{
+    color: #1d4ab1;
+    text-decoration: underline;
+}
+.save, .next{
+    cursor: pointer;
+    background: #1d4ab1;
+    color: #fff;
+    line-height: 0.88rem;
+    display: block;
+    text-align: center;
+    border-radius: 0.04rem;
+    font-size: 0.32rem;
+    margin-top: 0.6rem;
+}
+.save.disabled, .next.disabled, .next.prevent{
+    background: #D8D8D8;
+}
+
+.get-code, .img-code{
+    cursor: pointer;
+    position: absolute;
+    font-size: 0.24rem;
+    top: 0.29rem;
+    right: 0;
+    text-align: center;
+    width: 1.58rem;
+    height: 0.54rem;
+    line-height: 0.54rem;
+    background: #1d4ab1;
+    color: #fff;
+    border-radius: 0.04rem;
+    /* transform: translateY(-50%); */
+}
+.get-code.disabled, .get-code.prevent{
+    background: #D8D8D8;
+    color: #959595;
+}
+
+.img-code{
+    background: transparent;
+    height: 0.66rem;
+    line-height: 0.66rem;
+}
+.img-code:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #e5e5e5;
+    left: -0.2rem;
+    top: 0;
+    transform: scaleX(0.5);
+    webkitTransform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+}
+.img-code img{
+    width: 100%;
+}
+body {
+  padding-top: 0.88rem;
+}
+
+.bottomTip{
+    display: none;
+}

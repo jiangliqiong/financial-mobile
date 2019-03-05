@@ -1,0 +1,55 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/strategy.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="strategy-list">
+  <ul></ul>
+</section>
+<section class="no-strategy" style="display:none">
+  <img src="/images/common/norecord.png"
+     srcset="/images/common/norecord@2x.png 2x,
+             /images/common/norecord@3x.png 3x">
+  <p>暂无策略信息</p>
+</section>
+<section class="strategy-add">
+  <a href="/personal/sendStrategy.html"><i></i><span>发布策略信息</span></a>
+</section>
+{% endblock %}
+{% block script %}
+<script id="strategyTml" type="text/html">
+  <% if(list.length) { %>
+  <% for (var i = 0; i < list.length; i++) { %>
+  <li>
+    <p class="strategy-time"><span><%= list[i].create_date%></span><a data-id="<%= list[i].id%>" class="strategy-del iconfont" href="javascript:;">&#xe726;</a></p>
+    <div class="strategy-msg">
+      <p>
+        <span><%= list[i].currencyValue%></span>
+        <% if(list[i].type == '0') { %>
+        <span class="more">做多</span>
+        <% }else if(list[i].type == '1'){ %>
+        <span class="empty">做空</span>
+        <% }else{ %>
+        <span class="area">区间</span>
+        <% } %>
+      </p>
+      <% if(list[i].type == '2') { %>
+      <p class="area"><span><%= list[i].content.split('—')[0]%></span><b>—</b><span><%= list[i].content.split('—')[1].replace(/[\u4E00-\u9FA5]/g,'')%></span><span>高抛低吸</span></p>
+      <% }else{ %>
+      <p><span>入场<b><%= list[i].content.split(',')[0].replace(/[\u4E00-\u9FA5]/g,'')%></b></span><span>止损<b><%= list[i].content.split(',')[1].replace(/[\u4E00-\u9FA5]/g,'')%></b></span><span>止盈<b><%= list[i].content.split(',')[2].replace(/[\u4E00-\u9FA5]/g,'')%></b></span></p>
+      <% } %>
+    </div>
+  </li>
+  <% } %>
+  <% } %>
+</script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["strategy"]);
+</script>
+{% endblock %}

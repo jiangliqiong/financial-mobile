@@ -1,0 +1,283 @@
+body {
+  background: #efeff4;
+  margin: 0.88rem 0rem 1.38rem 0rem; }
+
+.apply-body {
+  background: #efeff4; }
+
+.ib-base-msg {
+  padding: 0.4rem 0.3rem;
+  background: #fff;
+  font-size: 0; }
+  .ib-base-msg .ib-img {
+    width: 2.6rem;
+    height: 1.04rem;
+    display: inline-block;
+    vertical-align: top; }
+    .ib-base-msg .ib-img img {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #e5e5e5;
+      display: block;
+      box-sizing: border-box; }
+  .ib-base-msg .detail-back {
+    float: right; }
+    .ib-base-msg .detail-back p {
+      width: 0.8rem;
+      height: 1rem;
+      background: -webkit-linear-gradient(#fbd811, #f5b007);
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      -webkit-border-radius: 0.04rem;
+      -moz-border-radius: 0.04rem;
+      -ms-border-radius: 0.04rem;
+      -o-border-radius: 0.04rem;
+      border-radius: 0.04rem; }
+      .ib-base-msg .detail-back p span {
+        font-size: 0.16rem;
+        letter-spacing: -0.004rem; }
+      .ib-base-msg .detail-back p i {
+        display: block;
+        width: 0.32rem;
+        height: 1px;
+        background: #fff;
+        margin: 0 auto;
+        margin-top: 0.08rem;
+        margin-bottom: 0.05rem; }
+      .ib-base-msg .detail-back p b {
+        max-width: 1.2rem;
+        font-size: 0.36rem;
+        letter-spacing: -0.009rem;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden; }
+  .ib-base-msg .ib-name {
+    font-size: 0.36rem;
+    letter-spacing: -0.009rem;
+    color: #000000;
+    display: inline-block;
+    vertical-align: top;
+    width: 2.8rem;
+    height: 1.04rem;
+    margin-left: 0.16rem; }
+    .ib-base-msg .ib-name span {
+      vertical-align: middle; }
+    .ib-base-msg .ib-name .ib-ico {
+      display: inline-block;
+      padding: 0.03rem 0.04rem;
+      line-height: 0.28rem;
+      margin-left: 0.1rem;
+      -webkit-border-radius: 0.02rem;
+      -moz-border-radius: 0.02rem;
+      -ms-border-radius: 0.02rem;
+      -o-border-radius: 0.02rem;
+      border-radius: 0.02rem;
+      background: linear-gradient(121deg, #ff6d6d, #ff0000);
+      font-size: 0.16rem;
+      letter-spacing: -0.004rem;
+      color: #fffbfa;
+      text-align: center;
+      margin-bottom: 3px; }
+  .ib-base-msg .ib-rebate {
+    font-size: 0.28rem;
+    line-height: 0.4rem;
+    letter-spacing: -0.007rem;
+    margin-top: 0.2rem;
+    color: #000000; }
+    .ib-base-msg .ib-rebate a {
+      color: #000000; }
+
+.ib-detail-msg .ib-detail-ul {
+  position: relative;
+  margin: 0.2rem 0rem; }
+  .ib-detail-msg .ib-detail-ul ul {
+    background: #fff;
+    padding: 0rem 0.3rem; }
+    .ib-detail-msg .ib-detail-ul ul li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      border-bottom: 0.021rem dashed #e5e5e5;
+      padding: 0.3rem 0rem; }
+      .ib-detail-msg .ib-detail-ul ul li div {
+        width: 100%;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        font-size: 0.28rem; }
+        .ib-detail-msg .ib-detail-ul ul li div:nth-child(even) {
+          margin-left: 0.6rem; }
+        .ib-detail-msg .ib-detail-ul ul li div span {
+          color: #000; }
+          .ib-detail-msg .ib-detail-ul ul li div span:first-child {
+            display: inline-block;
+            color: #959595;
+            width: 1.12rem;
+            margin-right: 0.2rem; }
+      .ib-detail-msg .ib-detail-ul ul li:last-child {
+        border-bottom: none; }
+  .ib-detail-msg .ib-detail-ul .ib-detail-line {
+    position: absolute;
+    width: 0;
+    height: 2.43rem;
+    border-left: dashed 1px #e5e5e5;
+    top: 0.5rem;
+    left: 50%;
+    margin-left: -0.3rem; }
+
+.set-reward {
+  margin: 0rem 0rem 0.2rem 0rem; }
+  .set-reward .set-reward-val {
+    position: relative;
+    padding: 0.28rem 0.3rem 0.2rem 0.3rem;
+    line-height: 0.58rem;
+    background: #fff; }
+    .set-reward .set-reward-val span {
+      display: inline-block;
+      font-size: 0.32rem;
+      letter-spacing: -0.008rem;
+      color: #000000;
+      vertical-align: middle; }
+      .set-reward .set-reward-val span.set-reward-label {
+        position: relative;
+        top: -1px; }
+        .set-reward .set-reward-val span.set-reward-label.unit {
+          margin-left: 0.4rem;
+          color: #959595; }
+      .set-reward .set-reward-val span i {
+        width: 0.18rem;
+        height: 0.3rem;
+        margin-right: 0.1rem;
+        display: inline-block;
+        background: url("/images/ib/svg/apply-rebate.svg") no-repeat;
+        background-size: 100%;
+        vertical-align: middle;
+        margin-bottom: 0.03rem; }
+    .set-reward .set-reward-val input {
+      top: -0.04rem;
+      font-size: 0.32rem;
+      width: 3rem;
+      border: none;
+      vertical-align: middle;
+      -moz-appearance: textfield;
+      position: relative; }
+      .set-reward .set-reward-val input::-webkit-input-placeholder {
+        color: #959595; }
+    .set-reward .set-reward-val input::-webkit-outer-spin-button,
+    .set-reward .set-reward-val input::-webkit-inner-spin-button {
+      -webkit-appearance: none; }
+    .set-reward .set-reward-val .reward-tip {
+      font-size: 0.24rem;
+      letter-spacing: -0.006rem;
+      margin-top: 0.2rem;
+      padding-top: 0.2rem;
+      color: #959595;
+      border-top: 1px solid #e5e5e5; }
+    .set-reward .set-reward-val .reward-img-tip {
+      position: absolute;
+      top: 0.97rem;
+      left: 2.19rem;
+      width: 3.4rem;
+      height: 0.74rem;
+      line-height: 0.74rem;
+      -webkit-border-radius: 0.04rem;
+      -moz-border-radius: 0.04rem;
+      -ms-border-radius: 0.04rem;
+      -o-border-radius: 0.04rem;
+      border-radius: 0.04rem;
+      background-image: linear-gradient(92deg, #fb8a01, #f46202);
+      box-shadow: 0 0.02rem 0.14rem 0 rgba(243, 99, 2, 0.58);
+      text-align: center; }
+      .set-reward .set-reward-val .reward-img-tip span {
+        font-size: 0.28rem;
+        letter-spacing: -0.007rem;
+        color: #ffffff;
+        vertical-align: middle; }
+        .set-reward .set-reward-val .reward-img-tip span.reward-close-cover {
+          width: 0.86rem;
+          height: 0.74rem;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 3; }
+      .set-reward .set-reward-val .reward-img-tip i.reward-arrow {
+        width: 0;
+        height: 0;
+        border-left: 0.14rem solid transparent;
+        border-right: 0.14rem solid transparent;
+        border-bottom: 0.14rem solid #f77702;
+        display: block;
+        margin: 1px auto 0;
+        position: absolute;
+        top: -0.14rem;
+        left: 50%;
+        margin-left: -0.14rem; }
+      .set-reward .set-reward-val .reward-img-tip i.reward-close {
+        cursor: pointer;
+        color: #fff;
+        font-size: 0.2rem;
+        margin-left: 0.65rem;
+        vertical-align: middle; }
+
+.ib-apply-list {
+  background: #fff; }
+  .ib-apply-list .ib-list-title {
+    font-size: 0.28rem;
+    letter-spacing: -0.008rem;
+    height: 1rem;
+    line-height: 1rem;
+    border: 1px solid #e5e5e5; }
+    .ib-apply-list .ib-list-title i {
+      width: 0.08rem;
+      height: 0.32rem;
+      margin-right: 0.22rem;
+      background: #094290;
+      display: inline-block;
+      vertical-align: middle; }
+    .ib-apply-list .ib-list-title span {
+      vertical-align: middle; }
+  .ib-apply-list .ib-list-tab {
+    padding: 0rem 0.3rem; }
+    .ib-apply-list .ib-list-tab table {
+      width: 100%;
+      table-layout: fixed; }
+      .ib-apply-list .ib-list-tab table thead tr td {
+        padding: 0.2rem 0rem 0rem 0rem;
+        font-size: 0.24rem;
+        letter-spacing: -0.006rem;
+        color: #959595; }
+      .ib-apply-list .ib-list-tab table tbody tr {
+        border-bottom: 1px solid #e5e5e5; }
+        .ib-apply-list .ib-list-tab table tbody tr:last-child {
+          border-bottom: none; }
+        .ib-apply-list .ib-list-tab table tbody tr td {
+          padding: 0.2rem 0rem;
+          font-size: 0.24rem;
+          letter-spacing: -0.007rem;
+          color: #000000;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+          .ib-apply-list .ib-list-tab table tbody tr td:nth-child(3) {
+            padding-right: 0.34rem; }
+
+.ib-apply-btn-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  .ib-apply-btn-box .ib-apply-btn {
+    background: #efeff4; }
+    .ib-apply-btn-box .ib-apply-btn .ib-apply-sure {
+      cursor: pointer;
+      width: 100%;
+      height: 0.98rem;
+      background: #f7ab09;
+      border: none;
+      outline: none;
+      font-size: 0.32rem;
+      letter-spacing: -0.008rem;
+      color: #ffffff; }

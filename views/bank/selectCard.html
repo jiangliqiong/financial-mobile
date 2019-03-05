@@ -1,0 +1,49 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/bank/selectCard.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <ul class="list" id="bankCardListBox">
+
+        <!--<li>-->
+            <!--<img src="/images/bank/icbc.png" />-->
+            <!--<span class="name">中国银行</span>-->
+            <!--<span class="number">尾号5211</span>-->
+            <!--<span class="icon iconfont selectIcon">&#xe71f;</span>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<img src="/images/bank/icbc.png" />-->
+            <!--<span class="name">中国银行</span>-->
+            <!--<span class="number">尾号5211</span>-->
+            <!--<span class="icon iconfont selectIcon">&#xe71f;</span>-->
+        <!--</li>-->
+    </ul>
+    <a class="addBtn" href="/personal/bank.html?type=2&status=1">
+        <span class="icon iconfont addIcon">&#xe729;</span>
+        <span class="addText">添加银行卡</span>
+    </a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/bank/selectCard.js"></script>
+<script id="bankCardListTml" type="text/html">
+    <% for (var i = 0; i < list.length; i++) { %>
+    <li>
+        <a href="withdraw.html?id=<%= list[i].account_id %>">
+            <img src="<%= list[i].bankLogo %>" />
+            <span class="name"><%= list[i].chinese_name %></span>
+            <span class="number">尾号<%= list[i].bankAccount %></span>
+            <span class="icon iconfont selectIcon"><%= list[i].selected ? '&#xe71f;' : '' %></span>
+        </a>
+    </li>
+    <% } %>
+</script>
+{% endblock %}

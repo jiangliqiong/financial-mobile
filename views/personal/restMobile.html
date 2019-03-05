@@ -1,0 +1,47 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/personal/restMobile.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<!-- <div id="modiMob0" >
+  	 <ul class="modiMinBox">
+  	 	<li class="">
+  	 		密码验证
+  	 		<span class="fr">
+  	 			<input type="password" name="password" id="password" placeholder="请输入登录密码" required/>
+  	 			<em class="icon-clean"></em>
+  	 		</span>
+  	 	</li>
+  	 </ul>
+</div> -->
+<div id="modiMob1">
+   <ul class="modiMinBox">
+    <li class="code">
+      新手机号
+      <span class="fr">
+        <input type="number" id="phoneNum" placeholder="请输入新的手机号" name="phoneNum" required/>
+        <em class="icon-clean"></em>
+      </span>
+      <b id="getCode" class="get-code disabled">获取验证码</b>
+    </li>
+    <li class="code">
+      验证码
+      <span class="fr code-span">
+        <input type="number" id="smsCode" name="validateCode" placeholder="请输入验证码" required/>
+        <em class="icon-clean"></em>
+      </span>
+    </li>
+   </ul>
+   <a href="javascript:;" id="clickSubmit" class="save disabled">确定</a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/personal/restMobile.js"></script>
+{% endblock %}

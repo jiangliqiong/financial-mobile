@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="750px" height="380px" viewBox="0 0 750 380" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>0CEB95BA-0633-481D-9855-EB289F33EBEB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="-2.08555984%" y1="-2.11746635%" x2="93.8570795%" y2="82.2277313%" id="linearGradient-1">
+            <stop stop-color="#93F7DF" offset="0%"></stop>
+            <stop stop-color="#5766DB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="60.0242257%" y1="55.9131898%" x2="33.1235509%" y2="23.2225737%" id="linearGradient-2">
+            <stop stop-color="#6062DE" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#F3F3F3" stop-opacity="0.256651947" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="58.130229%" y1="-8.82722746%" x2="187.171857%" y2="144.980162%" id="linearGradient-3">
+            <stop stop-color="#F3F1FF" offset="0%"></stop>
+            <stop stop-color="#4056ED" offset="100%"></stop>
+        </linearGradient>
+        <path d="M42.5795903,19.433863 L42.5795903,43.5419207 L51.0926468,58.1692816 L42.5795903,58.1692816 L34.0665338,58.1692816 L25.5534773,58.1692816 L9.68628454,58.1692816 C4.3352205,58.1692816 0,53.0511309 0,46.7496754 L1.98697633e-15,19.4196063 C1.98697633e-15,13.1181506 4.33522036,8.00000014 9.68628454,8.00000014 L32.8933058,8 C38.2443698,8.01425677 42.5795903,13.1181508 42.5795903,19.433863 Z" id="path-4"></path>
+        <filter x="-27.4%" y="-19.9%" width="154.8%" height="155.8%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="4" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.284626526   0 0 0 0 0.380392518   0 0 0 0 0.902317177  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M74.4125066,53.4910895 C86.903092,53.4910895 97.1330675,41.4584457 97.1330675,26.7455447 C97.1330675,12.0326438 86.9173997,0 74.4125066,0 C61.9219211,0 51.6919456,12.0326438 51.6919456,26.7455447 C51.6919456,41.4584457 61.9076134,53.4910895 74.4125066,53.4910895 M29.0187793,94.0153561 L120.002925,94.0153561 C120.002925,76.0033043 93.673039,59.2837309 74.4196604,59.2837309 C55.1662818,59.2837309 28.9992676,76 29.0187793,94.0153561 Z" id="path-6"></path>
+        <filter x="-15.4%" y="-10.6%" width="130.8%" height="129.8%" filterUnits="objectBoundingBox" id="filter-7">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="4" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.284626526   0 0 0 0 0.380392518   0 0 0 0 0.902317177  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.2.2.达到申请条件填写" transform="translate(0.000000, -127.000000)">
+            <g id="顶导" transform="translate(0.000000, 127.000000)">
+                <g id="达到头图">
+                    <rect id="背景" fill="url(#linearGradient-1)" x="0" y="0" width="750" height="380"></rect>
+                    <g id="Group" transform="translate(504.000000, 167.000000)">
+                        <circle id="Oval-2" stroke="#FC6262" stroke-width="4" cx="152.5" cy="23.5" r="8.5"></circle>
+                        <circle id="Oval" fill="url(#linearGradient-2)" cx="105" cy="77" r="54"></circle>
+                        <g id="代理商管理" transform="translate(20.000000, 0.000000)" fill-rule="nonzero">
+                            <g id="Shape">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            </g>
+                            <g id="Shape">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                                <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-6"></use>
+                            </g>
+                        </g>
+                        <path d="M6.4,80.4 L0,80.4 L0,83.6 L6.4,83.6 L6.4,90 L9.6,90 L9.6,83.6 L16,83.6 L16,80.4 L9.6,80.4 L9.6,74 L6.4,74 L6.4,80.4 Z" id="Combined-Shape" fill="#2DF8BE"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

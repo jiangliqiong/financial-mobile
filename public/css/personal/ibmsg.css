@@ -1,0 +1,92 @@
+body {
+  background: #efeff4;
+  margin-top: 0.88rem;
+  overflow-y: visible; }
+
+.ib-msg {
+  padding: 0rem 0.3rem;
+  background: #fff;
+  margin-bottom: 0.2rem; }
+  .ib-msg .ib-msg-main .ib-msg-box {
+    padding: 0.4rem 0rem;
+    position: relative; }
+    .ib-msg .ib-msg-main .ib-msg-box .ib-link {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2; }
+    .ib-msg .ib-msg-main .ib-msg-box div {
+      vertical-align: middle; }
+    .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box {
+      width: 0.45rem;
+      margin-right: 0.15rem;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      top: 0.03rem; }
+      .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box .ib-icon {
+        display: inline-block;
+        background-size: 100% !important; }
+        .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box .ib-icon.ib-icon-name {
+          width: 0.32rem;
+          height: 0.42rem;
+          background: url("/images/ib/svg/icon-name.svg") no-repeat; }
+        .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box .ib-icon.ib-icon-area {
+          width: 0.41rem;
+          height: 0.49rem;
+          background: url("/images/ib/svg/icon-area.svg") no-repeat; }
+        .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box .ib-icon.ib-icon-business {
+          width: 0.4rem;
+          height: 0.32rem;
+          background: url("/images/ib/svg/icon-business.svg") no-repeat; }
+        .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box .ib-icon.ib-icon-phone {
+          width: 0.41rem;
+          height: 0.4rem;
+          background: url("/images/ib/svg/icon-phone.svg") no-repeat; }
+        .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box .ib-icon.ib-icon-email {
+          width: 0.4rem;
+          height: 0.32rem;
+          background: url("/images/ib/svg/icon-email.svg") no-repeat; }
+        .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box .ib-icon.ib-icon-qq {
+          width: 0.4rem;
+          height: 0.42rem;
+          background: url("/images/ib/svg/icon-qq.svg") no-repeat; }
+        .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box .ib-icon.ib-icon-url {
+          width: 0.43rem;
+          height: 0.33rem;
+          background: url("/images/ib/svg/icon-url.svg") no-repeat; }
+        .ib-msg .ib-msg-main .ib-msg-box .ib-icon-box .ib-icon.ib-icon-introduce {
+          width: 0.37rem;
+          height: 0.38rem;
+          background: url("/images/ib/svg/icon-introduce.svg") no-repeat; }
+    .ib-msg .ib-msg-main .ib-msg-box .ib-name {
+      width: 1.6rem;
+      display: inline-block;
+      font-size: 0.32rem;
+      letter-spacing: -0.008rem;
+      color: #000000;
+      position: relative; }
+    .ib-msg .ib-msg-main .ib-msg-box .ib-val {
+      display: inline-block;
+      float: right;
+      font-size: 0.32rem;
+      letter-spacing: -0.008rem;
+      color: #959595; }
+      .ib-msg .ib-msg-main .ib-msg-box .ib-val p {
+        display: inline-block;
+        max-width: 3.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle; }
+      .ib-msg .ib-msg-main .ib-msg-box .ib-val i {
+        font-size: 0.3rem;
+        vertical-align: middle;
+        color: #b5b5b5; }
+  .ib-msg .ib-msg-main .line {
+    margin: 0rem 0rem 0rem 0.75rem;
+    height: 0.021rem;
+    background: #e5e5e5; }

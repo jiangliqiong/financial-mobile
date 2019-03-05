@@ -1,0 +1,21 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/personal/ibIntroduce.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <textarea class="content" maxlength="5000" name="ibIntroduce" placeholder="请填写您的相关介绍，以更好的展示您的优势，让更多的客户选择您（5000个汉字以内）" autofocus></textarea>
+    <a class="submitBtn">确定</a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/personal/ibIntroduce.js"></script>
+{% endblock %}
+

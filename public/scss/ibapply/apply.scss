@@ -1,0 +1,329 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #efeff4;
+  @include remCalc(margin,88 0 138 0);
+}
+.apply-body {
+  background: #efeff4;
+}
+.ib-base-msg {
+  @include remCalc(padding,40 30);
+  background: #fff;
+  font-size: 0;
+  .ib-img {
+    @include px2rem(width, 260);
+    @include px2rem(height, 104);
+    display: inline-block;
+    vertical-align: top;
+    img {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #e5e5e5;
+      display: block;
+      box-sizing: border-box;
+    }
+  }
+  .detail-back {
+      float: right;
+    p {
+      @include px2rem(width, 80);
+      @include px2rem(height, 100);
+      background: -webkit-linear-gradient( #fbd811, #f5b007);
+      color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      @include css3(border-radius, 4);
+      span {
+        @include px2rem(font-size, 16);
+        @include px2rem(letter-spacing, -0.4);
+      }
+      i {
+        display: block;
+        @include px2rem(width, 32);
+        height: 1px;
+        background: #fff;
+        margin: 0 auto;
+        @include px2rem(margin-top, 8);
+        @include px2rem(margin-bottom, 5);
+      }
+      b {
+        @include px2rem(max-width, 120);
+        @include px2rem(font-size, 36);
+        @include px2rem(letter-spacing, -0.9);
+        display:block;
+        white-space:nowrap;
+        overflow:hidden;
+      }
+    }
+  }
+  .ib-name {
+    @include px2rem(font-size, 36);
+    @include px2rem(letter-spacing, -0.9);
+    color: #000000;
+    display: inline-block;
+    vertical-align: top;
+    @include px2rem(width, 280);
+    @include px2rem(height, 104);
+    @include px2rem(margin-left, 16);
+    span {
+      vertical-align: middle;
+    }
+    .ib-ico {
+      display: inline-block;
+      @include remCalc(padding,3 4);
+      @include px2rem(line-height, 28);
+      @include px2rem(margin-left, 10);
+      @include css3(border-radius, 2);
+      background: linear-gradient(121deg, #ff6d6d, #ff0000);
+      @include px2rem(font-size, 16);
+      @include px2rem(letter-spacing, -0.4);
+      color: #fffbfa;
+      text-align: center;
+      margin-bottom: 3px;
+    }
+  }
+  .ib-rebate {
+     @include px2rem(font-size, 28);
+     @include px2rem(line-height, 40);
+     @include px2rem(letter-spacing, -0.7);
+     @include px2rem(margin-top, 20);
+     color: #000000;
+     a {
+       color: #000000;
+     }
+  }
+}
+.ib-detail-msg {
+  .ib-detail-ul {
+    position: relative;
+    @include remCalc(margin,20 0);
+    ul {
+      background: #fff;
+      @include remCalc(padding,0 30);
+      li {
+        @include flexbox();
+        border-bottom: 0.021rem dashed #e5e5e5;
+        @include remCalc(padding,30 0);
+         div {
+           width: 100%;
+           @include flex();
+           @include px2rem(font-size, 28);
+           &:nth-child(even) {
+            @include px2rem(margin-left,60);
+           }
+           span {
+             color: #000;
+             &:first-child {
+               display: inline-block;
+               color: #959595;
+               @include px2rem(width, 112);
+               @include px2rem(margin-right, 20);
+             }
+           }
+         }
+         &:last-child {
+           border-bottom: none;
+         }
+      }
+    }
+    .ib-detail-line {
+      position: absolute;
+      width: 0;
+      @include px2rem(height, 243);
+      border-left: dashed 1px #e5e5e5;
+      @include px2rem(top, 50);
+      left: 50%;
+      @include px2rem(margin-left, -30);
+    }
+  }
+}
+.set-reward {
+  @include remCalc(margin,0 0 20 0);
+  .set-reward-val {
+    position: relative;
+    @include remCalc(padding,28 30 20 30);
+    @include px2rem(line-height, 58);
+    background: #fff;
+    span {
+      display: inline-block;
+      @include px2rem(font-size, 32);
+      @include px2rem(letter-spacing, -0.8);
+      color: #000000;
+      vertical-align: middle;
+      &.set-reward-label {
+        position: relative;
+        top: -1px;
+        &.unit {
+          @include px2rem(margin-left, 40);
+          color: #959595;
+        }
+      }
+      i {
+        @include px2rem(width, 18);
+        @include px2rem(height, 30);
+        @include px2rem(margin-right, 10);
+        display: inline-block;
+        background: url('/images/ib/svg/apply-rebate.svg') no-repeat;
+        background-size: 100%;
+        vertical-align: middle;
+        @include px2rem(margin-bottom, 3);
+      }
+    }
+    input {
+      @include px2rem(top, -4);
+      @include px2rem(font-size, 32);
+      @include px2rem(width, 300);
+      border: none;
+      vertical-align: middle;
+      -moz-appearance: textfield;
+      position: relative;
+      &::-webkit-input-placeholder {
+         color:#959595;
+      }
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    .reward-tip {
+        @include px2rem(font-size, 24);
+        @include px2rem(letter-spacing, -0.6);
+        @include px2rem(margin-top, 20);
+        @include px2rem(padding-top, 20);
+        color: #959595;
+        border-top: 1px solid #e5e5e5;
+    }
+    .reward-img-tip {
+       position: absolute;
+       @include px2rem(top, 97);
+       @include px2rem(left, 219);
+       @include px2rem(width, 340);
+       @include px2rem(height, 74);
+       @include px2rem(line-height, 74);
+       @include css3(border-radius, 4);
+       background-image: linear-gradient(92deg, #fb8a01, #f46202);
+       box-shadow: 0 torem(2) torem(14) 0 rgba(243, 99, 2, 0.58);
+       text-align: center;
+       span {
+         @include px2rem(font-size, 28);
+         @include px2rem(letter-spacing, -0.7);
+         color: #ffffff;
+         vertical-align: middle;
+         &.reward-close-cover {
+           @include px2rem(width, 86);
+           @include px2rem(height, 74);
+           display: block;
+           position: absolute;
+           right: 0;
+           top: 0;
+           z-index: 3;
+         }
+       }
+       i {
+         &.reward-arrow {
+             width:0;
+             height:0;
+             border-left:torem(14) solid transparent;
+             border-right:torem(14) solid transparent;
+             border-bottom:torem(14) solid #f77702;
+             display: block;
+             margin: 1px auto 0;
+             position: absolute;
+             @include px2rem(top, -14);
+             left: 50%;
+             @include px2rem(margin-left, -14);
+         }
+         &.reward-close {
+             cursor: pointer;
+             color: #fff;
+             @include px2rem(font-size, 20);
+             @include px2rem(margin-left, 65);
+             vertical-align: middle;
+         }
+       }
+    }
+  }
+}
+.ib-apply-list {
+  background: #fff;
+  .ib-list-title {
+    @include px2rem(font-size, 28);
+    @include px2rem(letter-spacing, -0.8);
+    @include px2rem(height, 100);
+    @include px2rem(line-height, 100);
+    border: 1px solid #e5e5e5;
+    i {
+      @include px2rem(width, 8);
+      @include px2rem(height, 32);
+      @include px2rem(margin-right, 22);
+      background: #094290;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+  .ib-list-tab {
+    @include remCalc(padding, 0 30);
+    table {
+      width: 100%;
+      table-layout: fixed;
+      thead {
+        tr {
+          td {
+             @include remCalc(padding, 20 0 0 0);
+             @include px2rem(font-size, 24);
+             @include px2rem(letter-spacing, -0.6);
+             color: #959595;
+          }
+        }
+      }
+      tbody {
+        tr {
+          border-bottom: 1px solid #e5e5e5;
+          &:last-child {
+            border-bottom: none;
+          }
+          td {
+            @include remCalc(padding, 20 0);
+            @include px2rem(font-size, 24);
+            @include px2rem(letter-spacing, -0.7);
+            color: #000000;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            &:nth-child(3) {
+              @include px2rem(padding-right, 34);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.ib-apply-btn-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  .ib-apply-btn {
+    background: #efeff4;
+    .ib-apply-sure {
+      cursor: pointer;
+      width: 100%;
+      @include px2rem(height, 98);
+      background: #f7ab09;
+      border: none;
+      outline: none;
+      @include px2rem(font-size, 32);
+      @include px2rem(letter-spacing, -0.8);
+      color: #ffffff;
+    }
+  }
+}

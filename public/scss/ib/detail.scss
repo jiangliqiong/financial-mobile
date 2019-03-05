@@ -1,0 +1,367 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #efeff4;
+  @include remCalc(margin, 88 0 117 0);
+}
+.detail-top {
+  @include remCalc(padding, 40 30 38 30);
+  background: #fff;
+  .detail-top-msg {
+    font-size: 0;
+    .detail-logo {
+      vertical-align: top;
+      @include px2rem(width, 260);
+      @include px2rem(height, 104);
+      display: inline-block;
+      img {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #e5e5e5;
+        box-sizing: border-box;
+      }
+    }
+    .detail-name {
+      vertical-align: top;
+      @include px2rem(width, 280);
+      @include px2rem(height, 104);
+      display: inline-block;
+      @include px2rem(font-size, 36);
+      @include px2rem(letter-spacing, -0.9);
+      color: #000000;
+      @include px2rem(margin-left, 16);
+      i {
+        @include px2rem(font-size, 16);
+        @include px2rem(letter-spacing, -0.4);
+        @include remCalc(padding, 3 4);
+        @include px2rem(margin-left, 10);
+        background: linear-gradient(121deg, #ff6d6d, #ff0000);
+        color: #fffbfa;
+        font-style: normal;
+        @include css3(border-radius, 2);
+        vertical-align: middle;
+        display: inline-block;
+      }
+    }
+    .detail-back {
+        float: right;
+      p {
+        @include px2rem(width, 80);
+        @include px2rem(height, 100);
+        background: -webkit-linear-gradient( #fbd811, #f5b007);
+        color: #fff;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        @include css3(border-radius, 4);
+        span {
+          @include px2rem(font-size, 16);
+          @include px2rem(letter-spacing, -0.4);
+        }
+        i {
+          display: block;
+          @include px2rem(width, 32);
+          height: 1px;
+          background: #fff;
+          margin: 0 auto;
+          @include px2rem(margin-top, 8);
+          @include px2rem(margin-bottom, 5);
+        }
+        b {
+          @include px2rem(max-width, 120);
+          @include px2rem(font-size, 36);
+          @include px2rem(letter-spacing, -0.9);
+          display:block;
+          white-space:nowrap;
+          overflow:hidden;
+        }
+      }
+    }
+  }
+  .detail-ib-msg {
+    @include px2rem(margin-top, 40);
+    @include clearfix();
+    .detail-ib-msg-lt {
+      border-top: 1px solid #e5e5e5;
+      .detail-ib-name {
+        @include px2rem(font-size, 36);
+        @include px2rem(letter-spacing, -0.9);
+        color: #000000;
+        span {
+          vertical-align: middle;
+        }
+        i {
+          @include px2rem(font-size, 16);
+          @include px2rem(letter-spacing, -0.4);
+          @include remCalc(padding, 3 4);
+          @include px2rem(margin-left, 10);
+          background: linear-gradient(121deg, #ff6d6d, #ff0000);
+          color: #fffbfa;
+          font-style: normal;
+          @include css3(border-radius, 2);
+          vertical-align: middle;
+        }
+      }
+      .detail-ib-other {
+        @include px2rem(font-size, 24);
+        @include px2rem(letter-spacing, -0.6);
+        @include px2rem(margin-top, 30);
+        color: #959595;
+        .iconfont {
+          color: #094290;
+          @include px2rem(margin-right, 10);
+          &.icon-tubiao-dizhi {
+            @include px2rem(font-size, 22);
+          }
+          &.icon-tubiao-jianguanjigou {
+            @include px2rem(font-size, 21);
+          }
+        }
+        span {
+          @include px2rem(margin-right, 30);
+        }
+      }
+    }
+    .detail-ib-msg-rt {
+      cursor: pointer;
+      float: left;
+      .icon-tubiao-fenxiang {
+        @include px2rem(font-size, 54);
+        color: #094290;
+        @include px2rem(margin-left, 53);
+      }
+      p {
+        @include px2rem(font-size, 32);
+        @include px2rem(letter-spacing, -0.9);
+        @include px2rem(margin-left, 48);
+        color: #094290;
+      }
+    }
+  }
+}
+.detail-ib-describe {
+  cursor: pointer;
+  background: #fff;
+  @include px2rem(margin-top, 20);
+  @include px2rem(padding-bottom, 66);
+  .describe-title {
+    @include px2rem(font-size, 32);
+    @include px2rem(letter-spacing, -0.8);
+    @include px2rem(line-height, 45);
+    @include remCalc(padding, 28 0);
+    display: table-cell;
+    i {
+      @include px2rem(width, 8);
+      @include px2rem(height, 32);
+      @include px2rem(margin-right, 22);
+      background: #094290;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+  .describe-content {
+    @include remCalc(padding, 0 30);
+    @include px2rem(font-size, 28);
+    color: #000000;
+    p {
+       @include px2rem(line-height, 40);
+       overflow: hidden;
+       display: -webkit-box;
+       -webkit-line-clamp: 5;
+       -webkit-box-orient: vertical;
+       word-break: break-all;
+    }
+  }
+  .describe-slightly {
+    @include px2rem(font-size, 28);
+    color: #000000;
+    @include remCalc(padding, 0 30);
+    position: relative;
+    display: none;
+  }
+  .icon-jiantou {
+    @include css3fn('transform',rotate(90deg));
+    left: 50%;
+    @include px2rem(top, 30);
+    @include px2rem(font-size, 18);
+    @include px2rem(margin-left, -18);
+    color: #000;
+    font-weight: bold;
+    position: relative;
+    display: none;
+    &.up {
+      @include css3fn('transform',rotate(270deg));
+    }
+  }
+}
+.detail-field {
+  @include px2rem(margin-top, 20);
+  @include remCalc(padding, 0 30);
+  background: #fff;
+  ul {
+    li {
+       @include flexbox();
+       border-bottom: 0.021rem solid #e5e5e5;
+       &:last-child {
+         border-bottom: none;
+       }
+       &>div {
+         @include flex();
+         width: 100%;
+         @include remCalc(padding, 30 0);
+         @include px2rem(font-size, 28);
+         color: #000000;
+         overflow: hidden;
+         text-overflow:ellipsis;
+         white-space: nowrap;
+         &:first-child {
+           border-right: 0.021rem solid #e5e5e5;
+         }
+         &:last-child {
+           span {
+             &:first-child {
+               @include px2rem(margin-left, 60);
+             }
+           }
+         }
+         span {
+           &:first-child {
+              @include px2rem(width, 112);
+              display: inline-block;
+              @include px2rem(margin-right, 20);
+              color: #959595;
+           }
+         }
+       }
+    }
+  }
+}
+.ib-explain {
+  background: #fff;
+  @include px2rem(margin-top, 20);
+  @include px2rem(padding-bottom, 30);
+  .explain-title {
+    @include px2rem(font-size, 32);
+    @include px2rem(letter-spacing, -0.8);
+    @include px2rem(line-height, 45);
+    @include remCalc(padding, 28 0);
+    display: table-cell;
+    i {
+      @include px2rem(width, 8);
+      @include px2rem(height, 32);
+      @include px2rem(margin-right, 22);
+      background: #094290;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+  .explain-content {
+    @include remCalc(padding, 0 30);
+    @include px2rem(font-size, 28);
+    color: #000000;
+    overflow: hidden;
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+.ib-detail-btn {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  a {
+    width: 100%;
+    @include px2rem(font-size, 32);
+    @include remCalc(padding, 26 0);
+    text-align: center;
+    display: block;
+    color: #fff;
+    border:none;
+    outline: none;
+    background: #f7ab09;
+  }
+}
+
+/******************二维码********************/
+.qrcodeLayerBox .qrcodeLayer{
+    position: fixed;
+    left: calc(50% - 2.35rem);
+    top: 20%;
+    width: 4.7rem;
+    height: 6.8rem;
+    border-radius: 0.04rem;
+    z-index: 1000;
+    text-align: center;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    display: none;
+}
+.qrcodeLayerBox .qrcodeLayer >img{
+    width: 100%;
+    height: 100%;
+}
+.qrcodeLayerBox .qrcodeLayer .qrcode{
+    position: absolute;
+    top: 0.7rem;
+    left: 0.7rem;
+    width: 3.3rem;
+    height: 3.3rem;
+}
+.qrcodeLayerBox .qrcodeLayer .qrcode img{
+    width: 100%;
+    height: 100%;
+}
+.qrcodeLayerBox .qrcodeLayer .closeBtn{
+    display: block;
+    position: absolute;
+    bottom: 0.3rem;
+    left: 2.05rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.6rem;
+}
+
+.qrcodeLayerBox .qrcodeMask{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+}
+
+/*顶部分享按钮*/
+.shop-top-share {
+  position: fixed;
+  top: 0;
+  right: 0.9rem;
+  font-size: 0.42rem;
+  color: #fff;
+  z-index: 1000;
+  cursor: pointer;
+}
+.shop-top-share span {
+  width: 0.9rem;
+  height: 0.88rem;
+  text-align: center;
+  line-height: 0.88rem;
+  display: inline-block;
+}

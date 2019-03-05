@@ -1,0 +1,153 @@
+body {
+  padding-top: 0.88rem;
+  background: #efeff4;
+}
+.copyrighBox ul li:last-child {
+  margin-left: 0.2rem;
+}
+.container{
+    padding-top: 0.88rem;
+    display: none;
+}
+.back-cover {
+  position: absolute;
+  width: 0.9rem;
+  height: 0.88rem;
+  display: none;
+  z-index: 420;
+  left: 0;
+  top: 0;
+}
+.my-con *{
+    box-sizing: border-box;
+}
+.my-con i{
+    font-style: normal;
+}
+
+.my-con{
+    padding: 0 0.2rem;
+}
+.my-con.add-bank-edit {
+  padding: 0;
+}
+.banks{
+    font-size: 0.24rem;
+    line-height: 0.33rem;
+}
+.banks li{
+    background: #fff;
+    border-radius: 0.12rem;
+    margin-top: 0.2rem;
+    box-shadow: 0 5px 12px 0 rgba(29, 74, 177, 0.27);
+    overflow: hidden;
+}
+.banks li>div{
+    background-image: linear-gradient(107deg, #bfc0c2, #a9acb1);
+    color: #fff;
+    padding: 0.42rem 0.4rem 0.42rem 1.28rem;
+    position: relative;
+}
+.banks li.active>div{
+    background-image: linear-gradient(97deg, #3fa9ff, #257aea);
+}
+.banks li.active p span:first-child{
+    color: #ff5e00;
+}
+.banks li>div i{
+    position: absolute;
+    top: 0.5rem;
+    left: 0rem;
+    height: 1.28rem;
+    width: 1.28rem;
+    text-align: center;
+}
+.banks li>div i img{
+
+}
+.banks dt{
+    font-size: 0.36rem;
+    line-height: 0.5rem;
+    position: relative;
+}
+.banks dt span:last-child{
+    position: absolute;
+    right: 0;
+}
+.banks dd{
+    margin-top: 0.1rem;
+}
+.banks dd>span{
+    display: inline-block;
+}
+.banks dd .boder-rt{
+    padding-right: 0.1rem;
+    margin-right: 0.1rem;
+    position: relative;
+}
+.banks dd .boder-rt:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: #fff;
+    transform: scaleX(0.5);
+    webkitTransform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+}
+.banks li>p{
+    line-height: 0.88rem;
+    color: #1d4ab1;
+    font-size: 0.28rem;
+}
+.banks li>p span{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.banks li>p span:first-child:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: #d8d8d8;
+    transform: scaleX(0.5);
+    webkitTransform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+}
+.banks li>p span i{
+    display: inline-block;
+}
+.banks li.active>p span:first-child i{
+    width: 0.31rem;
+    height: 0.31rem;
+    background: url(/images/personal/icon-tel-def.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.1rem;
+    position: relative;
+    top: 0.05rem;
+}
+.add-con {
+  cursor: pointer;
+}
+.add-con .add{
+    font-size: 0.32rem;
+    color: #959595;
+    line-height: 0.88rem;
+    border: 1px solid #c1c1c1;
+    border-radius: 0.04rem;
+    display: block;
+    text-align: center;
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
+
+.bottomTip{
+    display: none;
+}

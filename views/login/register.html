@@ -1,0 +1,71 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/login/register.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="my-con">
+            <form>
+                <ul>
+                    <li class="input-container has-btn">
+                        <div>手机号</div>
+                        <input type="tel" placeholder="11位手机号码" name="phoneNum" id="phoneNum" required maxlength="11" oninput="if(value.length > 11)value=value.slice(0,11)" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false">
+                        <i class="icon-clean iconfont">&#xe70e;</i>
+                        <span class="get-code disabled" id="getCode">获取验证码</span>
+                    </li>
+                    <li class="input-container">
+                        <div>验证码</div>
+                        <input type="number" placeholder="请输入验证码" name="validateCode" id="smsCode" required oninput="if(value.length > 6)value=value.slice(0,6)" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false">
+                        <i class="icon-clean iconfont">&#xe70e;</i>
+                    </li>
+                    <li class="input-container">
+                        <div>登录密码</div>
+                        <input type="password" placeholder="6~18位的数字和字母组合" name="password" id="password" required>
+                        <i class="icon-clean iconfont">&#xe70e;</i>
+                    </li>
+                    <li class="input-container">
+                        <div>重复密码</div>
+                        <input type="password" placeholder="请再次输入密码" id="rePwd" name="confirmPassword" required>
+                        <i class="icon-clean iconfont">&#xe70e;</i>
+                    </li>
+
+                </ul>
+                <div class="form-last">
+                    <i class="icon-active"></i>我同意 <a href="javascript: void(0);" id="jumpIframe">《选财外汇服务条款》</a>
+                </div>
+                <div class="form-last">
+                    <span class="save disabled">立即注册</span>
+                </div>
+            </form>
+            <a class="back-register" href="javascript:;"></a>
+            <div class="tips-alert"></div>
+            <div class="text-protocol">
+                <p class="indent">欢迎注册成为选财外汇（以下简称“本平台”）会员，使用选财外汇为您提供的会员服务。
+选财外汇在此特别提醒您：在您成为本平台会员前，请仔细阅读并完全理解本服务条款的全部内容。您必须在不加修改地无条件完全接受本服务协议所包含的条款、条件和本平台即时刊登的通稿，并且遵守有关互联网及/或本平台的相关法律、规定与规则的前提下，才能进入会员注册程序。您只有成功注册成为选财外汇会员，才能使用我们提供的会员服务。如您不同意本服务条款的任意内容，请勿注册或使用选财外汇会员服务。如您通过进入注册程序并勾选“我同意”按钮，即表示您与选财外汇投资管理咨询有限公司已达成协议，自愿接受本服务条款的所有内容。此后，您不得以未阅读本服务条款内容作任何形式的抗辩。</p>
+                <p class="paragh_title">一、服务内容</p>
+                <p class="indent">选财外汇（以下简称“本平台”）根据本服务条款通过选财外汇提供各类网络服务，其服务内容可包括网上注册和登记、用户网上查询、购买产品等。</p>
+                <p>本平台有权决定并不时修改服务内容，包括（但不限于）</p>
+                <p>(1) 在任何时候扩展、修改、减少或停止服务内容；</p>
+                <p>(2) 对服务内容加以限制或对这种限制进行修改；</p>
+                <p>(3) 规定或改变提供全部或部分服务内容的服务时间。</p>
+                <p class="indent">上述对服务内容的修改无须向用户或任何第三方作特别告知或专门通知，自本平台作出修改决定之时起自动更新并生效。本平台行使修改或中断服务的权利，不需对用户或任何第三方承担任何责任，也不对其做任何赔偿。</p>
+                <p class="paragh_title">三、用户隐私</p>
+                <p class="indent"> 本平台将根据行业标准严格保密您注册时所填写的个人信息，使您的信息处于安全状态，未经您的同意我们不会提供您的信息给第三者（公司或个人）。</p>
+                <p class="indent">用户应详细阅读本平台的隐私条款，用户使用本平台的任何服务应视为同意并遵守本平台的隐私条款。选财外汇确保用户个人隐私得到尊重，保证不会在未经用户合法授权时公开、编辑或透露用户注册资料及保存在本平台中的非公开内容。但以下情况除外：</p>
+                <p>(1) 用户授权本平台公开、透露这些信息；</p>
+                <p>(2) 相关的法律法规或监管机构、司法机构要求本平台提供用户的个人资料；国家司法机关符合法律规定并经法定程序的检查及其他操作；</p>
+                <p>(3) 任何第三方盗用、冒用或未经许可擅自披露、使用或对外公开用户的个人隐私资料。</p>
+                <p>(4) 注册会员自己要求网站提供特定服务时，需要把注册会员的姓名和地址提供给第三者的。</p>
+                <p>(5) 在适合的情况下，并在您同意的前提下，我们会利用您的信息来联络您，为您发送信息。</p>
+            </div>
+        </div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/login/register.js"></script>
+{% endblock %}

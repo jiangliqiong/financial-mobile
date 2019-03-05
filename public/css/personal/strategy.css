@@ -1,0 +1,128 @@
+body {
+  background: #efeff4;
+  margin-top: 0.88rem; }
+
+.strategy-list {
+  padding-bottom: 0.94rem; }
+  .strategy-list ul li {
+    padding: 0.2rem 0.3rem;
+    margin-bottom: 0.2rem;
+    background: #fff; }
+    .strategy-list ul li .strategy-time {
+      color: #959595;
+      font-size: 0.28rem;
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid #e5e5e5; }
+      .strategy-list ul li .strategy-time .strategy-del {
+        font-size: 0.24rem;
+        float: right;
+        color: #959595;
+        cursor: pointer; }
+    .strategy-list ul li .strategy-msg {
+      font-size: 0;
+      margin-top: 0.27rem; }
+      .strategy-list ul li .strategy-msg p:first-child {
+        margin-bottom: 0.2rem; }
+        .strategy-list ul li .strategy-msg p:first-child span {
+          vertical-align: middle; }
+          .strategy-list ul li .strategy-msg p:first-child span:nth-child(1) {
+            font-size: 0.4rem;
+            margin-right: 0.1rem;
+            color: #000; }
+          .strategy-list ul li .strategy-msg p:first-child span:nth-child(2) {
+            font-size: 0.24rem;
+            padding: 0.04rem 0.06rem;
+            border: 1px solid #0984ea;
+            -webkit-border-radius: 0.04rem;
+            -moz-border-radius: 0.04rem;
+            -ms-border-radius: 0.04rem;
+            -o-border-radius: 0.04rem;
+            border-radius: 0.04rem; }
+            .strategy-list ul li .strategy-msg p:first-child span:nth-child(2).empty {
+              color: #0984ea; }
+            .strategy-list ul li .strategy-msg p:first-child span:nth-child(2).more {
+              color: #f33b49;
+              border-color: #f33b49; }
+            .strategy-list ul li .strategy-msg p:first-child span:nth-child(2).area {
+              color: #f9a622;
+              border-color: #f9a622; }
+      .strategy-list ul li .strategy-msg p:last-child {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 0.28rem;
+        color: #959595; }
+        .strategy-list ul li .strategy-msg p:last-child span {
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          width: 100%;
+          display: inline-block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+          .strategy-list ul li .strategy-msg p:last-child span b {
+            font-weight: normal;
+            color: #000;
+            margin-left: 0.1rem; }
+        .strategy-list ul li .strategy-msg p:last-child.area {
+          display: block;
+          font-size: 0; }
+          .strategy-list ul li .strategy-msg p:last-child.area span {
+            width: auto;
+            color: #000;
+            vertical-align: top;
+            font-size: 0.28rem; }
+            .strategy-list ul li .strategy-msg p:last-child.area span:last-child {
+              color: #959595;
+              margin-left: 0.2rem;
+              margin-top: -0.02rem; }
+          .strategy-list ul li .strategy-msg p:last-child.area b {
+            color: #000;
+            vertical-align: top;
+            font-size: 0.28rem;
+            margin: 0rem 0.2rem;
+            font-weight: normal; }
+
+.strategy-add {
+  width: 100%;
+  background: #094290;
+  color: #fff;
+  font-size: 0.32rem;
+  letter-spacing: -0.008rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  cursor: pointer;
+  display: table-cell; }
+  .strategy-add a {
+    padding: 0.26rem 0rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff; }
+    .strategy-add a i {
+      width: 0.32rem;
+      height: 0.32rem;
+      display: inline-block;
+      background: url("/images/personal/add.svg") no-repeat;
+      background-size: 100%;
+      margin-right: 0.15rem;
+      vertical-align: middle; }
+    .strategy-add a span {
+      vertical-align: middle; }
+
+.no-strategy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -1.14rem;
+  margin-top: -1.62rem; }
+  .no-strategy img {
+    width: 2.06rem;
+    height: 2.68rem; }
+  .no-strategy p {
+    font-size: 0.38rem;
+    color: #999; }

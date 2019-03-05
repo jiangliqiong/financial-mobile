@@ -1,0 +1,197 @@
+{% extends '../common/layout.html' %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/openAccount/index.css" />
+<link type="text/css" rel="stylesheet" href="/css/common/iosSelect.css" />
+{% endblock %}
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+
+{% block content %}
+{% if brokerInfo=="" %}
+   <div class="open_header">
+      <div class="nodata abnormal" style="display: block;">
+        <img src="/images/common/nodata.png" srcset="/images/common/nodata@2x.png 2x, /images/common/nodata@3x.png 3x" />
+        <span>当前交易商不存在！<br/>请退出重新选择其他的交易商</span>
+    </div>
+     </div>
+{% else %}
+<div class="open_header">
+    <dl>
+        <dd><img src="{{brokerInfo.logo_url}}" width="100%"></dd>
+        <dt>
+            <p>{{brokerInfo.chinese_name}}</p>
+            <span class="customershow">外汇返佣：${% if brokerInfo.customer_back %}{{ brokerInfo.customer_back }}{% else %}0{% endif %}/手</span>
+            <span class="ibshow">代理返佣：${% if brokerInfo.ib_back %}{{ brokerInfo.ib_back }}{% else %}0{% endif %}/手</span>
+        </dt>
+    </dl>
+    {% if reftype=="" %}
+        <table>
+            <tbody><tr>
+                <th>平均点差{{ reftype }}</th>
+                <th>最高杠杆</th>
+                <th>最低入金</th>
+                <th>经营模式</th>
+            </tr>
+            <tr>
+                <td>{{ brokerInfo.min_point }}</td>
+                <td>{{ brokerInfo.max_leverage }}</td>
+                <td>{{ brokerInfo.min_price }}</td>
+                <td>{{ brokerInfo.managing_mode }}</td>
+            </tr>
+            </tbody>
+        </table>
+    {% else %}
+    <div class="agenttip">
+        <p>成为该交易商代理，享受代理返佣 ${% if brokerInfo.ib_back %}{{ brokerInfo.ib_back }}{% else %}0{% endif %}/手 <i class="icon iconfont close">&#xe726;</i></p>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
+<form class="open_form">
+    <div class="opencont">
+        <h4 class="open_introducer" style="display: none;">
+            <span>介绍人</span>
+            <input type="tel" name="open_introducer_mobile" placeholder="您的介绍人手机号码(选填)" title="介绍人手机号码" maxlength="11" />
+            <input type="text" name="open_introducer" style="display: none;">
+            <input type="text" name="ibId" value="" style="display: none;"/>
+            <i class="icon iconfont deleteicon">&#xe70e;</i>
+        </h4>
+        <h4>
+            <span>姓氏</span>
+            <input type="text" name="firstName" placeholder="您的真实姓氏" title="姓氏"/>
+            <i class="icon iconfont deleteicon">&#xe70e;</i>
+        </h4>
+        <h4>
+            <span>名字</span>
+            <input type="text" name="lastName" placeholder="您的真实名字" title="名字"/>
+            <i class="icon iconfont deleteicon">&#xe70e;</i>
+        </h4>
+        <h4>
+            <span>称谓</span>
+            <label class="sex">
+                <i class="icon iconfont radio">&#xe724;</i>
+                <input type="radio" name="sex" value="0">先生
+            </label>
+            <label class="sex">
+                <i class="icon iconfont radio">&#xe724;</i>
+                <input type="radio" name="sex" value="1">女士
+            </label>
+        </h4>
+        <h4>
+            <span>出生日期</span>
+            <div class="form-item item-line" id="selectDate">
+                <div class="pc-box">
+                    <input type="hidden" name="birthday" value="1980-01-01"/>
+                    <em data-year="1980" data-month="01" data-date="01" id="showDate">1980-01-01</em>
+                    <i class="icon iconfont arrowicon">&#xe720;</i>
+                </div>
+            </div>
+        </h4>
+        <h4>
+            <span>电子邮箱</span><input type="text" name="email" placeholder="电子邮箱" title="电子邮箱"/><i class="icon iconfont deleteicon">&#xe70e;</i>
+        </h4>
+        <h4>
+            <span>国家</span>
+            <input type="hidden" name="country_id" id="countryId" value="01">
+            <em id="showCountry"></em>
+            <i class="icon iconfont arrowicon">&#xe720;</i>
+        </h4>
+        <h4>
+            <span>所在地区</span>
+            <div class="form-item item-line" id="selectArea">
+                <div class="pc-box">
+                    <input type="hidden" name="province_id"/>
+                    <input type="hidden" name="cityid"/>
+                    <em data-province="" data-city="" id="showArea">所在地区</em>
+                    <i class="icon iconfont arrowicon">&#xe720;</i>
+                </div>
+            </div>
+        </h4>
+        <h4>
+            <span>街道地址</span>
+            <input type="text" name="regiondesc" placeholder="所在街道地址"/>
+            <i class="icon iconfont locateicon" style="display: none;">&#xe711;</i>
+            <i class="icon iconfont deleteicon">&#xe70e;</i>
+        </h4>
+        <h4>
+            <span>邮政编码</span>
+            <input type="number" name="post_code" placeholder="邮政编码" title="邮政编码"/>
+            <i class="icon iconfont deleteicon">&#xe70e;</i>
+        </h4>
+        <h4>
+            <span>身份证号码</span>
+            <input type="text" name="idnumber" placeholder="15或者18位身份证号" title="身份证号码">
+            <i class="icon iconfont deleteicon">&#xe70e;</i>
+        </h4>
+        <h4 class="photoshow">
+            <span>身份证照片</span>
+            <del>已认证</del>
+        </h4>
+    </div>
+    <div class="opencont">
+        <h5>上传身份证图片（正反面各一张）</h5>
+        <p class="tips">证件必须是彩色原件电子版，可以是扫描件或数码拍摄照片，图片支持图片格式为.jpg .jpeg</p>
+        <dl class="upload">
+            <dt class="uploaddiv">
+               <input type="file" name="fileImg1" i="1" class="fileImage"/>
+               <div>
+                    <i class="icon iconfont">&#xe718;</i>
+                    <p>上传人像面</p>
+               </div>
+            </dt>
+            <dd class="uploaddiv">
+                <input type="file" name="fileImg2" i="2" class="fileImage"/>
+                <div>
+                    <i class="icon iconfont">&#xe718;</i>
+                    <p>上传国徽面</p>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    {% if brokerInfo.broker_id == "1" %}
+    <div class="opencont">
+        <h5>上传银行卡照片</h5>
+        <p class="tips">证件必须是彩色原件电子版，可以是扫描件或数码拍摄照片，图片支持图片格式为.jpg .jpeg</p>
+        <dl class="upload">
+            <dd class="uploaddiv" style="float:left;">
+                <input type="file" name="bank_url" i="3" class="fileImage"/>
+                <div>
+                    <i class="icon iconfont">&#xe718;</i>
+                    <p>上传银行卡</p>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    {% endif %}
+    <div class="btnshow">
+        <a class="smallbtn">上一步</a>
+        <a class="smallbtn disable submitData">确认提交</a>
+    </div>
+</form>
+<div class="openInfo">
+    <dl><dt>姓名：</dt><dd datashow="name"> </dd></dl>
+    <dl><dt>称谓：</dt><dd datashow="sex"> </dd></dl>
+    <dl><dt>出生日期：</dt><dd datashow="birthday"> </dd></dl>
+    <dl><dt>电子邮箱：</dt><dd datashow="email"> </dd></dl>
+    <dl><dt>国家：</dt><dd datashow="countryName"> </dd></dl>
+    <dl><dt>所在地区：</dt><dd datashow="location"> </dd></dl>
+    <dl><dt>街道地址：</dt><dd datashow="regiondesc"> </dd></dl>
+    <dl><dt>邮政编码：</dt><dd datashow="post_code"> </dd></dl>
+    <dl><dt>手机号码：</dt><dd datashow="telphone"> </dd></dl>
+    <dl><dt>身份证号：</dt><dd datashow="idnumber"> </dd></dl>
+    <dl><dt>身份证照片：</dt><dd datashow="is_checked"> </dd></dl>
+    <div class="editInfo"><span>编辑开户信息 <i class="icon iconfont">&#xe720;</i></span></div>
+    <div class="btnshow">
+        <a class="next-step able submit">确认提交</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/common/iscroll.js"></script>
+<script type="text/javascript" src="/js/common/iosSelect.js"></script>
+<script type="text/javascript" src="/js/openAccount/index.js"></script>
+{% endblock %}

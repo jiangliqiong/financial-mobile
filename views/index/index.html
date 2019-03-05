@@ -1,0 +1,293 @@
+{% extends '../common/layout.html' %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/index/index.css" />
+<link type="text/css" rel="stylesheet" href="/css/common/swiper.min.css" />
+{% endblock %}
+
+{% block content %}
+<div class="indexdiv" style="display: none;">
+    <div class="banner">
+        <div class="search">
+            <div>
+                <i class="icon iconfont">&#xe740;</i>
+                <input type="" name="" placeholder="交易商名称、代理商名词">
+            </div>
+            <span></span>
+        </div>
+        <div id="pager">
+            <em class='on'></em>
+        </div>
+
+        <div id="mySwipe" class="swipe" style="visibility: visible;">
+            <div class="swipe-wrap">
+                <div><a href='/openAccount/check.html?brokerId=40'><img src="/images/index/banner.png"></a></div>
+            </div>
+            <div class="bannerradius"><img src="/images/index/invalid-name@2x.png" width="100%"></div>
+        </div>
+    </div>
+    <div class="bannerlist">
+        <ul>
+            <li><a href="/traders/list.html"><h3><img src="images/index/ib_01.png" srcset="images/index/ib_01@2x.png 2x,images/index/ib_01@3x.png 3x"></h3><p>优质交易商</p></a></li>
+            <li><a href="/ib/list.html"><h3><img src="images/index/ib_02.png" srcset="images/index/ib_02@2x.png 2x,images/index/ib_02@3x.png 3x"></h3><p>代理商IB</p></a></li>
+            <li><a href="/knowledges/home.html"><h3><img src="images/index/ib_03.png" srcset="images/index/ib_03@2x.png 2x,images/index/ib_03@3x.png 3x"></h3><p>外汇大课堂</p></a></li>
+            <li><a href="supervision/list.html"><h3><img src="images/index/ib_04.png" srcset="images/index/ib_04@2x.png 2x,images/index/ib_04@3x.png 3x"></h3><p>监管机构</p></a></li>
+        </ul>
+    </div>
+    <div class="hotlist">
+        <div class="hottop">
+            <span><ins></ins>热门交易商</span>
+            <div>
+                <a href="/noviciate/100activity.html">
+                <img src="images/index/hoticon.png" srcset="images/index/hoticon@2x.png 2x,images/index/hoticon@3x.png 3x">
+                <ul>
+                   <li>用户专享：交易100手以上送kindle</li>
+                </ul>
+                <i class="icon iconfont">&#xe734;</i>
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for item in list %}
+                <div class="swiper-slide stop-swiping">
+                    <ul class="list">
+                      {% for i in item %}
+                      {% if i!=""%}
+                        <li>
+                           <a href="/traders/shop.html?brokerId={{ i.broker_id }}">
+                               <ins>{{ i.managing_mode }}</ins>
+                               <img src="{{ i.logo_url }}"/>
+                               <h3>{{ i.chinese_name}}</h3>
+                               <p>平均点差:{{ i.min_point}}</p>
+                               <p>监管:{{ i.regulatorN }}</p>
+                            </a>
+                        </li>
+                       {% else %}
+                       <li>
+                       </li>
+                       {% endif %}
+                      {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination" style="display: none;"></div>
+        </div>
+    </div>
+    <div class="ibad"><a href="/noviciate/upgradeIb.html"><img src="images/index/ibad.png" width="100%"/></a></div>
+    <div class="adList">
+       <ul>
+            {% for item in ibList %}
+            <li>
+                <a href="/ib/index.html?ibId={{item.recommended_id}}">
+                   <p><img src="{{item.recommend_image}}"></p>
+                   <h3>{{item.recommend_title}}</h3>
+                </a>
+            </li>
+            {% endfor %}
+       </ul>
+    </div>
+    {% if strategy.length > 0 %}
+    <div class="strategy">
+      <div class="strategy-box">
+        <div class="strategy-lt">
+          <img src="/images/index/strategy.svg" alt="">
+          <i></i>
+        </div>
+        <div class="strategy-rt">
+          <ul>
+            {% set listLength = strategy.length %}
+            {% for i in range(0, listLength) -%}
+            {% set data = strategy[i] %}
+            <li>
+              <div class="">
+                <p>
+                  {% if data.chanceName == '做空' %}
+                  <span>{{ data.symbolPeriodName }}/卖</span>
+                  {% else %}
+                  <span>{{ data.symbolPeriodName }}/买</span>
+                  {% endif %}
+                  {% if data.symbolName.length > 2 %}
+                  <span>{{ data.symbolName.substring(0,2) }}/{{ data.symbolName.substring(2,4) }}</span>
+                  {% else %}
+                  <span>{{ data.symbolName }}</span>
+                  {% endif %}
+                  <span>{{ data.recommendTimeStr }}</span>
+                </p>
+                <p><span>入场:{{ data.price }}</span><i></i><span>止损:{{ data.ss }}</span><i></i><span>止盈:{{ data.sy }}</span></p>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    <div class="video">
+      <div class="video-top">
+        <span></span><p>教学视频</p>
+      </div>
+      <div class="video-box">
+        {% for item in videoList %}
+            {% if item.recommend_image!=""%}<a href="/knowledges/detail.html?educationId={{item.recommended_id}}"><p><img src="{{ item.recommend_image }}"/><span><del>{{item.recommend_title}}</del></span><ins></ins></p></a>{% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="end-line"><i></i><p>我已经到底儿啦~</p><i></i></div>
+</div>
+<div class="searchdiv" style="display: none;">
+    <div class="search_s">
+        <form id="searchform" action="#">
+            <i class="icon iconfont">&#xe740;</i>
+            <input type="search" name="search" autocomplete="off" placeholder="交易商名称、代理商名词"/>
+            <i class="icon iconfont clearsearch">&#xe70e;</i>
+        </form>
+        <ins>取消</ins>
+    </div>
+    <div class="searchlink">
+        <ul>
+            <li><span>GoMarkets高汇</span>交易商</li>
+            <li><span>万致 VLTC</span>代理商</li>
+            <li><span>AAA外汇跟单有限公司</span>交易商</li>
+            <li><span>AAA外汇跟单有限公司</span>交易商</li>
+            <li><span>AAA外汇跟单有限公司</span>交易商</li>
+        </ul>
+        <p>点击加载更多</p>
+    </div>
+    <div class="searchnull">
+        很抱歉，没有找到匹配结果
+    </div>
+    <div class="searchResult">
+        <ul class="sResulthead">
+            <li class="on">优质交易商</li>
+            <li>代理商IB</li>
+        </ul>
+        <div class="sResultList traders" style="display:block;">
+            <ul class="trader">
+               <!--  <li>
+                    <img src="  ">
+                    <h3>AETOS艾拓思</h3>
+                    <p>平均点差：<span>1.4</span></p>
+                    <p>最高杠杆：<span>1:323</span></p>
+                    <p>最低入金：<span>$232</span></p>
+                    <p>平台类型：<span>MM/STP/ECN</span></p>
+                    <p>代理返佣：<span>$2/每手</span></p>
+                    <a class="openbtn" href="">马上开户</a>
+                </li>
+                <li>
+                    <img src="  ">
+                    <h3>AETOS艾拓思</h3>
+                    <p>平均点差：<span>1.4</span></p>
+                    <p>最高杠杆：<span>1:323</span></p>
+                    <p>最低入金：<span>$232</span></p>
+                    <p>平台类型：<span>MM/STP/ECN</span></p>
+                    <p>代理返佣：<span>$2/每手</span></p>
+                    <a class="openbtn" href="">马上开户</a>
+                </li>
+                <li>
+                    <img src="  ">
+                    <h3>AETOS艾拓思</h3>
+                    <p>平均点差：<span>1.4</span></p>
+                    <p>最高杠杆：<span>1:323</span></p>
+                    <p>最低入金：<span>$232</span></p>
+                    <p>平台类型：<span>MM/STP/ECN</span></p>
+                    <p>代理返佣：<span>$2/每手</span></p>
+                    <a class="openbtn" href="">马上开户</a>
+                </li>
+                <li>
+                    <img src="  ">
+                    <h3>AETOS艾拓思</h3>
+                    <p>平均点差：<span>1.4</span></p>
+                    <p>最高杠杆：<span>1:323</span></p>
+                    <p>最低入金：<span>$232</span></p>
+                    <p>平台类型：<span>MM/STP/ECN</span></p>
+                    <p>代理返佣：<span>$2/每手</span></p>
+                    <a class="openbtn" href="">马上开户</a>
+                </li> -->
+            </ul>
+        </div>
+        <div class="sResultList ibs">
+            <ul class="ibslist">
+              <!--   <li>
+                    <a href="">
+                        <div><img src="https://test.fmtxt.com/images/index/02.png"></div>
+                        <div>
+                            <h3><span><i class="icon iconfont">&#xe727;</i>认证机构</span>心羽经纪</h3>
+                            <p>
+                                <span>VantageFX万致</span><span>ACH</span><span>阿尔法Alpha</span><span>迈肯司</span><span>迈肯司</span>
+                            </p>
+                            <p>地区：北京</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div><img src="https://test.fmtxt.com/images/index/02.png"></div>
+                        <div>
+                            <h3><span><i class="icon iconfont">&#xe727;</i>认证机构</span>心羽经纪</h3>
+                            <p>
+                                <span>VantageFX万致</span><span>ACH</span><span>阿尔法Alpha</span><span>迈肯司</span><span>迈肯司</span>
+                            </p>
+                            <p>地区：北京</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div><img src="https://test.fmtxt.com/images/index/02.png"></div>
+                        <div>
+                            <h3><span><i class="icon iconfont">&#xe727;</i>认证机构</span>心羽经纪</h3>
+                            <p>
+                                <span>VantageFX万致</span><span>ACH</span><span>阿尔法Alpha</span><span>迈肯司</span><span>迈肯司</span>
+                            </p>
+                            <p>地区：北京</p>
+                        </div>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="history">
+        <div class="hottop">
+            <span><ins> </ins>历史记录</span><i class="icon iconfont">&#xe742;</i>
+        </div>
+        <div class="historylist">
+        </div>
+    </div>
+    <div class="hot">
+        <div class="hottop">
+            <span><ins> </ins>热门交易商</span>
+        </div>
+        <div class="hottrader">
+            <ul>
+                {% for hot in hotList %}
+                <li>
+                    <a href="/traders/shop.html?brokerId={{ hot.broker_id }}">
+                        <div><img src="{{ hot.logo_url }}"></div>
+                        <h3>{{ hot.chinese_name }}</h3>
+                        <p>平均点差：<span>{{ hot.min_point}}</span></p>
+                        <p>最高杠杆：<span>{{ hot.max_leverage}}</span></p>
+                        <p>最低入金：<span>{% if hot.min_price=="" %}$0{% else %}{{ hot.min_price }}{% endif %}</span></p>
+                        <p>经营模式：<span>{{ hot.managing_mode }}</span></p>
+                        <p class="ibback">代理返佣：<span>{% if hot.ib_back=="" %}$0/手{% else %}${{ hot.ib_back }}/手{% endif %}</span></p>
+                        <p class="customerback">交易返佣：<span>{% if hot.customer_back=="" %}$0/手{% else %}${{ hot.customer_back }}/手{% endif %}</span></p>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+{% block footer %}
+{% include "../common/footer.html" %}
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/base64.js"></script>
+<script type="text/javascript" src="js/index/swiper.js"></script>
+<script type="text/javascript" src="js/common/swiper.min.js"></script>
+<script type="text/javascript" src="/js/index/index.js"></script>
+{% endblock %}

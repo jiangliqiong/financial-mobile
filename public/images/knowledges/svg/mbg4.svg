@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="337px" height="160px" viewBox="0 0 337 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>14D7FBD6-B09E-48BA-9A32-EE88D14533E6</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="7.13792147%" y1="11.4999225%" x2="94.9944729%" y2="88.7849442%" id="linearGradient-1">
+            <stop stop-color="#094392" offset="0%"></stop>
+            <stop stop-color="#222222" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="337" height="160" rx="4"></rect>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.1外汇大课堂首页" transform="translate(-383.000000, -691.000000)">
+            <g id="外汇市场实盘" transform="translate(383.000000, 691.000000)">
+                <g id="底图-市场实盘">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <g id="Group-3" mask="url(#mask-3)" stroke="#2640A2" stroke-width="50" opacity="0.599999964">
+                        <g transform="translate(35.004464, 177.370490) rotate(-330.000000) translate(-35.004464, -177.370490) translate(-61.995536, 79.370490)" id="Oval-15">
+                            <ellipse cx="97" cy="98" rx="97" ry="97.1736999"></ellipse>
+                            <path d="M97,195.1737 L97,195.1737 C150.571621,195.1737 194,151.667553 194,98 C194,44.3324475 150.571621,0.826300129 97,0.826300129"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

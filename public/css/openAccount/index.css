@@ -1,0 +1,360 @@
+body {
+  font-size: 0.32rem;
+  background: #efeff4 url(/images/common/loading.gif) no-repeat center 6rem;
+  background-size: 1.5rem 1.5rem;
+}
+ins {
+  text-decoration: none;
+}
+input::-webkit-input-placeholder {
+  color: #dddddd;
+}
+.open_header {
+  font-size: 0.32rem;
+  margin-top: 0.88rem;
+  padding: 0 0.3rem;
+  background: #fff;
+  display: none;
+}
+.open_header dl {
+  position: relative;
+  padding: 0.3rem 0;
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+  padding-left: 2.7rem;
+}
+.open_header dl.showTab:after {
+  content: "";
+  position: absolute;
+  right: 0.1rem;
+  border-top: 1px solid #b5b5b5;
+  border-right: 1px solid #b5b5b5;
+  width: 0.24rem;
+  height: 0.24rem;
+  top: 50%;
+  transform: rotate(-315deg);
+  margin-top: -0.12rem;
+}
+.open_header dd {
+  position: absolute;
+  width: 2.6rem;
+  height: 1.04rem;
+  border: 1px solid #ddd;
+  left: 0;
+}
+.open_header dl dt p {
+  font-size: 0.36rem;
+  line-height: 0.46rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.open_header dd img {
+  width: 2.6rem;
+  height: 1.04rem;
+}
+.open_header dt {
+  padding: 0.1rem 0.3rem 0 0.2rem;
+  height: 1rem;
+}
+.open_header dt span {
+  color: #f7ab09;
+  font-size: 0.28rem;
+  display: none;
+}
+.open_header table {
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  background: #fff;
+}
+.open_header table th {
+  padding-top: 0.2rem;
+  text-align: left;
+  color: #959595;
+  font-weight: normal;
+  font-size: 0.24rem;
+}
+.open_header table td {
+  font-size: 0.24rem;
+  padding-bottom: 0.3rem;
+}
+.open_form .opencont {
+  background: #fff;
+  margin: 0.2rem 0;
+  padding: 0 0.3rem;
+}
+.opencont h5 {
+  padding: 0.4rem 0 0;
+  font-size: 0.36rem;
+}
+.tips {
+  font-size: 0.24rem;
+  color: #959595;
+}
+.open_form {
+  display: none;
+}
+.open_form h4 {
+  padding: 0.4rem 0;
+  border-top: 1px solid #e5e5e5;
+  height: auto;
+  overflow: hidden;
+}
+.open_form span {
+  display: block;
+  width: 30%;
+  float: left;
+  line-height: 0.42rem;
+  font-size: 0.32rem;
+}
+.open_form h4:first-child {
+  border-top: none;
+}
+.open_form h4 input {
+  -webkit-appearance: none;
+  border: 0;
+  padding: 0 0.2rem;
+  font-size: 0.32rem;
+  float: left;
+  width: 63%;
+  background: #fff;
+  line-height: 0.42rem;
+}
+.open_form h4 del {
+  padding: 0 0.2rem;
+  text-decoration: none;
+  color: #999;
+}
+.open_form h4 input[disabled="disabled"] {
+  color: #999;
+}
+.open_form h4 label {
+  float: left;
+  width: 30%;
+}
+.open_form h4 label input {
+  width: 20%;
+}
+#datetime {
+  float: left;
+  width: 66%;
+  padding: 0 0.2rem;
+  font-size: 0.32rem;
+}
+.open_form h4 a {
+  display: inline-block;
+  width: 1.58rem;
+  line-height: 0.54rem;
+  border-radius: 0.04rem;
+  background-color: #094290;
+  color: #fff;
+  font-size: 0.24rem;
+  text-align: center;
+  float: right;
+}
+.open_form input[type='radio'] {
+  -webkit-appearance: none;
+  display: none;
+}
+.open_form h4 i {
+  float: right;
+}
+.next-step {
+  display: block;
+  margin: 0.6rem 0 0;
+  background: #D8D8D8;
+  color: #fff;
+  line-height: 0.88rem;
+  text-align: center;
+  border-radius: 0.05rem;
+}
+.next-step.able {
+  background: #094290;
+}
+.btnshow {
+  padding: 0 0.3rem;
+  margin: 0.6rem 0;
+}
+.smallbtn:last-child {
+  float: right;
+}
+.smallbtn {
+  display: inline-block;
+  width: 48%;
+  text-align: center;
+  line-height: 0.98rem;
+  border-radius: 0.04rem;
+  background: #fff;
+  color: #000;
+}
+.smallbtn.disable {
+  background: #d8d8d8;
+  color: #fff;
+}
+.smallbtn.able {
+  background: #094290;
+  color: #fff;
+}
+.upload {
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 0.4rem;
+  margin-top: 0.4rem;
+}
+.uploaddiv {
+  float: left;
+  height: 2.2rem;
+  border: 2px solid #094290;
+  border-radius: 0.04rem;
+  width: 48%;
+  color: #094290;
+  font-size: 0.28rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.uploaddiv input {
+  position: absolute;
+  width: 100%;
+  height: 2.2rem;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  left: 0;
+  z-index: 1;
+}
+.uploaddiv div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2.2rem;
+}
+.uploaddiv div i {
+  display: inline-block;
+  padding-top: 0.6rem;
+  font-size: 0.48rem;
+}
+.uploaddiv:last-child {
+  float: right;
+}
+.uploaddiv div p {
+  line-height: 0.42rem;
+}
+.deleteicon {
+  opacity: 0;
+  float: right;
+  color: #b6b6b6;
+  position: relative;
+  font-size: 0.36rem;
+  margin-right: 0.02rem;
+}
+.locateicon {
+  float: right;
+  color: #094290;
+  font-size: 0.42rem;
+}
+.agenttip {
+  position: absolute;
+  color: #fff;
+  font-size: 0.28rem;
+  background: -webkit-linear-gradient(304deg, #fb8a01, #f46202);
+  border-radius: 0.04rem;
+  padding: 0.15rem 0;
+  width: 86%;
+  left: 50%;
+  margin-left: -43%;
+  box-shadow: 0px 0px 0.15rem #fb8a01;
+  z-index: 2;
+  display: none;
+}
+.agenttip p {
+  padding: 0 0.76rem 0 0.25rem;
+  line-height: 0.4rem;
+}
+.agenttip p:after {
+  display: inline-block;
+  border: 0.1rem solid transparent;
+  border-bottom: 0.1rem solid #f87702;
+  position: absolute;
+  content: "";
+  top: -0.2rem;
+  left: 50%;
+}
+.agenttip .close {
+  font-size: 0.24rem;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  display: inline-block;
+  width: 0.72rem;
+  height: 0.72rem;
+  right: 0;
+  text-align: center;
+  line-height: 0.72rem;
+}
+.radio {
+  float: left !important;
+  margin: 0 0.1rem 0 0.2rem;
+  font-size: 0.36rem;
+  color: #d9d9d9;
+}
+.radio.checked {
+  color: #f7ab08;
+}
+.arrowicon {
+  float: right;
+  color: #b5b5b5;
+  margin-top: 5px;
+}
+.opencont em {
+  font-style: normal;
+  margin-left: 0.2rem;
+  width: 62%;
+  display: inline-block;
+  line-height: 0.32rem;
+  height: 0.32rem;
+}
+.openInfo {
+  display: none;
+  margin-top: 0.2rem;
+}
+.openInfo dl {
+  padding: 0 0.3rem;
+  background: #fff;
+}
+.openInfo dl dt {
+  font-size: 0.28rem;
+  text-align: left;
+  color: #959595;
+  line-height: 0.4rem;
+  margin-top: 0.2rem;
+  width: 30%;
+  float: left;
+}
+.openInfo dl {
+  height: auto;
+  overflow: hidden;
+}
+.openInfo dl dd {
+  font-size: 0.28rem;
+  color: #000;
+  line-height: 0.4rem;
+  margin-top: 0.2rem;
+  width: 70%;
+  float: right;
+  text-align: right;
+  word-break: break-word;
+}
+.editInfo {
+  padding-top: 0.4rem;
+  background: #fff;
+}
+.editInfo span {
+  display: block;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  line-height: 0.98rem;
+  font-size: 0.32rem;
+  color: #094290;
+}

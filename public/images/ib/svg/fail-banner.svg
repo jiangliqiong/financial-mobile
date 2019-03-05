@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="750px" height="380px" viewBox="0 0 750 380" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>63B81D05-C008-4209-90A6-F32C2CA9ACEE</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="-2.08555984%" y1="-2.11746635%" x2="93.8570795%" y2="82.2277313%" id="linearGradient-1">
+            <stop stop-color="#9993F7" offset="0%"></stop>
+            <stop stop-color="#575BDB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="60.0242257%" y1="55.9131898%" x2="33.1235509%" y2="23.2225737%" id="linearGradient-2">
+            <stop stop-color="#6062DE" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#F3F3F3" stop-opacity="0.256651947" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="18.7985133%" y1="46.6023236%" x2="111.71467%" y2="46.6023237%" id="linearGradient-3">
+            <stop stop-color="#F3F2FF" offset="0%"></stop>
+            <stop stop-color="#E491F1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M99.509668,81.509668 L99.509668,26.509668 L81.509668,26.509668 L81.509668,81.509668 L26.509668,81.509668 L26.509668,99.509668 L81.509668,99.509668 L81.509668,154.509668 L99.509668,154.509668 L99.509668,99.509668 L154.509668,99.509668 L154.509668,81.509668 L99.509668,81.509668 Z" id="path-4"></path>
+        <filter x="-10.9%" y="-7.8%" width="121.9%" height="121.9%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="4" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.545098039   0 0 0 0 0.31372549   0 0 0 0 0.780392157  0 0 0 0.385869565 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.2.1.未达到IB申请条件-单条" transform="translate(0.000000, -127.000000)">
+            <g id="顶导" transform="translate(0.000000, 127.000000)">
+                <g id="未达到头图">
+                    <rect id="背景" fill="url(#linearGradient-1)" x="0" y="0" width="750" height="380"></rect>
+                    <g id="Group" transform="translate(496.000000, 125.000000)">
+                        <circle id="Oval-2" stroke="#FF8585" stroke-width="3" cx="160" cy="65" r="7"></circle>
+                        <circle id="Oval" fill="url(#linearGradient-2)" cx="113" cy="119" r="54"></circle>
+                        <g id="Combined-Shape" transform="translate(90.509668, 90.509668) rotate(-315.000000) translate(-90.509668, -90.509668) ">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                            <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        </g>
+                        <path d="M14.4,122.4 L8,122.4 L8,125.6 L14.4,125.6 L14.4,132 L17.6,132 L17.6,125.6 L24,125.6 L24,122.4 L17.6,122.4 L17.6,116 L14.4,116 L14.4,122.4 Z" id="Combined-Shape" fill="#2DF8BE"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

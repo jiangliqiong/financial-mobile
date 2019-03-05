@@ -1,0 +1,33 @@
+{% extends '../common/layout.html' %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/openAccount/result.css" />
+{% endblock %}
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+{% block content %}
+{% if flag==1 %}
+<div class="success">
+    <i class="icon iconfont successicon">&#xe725;</i>
+	<h5>开户申请提交成功</h5>
+	<p>您的交易账户和初始密码将在审核通过后及时发送至您的邮箱， 请注意查收</p>
+</div>
+<a class="back-step">完成</a>
+{% elif flag==2 %}
+<div class="success">
+    <i class="icon iconfont failicon">&#xe71b;</i>
+	<h5>您已在此交易商开过户</h5>
+	<p>您也可以在“个人中心-我的交易账户”中变更相应代理关系</p>
+</div>
+<a class="back-step">查看开户信息</a>
+{% else %}
+<div class="success">
+    <i class="icon iconfont failicon">&#xe71b;</i>
+	<h5>开户失败，请联系客服</h5>
+	<a class="back-step">返回</a>
+</div>
+{% endif %}
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/openAccount/result.js"></script>
+{% endblock %}

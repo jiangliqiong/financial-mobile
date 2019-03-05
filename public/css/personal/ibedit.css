@@ -1,0 +1,152 @@
+body {
+  background: #fff;
+  margin-top: 0.88rem; }
+
+.ib-edit-content {
+  padding: 0rem 0.3rem; }
+  .ib-edit-content .ib-edit-box {
+    display: none; }
+    .ib-edit-content .ib-edit-box .ib-edit-main {
+      padding: 0.6rem 0rem 0.4rem 0rem;
+      border-bottom: 0.021rem solid #e5e5e5; }
+      .ib-edit-content .ib-edit-box .ib-edit-main .ib-label {
+        width: 1.95rem;
+        display: inline-block;
+        font-size: 0.32rem;
+        letter-spacing: -0.008rem;
+        color: #000000;
+        vertical-align: middle; }
+      .ib-edit-content .ib-edit-box .ib-edit-main input {
+        font-size: 0.32rem;
+        letter-spacing: -0.008rem;
+        vertical-align: middle;
+        border: none; }
+        .ib-edit-content .ib-edit-box .ib-edit-main input::-webkit-input-placeholder {
+          color: #dcdcdc; }
+      .ib-edit-content .ib-edit-box .ib-edit-main input::-webkit-outer-spin-button,
+      .ib-edit-content .ib-edit-box .ib-edit-main input::-webkit-inner-spin-button {
+        -webkit-appearance: none; }
+      .ib-edit-content .ib-edit-box .ib-edit-main input[type="number"] {
+        -moz-appearance: textfield; }
+    .ib-edit-content .ib-edit-box .ib-edit-btn {
+      width: 100%;
+      font-size: 0.32rem;
+      margin-top: 0.6rem;
+      letter-spacing: -0.008rem;
+      padding: 0.22rem 0rem;
+      color: #ffffff;
+      display: block;
+      background: #094290;
+      -webkit-border-radius: 0.04rem;
+      -moz-border-radius: 0.04rem;
+      -ms-border-radius: 0.04rem;
+      -o-border-radius: 0.04rem;
+      border-radius: 0.04rem;
+      text-align: center; }
+      .ib-edit-content .ib-edit-box .ib-edit-btn.ib-disabled {
+        background: #ccc; }
+
+.ib-edit-pic {
+  display: none;
+  padding: 0.6rem 0rem 0rem 0rem;
+  text-align: center;
+  font-size: 0.28rem;
+  letter-spacing: -0.008rem;
+  color: #ffffff;
+  background: -webkit-linear-gradient(left, #094494, #0a1f61);
+  background: -o-linear-gradient(right, #094494, #0a1f61);
+  background: -moz-linear-gradient(right, #094494, #0a1f61);
+  background: linear-gradient(to right, #094494, #0a1f61); }
+  .ib-edit-pic .ib-upload {
+    margin: 0.2rem 1rem 0.4rem;
+    height: 3.15rem;
+    position: relative;
+    background: #fff; }
+    .ib-edit-pic .ib-upload .cover-pic {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4; }
+    .ib-edit-pic .ib-upload #upload {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+      -ms-opacity: 0;
+      -o-opacity: 0;
+      opacity: 0; }
+      .ib-edit-pic .ib-upload #upload input {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-opacity: 0;
+        -moz-opacity: 0;
+        -ms-opacity: 0;
+        -o-opacity: 0;
+        opacity: 0; }
+    .ib-edit-pic .ib-upload .ib-upload-btn {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; }
+      .ib-edit-pic .ib-upload .ib-upload-btn .ib-upload-icon {
+        width: 0.7rem;
+        height: 0.7rem;
+        margin-top: 0.9rem;
+        background: url("/images/ib/svg/ib-add-pic.svg") no-repeat;
+        display: inline-block;
+        background-size: 100%; }
+      .ib-edit-pic .ib-upload .ib-upload-btn span {
+        font-size: 0.28rem;
+        margin-top: 0.2rem;
+        letter-spacing: -0.008rem;
+        color: #094290;
+        display: block; }
+    .ib-edit-pic .ib-upload .ib-upload-pic {
+      width: 100%;
+      height: 100%;
+      display: none; }
+    .ib-edit-pic .ib-upload .img-loading {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: block;
+      background: url("/images/common/loading.gif") no-repeat;
+      top: 50%;
+      left: 50%;
+      background-size: 100%;
+      margin: -0.75rem 0rem 0rem -0.75rem;
+      display: none; }
+  .ib-edit-pic .ib-upload-sure {
+    background: #fff;
+    padding: 0.6rem 0.3rem 0rem 0.3rem; }
+    .ib-edit-pic .ib-upload-sure a {
+      width: 100%;
+      padding: 0.22rem 0rem;
+      display: block;
+      background: #094290;
+      font-size: 0.32rem;
+      letter-spacing: -0.8px;
+      color: #fff;
+      -webkit-border-radius: 0.04rem;
+      -moz-border-radius: 0.04rem;
+      -ms-border-radius: 0.04rem;
+      -o-border-radius: 0.04rem;
+      border-radius: 0.04rem; }
+      .ib-edit-pic .ib-upload-sure a.ib-disabled {
+        background: #ccc; }
+
+.imgLayerBox .imgBox img {
+  width: 100%; }

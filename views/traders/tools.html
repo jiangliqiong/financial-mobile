@@ -1,0 +1,42 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/traders/tools.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <div class="mt4Img">
+        <img src="/images/traders/mt4.png" srcset="/images/traders/mt4@2x.png 2x,/images/traders/mt4@3x.png 3x" class="">
+    </div>
+
+    <a class="androidLoad" href="http://www.gwfx.com/download/metatrader4.apk" style="display: none">Android版下载</a>
+
+    <a class="iosLoad" href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?mt=8" style="display: none">iOS版下载</a>
+
+    <div class="showRebate" data-customerback="{{ brokerData.customer_back }}" data-ibback="{{ brokerData.ib_back }}">
+        <div class="tradeAndIbRebate" style="display: none;">
+            <span class="traderRebate">外汇返佣: $<i class="val"></i>/手</span>
+            <i class="vLine"></i>
+            <span class="ibRebate">代理返佣: $<i class="val"></i>/手</span>
+            <i class="triangle"></i>
+        </div>
+        <div class="tradeRebate" style="display: none;">
+            <p class="rebateValue">
+                <span>外汇返佣: </span>
+                <span class="rebateVal">$<i class="val"></i>/手</span>
+            </p>
+            <span class="triangle"></span>
+        </div>
+    </div>
+    <a class="openAccountBtn">马上开户</a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/traders/tools.js"></script>
+{% endblock %}

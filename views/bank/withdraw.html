@@ -1,0 +1,41 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/bank/withdraw.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <div class="page">
+        <div class="bankCard">
+            <a class="item">
+                <img  class="bankLogo" />
+                <span class="bankName"></span>
+                <span class="bankAccount"></span>
+                <span class="defaultText"></span>
+                <span class="icon iconfont nextIcon">&#xe720;</span>
+            </a>
+        </div>
+        <div class="moneyBox">
+            <div class="moneyInput">
+                <span class="unit">￥</span>
+                <input type="number" name="money" value="" placeholder="请输入提现金额" class="moneyVal" id="inputMoney" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if(!((event.keyCode>= 48 && event.keyCode <=57) || event.keyCode == 46)) event.returnValue=false"/>
+                <a class="allWithdrawBtn">全部提现</a>
+            </div>
+            <div class="balance">
+                <p class="balanceText">可提现金额：<span id="balanceValue"></span>元</p>
+                <p class="hintText">超过可提现余额</p>
+            </div>
+        </div>
+        <a class="okBtn" id="withdrawBtn">确认提现</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/bank/withdraw.js"></script>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/ibChangeRes.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="success-tip">
+  {% if status %}
+  <p class="success-ico"><span class="iconfont icon-chenggongtishi">&#xe725;</span></p>
+  <p class="success-tip-msg">代理商变更成功</p>
+  <p class="success-tip-msg2">提示：变更成功后，您不再享受原IB代理商提供的交易返佣及相关服务，同时，您将享受新的IB代理商给予的交易返佣及相关服务。</p>
+  {% else %}
+  <p class="success-ico"><span class="iconfont icon-cuowutishi1">&#xe71b;</span></p>
+  <p class="success-tip-msg">代理商变更失败</p>
+  <p class="success-tip-msg2">对不起，该账户距离您上次IB代理商变更还不到24小时，请稍后再操作！</p>
+  {% endif %}
+  <p class="know-btn-box"><a class="know-btn" href="/personal/tradingAccount.html">我知道了</a></p>
+</section>
+{% if list.length>0 %}
+<section class="hot-retail">
+   <p class="hot-retail-title"><i class="hot-retail-ico"></i><span>热门交易商</span></p>
+   <ul class="hot-retail-list">
+     {% set listLength = list.length %}
+     {% for i in range(0, listLength) -%}
+     {% set data = list[i] %}
+     <li>
+      <div class="hot-retail-box">
+        {% if data.logo_url %}
+        <p class="img"><img src="{{ data.logo_url }}"/></p>
+        {% else %}
+        <p class="img"><img src="https://test-fm.oss-cn-hangzhou.aliyuncs.com/default/id_card/871503045981000.png"/></p>
+        {% endif %}
+        <div class="hot-retail-main">
+          <p class="hot-retail-name">{{ data.chinese_name }}</p>
+          <div class="hot-retail-msg">
+            <div class="hot-retail-msg-lt">
+               <p>平均点差：</p>
+               <p>最高杠杆：</p>
+               <p>最低入金：</p>
+               <p>经营模式：</p>
+               <p>代理返佣：</p>
+            </div>
+            <div class="hot-retail-msg-rt">
+              {% if data.min_point %}
+              <p>{{ data.min_point }}</P>
+              {% else %}
+              <p>&nbsp;</P>
+              {% endif %}
+              {% if data.max_leverage %}
+              <p>{{ data.max_leverage }}</P>
+              {% else %}
+              <p>&nbsp;</P>
+              {% endif %}
+               {% if data.min_price %}
+               <p>{{ data.min_price }}</P>
+               {% else %}
+               <p>&nbsp;</P>
+               {% endif %}
+               {% if data.managing_mode %}
+               <p>{{ data.managing_mode }}</P>
+               {% else %}
+               <p>&nbsp;</P>
+               {% endif %}
+               <p class="back-val" data-ib="{{ data.ib_back }}" data-customer="{{ data.customer_back }}"></P>
+            </div>
+          </div>
+        </div>
+      </div>
+     </li>
+     {%- endfor %}
+   </ul>
+</section>
+{% endif %}
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["ibResult"]);
+</script>
+{% endblock %}

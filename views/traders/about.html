@@ -1,0 +1,42 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/traders/about.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <div class="content" style="display: none;">
+        <!--<div class="title brandIntroduce" style="display: none;"><i class="vLine"></i><p>品牌介绍</p></div>-->
+        <div class="area brandIntroduce"></div>
+    </div>
+    <div class="showRebate">
+    <div class="tradeAndIbRebate" style="display: none;">
+        <span class="traderRebate">外汇返佣: $<i class="val"></i>/手</span>
+        <i class="vLine"></i>
+        <span class="ibRebate">代理返佣: $<i class="val"></i>/手</span>
+        <i class="triangle"></i>
+    </div>
+    <div class="tradeRebate" style="display: none;">
+        <p class="rebateValue">
+            <span>外汇返佣: </span>
+            <span class="rebateVal">$<i class="val"></i>/手</span>
+        </p>
+        <span class="triangle"></span>
+    </div>
+</div>
+    <a class="openAccountBtn">马上开户</a>
+</div>
+{% include "../common/loading.html" %}
+{% include "../common/loadfail.html" %}
+{% include "../common/nodata.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/traders/about.js"></script>
+{% endblock %}
+

@@ -1,0 +1,156 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #efeff4;
+  @include px2rem(margin-top, 88);
+}
+.success-tip {
+  width: 100%;
+  @include px2rem(height, 477);
+  background: #fff;
+  .success-ico {
+    width: 100%;
+    @include px2rem(height, 96);
+    @include px2rem(padding-top, 97.7);
+    text-align: center;
+    .icon-chenggongtishi {
+      @include px2rem(font-size, 96);
+      color: #1ec118;
+    }
+  }
+  .success-tip-msg {
+    width: 100%;
+    @include px2rem(line-height, 59);
+    @include px2rem(font-size, 42);
+    @include px2rem(margin-top, 14);
+    letter-spacing: -1px;
+    text-align: center;
+    color: #0c0c0c;
+  }
+  .success-tip-msg2 {
+    @include px2rem(font-size, 28);
+    @include px2rem(line-height, 40);
+    @include px2rem(margin-top, 40);
+    @include remCalc(padding,0 42);
+    @include px2rem(letter-spacing, -0.7);
+    text-align: center;
+    color: #959595;
+  }
+}
+.success-banner {
+  width: 100%;
+  @include px2rem(height, 200);
+  @include remCalc(margin, 20 0 20 0);
+  background: #fff;
+  a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  img {
+    @include px2rem(height, 200);
+  }
+}
+.hot-retail {
+  width: 100%;
+  border-bottom: solid 1px #e5e5e5;
+  background: #fff;
+  .hot-retail-title {
+    @include px2rem(font-size, 32);
+    @include px2rem(letter-spacing, -0.8);
+    @include px2rem(line-height, 100);
+    color: #000000;
+    border-bottom: 0.021rem solid #e5e5e5;
+    span {
+      vertical-align: middle;
+    }
+  }
+  .hot-retail-ico {
+    @include px2rem(width, 8);
+    @include px2rem(height, 32);
+    @include px2rem(margin-right, 22);
+    background: #094290;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .hot-retail-list {
+    @include clearfix();
+    li {
+      width: 50%;
+      display: block;
+      float: left;
+      overflow: hidden;
+      @include px2rem(padding-top, 20);
+      &:nth-child(odd){
+        .hot-retail-box {
+           @include remCalc(margin, 0 9 0 30);
+        }
+      }
+      &:nth-child(even){
+        .hot-retail-box {
+           @include remCalc(margin, 0 30 0 9);
+        }
+      }
+      .hot-retail-box {
+        position: relative;
+        .hot-hover {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+        }
+        .img {
+          @include px2rem(height, 138);
+          border: solid 0.021rem #e5e5e5;
+          border-bottom: none;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .hot-retail-main {
+          border: solid 0.021rem #e5e5e5;
+          .hot-retail-name {
+              @include px2rem(height, 42);
+              @include px2rem(font-size, 32);
+              @include px2rem(letter-spacing, -0.8);
+              @include px2rem(margin-top, 20);
+              @include px2rem(text-indent, 15);
+              color: #000000;
+              display:block;
+              white-space:nowrap;
+              overflow:hidden;
+              text-overflow:ellipsis;
+          }
+          .hot-retail-msg {
+            @include px2rem(margin-top, 20);
+            @include px2rem(text-indent, 10);
+            @include px2rem(padding-bottom, 20);
+            @include px2rem(font-size, 24);
+            @include px2rem(letter-spacing, -0.7);
+            @include clearfix();
+            position: relative;
+            p {
+              @include px2rem(margin-bottom, 10);
+              @include px2rem(height, 32);
+              display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+            }
+            .hot-retail-msg-rt {
+              color: #000;
+              @include px2rem(height, 200);
+              span {
+                color: #959595;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

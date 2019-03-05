@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="337px" height="160px" viewBox="0 0 337 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>0BDA10A7-740F-43AB-844F-3E70CD8F5B75</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="86.3211519%" y2="81.5642442%" id="linearGradient-1">
+            <stop stop-color="#FF5D5E" offset="0%"></stop>
+            <stop stop-color="#FF1645" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="337" height="160" rx="4"></rect>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.1外汇大课堂首页" transform="translate(-30.000000, -516.000000)">
+            <g id="各国货币介绍" transform="translate(30.000000, 516.000000)">
+                <g id="底图-货币介绍">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <rect id="Rectangle-93" fill="#FFFFFF" opacity="0.099999994" mask="url(#mask-3)" transform="translate(-0.469517, 65.530483) rotate(-315.000000) translate(0.469517, -65.530483) " x="-106.469517" y="26.5304833" width="212" height="78" rx="39"></rect>
+                    <rect id="Rectangle-93-Copy" fill="#FFFFFF" opacity="0.199999988" mask="url(#mask-3)" transform="translate(-20.469517, 72.530483) rotate(-45.000000) translate(20.469517, -72.530483) " x="-126.469517" y="33.5304833" width="212" height="78" rx="39"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

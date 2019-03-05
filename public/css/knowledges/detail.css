@@ -1,0 +1,124 @@
+body {
+  margin: 0.88rem 0rem 0rem 0rem;
+  background: #fff; }
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 4.24rem; }
+  .video #videoCon {
+    width: 100%;
+    height: 4.24rem; }
+    .video #videoCon video, .video #videoCon embed {
+      width: 100%;
+      height: 4.24rem; }
+  .video .not-wifi {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: url("/images/ib/svg/wifi.svg") no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .video .not-wifi .not-wifi-box {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      margin-top: -0.67rem; }
+      .video .not-wifi .not-wifi-box .video-wifi-tip {
+        width: 100%;
+        font-size: 0.32rem;
+        letter-spacing: -0.005rem;
+        text-align: center;
+        color: #ffffff; }
+        .video .not-wifi .not-wifi-box .video-wifi-tip span {
+          color: #f7ab09; }
+      .video .not-wifi .not-wifi-box .continue-play {
+        padding: 0.12rem 0.16rem;
+        background: #f7ab09;
+        -webkit-border-radius: 0.04rem;
+        -moz-border-radius: 0.04rem;
+        -ms-border-radius: 0.04rem;
+        -o-border-radius: 0.04rem;
+        border-radius: 0.04rem;
+        color: #fff;
+        font-size: 0.28rem;
+        letter-spacing: -0.005rem;
+        display: inline-block;
+        margin-top: 0.3rem; }
+  .video .video-loading {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 3rem; }
+    .video .video-loading i {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: block;
+      background: url("/images/common/loading-video.gif") no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -0.75rem;
+      margin-left: -0.75rem; }
+  .video .kg-video-bg {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .video .kg-video-bg .kg-video-name {
+      width: 100%;
+      font-size: 0.32rem;
+      letter-spacing: -0.005rem;
+      color: #ffffff;
+      position: absolute;
+      bottom: 0rem;
+      left: 0rem;
+      height: 1.7rem;
+      background-image: linear-gradient(to bottom, rgba(238, 238, 238, 0), rgba(0, 0, 0, 0.45)); }
+      .video .kg-video-bg .kg-video-name span {
+        padding: 0rem 0.2rem;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: absolute;
+        bottom: 0.2rem;
+        left: 0; }
+
+.article {
+  padding: 0rem 0.3rem; }
+  .article .article-title {
+    padding: 0.3rem 0rem;
+    font-size: 0.36rem;
+    letter-spacing: -0.007rem;
+    color: #000000;
+    border-bottom: 1px solid #e5e5e5; }
+  .article .article-name {
+    padding: 0.6rem 0rem 0.3rem 0rem;
+    font-size: 0.36rem;
+    letter-spacing: -0.007rem;
+    color: #000000;
+    text-align: center; }
+  .article .article-content {
+    padding-top: 0.3rem;
+    font-size: 0.28rem;
+    letter-spacing: -0.005rem;
+    color: #000; }

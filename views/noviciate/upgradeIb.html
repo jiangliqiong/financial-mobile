@@ -1,0 +1,49 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/noviciate/upgradeIb.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <img class="ibmsg" src="/images/noviciate/ibmsg01.png" srcset="/images/noviciate/ibmsg01@2x.png 2x,/images/noviciate/ibmsg01@3x.png 3x" />
+    <img class="ibmsg" src="/images/noviciate/ibmsg02.png" srcset="/images/noviciate/ibmsg02@2x.png 2x,/images/noviciate/ibmsg02@3x.png 3x" />
+    <img class="ibmsg" src="/images/noviciate/ibmsg03.png" srcset="/images/noviciate/ibmsg03@2x.png 2x,/images/noviciate/ibmsg03@3x.png 3x" />
+    <img class="ibmsg" src="/images/noviciate/ibmsg04.png" srcset="/images/noviciate/ibmsg04@2x.png 2x,/images/noviciate/ibmsg04@3x.png 3x" />
+    <img class="ibmsg" src="/images/noviciate/ibmsg05.png" srcset="/images/noviciate/ibmsg05@2x.png 2x,/images/noviciate/ibmsg05@3x.png 3x" />
+    <img class="ibmsg" src="/images/noviciate/ibmsg06.png" srcset="/images/noviciate/ibmsg06@2x.png 2x,/images/noviciate/ibmsg06@3x.png 3x" />
+    <img class="ibmsg intro" src="/images/noviciate/ibmsg07.png" srcset="/images/noviciate/ibmsg07@2x.png 2x,/images/noviciate/ibmsg07@3x.png 3x" />
+    <div class="friends intro">
+        <p class="title">若您代理的交易商和介绍好友开户的交易商一致，他们就变成您的代理客户咯！他们每一手交易（含0.01手）也算返佣给您！</p>
+        <div class="infoBox">
+            <ul id="friendsBox"></ul>
+        </div>
+        <a class="more" id="checkMore">展开查看更多</a>
+    </div>
+    <img class="ibmsg intro" src="/images/noviciate/ibmsg08.png" srcset="/images/noviciate/ibmsg08@2x.png 2x,/images/noviciate/ibmsg08@3x.png 3x" />
+    <img class="ibmsg" src="/images/noviciate/ibmsg09.png" srcset="/images/noviciate/ibmsg09@2x.png 2x,/images/noviciate/ibmsg09@3x.png 3x" />
+    <img class="ibmsg" src="/images/noviciate/ibmsg10.png" srcset="/images/noviciate/ibmsg10@2x.png 2x,/images/noviciate/ibmsg10@3x.png 3x" />
+    <img class="ibmsg" src="/images/noviciate/ibmsg11.png" srcset="/images/noviciate/ibmsg11@2x.png 2x,/images/noviciate/ibmsg11@3x.png 3x" />
+    <img class="ibmsg" src="/images/noviciate/ibmsg12.png" srcset="/images/noviciate/ibmsg12@2x.png 2x,/images/noviciate/ibmsg12@3x.png 3x" />
+</div>
+    <div class="btn">
+        <a href="https://mfx.fmtxt.com"><img class="ibmsg" src="/images/noviciate/btn.png" srcset="/images/noviciate/btn@2x.png 2x,/images/noviciate/btn@3x.png 3x" /></a>
+    </div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/noviciate/upgradeIb.js"></script>
+<script id="friendstml" type="text/html">
+    <% for (var i = 0; i < list.length; i++) { %>
+    <li class="<%= list[i].hidden %>">
+        <span class="tel"><%= list[i].mobile ? list[i].mobile : '' %></span>
+        <span class="name"><%= list[i].broker_name ? list[i].broker_name : '' %></span>
+        <span class="date"><%= list[i].open_date ? list[i].open_date : '' %></span>
+    </li>
+    <% }%>
+</script>
+{% endblock %}

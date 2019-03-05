@@ -1,0 +1,110 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<meta />
+<link type="text/css" rel="stylesheet" href="/css/traders/list.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <div class="mask"></div>
+    <div class="filtration">
+        <span class="defaultIndex filterActive">默认排序</span>
+        <h4><span>点差</span><i id="diancha" class="icon iconfont downIcon">&#xe60f;</i></h4>
+        <h4><span>杠杆</span><i id="ganggan" class="icon iconfont downIcon ">&#xe60f;</i></h4>
+        <h4><span>国家</span><i id="guojia" class="icon iconfont downIcon ">&#xe60f;</i></h4>
+        <h4><span>类型</span><i id="leixing" class="icon iconfont downIcon ">&#xe60f;</i></h4>
+    </div>
+    <div class="filterDiv">
+        <ul id="dianchaUl">
+            <li class="diancha quanbu liactive">全部</li>
+            {% for item in dianchaItems %}
+            <li class="diancha dianchaW">{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <ul id="gangganUl">
+            <li class="ganggan quanbu liactive">全部</li>
+            {% for item in gangganItems %}
+            <li class="ganggan gangganW">{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <ul id="guojiaUl">
+            <li class="guojia quanbu liactive">全部</li>
+            {% for item in guojiaData %}
+            <li class="guojia guojiaW">{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <ul id="leixingUl">
+            <li class="leixing quanbu liactive">全部</li>
+            {% for item in leixingData %}
+            <li class="leixing leixingW">{{ item.dict_value }}</li>
+            {% endfor %}
+        </ul>
+        <div class="btnBox">
+            <a class="resetBtn">重置</a>
+            <a class="finishBtn">完成</a>
+        </div>
+    </div>
+</div>
+<div class="list" id="borkerListBox">
+    {% for item in brokerList %}
+        {% if item %}
+        <div class="listItem">
+            <a href="shop.html?brokerId={{ item.broker_id }}">
+                <div class="listLogo">
+                    <img src="{{ item.logo_url }}"/>
+                </div>
+                <div class="listCont">
+                    <h4 class="title">{{ item.chinese_name }}</h4>
+                    <ul>
+                        <li><span>平均点差：</span><span class="liValue">{{ item.min_point }}</span></li>
+                        <li><span>最高杠杆：</span><span class="liValue">{{ item.max_leverage }}</span></li>
+                        {% if item.min_price %}
+                        <li><span>最低入金：</span><span class="liValue">{{ item.min_price }}</span></li>
+                        {% else %}
+                        <li><span>最低入金：</span><span class="liValue">{{ 0 }}</span></li>
+                        {% endif %}
+                        <li><span>经营模式：</span><span class="liValue">{{ item.managing_mode }}</span></li>
+                        <li class="rebateType" data-customerback="{{ item.customer_back }}" data-ibback="{{ item.ib_back }}"><span class="liLabel"></span><span class="liValue"></span></li>
+                    </ul>
+                </div>
+                <span  class="btn">马上开户</span>
+            </a>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% include "../common/loading.html" %}
+{% include "../common/loadfail.html" %}
+{% include "../common/nodata.html" %}
+{% endblock %}
+
+
+{% block script %}
+<script type="text/javascript" src="/js/traders/list.js"></script>
+
+<script id="brokerListTml" type="text/html">
+    <% for (var i = 0; i < list.length; i++) { %>
+    <div class="listItem">
+        <a href="shop.html?brokerId=<%= list[i].broker_id %>">
+            <img class="listLogo" src="<%= list[i].logo_url %>"/>
+            <div class="listCont">
+                <h4 class="title"><%= list[i].chinese_name %></h4>
+                <ul>
+                    <li><span>平均点差：</span><span class="liValue"><%= list[i].min_point %></span></li>
+                    <li><span>最高杠杆：</span><span class="liValue"><%= list[i].max_leverage %></span></li>
+                    <li><span>最低入金：</span><span class="liValue"><%= list[i].min_price %></span></li>
+                    <li><span>经营模式：</span><span class="liValue"><%= list[i].managing_mode %></span></li>
+                    <li><span><%= list[i].rebateText %></span><span class="liValue">$<%= list[i].rebate ? list[i].rebate : '0' %>/每手</span></li>
+                </ul>
+            </div>
+            <span class="btn">马上开户</span>
+        </a>
+    </div>
+    <%}%>
+</script>
+{% endblock %}

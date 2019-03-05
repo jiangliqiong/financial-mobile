@@ -1,0 +1,177 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/traders/trade.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="btnBox">
+    <ul>
+        <li class="spread"><span class="tradeActive">点差表</span> </li>
+        <li class="inout"><span>出入金方式</span></li>
+        <li class="type"><span>账户类型</span></li>
+    </ul>
+</div>
+<!--<div class="hasNoRecord" data-spreadrecord="{{ spreadDis }}" data-inoutrecord="{{ inOutDis }}" data-accounttyperecord="{{ accountTypeDis }}" style="display: none">-->
+    <!--<img src="/images/traders/noRecord.png" srcset="/images/traders/noRecord@2x.png 2x,/images/traders/noRecord@3x.png 3x">-->
+<!--</div>-->
+
+<div class="contentBox {{ contentBoxClass }}" data-spreadrecord="{{ spreadHasData }}" data-inoutrecord="{{ inOutHasdata }}" data-accounttyperecord="{{ accountTypeHasData }}">
+    <div class="spreadModule tradeModule">
+        <div class="head"><p class="left">货币对</p><p class="right">平均点差</p></div>
+        <ul>
+            {% for item in spreadItem %}
+            <li>
+                <p class="left">{{ item.code}}</p>
+                <p class="right">{{ item.average_point}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="inoutModule tradeModule" style="display: none">
+        <div class="mode">
+            <div class="head"><i class="vLine"></i><span>入金方式</span></div>
+            <table border='0' cellspacing="1" cellpadding="0">
+                <thead>
+                <tr>
+                    <td class="type">入金方式</td>
+                    <td class="currency">货币</td>
+                    <td class="cost">费用/手续费</td>
+                    <td class="date">处理时间</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in inOutItem %}
+                {% if item.type == '1' %}
+                <tr>
+                    <td>{{ item.mode }}</td>
+                    <td>{{ item.currency }}</td>
+                    <td>{{ item.poundage }}</td>
+                    <td>{{ item.process_date }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mode">
+            <div class="head"><i class="vLine"></i><span>出金方式</span></div>
+            <table border='0' cellspacing="1" cellpadding="0">
+                <thead>
+                <tr>
+                    <td class="type">出金方式</td>
+                    <td class="currency">货币</td>
+                    <td class="cost">费用/手续费</td>
+                    <td class="date">处理时间</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in inOutItem %}
+                {% if item.type == '2' %}
+                <tr>
+                    <td>{{ item.mode }}</td>
+                    <td>{{ item.currency }}</td>
+                    <td>{{ item.poundage }}</td>
+                    <td>{{ item.process_date }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="typeModule tradeModule" style="display: none">
+        <table border='0' cellspacing="0" cellpadding="0" >
+            <thead>
+            <tr>
+                <td>账户名称</td>
+                <td>点差类型</td>
+                <td>最大杠杆</td>
+                <td>最小头寸</td>
+                <td>剥头皮</td>
+                <td>EA交易</td>
+                <td>锁仓</td>
+                <td>入金要求</td>
+                <td>爆仓比例</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in accountTypeItem %}
+            <tr>
+                <td>{{ item.account_name }}</td>
+                <td>
+                    {% if item.ask_type == 'FLOATPOINT' %}
+                    浮动点差
+                    {% else %}
+                    固定点差
+                    {% endif %}
+                </td>
+                {% if item.max_leverage_first and item.max_leverage_last %}
+                <td>{{ item.max_leverage_first }}:{{ item.max_leverage_last }}</td>
+                {% else %}
+                <td>---</td>
+                {% endif %}
+                <td>{{ item.min_position }}</td>
+                <td>
+                    {% if item.is_scalp == '1' %}
+                    允许
+                    {% else %}
+                    不允许
+                    {% endif %}
+                </td>
+                <td>
+                    {% if item.is_ea == '0' %}
+                    允许
+                    {% else %}
+                    不允许
+                    {% endif %}
+                </td>
+                <td>
+                    {% if item.is_lock == '1' %}
+                    允许
+                    {% else %}
+                    不允许
+                    {% endif %}
+                </td>
+                <td>{{ item.in_money }}</td>
+                <td>{{ item.out_space }}%</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mask">
+        <img src="/images/traders/swipe-left.png" srcset="/images/traders/swipe-left@2x.png 2x,/images/traders/swipe-left@3x.png 3x" class="x_Swipe_Left">
+        <span>左右滑动查看更多数据</span>
+    </div>
+</div>
+<a class="openAccountBtn" data-brokername="{{ brokerData.chinese_name }}">马上开户</a>
+<div class="showRebate" data-customerback="{{ brokerData.customer_back }}" data-ibback="{{ brokerData.ib_back }}">
+    <div class="tradeAndIbRebate" style="display: none;">
+        <span class="traderRebate">外汇返佣: $<i class="val"></i>/手</span>
+        <i class="vLine"></i>
+        <span class="ibRebate">代理返佣: $<i class="val"></i>/手</span>
+        <!-- <i class="triangle"></i> -->
+    </div>
+    <div class="tradeRebate" style="display: none;">
+        <p class="rebateValue">
+            <span>外汇返佣: </span>
+            <span class="rebateVal">$<i class="val"></i>/手</span>
+        </p>
+        <!-- <span class="triangle"></span> -->
+    </div>
+</div>
+
+{% include "../common/loadfail.html" %}
+{% include "../common/norecord.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/traders/trade.js"></script>
+{% endblock %}

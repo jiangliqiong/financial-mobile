@@ -1,0 +1,225 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #efeff4;
+  @include px2rem(margin-top, 88);
+}
+.ib-msg {
+  @include remCalc(padding, 30);
+  background: #fff;
+  @include flexbox();
+  .ib-msg-lt {
+      width: 100%;
+      @include flex();
+      @include px2rem(font-size, 32);
+      @include px2rem(letter-spacing, -0.8);
+      color: #094290;
+      span {
+        vertical-align: middle;
+      }
+      i {
+        @include px2rem(font-size, 40);
+        @include px2rem(margin-right, 16);
+        vertical-align: middle;
+      }
+  }
+  .ib-msg-rt {
+    width: 100%;
+    @include flex();
+    text-align: right;
+    span {
+      @include remCalc(padding, 3 15);
+      @include px2rem(font-size, 20);
+      @include px2rem(letter-spacing, -0.3);
+      @include px2rem(margin-left, 10);
+      color: #f7ab09;
+      @include css3(border-radius, 100);
+      border: solid 1px #f7ab09;
+      vertical-align: middle;
+    }
+  }
+  @include clearfix();
+}
+.ib-reward {
+  @include px2rem(margin-top, 20);
+  @include remCalc(padding, 10 30 40);
+  background: #fff;
+  span {
+    @include px2rem(font-size, 32);
+    @include px2rem(letter-spacing, -0.8);
+    color: #000000;
+  }
+  .ib-invest-reward {
+    @include remCalc(padding, 40 0);
+    border-bottom: 1px solid #e5e5e5;
+    .ib-label {
+      @include px2rem(width, 200);
+      vertical-align: middle;
+      display: inline-block;
+    }
+    input {
+      @include px2rem(font-size, 32);
+      @include px2rem(letter-spacing, -0.8);
+      @include px2rem(width, 300);
+      border: none;
+      &::-webkit-input-placeholder {
+         color:#dcdcdc;;
+      }
+    }
+    .ib-unit {
+      float: right;
+      vertical-align: middle;
+    }
+  }
+  .ib-reward-box {
+    @include clearfix();
+    .ib-label {
+      @include px2rem(width, 200);
+      @include remCalc(padding, 40 0);
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .ib-reward-list {
+      display: inline-block;
+      @include remCalc(padding, 26 0);
+      @include px2rem(width, 480);
+      border-bottom: 1px solid #e5e5e5;
+      float: right;
+      &.edit {
+        .ib-reward-input {
+          border-right: 1px solid #e5e5e5;
+        }
+        .close-reward {
+          cursor: pointer;
+          display: inline-block;
+        }
+      }
+      .ib-reward-input {
+        @include remCalc(padding, 15 28 15 0);
+        @include px2rem(width, 400);
+        display: inline-block;
+        input {
+          @include px2rem(font-size, 32);
+          @include px2rem(letter-spacing, -0.8);
+          @include px2rem(width, 400);
+          border: none;
+          &::-webkit-input-placeholder {
+             color:#dcdcdc;;
+          }
+        }
+      }
+      .close-reward {
+        cursor: pointer;
+        @include px2rem(font-size, 26);
+        @include px2rem(margin-left, 10);
+        color: #959595;
+        display: none;
+      }
+    }
+  }
+  .ib-reward-btn-box {
+    display: inline-block;
+    float: right;
+    @include px2rem(width, 480);
+    a {
+      @include px2rem(margin-top, 20);
+      @include remCalc(padding, 15 40);
+      @include css3(border-radius,4);
+      border: solid 1px #094290;
+      @include px2rem(font-size, 28);
+      @include px2rem(letter-spacing, -0.7);
+      background: #fff;
+      color: #094290;
+      display: inline-block;
+      &.no-reward {
+        @include px2rem(margin-top, 25);
+      }
+    }
+  }
+}
+.ib-stauts {
+  @include px2rem(font-size,32);
+  @include px2rem(letter-spacing,-0.8);
+  @include remCalc(margin,20 0 0 0);
+  background: #fff;
+  color: #000000;
+  @include remCalc(padding, 50 30);
+  @include clearfix();
+  .ib-status-lable {
+    @include px2rem(line-height,62);
+    vertical-align: middle;
+  }
+  .ib-status-msg {
+    float: right;
+    text-align: right;
+    span {
+      vertical-align: middle;
+      display: table-cell;
+      &:first-child {
+        @include px2rem(padding-right,15);
+      }
+      &.ib-status-switch {
+        cursor: pointer;
+         @include px2rem(width,106);
+         @include px2rem(height,62);
+         display: table-cell;
+         @include css3(border-radius,31);
+         background: #e5e5e5;
+         &.on {
+           background: #44db5e;
+           i {
+             @include px2rem(margin-left,44);
+           }
+         }
+         i {
+           @include px2rem(width,56);
+           @include px2rem(height,56);
+           @include px2rem(margin-left,6);
+           display: block;
+           background: #fff;
+           @include css3fn(border-radius,50%);
+           vertical-align: middle;
+           @include css3fn(transition,all 0.2s);
+         }
+      }
+    }
+  }
+}
+.ib-msg-detail {
+  @include remCalc(padding, 25 30 40);
+  @include px2rem(margin-top,20);
+  background: #fff;
+  @include px2rem(font-size,24);
+  @include px2rem(letter-spacing,-0.6);
+  color: #959595;
+  p {
+    @include px2rem(margin-top,15);
+  }
+}
+.ib-shop-btn {
+  @include remCalc(padding, 60 30 20);
+  button {
+    cursor: pointer;
+    width: 100%;
+    @include css3(border-radius,4);
+    @include px2rem(height,88);
+    @include px2rem(font-size,32);
+    @include px2rem(letter-spacing,-0.8)
+    color: #fff;
+    background-color: #094290;
+    border: none;
+    outline: none;
+  }
+}
+.shop-info-back {
+  @include px2rem(width,90);
+  @include px2rem(height,88);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}

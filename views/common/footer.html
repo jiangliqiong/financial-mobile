@@ -1,0 +1,40 @@
+<div class="footerNav">
+    <ul>
+        <li>
+            <a class="homeLink" href="/" id="footerJumpHome">
+                {% if footOn=="index" %}
+                <img src="/images/common/home-on.png" srcset="/images/common/home-on@2x.png 2x,/images/common/home-on@3x.png 3x" />
+                {% else %}
+                <img src="/images/common/home.png" srcset="/images/common/home@2x.png 2x,/images/common/home@3x.png 3x" />
+                {% endif %}
+            </a>
+        </li>
+        <li>
+            <a href="../calendar/index.html" id="footerJumpCalendar">
+                {% if footOn=="calendar" %}
+                <img src="/images/common/calendar-on.png" srcset="/images/common/calendar-on@2x.png 2x,/images/common/calendar-on@3x.png 3x" />
+                {% else %}
+                <img src="/images/common/calendar.png" srcset="/images/common/calendar@2x.png 2x,/images/common/calendar@3x.png 3x" />
+                {% endif %}
+            </a>
+        </li>
+        <li>
+            <a id="footerJumpTradingAccount">
+                {% if footOn=="tradeAccount" %}
+                <img src="/images/common/account-on.png" srcset="/images/common/account-on@2x.png 2x,/images/common/account-on@3x.png 3x" />
+                {% else %}
+                <img src="/images/common/account.png" srcset="/images/common/account@2x.png 2x,/images/common/account@3x.png 3x" />
+                {% endif %}
+            </a>
+        </li>
+        <li>
+            <a id="footerJumpPersonal">
+                {% if footOn=="personal" %}
+                <img src="/images/common/personal-on.png" srcset="/images/common/personal-on@2x.png 2x,/images/common/personal-on@3x.png 3x" />
+                {% else %}
+                <img src="/images/common/personal.png" srcset="/images/common/personal@2x.png 2x,/images/common/personal@3x.png 3x" />
+                {% endif %}
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,189 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/ibmsg.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section id="ib-msg"></section>
+{% endblock %}
+{% block script %}
+<script id="ibMsgTml" type="text/html">
+  <section class="ib-msg">
+    <div class="ib-msg-main">
+      <div class="ib-msg-box">
+        <div class="ib-icon-box">
+          <span class="ib-icon ib-icon-name"></span>
+        </div>
+        <div class="ib-name">
+           <span>代理商名称</span>
+        </div>
+        <div class="ib-val">
+            <% if (ib_name&&ib_name!='') { %>
+            <p><%= ib_name%></p>
+            <% }else { %>
+            <p>未填写</p>
+            <% } %>
+            <i class="iconfont icon-jiantou">&#xe720;</i>
+        </div>
+        <a class="ib-link" href="/personal/ibedit.html?field=name&type=ib"></a>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="ib-msg-main">
+      <div class="ib-msg-box">
+        <div class="ib-icon-box">
+          <span class="ib-icon ib-icon-area"></span>
+        </div>
+        <div class="ib-name">
+           <span>办公所在地</span>
+        </div>
+        <div class="ib-val">
+           <% if (ib_address&&ib_address!='') { %>
+           <p>已填写</p>
+           <% }else { %>
+           <p>未填写</p>
+           <% } %>
+            <i class="iconfont icon-jiantou">&#xe720;</i>
+        </div>
+        <a class="ib-link" href="/personal/address.html?type=ib"></a>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="ib-msg-main">
+      <div class="ib-msg-box">
+        <div class="ib-icon-box">
+          <span class="ib-icon ib-icon-business"></span>
+        </div>
+        <div class="ib-name">
+           <span>营业执照</span>
+        </div>
+        <div class="ib-val">
+            <% if(image_url1&&authentication_status == '2') { %>
+            <p>已认证</p>
+            <% }else if(image_url1&&authentication_status != '2') { %>
+            <p>未认证</p>
+            <% }else { %>
+            <p>未填写</p>
+            <% } %>
+            <i class="iconfont icon-jiantou">&#xe720;</i>
+        </div>
+        <% if(image_url1&&authentication_status == '2') { %>
+          <a class="ib-link" href="/personal/ibedit.html?field=pic&type=ib&status=2"></a>
+        <% }else { %>
+          <a class="ib-link" href="/personal/ibedit.html?field=pic&type=ib&status=1"></a>
+        <% } %>
+      </div>
+    </div>
+  </section>
+  <section class="ib-msg">
+    <div class="ib-msg-main">
+      <div class="ib-msg-box">
+        <div class="ib-icon-box">
+           <span class="ib-icon ib-icon-phone"></span>
+        </div>
+        <div class="ib-name">
+           <span>客服电话</span>
+        </div>
+        <div class="ib-val">
+            <% if (service_telephone&&service_telephone!='') { %>
+            <p><%= service_telephone%></p>
+            <% }else { %>
+            <p>未填写</p>
+            <% } %>
+            <i class="iconfont icon-jiantou">&#xe720;</i>
+        </div>
+        <a class="ib-link" href="/personal/ibedit.html?field=phone&type=ib"></a>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="ib-msg-main">
+      <div class="ib-msg-box">
+        <div class="ib-icon-box">
+          <span class="ib-icon ib-icon-email"></span>
+        </div>
+        <div class="ib-name">
+           <span>客服邮箱</span>
+        </div>
+        <div class="ib-val">
+           <% if (service_mailbox&&service_mailbox!='') { %>
+           <p><%= service_mailbox%></p>
+           <% }else { %>
+           <p>未填写</p>
+           <% } %>
+           <i class="iconfont icon-jiantou">&#xe720;</i>
+        </div>
+        <a class="ib-link" href="/personal/ibedit.html?field=email&type=ib"></a>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="ib-msg-main">
+      <div class="ib-msg-box">
+        <div class="ib-icon-box">
+          <span class="ib-icon ib-icon-qq"></span>
+        </div>
+        <div class="ib-name">
+           <span>客服QQ</span>
+        </div>
+        <div class="ib-val">
+            <% if (service_QQ&&service_QQ!='') { %>
+            <p><%= service_QQ%></p>
+            <% }else { %>
+            <p>未填写</p>
+            <% } %>
+           <i class="iconfont icon-jiantou">&#xe720;</i>
+        </div>
+        <a class="ib-link" href="/personal/ibedit.html?field=qq&type=ib"></a>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="ib-msg-main">
+      <div class="ib-msg-box">
+        <div class="ib-icon-box">
+          <span class="ib-icon ib-icon-url"></span>
+        </div>
+        <div class="ib-name">
+           <span>官方网址</span>
+        </div>
+        <div class="ib-val">
+            <% if (offical_website&&offical_website!='') { %>
+            <p><%= offical_website%></p>
+            <% }else { %>
+            <p>未填写</p>
+            <% } %>
+            <i class="iconfont icon-jiantou">&#xe720;</i>
+        </div>
+        <a class="ib-link" href="/personal/ibedit.html?field=url&type=ib"></a>
+      </div>
+    </div>
+  </section>
+  <section class="ib-msg">
+    <div class="ib-msg-main">
+      <div class="ib-msg-box">
+        <div class="ib-icon-box">
+          <span class="ib-icon ib-icon-introduce"></span>
+        </div>
+        <div class="ib-name">
+           <span>代理商介绍</span>
+        </div>
+        <div class="ib-val">
+           <% if(ib_introduce&&ib_introduce!='') { %>
+             <p>已填写</p>
+           <% }else { %>
+             <p>未填写</p>
+           <% } %>
+           <i class="iconfont icon-jiantou">&#xe720;</i>
+        </div>
+        <a class="ib-link" href="/personal/ibIntroduce.html"></a>
+      </div>
+    </div>
+  </section>
+</script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["perIbMsg"]);
+</script>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/ibapply/bcTrue.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="success-tip">
+  <p class="success-ico"><span class="iconfont icon-chenggongtishi">&#xe725;</span></p>
+  <p class="success-tip-msg">恭喜！您已成为{{ ibName }}的代理</p>
+  <p class="success-tip-msg2">系统已自动为您添加该交易商代理信息至您的个人主页<br/>您可以设置相应投资人奖励以吸引更多开户</p>
+  <p class="success-btn"><a href="/personal/shopinfo.html?agents_id={{ agentsId }}" class="become-true-btn">去设置投资人奖励</a></p>
+</section>
+{% endblock %}

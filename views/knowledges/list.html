@@ -1,0 +1,40 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/knowledges/list.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="article">
+  {% if kgList.length> 0 %}
+  {% set kgLength = kgList.length %}
+  {% for i in range(0, kgLength) -%}
+  {% set data = kgList[i] %}
+  <div class="article-box">
+    <p class="article-title"><span>{{ data.education_name }}</span><i class="iconfont">&#xe720;</i></p>
+    <div class="article-msg">
+       <div class="article-lt">
+          <p>课程简介：</p>
+          <div class="article-introduce">{{ data.video_content | safe }}</div>
+       </div>
+       <div class="article-rt">
+          {% if data.education_image %}
+          <img src="{{ data.education_image }}" alt="">
+          {% else %}
+          <img src="/images/ib/img/ib-default_logo.png" alt="">
+          {% endif %}
+       </div>
+    </div>
+    <a href="/knowledges/detail.html?educationId={{ data.education_id }}&name={{ kgType }}" class="article-link"></a>
+  </div>
+  {%- endfor %}
+  {% else %}
+  <div class="no-data">
+   <div class="no-img"><i></i></div>
+   <p>暂无数据</p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

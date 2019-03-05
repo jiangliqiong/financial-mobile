@@ -1,0 +1,165 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #fff;
+  @include px2rem(margin-top, 88);
+}
+.ib-edit-content {
+  @include remCalc(padding,0 30);
+  .ib-edit-box {
+    display: none;
+    .ib-edit-main {
+      @include remCalc(padding,60 0 40 0);
+      border-bottom: 0.021rem solid #e5e5e5;
+      .ib-label {
+        @include px2rem(width, 195);
+        display: inline-block;
+        @include px2rem(font-size, 32);
+        @include px2rem(letter-spacing, -0.8);
+        color: #000000;
+        vertical-align: middle;
+      }
+      input {
+        @include px2rem(font-size, 32);
+        @include px2rem(letter-spacing, -0.8);
+        vertical-align: middle;
+        border: none;
+        &::-webkit-input-placeholder {
+           color:#dcdcdc;
+        }
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+      }
+      input[type="number"]{
+          -moz-appearance: textfield;
+      }
+    }
+    .ib-edit-btn {
+      width: 100%;
+      @include px2rem(font-size, 32);
+      @include px2rem(margin-top, 60);
+      @include px2rem(letter-spacing, -0.8);
+      @include remCalc(padding,22 0);
+      color: #ffffff;
+      display: block;
+      background: #094290;
+      @include css3(border-radius, 4);
+      text-align: center;
+      &.ib-disabled {
+        background: #ccc;
+      }
+    }
+  }
+}
+.ib-edit-pic {
+  display: none;
+  @include remCalc(padding,60 0 0 0);
+  text-align: center;
+  @include px2rem(font-size, 28);
+  @include px2rem(letter-spacing, -0.8);
+  color: #ffffff;
+  background: -webkit-linear-gradient(left, #094494 , #0a1f61);
+  background: -o-linear-gradient(right, #094494, #0a1f61);
+  background: -moz-linear-gradient(right, #094494, #0a1f61);
+  background: linear-gradient(to right, #094494 , #0a1f61);
+  .ib-upload {
+    @include remCalc(margin,20 100 40);
+    @include px2rem(height, 315);
+    position: relative;
+    background: #fff;
+    .cover-pic {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+    }
+    #upload {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      @include css3fn(opacity,0)
+      input {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include css3fn(opacity,0)
+      }
+    }
+    .ib-upload-btn {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      .ib-upload-icon {
+        @include px2rem(width, 70);
+        @include px2rem(height, 70);
+        @include px2rem(margin-top, 90);
+        background: url('/images/ib/svg/ib-add-pic.svg')  no-repeat;
+        display: inline-block;
+        background-size: 100%;
+      }
+      span {
+        @include px2rem(font-size, 28);
+        @include px2rem(margin-top, 20);
+        @include px2rem(letter-spacing, -0.8);
+        color: #094290;
+        display: block;
+      }
+    }
+    .ib-upload-pic {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    .img-loading {
+      position: absolute;
+      @include px2rem(width, 150);
+      @include px2rem(height, 150);
+      display: block;
+      background: url('/images/common/loading.gif') no-repeat;
+      top: 50%;
+      left: 50%;
+      background-size: 100%;
+      @include remCalc(margin, -75 0 0 -75);
+      display: none;
+    }
+  }
+  .ib-upload-sure {
+    background: #fff;
+    @include remCalc(padding,60 30 0 30);
+    a {
+     width: 100%;
+     @include remCalc(padding,22 0);
+     display: block;
+     background: #094290;
+     @include remCalc(font-size,32);
+     letter-spacing: -0.8px;
+     color: #fff;
+     @include css3(border-radius, 4);
+     &.ib-disabled {
+       background: #ccc;
+     }
+    }
+  }
+}
+.imgLayerBox .imgBox {
+  img {
+     width: 100%;
+  }
+}

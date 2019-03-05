@@ -1,0 +1,26 @@
+{% extends './common/layout.html' %}
+{% block header %}
+{% include "./common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="notfound">
+{% if error.status==404 %}
+	<div>
+		<img src="../images/common/404.png"/>
+		<span>{{ error.status }}</span>
+	</div>
+	<h3>从前有座山，山里有座庙，<br/>庙里有个页面，现在找不到…</h3>
+	<p>当前页面未找到，请 <a href="">刷新重试</a> 或 <a href="">返回首页</a></p>
+{% else %}
+	<div>
+		<img src="../images/common/500.png"/>
+	</div>
+	<h3>服务器君打瞌睡了…</h3>
+	<p>当前页面未找到，请 <a href="">刷新重试</a> 或 <a href="">返回首页</a></p>
+{% endif %}
+</div>
+<!-- <h1>{{ message }}<h1>
+<h2>{{ error.status }}<h2>
+<pre>{{ error.stack }}</pre> -->
+{% endblock %}

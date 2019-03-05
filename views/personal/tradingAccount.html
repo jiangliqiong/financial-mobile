@@ -1,0 +1,113 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/personal/tradingAccount.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <ul class="item" id="accountInfoListBox"></ul>
+</div>
+{% include "../common/loading.html" %}
+{% include "../common/loadfail.html" %}
+<div class="nodata abnormal {{ noDataClass }}">
+    <img src="/images/common/nodata.png" srcset="/images/common/nodata@2x.png 2x, /images/common/nodata@3x.png 3x" />
+    <span>暂无数据</span>
+    <a class="gotoOpenAccountBtn" href="/traders/list.html">马上开户</a>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include "../common/footer.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/personal/tradingAccount.js"></script>
+<script id="accountInfoListTml" type="text/html">
+    <% for (var i = 0; i < list.length; i++) { %>
+    <% if ( list[i].open_status == 1) { %>
+        <li>
+            <div class="head bottomBorder">
+                <span class="icon iconfont necktieIcon">&#xe735;</span>
+                <p class="title"><%= list[i].chinese_name ?  list[i].chinese_name : '' %></p>
+                <a class="rebate"><%= list[i].customize_back ?  list[i].customize_back : list[i].customer_back %> 美元/手</a>
+            </div>
+            <div class="agent stauts13">
+                <p class="text">代理商：</p>
+                <p class="name"><%= list[i].ib_name ?  list[i].ib_name : '直接开户' %></p>
+                <p class="applying">开户申请中...</p>
+            </div>
+        </li>
+    <% }else if ( list[i].open_status == 2 ) { %>
+        <li>
+            <div class="head">
+                <span class="icon iconfont necktieIcon">&#xe735;</span>
+                <p class="title"><%= list[i].chinese_name ?  list[i].chinese_name : '' %></p>
+                <p class="account"><span class="label">账号：</span><span><%= list[i].open_acount ?  list[i].open_acount : '' %></span></p>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <p class="rebate"><%= list[i].customize_back ?  list[i].customize_back : list[i].customer_back %>美元/手</p>
+                    <p class="cycle"><%= list[i].period_days ?  list[i].period_days : '0' %>日返佣</p>
+                </div>
+                <div class="right">
+                    <p><span>累积交易：</span><span class="rightVal"><%= list[i].volume ?  list[i].volume : '0' %>手</span></p>
+                    <p><span>最近一次返佣金额：</span><span class="rightVal"><%= list[i].recentReturn ?  list[i].recentReturn : '0.00' %>元</span></p>
+                    <p><span>合计获得返佣：</span><span class="rightVal"><%= list[i].balance_back_rmb ?  list[i].balance_back_rmb : '0.00' %>元</span></p>
+                    <p><span>下一个返佣时间：</span><span class="rightVal"><%= list[i].nextBackDay ?  list[i].nextBackDay : '' %></span></p>
+                </div>
+            </div>
+            <div class="agent">
+                <p class="text">代理商：</p>
+                <p class="name"><%= list[i].ib_name ?  list[i].ib_name : '直接开户' %></p>
+                <% if( list[i].ib_name ){ %>
+                <a class="changeBtn" data-openid="<%= list[i].open_id %>" data-href="iblist.html?broker_id=<%= list[i].broker_id %>&ib_id=<%= list[i].ib_id %>&ib_account=<%= list[i].open_acount %>&openId=<%= list[i].open_id %>">变更</a>
+                <% if( list[i].fc && list[i].fc.new_ib_id == '' ){ %>
+                <a class="unbindBtn disabled" data-openid="<%= list[i].open_id ?  list[i].open_id : '' %>" data-platback="<%= list[i].customer_back ?  list[i].customer_back : '0' %>">解绑</a>
+                <% }else{ %>
+                <a class="unbindBtn" data-openid="<%= list[i].open_id ?  list[i].open_id : '' %>" data-platback="<%= list[i].customer_back ?  list[i].customer_back : '0' %>">解绑</a>
+                <% } %>
+                <% }else{ %>
+                <a class="changeBtn" data-openid="<%= list[i].open_id %>" data-href="iblist.html?broker_id=<%= list[i].broker_id %>&ib_id=<%= list[i].ib_id %>&ib_account=<%= list[i].open_acount %>&openId=<%= list[i].open_id %>">变更</a>
+                <% } %>
+            </div>
+            <% if(  list[i].fc ){ %>
+            <% if(  list[i].fc.new_ib_id ){ %>
+            <div class="hintBox">
+                <img class="hintImg" src="/images/personal/ta_hint_icon.png" srcset="/images/personal/ta_hint_icon@2x.png 2x,/images/personal/ta_hint_icon@3x.png 3x" />
+                <p class="hintText">已申请变更代理商为【<%= list[i].fc.new_ib_name ?  list[i].fc.new_ib_name : '' %>】,下一结算周期生效。</p>
+            </div>
+            <% }else{ %>
+            <div class="hintBox">
+                <img class="hintImg" src="/images/personal/ta_hint_icon.png" srcset="/images/personal/ta_hint_icon@2x.png 2x,/images/personal/ta_hint_icon@3x.png 3x" />
+                <p class="hintText">已申请解除代理，下一结算周期生效。</p>
+            </div>
+            <% } %>
+            <% }else{ %>
+            <div class="hintBox" style="display: none">
+                <img class="hintImg" src="/images/personal/ta_hint_icon.png" srcset="/images/personal/ta_hint_icon@2x.png 2x,/images/personal/ta_hint_icon@3x.png 3x" />
+                <p class="hintText"></p>
+            </div>
+            <% } %>
+        </li>
+    <% }else if ( list[i].open_status == 3 ){ %>
+        <li>
+            <div class="head bottomBorder">
+                <span class="icon iconfont necktieIcon">&#xe735;</span>
+                <p class="title"><%= list[i].chinese_name ?  list[i].chinese_name : '' %></p>
+                <a class="rebate"><%= list[i].customize_back ?  list[i].customize_back : list[i].customer_back %> 美元/手</a>
+            </div>
+            <div class="agent stauts13">
+                <p class="text">代理商：</p>
+                <p class="name"><%= list[i].ib_name ?  list[i].ib_name : '直接开户' %></p>
+                <p class="failure">开户失败</p>
+            </div>
+        </li>
+    <% } %>
+    <% } %>
+</script>
+{% endblock %}

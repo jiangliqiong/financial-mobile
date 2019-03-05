@@ -1,0 +1,168 @@
+p,body{
+	margin:0;
+	padding: 0;
+}
+body{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1f1535), to(#111228));
+	padding-top: 0.88rem;
+}
+input, select, textarea {
+    vertical-align: baseline;
+}
+input{margin: 3px 3px 0px 5px}
+img{
+	border:none;
+}
+.img{
+	margin: 0 auto;
+	text-align: center;
+	font-size: 0;
+}
+.img img{
+	max-width: 100%;
+}
+.form{
+	max-width: 6.3rem;
+	background: url('/images/activity/salon/activity13.png') no-repeat;
+	padding:0 0.6rem;
+	margin:0 auto;
+	font-size:0.24rem;
+	padding-bottom: 0.6rem
+}
+.form .labeltip{
+	font-size:0.24rem;
+	display: block;
+	color:#fff;
+	margin-bottom: 0.25rem;
+}
+input{
+	outline: none;
+}
+.form input[type='text'],.form input[type='tel']{
+	width:90%;
+	border:2px solid #8616e4;
+	background: #0f0f3b;
+	line-height: 0.8rem;
+	height: 0.8rem;
+	border-radius: 2px;
+	padding:0 5%;
+	color:#fff;
+	font-size: 0.24rem;
+	margin-bottom: 0.3rem;
+}
+.form input.ok{
+	border:2px solid #00c700;
+	position: relative;
+}
+.form input.ok:after{
+	position: absolute;
+    display: inline-block;
+    width:100
+}
+.form input.error{
+	border:2px solid #ff0000;
+}
+input::-webkit-input-placeholder {
+    color: #3a3a93;
+    font-size: 0.24rem;
+}
+.form p{
+	color:#fff;
+	line-height:0.3rem;
+}
+.form p.p1{
+	margin-bottom: 0.2rem;
+}
+.form div{
+	position: relative;
+}
+.form div span{
+	position: absolute;
+	right: 0.1rem;
+	display: inline-block;
+	top:0.26rem;
+}
+.form div span.error {
+	width:0.26rem;
+	height:0.26rem;
+	background: url('/images/activity/salon/error.png');
+	background-size: 100%;
+}
+.form div span.ok {
+	width:0.34rem;
+	height:0.23rem;
+	background: url('/images/activity/salon/right.png');
+	background-size: 100%;
+}
+.form div span img{
+	max-width: 100%;
+}
+.form p input[type='radio']{
+	width:0.3rem;
+	height:0.3rem;
+	border-radius: 0.18rem;
+	-webkit-appearance: none;
+	border:2px solid #d34f17;
+	background: #0f0f3b;
+	margin-right: 0.1rem;
+	position: relative;
+	top: 0.05rem;
+}
+.form p input[type='radio']:checked{
+    background: #e45516;
+}
+
+.form p input[type='radio']:checked+span{
+	position: absolute;
+	width: 0.16rem;
+	height: 0.08rem;
+	display: inline-block;
+	border-left: 1px solid #fff;
+	border-bottom:1px solid #fff;
+	-webkit-transform: rotate(-50deg);
+	transform: rotate(-50deg);
+	margin-left:-0.34rem;
+	margin-top: 0.18rem;
+}
+.form p label{
+	line-height: 0.3rem;
+	margin-right:0.3rem;
+}
+.submit{
+	cursor: pointer;
+}
+.tip{
+	position: fixed;
+	background: rgba(0, 0, 0, 0.77);
+	bottom:50%;
+	color:#fff;
+	text-align: center;
+	left:50%;
+	width:3.6rem;
+	height:2.9rem;
+	border-radius: 0.1rem;
+	font-size: 0.35rem;
+	padding-top: 0.7rem;
+	margin-left:-1.8rem;
+	margin-bottom: -1.45rem;
+}
+.tip p{
+	line-height: 0.8rem;
+}
+
+.tip div{
+	width:1.18rem;
+	height:1.18rem;
+	margin: 0 auto;
+}
+.tip div.error {
+	background: url('/images/activity/salon/fail.png');
+	background-size: 100%;
+}
+.tip div.ok {
+	background: url('/images/activity/salon/success.png');
+	background-size: 100%;
+}
+.tip div img{
+   max-width: 100%;
+}

@@ -1,0 +1,310 @@
+body{
+    background-color: #ffffff;
+}
+.topbar{
+    position: absolute;
+    background:none;
+}
+.mildHintBox{
+    top: 20%;
+}
+/**
+ *登录
+ */
+/****************头部****************/
+.contentBox .head{
+    width: 100%;
+    height: 2.8rem;
+    position: relative;
+}
+.head .headImg{
+    width: 100%;
+    height: 2.8rem;
+}
+.head .loginType{
+    position: absolute;
+    bottom: 0.37rem;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    left: 0 ;
+    height: .45rem;
+    width: 100%;
+}
+.head .codeLogin{
+    display: block;
+    font-size: 0.32rem;
+    color: #ffffff;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    padding-left: 1rem;
+    text-align: left;
+    cursor: pointer;
+}
+.head .passwordLogin{
+    display: block;
+    font-size: 0.32rem;
+    color: #ffffff;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    padding-right: 1rem;
+    text-align: right;
+    cursor: pointer;
+}
+.head .vline{
+    position: absolute;
+    top: 0.08rem;
+    left: 3.74rem;
+    display: block;
+    height: 0.3rem;
+    width: 0.02rem;
+    background-color: #ffffff;
+}
+.head .mark{
+    position: absolute;
+    bottom: 0;
+    width: 0rem;
+    height: 0rem;
+    display: block;
+    border-left: 0.18rem solid transparent;
+    border-right: 0.18rem solid transparent;
+    border-bottom: 0.12rem solid #ffffff;
+}
+.head .mark.left{
+    left: 1.45rem;
+}
+.head .mark.right{
+    right: 1.45rem;
+}
+/**
+ * 表单
+ */
+/*****************验证登录表单*****************/
+/*******************手机号****************/
+.loginForm{
+    width: calc(100% - 0.6rem);
+    height: auto;
+    padding: 0 0.3rem;
+}
+.loginForm .phoneBox{
+    display: block;
+    width: 100%;
+    height: 0.45rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.39rem;
+    border-bottom: 0.01rem solid #e5e5e5;
+}
+.phoneBox .telephone{
+    float: left;
+    width: calc(100% - 2.4rem);
+    height: 0.45rem;
+    font-size: 0.32rem;
+    color: #000000;
+    border: none;
+    line-height: 0.45rem;
+}
+.phoneBox .telephone_pass{
+    width: calc(100% - 0.5rem);
+}
+.phoneBox .clearIcon{
+    float: left;
+    display: none;
+    font-size: 0.34rem;
+    color: #b6b6b6;
+    margin-top: 0.03rem;
+    margin-left: 0.16rem;
+    cursor: pointer;
+}
+.phoneBox .clearIcon_pass{
+    float: right;
+    margin-left: 0;
+}
+.phoneBox .codeBtn{
+    display: block;
+    float: right;
+    width: 1.58rem;
+    height: 0.54rem;
+    border-radius: 0.04rem;
+    background-color: #D8D8D8;
+    text-align: center;
+    line-height: 0.54rem;
+    font-size: 0.24rem;
+    color: #959595;
+    border: none;
+    margin-top: -0.07rem;
+    cursor: pointer;
+}
+.phoneBox .codeBtn.on{
+    background-color: #1d4ab1;
+    color: #ffffff;
+}
+/***************验证码*****************/
+.loginForm .codeBox{
+    display: block;
+    width: 100%;
+    height: 0.45rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.39rem;
+    border-bottom: 0.01rem solid #e5e5e5;
+}
+
+.codeBox .code{
+    float: left;
+    width: calc(100% - 0.5rem);
+    height: 0.45rem;
+    font-size: 0.32rem;
+    color: #000000;
+    border: none;
+    line-height: 0.45rem;
+}
+.codeBox .clearIcon{
+    float: right;
+    display: none;
+    font-size: 0.34rem;
+    color: #b6b6b6;
+    margin-top: 0.03rem;
+    cursor: pointer;
+}
+/*****************密码****************/
+.loginForm .passwordBox{
+    display: block;
+    width: 100%;
+    height: 0.45rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.39rem;
+    border-bottom: 0.01rem solid #e5e5e5;
+}
+.passwordBox .password{
+    float: left;
+    width: calc(100% - 0.5rem);
+    height: 0.45rem;
+    font-size: 0.32rem;
+    color: #000000;
+    border: none;
+    line-height: 0.45rem;
+}
+.passwordBox .clearIcon{
+    float: right;
+    display: none;
+    font-size: 0.34rem;
+    color: #b6b6b6;
+    margin-top: 0.03rem;
+    cursor: pointer;
+}
+/***************忘记密码**************/
+.loginForm .forgetBox{
+    margin-top: 0.2rem;
+    width: 100%;
+    height: 0.36rem;
+}
+.forgetBox .keepIcon{
+    display: block;
+    float: left;
+    font-size: 0.36rem;
+    color: #f4b838;
+    margin-top: -0.04rem;
+}
+.forgetBox .keepLogin{
+    display: block;
+    float: left;
+    margin-left: 0.1rem;
+    font-size: 0.24rem;
+    color: #000000;
+}
+.forgetBox .hintIcon{
+    display: block;
+    float: left;
+    font-size: 0.22rem;
+    color: #959595;
+    margin-top: 0.05rem;
+}
+.forgetBox .loginHint{
+    display: block;
+    float: left;
+    font-size: 0.24rem;
+    color: #959595;
+    margin-left: 0.1rem;
+}
+.forgetBox .forgetPassword{
+    float: right;
+    display: block;
+    font-size: 0.24rem;
+    color: #000000;
+}
+.loginForm .btnBox{
+    margin-top: 0.6rem;
+    width: 100%;
+    overflow: hidden;
+}
+.btnBox .loginBtn{
+    display: block;
+    width: 100%;
+    height: 0.88rem;
+    border-radius: 0.04rem;
+    background-color: #d8d8d8;
+    font-size: 0.32rem;
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.88rem;
+    border: none;
+    cursor: pointer;
+}
+.btnBox .loginBtn.on{
+    background-color: #1d4ab1;
+}
+
+.btnBox .registerBtn{
+    display: block;
+    margin-top: 0.3rem;
+    width: calc(100% - 0.04rem);
+    height: 0.84rem;
+    text-align: center;
+    line-height: 0.84rem;
+    border: 0.021rem solid #1d4ab1;
+    border-radius: 0.04rem;
+    background-color: #ffffff;
+    font-size: 0.32rem;
+    color: #1d4ab1;
+    cursor: pointer;
+}
+/****************底部******************/
+.foot{
+    margin-top: 0.4rem;
+    width: 100%;
+    overflow: hidden;
+}
+.foot .contactWayBox{
+    width: calc(100% - 0.6rem);
+    margin: 0 auto;
+    height: 0.33rem;
+    line-height: 0.33rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.01rem solid #e4e4e4;
+    font-size: 0.24rem;
+    color: #b7b7b7;
+}
+.contactWayBox >span{
+    float: left;
+}
+.contactWayBox .text{
+    margin-left: 0.1rem;
+}
+.contactWayBox .serviceHotLineIcon{
+    font-size: 0.26rem;
+    margin-left: 0.44rem;
+}
+.contactWayBox .weixinIcon{
+    font-size: 0.24rem;
+    margin-left: 0.3rem;
+    margin-top: 0.03rem;
+}
+.copyrightBox{
+    margin: 0.1rem 0 0.98rem 0;
+    padding-bottom: 0.2rem;
+    font-size: 0.24rem;
+    text-align: center;
+    color: #b7b7b7;
+    letter-spacing: -0.006rem;
+}

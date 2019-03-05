@@ -1,0 +1,85 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/common/iosSelect.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/sendStrategy.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="strategy">
+  <div class="varieties" id="showVarieties">
+     <div class="varieties-box">
+       <span class="lt">交易品种</span>
+       <p class="rt"><span class="varieties-val">请选择交易品种</span></p>
+       <i class="iconfont">&#xe720;</i>
+     </div>
+  </div>
+  <div class="category">
+    <div class="category-box">
+      <span class="lt">类别</span>
+      <div class="rt">
+        <span class="active"><a href="javascript:;">做多</a><i class="strategy-arrow"></i></span><span><a href="javascript:;">做空</a><i class="strategy-arrow center"></i></span><span><a href="javascript:;">区间</a><i class="strategy-arrow right"></i></span>
+      </div>
+    </div>
+  </div>
+  <div class="data">
+     <ul>
+       <li class="val">
+        <span class="label">入场点</span>
+        <div class="data-box">
+          <a class="reduce-num" href="javascript:;"><span></span></a>
+          <input type="number" name="入场点位" value="" placeholder="设置入场点位">
+          <a class="add-num" href="javascript:;"><span></span></a>
+        </div>
+       </li>
+       <li class="val">
+        <span class="label">止损</span>
+        <div class="data-box">
+          <a class="reduce-num" href="javascript:;"><span></span></a>
+          <input type="number" name="止损点位" value="" placeholder="设置止损点位">
+          <a class="add-num" href="javascript:;"><span></span></a>
+        </div>
+       </li>
+       <li class="val">
+        <span class="label">止盈</span>
+        <div class="data-box">
+          <a class="reduce-num" href="javascript:;"><span></span></a>
+          <input type="number" name="止盈点位" value="" placeholder="设置止盈点位">
+          <a class="add-num" href="javascript:;"><span></span></a>
+        </div>
+       </li>
+       <li class="area">
+        <span class="label">区间价</span>
+        <div class="data-box">
+          <a class="reduce-num" href="javascript:;"><span></span></a>
+          <input type="number" name="区间起始价" value="" placeholder="设置起始价">
+          <a class="add-num" href="javascript:;"><span></span></a>
+        </div>
+       </li>
+       <li class="area">
+        <span class="label"></span>
+        <div class="data-box">
+          <a class="reduce-num" href="javascript:;"><span></span></a>
+          <input type="number" name="区间截止价" value="" placeholder="设置截止价">
+          <a class="add-num" href="javascript:;"><span></span></a>
+        </div>
+       </li>
+     </ul>
+  </div>
+</section>
+<section class="strategy-btn">
+  <button type="button" name="button">确认发布</button>
+  <p class="tip">提示：策略信息24小时内仅您的客户可见，24小时候所有浏览者均可见</p>
+</section>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript" src="/js/common/iscroll.js"></script>
+<script type="text/javascript" src="/js/common/iosSelect.js"></script>
+<script type="text/javascript">
+  seajs.use(["sendStrategy"]);
+</script>
+{% endblock %}

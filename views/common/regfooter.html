@@ -1,0 +1,100 @@
+<style>
+	.copyrighBox{
+		 width: 100%;
+   		 margin-top: 0.10rem;
+	}
+	.copyrighBox ul{
+		height: 0.73rem;
+		line-height: 0.5rem;
+        width: 6.87rem;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+	}
+	.copyrighBox ul li{
+        display: inline-block;
+        height: 100%;
+        text-align: center;
+    }
+    .copyrighBox ul li img{
+        vertical-align: middle;
+        width: 0.339rem;
+        height: 0.28rem;
+    }
+    .copyrighBox ul li.BottomPhoneBox img{
+        width: 0.26rem;
+        height: 0.26rem;
+    }
+    .copyrighBox ul li span{
+       vertical-align: middle;
+       color: #b7b7b7;
+       font-size: 0.24rem;
+       letter-spacing: -0.6px;
+       padding-left: 3px;
+    }
+    .copyrighBoxBottom{
+        width: 6.87rem;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 0.12rem;
+        padding-bottom: 1.4rem;
+        position: relative;
+    }
+    .copyrighBoxBottom:before{
+       position: absolute;
+		display: inline-block;
+		content: '';
+		height: 1px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: #e4e4e4;
+		transform: scale(1,0.5);
+    }
+    .copyrighBoxBottom p{
+        line-height: 0.35rem;
+        text-align: center;
+        color: #b7b7b7;
+        font-size: 0.24rem;
+        white-space: nowrap;
+        letter-spacing: -0.006rem;
+    }
+    .copyrighBox .bottomTip{
+    	width: 6.87rem;
+    	margin: 0 auto;
+        line-height:0.8rem;
+        text-align: center;
+        color: #b7b7b7;
+        font-size: 0.24rem;
+        position: relative;
+    }
+    .copyrighBox .bottomTip:after{
+    	position: absolute;
+		display: inline-block;
+		content: '';
+		height: 1px;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		background-color: #e4e4e4;
+		transform: scale(1,0.5);
+    }
+</style>
+
+
+<div class="copyrighBox">
+
+	<p class="bottomTip"></p>
+      <ul>
+      	<li class="BottomPhoneBox">
+      		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAoxJREFUSA2lljuIE1EUhjOTKIniVilEFES2EW1cYrGoYFYmL0TsLJQFbS12tRIFQZDtFkREtNVqJY1NXj7GQmKTZkULUVBEfGRBJYsQ2Dz8TtiEm5uZcWa8cJlzz+P/z7nPMSKbrVKpzPR6vZuGYRxDVYzH45fS6fTvof1/v4YAQLIAyTJiVAF8gzxXKBTWFF1o0SyVShlIboGgkgjgQap73Gg0toRGVwJN5EVlPCb2+/3ZZrO5MKYMOTDJ+ohXLPaLXna/NqnIs1HVXtu2455OPoxCtOrlR0U2u6/t5ePHJkQ1N0dI3lHRvJs9iN6MxWIPCOg5BK1Ho1HZ3l8cbIFVpmVZn8n8iR6J7kcmk/mq68OOB5vBNM0lHYApm65Wq3O6Pux4cDNIcLlcfg54WgP6ThIzuVzum6YPPBxUtBl1ja++Vjshl9thW2BkLWBElM/nX7EudzR7BKLD3A4rnKWYbgsyHhFJENN0FbKPDgAn2+32Q0j1+9DB1Vk1WqOhmbU6CuAzxluHOuW7kkgkznGAO4rOlzhWkUQwhS85P/NU1ndAOENlRa8riddgikQncCcqGoJT2WUC5I2aaCRRx3Zafas4Cnt4bsroD2D/SV9KJpO3U6nUhgC4EomR7K7zuSGy3gD6RL/A1rdrtdquTqfzFJ/9qh/2t/Sz+Kx6EkkQr+95srxPd3sAfwG2A7vbrlzHfuKfRELGtFhMSxGwKRkHbRC98EUkwFQ2DdEj+qEQRGsTu8MNhHn+AMks2d118/HQv/ddkQoiU9ntdu+h26fqnWQS+8NxOR6KSADr9Xqi1WpdocpFutvayUY4xdn0v0ZO2YqO6rZDlKNbDGX9diNvQPBarrRsNiv/h5G/sI7yzQweezwAAAAASUVORK5CYII=" /><span>客服热线:400-8713-007</span>
+      	</li>
+      	<li class="BottomChartBox">
+      		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAAAXNSR0IArs4c6QAABApJREFUSA2tlktIVFEYx507I6NETgn2IILIqKgIQqGyqbDxNQa1yZVuFLKkx6J1QfSSCoooiKJoYQQtoiLTMTMXakFQhIWWQVnSZPawpqk00+n3XeYMd27XcWbywHfP+V7/87/nbUuJURoaGpZomuYdGxvz2Gy2+aFQaAbhTuQT0oevHVtzSUnJPfyhGFATumxWET6fby0d7EWKrPwWth5IHS8uLr6YLKEoIoyAE6BjENht0Vk8pg7yK7xeb288wcaYCJGmpqYpo6OjTTjXGAMSbUPkPTklkOlMJFeTYEbADonrNP+LRBhrNnh3mN7ZosdbdCKMxk4SCo1J/Nk39CvIW6Pd2CYmhNxCHhjttGdCps5ki6lqbW1t09kVB81RgG8pLS0tT09PX0l7xOwXHfsppmATkmcmAxEPPxj1c1YYyqYFg8EylKnKoGrIfZa20+n8BugfZTfW2PWYsO2L0SdtpjvuRW9jpzSQ4zWD8IfP6Ui2Yyl1vtkvOr4gcoJmFsRrzDHiz8rKyszNzbUcUWO8EHmBYaHRmGR7kI5vcp74yP+BOBiRKXa7XXaRv6ioqAf/2HjYtsbGxq/8sWu8gDjsP4k5AoFmRqWSzjaCN9ech12m7i71GU7itn/8EOkmcbHZEafeTVwVJLaCUYlEzqVY+ZBpIaeSk7hPxWkkv1ZKgvVLwCoArWMkquIlIX0Q62HaOhmE1apPDaB6pSRQ/ySvHMCryALJQw8g55BHVjjYHyLnkWDYP43axxZfJrqMyGWcsrjiLsTXklejSIQTt3GebE9LS3PjHzCCofexe9z4t2HfpXzkZzAyl6jtGodWAMdh5ZyoBnSIxNvEVZpih8O6nDnmc+dPTk6O2jFDprxcroPN+uICWGO+WglYZwqyUm+wNh6zLg4YnRD8iH4BWQWe1bnTTIxMWzX+TGMu7WuRVQ6rTALqkcgCMgXrKmD7aSwlTk7kySov9UtP0NjbX1wul7zELBeb6hH/O9ryUpu0AuaMCBFBzcvL+0U1GqsHRiID6Y8Vk4TvXRSR1tZWByDLw0CvWAvVsD2E3oF8QITkPGxPqCezdErHkTI8PLyIv5VVvQ85zXSpnaDH4LN1dXWl+v3+WSMjI7LTon5ED0riA+6lKCKMwCA42bJerPAYCXmp/0bessvOArDDKi5BWwfnS3Nk1ySYnNLe3j41EAjcJ08/GRPND8cP8t5Z4fF43iQ9tG63+ztXvOyyhB7JijB5/tTU1PVCQmxJE5Fkbs8BjnR5Sp5EJnz8SI4qxNcWFhY+Vfp/ERGQ/Pz8IeZ4D+srGzmK6ZkCN9Z03Iv/LHWL2FlfOVF+ozJZbTmlmbY57KxMOv/qcDj6CwoKZPvrhRt3A5ddGfdc5Hn5F4jamzIvU/pxAAAAAElFTkSuQmCC" /><span>微信公众号:选财外汇</span>
+      	</li>
+      </ul>
+      <div class="copyrighBoxBottom">
+      	<p>Copyright@2015-2018 www.fmtxt.com All Rights Reserved</p>
+      	<p>腾信堂版权所有 手机触屏版</p>
+      </div>
+</div>

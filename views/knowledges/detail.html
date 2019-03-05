@@ -1,0 +1,42 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/knowledges/detail.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+{% if kgVideo.education_type == '0' %}
+<section id="kg-video" class="video" data-vid="{{ kgVideoId }}" data-pic="{{ kgVideo.education_image }}">
+  <div class="not-wifi video-mask">
+    <div class="not-wifi-box">
+      <p class="video-wifi-tip">非wifi网络，播放视频将消耗流量</p>
+      <a class="continue-play vide-play-btn" href="javascript:;">继续播放</a>
+    </div>
+  </div>
+  <div class="kg-video-bg vide-play-btn video-mask" style="background-image:url('{{ kgVideo.education_image }}')">
+   <p class="kg-video-name"><span>{{ kgVideo.education_name }}</span></p>
+  </div>
+  <div class="video-loading"><i></i></div>
+  <div id="videoCon"></div>
+</section>
+<section class="article">
+   <div class="article-title">简介</div>
+   <div class="article-content">{{ kgVideo.video_content | safe }}</div>
+</section>
+{% else %}
+<section class="article">
+   <div class="article-name">{{ kgVideo.education_name }}</div>
+   <div class="article-content">{{ kgVideo.video_content | safe }}</div>
+</section>
+{% endif %}
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/tvp.player.js"></script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["kGDetail"]);
+</script>
+{% endblock %}

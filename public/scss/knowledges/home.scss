@@ -1,0 +1,242 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  @include remCalc(margin, 88 0 0 0);
+  background: #efeff4;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  #pager {
+    position: absolute;
+    z-index: 33;
+    width: 100%;
+    text-align: center;
+    @include px2rem(bottom, 14);
+    em {
+      @include px2rem(width, 8);
+      @include px2rem(height, 8);
+      display: inline-block;
+      background: #fff;
+      @include css3fn(border-radius, 50%);
+      &.on {
+        @include px2rem(width, 30);
+        @include css3(border-radius, 4);
+      }
+    }
+  }
+  .swipe {
+    height: auto;
+    overflow: hidden;
+    visibility: hidden;
+    width: 100%;
+  }
+  .swipe-wrap {
+    @include px2rem(height, 270);
+    overflow: hidden;
+    div {
+      height: auto;
+      float: left;
+      width: 100%;
+      position: relative;
+      @include px2rem(height, 270);
+      a {
+        display: block;
+      }
+    }
+    img {
+      width: 100%;
+      display: inline-block;
+      padding-left: 0px;
+      height: 100%;
+    }
+  }
+}
+.menu {
+  @include remCalc(padding, 30 30 14 30);
+  background: #fff;
+  ul {
+    font-size: 0;
+    li {
+      display: inline-block;
+      @include px2rem(width, 337);
+      @include px2rem(height, 160);
+      @include px2rem(line-height, 160);
+      @include px2rem(font-size, 34);
+      @include px2rem(letter-spacing, -0.6);
+      overflow-x: hidden;
+      overflow: hidden;
+      @include px2rem(margin-bottom, 16);
+      div {
+        display: inline-block;
+        @include px2rem(width, 337);
+        @include px2rem(height, 160);
+        a {
+          color: #fff;
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+        i {
+          color: #fff;
+          @include css3fn(opacity, 0.6);
+          float: right;
+          @include px2rem(margin-right, 30);
+        }
+      }
+      &:nth-child(odd) {
+        @include px2rem(margin-right, 16);
+      }
+      &:nth-child(1) {
+        div {
+          background: url('/images/knowledges/svg/mbg1.svg') no-repeat;
+          background-size: 100%;
+          @include px2rem(text-indent, 30);
+        }
+      }
+      &:nth-child(2) {
+        div {
+          background: url('/images/knowledges/svg/mbg2.svg') no-repeat;
+          background-size: 100%;
+          @include px2rem(text-indent, 30);
+        }
+      }
+      &:nth-child(3) {
+        div {
+          background: url('/images/knowledges/svg/mbg3.svg') no-repeat;
+          background-size: 100%;
+          @include px2rem(text-indent, 30);
+        }
+      }
+      &:nth-child(4) {
+        div {
+          background: url('/images/knowledges/svg/mbg4.svg') no-repeat;
+          background-size: 100%;
+          @include px2rem(text-indent, 30);
+        }
+      }
+    }
+  }
+}
+.novice-box {
+  background: #fff;
+  position: relative;
+  a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .novice {
+    @include remCalc(margin, 0 30);
+    border-top: 1px solid #e5e5e5;
+    @include remCalc(padding, 47 0);
+    @include px2rem(text-indent, 10);
+    i,span {
+      vertical-align: middle;
+    }
+    .novice-icon {
+      @include px2rem(width, 62);
+      @include px2rem(height, 50);
+      display: inline-block;
+      background: url('/images/knowledges/svg/novice-icon.svg') no-repeat;
+      background-size: 100%;
+    }
+    .title {
+      @include px2rem(font-size, 36);
+      @include px2rem(letter-spacing, -0.7);
+      @include px2rem(margin-left, 26);
+      color: #000000;
+    }
+    .icon-red {
+      @include px2rem(font-size, 16);
+      @include px2rem(letter-spacing, -0.4);
+      color: #fffbfa;
+      @include remCalc(padding, 3 8);
+      background: linear-gradient(121deg, #ff6d6d, #ff0000);
+      @include css3(border-radius, 4);
+      @include px2rem(margin-left, 20);
+    }
+    .iconfont {
+      @include px2rem(font-size, 36);
+      @include css3fn('transform',rotate(90deg));
+      color: #b5b5b5;
+      display: inline-block;
+      vertical-align: top;
+      float: right;
+    }
+  }
+}
+.video {
+  @include px2rem(margin-top, 20);
+  div {
+    position: relative;
+    width: 100%;
+    @include px2rem(height, 300);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include px2rem(margin-bottom, 10);
+    &.msg-cover {
+      @include px2rem(height, 170);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom,rgba(238,238,238,0),rgba(0,0,0,.45));
+      z-index: 2;
+      margin-bottom: 0;
+    }
+    .play-icon {
+      width: .7rem;
+      height: .7rem;
+      background: #f7ab09;
+      border-radius: .35rem;
+      margin-left: -.35rem;
+      margin-top: -.35rem;
+      z-index: 3;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      &:after{
+        content: '';
+        border: .14rem solid transparent;
+        border-left: .18rem solid #fff;
+        margin-top: -.14rem;
+        margin-left: -.05rem;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+      }
+    }
+    .msg {
+      @include remCalc(padding, 0 20);
+      @include px2rem(font-size, 32);
+      @include px2rem(letter-spacing, -0.8);
+      color: #ffffff;
+      position: absolute;
+      @include px2rem(left, 0);
+      @include px2rem(bottom, 20);
+      @include px2rem(max-width, 700);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .video-link {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 33;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "bluebird": "^3.4.6",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-less": "^3.3.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-collector": "^1.0.5",
+    "gulp-uglify": "^2.0.0",
+    "http-proxy-middleware": "^0.17.4",
+    "nunjucks": "^3.0.1",
+    "request-promise": "^4.2.2",
+    "run-sequence": "^2.1.0",
+    "serve-favicon": "^2.4.5",
+    "supervisor": "^0.12.0"
+  },
+  "devDependencies": {
+    "accord": "^0.27.3",
+    "browser-sync": "^2.18.13",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "less": "^2.7.3",
+    "make-error-cause": "^1.2.2",
+    "morgan": "^1.9.0",
+    "when": "^3.7.8"
+  }
+}

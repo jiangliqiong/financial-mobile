@@ -1,0 +1,111 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/ibapply/qualified.css" />
+<link type="text/css" rel="stylesheet" href="/css/common/iosSelect.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+{% if type == 1 %}
+<section class="banner-active"></section>
+{% else %}
+<section class="banner" id="aaa">
+  <div class="qualified-msg">
+    <p>您还不是IB代理商</p>
+    <p>请先填写资料成为代理商身份！</p>
+  </div>
+</section>
+{% endif %}
+<section class="qualified-form">
+   <ul>
+      <li>
+        <span class="label-name">代理商名称</span>
+        <div class="form-val">
+          <input type="text" name="name" value="" placeholder="为自己取个代理商名称" required maxlength='30'/>
+        </div>
+        <span class="required-label">（必填）</span>
+      </li>
+      <li id="showCountry" data-id="01">
+        <span class="label-name">国家</span>
+        <div class="form-val"><span class="area-val checked">中国</span><i class="icon iconfont arrowicon">&#xe720;</i></div>
+      </li>
+      <li id="selectArea">
+        <span class="label-name">所在地区</span>
+        <div class="form-val"><span class="area-val">&nbsp;</span><i class="icon iconfont arrowicon">&#xe720;</i></div>
+      </li>
+      <li>
+        <span class="label-name">办公所在地</span>
+        <div class="form-val">
+          <input type="text" name="area" value="" placeholder="本机构办公所在地" required maxlength="60" />
+        </div>
+        <span class="required-label">（必填）</span>
+      </li>
+      <li>
+        <span class="label-name">营业执照</span>
+        <div class="form-val  upload-pic-box">
+          <div class="upload-status upload-ok">
+             <i class="iconfont icon-yishangchuan">&#xe71e;</i><span>已上传</span>
+          </div>
+          <div class="upload-status upload-loading">
+             <i class="loading-pic"></i><span>正在上传</span>
+          </div>
+          <div class="ib-upload">
+            <a class="ib-upload-btn" href="javascript:;"><i class="iconfont icon-zhongxinshangchuan">&#xe713;</i><span>立即上传</span></a>
+            <form action="/api/upload" method="post" id="upload" target="uploadIframe" enctype="multipart/form-data">
+              <input type="file" name="file" class="file-pic" accept="image/gif, image/jpeg, image/jpg, image/png">
+            </form>
+          </div>
+          <p class="form-pic-tip">如您为机构代理商，请上传营业执照</p>
+        </div>
+      </li>
+      <li>
+        <span class="label-name">客服电话</span>
+        <div class="form-val">
+          <input type="text" name="phone" value="" placeholder="客户服务电话" required />
+        </div>
+        <span class="required-label">（必填）</span>
+      </li>
+      <li>
+        <span class="label-name">客服邮箱</span>
+        <div class="form-val">
+          <input type="email" name="email" value="" placeholder="客户服务邮箱" required maxlength="100" />
+        </div>
+      </li>
+      <li>
+        <span class="label-name">客服QQ</span>
+        <div class="form-val">
+          <input type="number" name="qq" value="" placeholder="QQ号作为在线客服接入号" required maxlength="30" />
+        </div>
+        <span class="required-label">（必填）</span>
+      </li>
+      <li>
+        <span class="label-name">官方网址</span>
+        <div class="form-val">
+          <input type="url" name="url" value="" placeholder="填写公司官网地址" required maxlength="100" />
+        </div>
+      </li>
+      <li>
+        <span class="label-name">代理商介绍</span>
+        <div class="form-val form-textarea-box">
+          <textarea class="textarea-descr" name="descr" placeholder="请填写您的相关介绍，以更好的展示您的优势，让更多的客户选择您（5000个汉字以内)" required maxlength="5000"></textarea>
+        </div>
+        <span class="required-label bottom">（必填）</span>
+      </li>
+      <li>
+         <button type="button" class="required-btn" disabled>成为IB代理商</button>
+      </li>
+   </ul>
+   <iframe class="uploadIframeBox" id="uploadIframe" name="uploadIframe" style="display:none;"></iframe>
+</section>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript" src="/js/common/iscroll.js"></script>
+<script type="text/javascript" src="/js/common/iosSelect.js"></script>
+<script type="text/javascript">
+  seajs.use(["qualified"]);
+</script>
+{% endblock %}

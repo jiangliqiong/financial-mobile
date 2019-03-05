@@ -1,0 +1,46 @@
+body {
+  font-size: 0.32rem;
+  background: #ffffff;
+}
+iframe {
+  border: 0;
+}
+.back-step {
+  display: block;
+  margin: 0.9rem 0.3rem 0;
+  background: #094290;
+  color: #fff;
+  line-height: 0.88rem;
+  text-align: center;
+  border-radius: 0.05rem;
+}
+.success {
+  text-align: center;
+  padding: 1rem 0.4rem 0;
+  margin-top: 0.8rem;
+}
+.success h5 {
+  font-size: 0.42rem;
+  color: #0c0c0c;
+  margin-top: 0.14rem;
+}
+.success p {
+  color: #959595;
+  margin-top: 0.4rem;
+}
+.registertip {
+  background: #fff7ea;
+  color: #f7ab09;
+  font-size: 0.28rem;
+  padding: 0.2rem;
+  margin-top: 0.4rem;
+  text-align: left;
+}
+.successicon {
+  color: #41cc3d;
+  font-size: 1.1rem;
+}
+.failicon {
+  color: #ff0101;
+  font-size: 1.1rem;
+}

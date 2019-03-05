@@ -1,0 +1,177 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/common/swiper.min.css" />
+<link type="text/css" rel="stylesheet" href="/css/traders/shop.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="xm">
+    <img src="/images/traders/xm.png" srcset="/images/traders/xm@2x.png 2x, /images/traders/xm@3x.png 3x"/>
+</div>
+<div class="shopLogo">
+    <img src="{{ item.logo_url }}"/>
+</div>
+<div class="shopName">
+    <div class="titleArea">
+        <div class="title">
+            <span>{{ item.chinese_name }}</span>
+            <span class="vipImg"></span>
+            <!--<img src="/images/traders/store.png" srcset="/images/traders/store@2x.png 2x,/images/traders/store@3x.png 3x" class="" />-->
+        </div>
+        <div class="regionBnak">
+            <div class="icon iconfont regionIcon">&#xe711;</div>
+            <div class="bankBox">
+                <span>{{ item.country }}</span>
+                <i class="icon iconfont bankIcon">&#xe712;</i>
+                <span>{{ item.regulators }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="commentBtn">
+        <p>
+            <span class="icon iconfont">&#xe774;</span>
+            <span class="text num">&nbsp;</span>
+        </p>
+    </div>
+</div>
+<div class="relevant">
+    <ul>
+        <li>
+            <a href="about.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}"><span class="icon iconfont relevantIcon">&#xe710;</span></a><br/>
+            <a href="about.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}"><span>关于我们</span></a>
+        </li>
+        <li>
+            <a href="trade.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}"><span class="icon iconfont relevantIcon ml8">&#xe763;</span></a><br/>
+            <a href="trade.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}"> <span>外汇交易</span></a>
+        </li>
+        <li>
+            <a href="activity.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}"><span class="icon iconfont relevantIcon ml8">&#xe71c;</span></a><br/>
+            <a href="activity.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}"><span>优惠活动</span></a>
+        </li>
+        <li>
+            <a href="tools.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}"><span class="icon iconfont relevantIcon">&#xe721;</span></a><br/>
+            <a href="tools.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}"><span>交易工具</span></a>
+        </li>
+    </ul>
+</div>
+
+<div class="banner">
+    <a href="activity.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}" class="bannerHref"><img src="/images/traders/banner1.png" class="bannerImg"/></a>
+    <!--<div class="swiper-container">-->
+        <!--<div class="swiper-wrapper">-->
+            <!--<div class="swiper-slide"><img src="/images/traders/banner1.png" class="bannerImg"/></div>-->
+            <!--<div class="swiper-slide"><img src="/images/traders/banner2.png" class="bannerImg"/></div>-->
+            <!--<div class="swiper-slide"><img src="/images/traders/banner3.png" class="bannerImg"/></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="swiper-pagination bannerBtn"></div>-->
+</div>
+<div class="brandAdvantage">
+    <div class="title">
+        <i class="vLine"></i>
+        <span class="tit">品牌优势</span>
+        <a class="detail" href="advantage.html?brokerId={{ item.broker_id }}&shareId={{ shareId }}">查看详情<span class="icon iconfont gotoIcon">&#xe720;</span></a>
+    </div>
+    <div class="content">{{ item.brand_advantage }}</div>
+</div>
+<div class="feature">
+    <i class="vLine"></i>
+    <ul>
+        <li>
+            <div class="left">
+                <span>最高杠杆</span>
+                <span class="contentTxt">{{ item.max_leverage }}</span>
+            </div>
+            <div class="right">
+                <span>最低入金</span>
+                {% if item.min_price %}
+                <span class="contentTxt">{{ item.min_price }}</span>
+                {% else %}
+                <span class="contentTxt">{{ 0 }}</span>
+                {% endif %}
+            </div>
+        </li>
+        <li>
+            <div class="left">
+                <span>最小寸头</span>
+                <span class="contentTxt">{{ item.min_position }}</span>
+            </div>
+            <div class="right">
+                <span>平均点差</span>
+                <span class="contentTxt">{{ item.min_point }}</span>
+            </div>
+        </li>
+        <li>
+            <div class="left">
+                <span>EA交易</span>
+                <span class="contentTxt">{{ item.is_ea_permission }}</span>
+            </div>
+            <div class="right">
+                <span>剥头皮</span>
+                <span class="contentTxt">{{ item.scalp }}</span>
+            </div>
+        </li>
+        <li>
+            <div class="left">
+                <span>经营模式</span>
+                <span class="contentTxt">{{ item.managing_mode }}</span>
+            </div>
+            <div class="right">
+
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="showRebate" data-customerback="{{ item.customer_back }}" data-ibback="{{ item.ib_back }}">
+    <div class="tradeAndIbRebate" style="display: none;">
+        <span class="traderRebate">外汇返佣: $<i class="val"></i>/手</span>
+        <i class="vLine"></i>
+        <span class="ibRebate">代理返佣: $<i class="val"></i>/手</span>
+        <i class="triangle"></i>
+    </div>
+    <div class="tradeRebate" style="display: none;">
+        <p class="rebateValue">
+            <span>外汇返佣: </span>
+            <span class="rebateVal">$<i class="val"></i>/手</span>
+        </p>
+        <span class="triangle"></span>
+    </div>
+</div>
+<a class="openAccountBtn" data-brokername="{{ item.chinese_name }}">马上开户</a>
+<a class="agentTraderBtn" data-brokerid="{{ item.broker_id }}"></a>
+<div class="mask"></div>
+<!--<div class="shareBox">-->
+    <!--<div class="shareBtn">-->
+        <!--<a><img src="/images/traders/wx.png" srcset="/images/traders/wx@2x.png 2x, /images/traders/wx@3x.png 3x" /></a>-->
+        <!--<a><img src="/images/traders/pyq.png" srcset="/images/traders/pyq@2x.png 2x, /images/traders/pyq@3x.png 3x" /></a>-->
+        <!--<a><img src="/images/traders/qq.png" srcset="/images/traders/qq@2x.png 2x, /images/traders/qq@3x.png 3x" /></a>-->
+        <!--<a class="fzUrl"><img src="/images/traders/fz.png" srcset="/images/traders/fz@2x.png 2x, /images/traders/fz@3x.png 3x" /></a>-->
+        <!--<a class=""><img src="/images/traders/ewm.png" srcset="/images/traders/ewm@2x.png 2x, /images/traders/ewm@3x.png 3x" /></a>-->
+    <!--</div>-->
+    <!--<a class="cancelBtn">取消</a>-->
+<!--</div>-->
+
+<div class="qrcodeLayerBox">
+    <div class="qrcodeMask"></div>
+    <div class="qrcodeLayer">
+        <img src="/images/traders/qrcode.png" srcset="/images/traders/qrcode@2x.png 2x, /images/traders/qrcode@3x.png 3x" />
+        <div class="qrcode" id="qrcode">
+            <!--<img />-->
+        </div>
+        <a class="closeBtn"></a>
+        </div>
+    </div>
+</div>
+<a class="shop-top-share shareBtn" href="javascript:;"><span class="icon iconfont shareIcon">&#xe773;</span></a>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/common/swiper.min.js"></script>
+<script type="text/javascript" src="/js/common/qrcode.min.js"></script>
+<script type="text/javascript" src="/js/traders/shop.js"></script>
+{% endblock %}

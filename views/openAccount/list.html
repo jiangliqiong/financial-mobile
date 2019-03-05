@@ -1,0 +1,39 @@
+{% extends '../common/layout.html' %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/openAccount/list.css" />
+{% endblock %}
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+{% block content %}
+<div class="list">
+    {% for item in data %}
+        <div class="item {% if item.broker_id==brokerId %}on{% endif %}" data-id="{{ item.broker_id }}">
+            <dl>
+                <dd><img src="{{ item.logo_url }}" width="100%"></dd>
+                <dt>
+                    <p>{{ item.chinese_name }}</p>
+                    <span class="customershow">外汇返佣：${% if item.customer_back == "" %}0{% else %}{{item.customer_back}}{% endif%}/手</span>
+                </dt>
+            </dl>
+            <table>
+                <tr>
+                    <th>平均点差</th>
+                    <th>最高杠杆</th>
+                    <th>最低入金</th>
+                    <th>经营模式</th>
+                </tr>
+                <tr>
+                    <td>{{ item.min_point }}</td>
+                    <td>{{ item.max_leverage }}</td>
+                    <td>{% if item.min_price=="" %} $0 {% else %}{{ item.min_price }}{% endif %}</td>
+                    <td>{{ item.managing_mode }}</td>
+                </tr>
+            </table>
+         </div>
+    {% endfor %}
+</div>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/openAccount/list.js"></script>
+{% endblock %}

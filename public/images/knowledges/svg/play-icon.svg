@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="78px" viewBox="0 0 78 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>A093FF84-6D35-4E1F-8EA3-DD138F3C82ED</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-0.9%" y="-1.7%" width="101.9%" height="104.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.1外汇大课堂首页" transform="translate(-336.000000, -1161.000000)">
+            <g id="经典视频课程" transform="translate(0.000000, 1048.000000)">
+                <g id="热门教学">
+                    <g id="视频">
+                        <g filter="url(#filter-1)">
+                            <g id="视频按钮" transform="translate(340.000000, 115.000000)">
+                                <circle id="Oval-2" fill="#F7AB09" cx="35" cy="35" r="35"></circle>
+                                <path d="M49.4699288,36.7119696 L29.5472494,49.738337 L29.5472494,49.738337 C29.0850038,50.0405744 28.4652679,49.9108623 28.1630304,49.4486167 C28.0566535,49.2859227 28,49.095752 28,48.9013673 L28,22.8486327 L28,22.8486327 C28,22.2963479 28.4477153,21.8486327 29,21.8486327 C29.1943846,21.8486327 29.3845553,21.9052862 29.5472494,22.011663 L49.4699288,35.0380304 L49.4699288,35.0380304 C49.9321744,35.3402679 50.0618866,35.9600038 49.7596491,36.4222494 C49.6841072,36.5377841 49.5854635,36.6364277 49.4699288,36.7119696 Z" id="Triangle" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,133 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/ibapply/apply.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="apply-body">
+  <section id="apply"></section>
+  <section class="ib-apply-list" id="ib-apply-list"></section>
+</section>
+<section class="ib-apply-btn-box" style="display:none">
+  <div class="ib-apply-btn">
+    <button type="button" name="button" class="ib-apply-sure">确认申请</button>
+  </div>
+</section>
+{% endblock %}
+{% block script %}
+<script id="applyTml" type="text/html">
+  <section class="ib-base-msg">
+    <p class="ib-img"><img src="<%= broker.logo_url %>" alt=""></p>
+    <p class="ib-name"><span class="ib-name-val"><%= broker.chinese_name %></span><span class="ib-ico">旗舰店</span></p>
+    <div class="detail-back">
+      <p>
+        <span>返佣金额</span>
+        <i></i>
+        <b>$<%= broker.rakeBack %></b>
+      </p>
+    </div>
+  </section>
+  <section class="ib-detail-msg">
+    <div class="ib-detail-ul">
+      <ul>
+        <li>
+          <div class="">
+            <span>最高杠杆</span>
+            <% if(broker.max_leverage) { %>
+            <span><%= broker.max_leverage %></span>
+            <% }else { %>
+            <span><%= broker.max_leverage_first %>:<%= broker.max_leverage_last %></span>
+            <% } %>
+          </div>
+          <div class="">
+            <span>最低入金</span>
+            <% if(broker.min_price) { %>
+            <span><%= broker.min_price %></span>
+            <% }else { %>
+            <span>0</span>
+            <% } %>
+          </div>
+        </li>
+        <li>
+          <div class="">
+            <span>最小寸头</span>
+            <span><%= broker.min_position %></span>
+          </div>
+          <div class="">
+            <span>平均点差</span>
+            <% if (broker.min_point) { %>
+            <span><%= broker.min_point %></span>
+            <% }else { %>
+            <span>0</span>
+            <% } %>
+          </div>
+        </li>
+        <li>
+          <div class="">
+            <span>EA交易</span>
+            <% if ( broker.ea_permission == '0' ) { %>
+            <span>允许</span>
+            <% }else { %>
+            <span>不允许</span>
+            <% } %>
+          </div>
+          <div class="">
+            <span>剥头皮</span>
+            <span><%= broker.scalp %></span>
+          </div>
+        </li>
+      </ul>
+      <i class="ib-detail-line"></i>
+    </div>
+  </section>
+  <section class="set-reward">
+    <div class="set-reward-val">
+       <span class="set-reward-label"><i></i>投资人奖励</span>
+       <span class="set-reward-label unit">$</span>
+       <input type="number" name="" value="" placeholder="0.0" class="reward-val" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if(!((event.keyCode>= 48 && event.keyCode <=57) || event.keyCode == 46)) event.returnValue=false"/>
+       <p class="reward-tip">*返佣额将作为投资人选择与您合作的重要因素之一</p>
+       <p class="reward-img-tip">
+         <i class="reward-arrow"></i>
+         <span>填写投资人奖励</span>
+         <i class="reward-close iconfont icon-guanbi">&#xe726;</i>
+        <span class="reward-close reward-close-cover"></span>
+       </p>
+    </div>
+  </section>
+</script>
+<script id="applyList" type="text/html">
+  <% if (list&&list.length>0) { %>
+  <p class="ib-list-title"><i></i><span>以下投资人账户将在下一个结算周期自动成为您的代理账户</span></p>
+  <div class="ib-list-tab">
+      <table>
+        <thead>
+          <tr>
+            <td width="25%">会员</td>
+            <td width="25%">账户名</td>
+            <td width="35%">开户交易商</td>
+            <td width="15%">当前返佣</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (var i = 0; i < list.length; i++) { %>
+          <tr>
+            <td><%= list[i].mobile %></td>
+            <td><%= list[i].openAccont %></td>
+            <td><%= list[i].broker_name %></td>
+            <td>$<%= list[i].back %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+  </div>
+  <% } %>
+</script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["apply"]);
+</script>
+{% endblock %}

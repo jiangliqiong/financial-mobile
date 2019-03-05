@@ -1,0 +1,209 @@
+body {
+  background: #efeff4;
+  margin-top: 0.88rem; }
+
+input {
+  -webkit-appearance: none;
+  outline: none; }
+
+.strategy .varieties {
+  padding: 0rem 0.3rem;
+  background: #fff;
+  cursor: pointer; }
+  .strategy .varieties .varieties-box {
+    font-size: 0;
+    padding: 0.4rem 0rem;
+    border-bottom: 0.02rem solid #e5e5e5; }
+    .strategy .varieties .varieties-box span {
+      vertical-align: middle; }
+      .strategy .varieties .varieties-box span.lt {
+        font-size: 0.32rem;
+        color: #000;
+        letter-spacing: -0.008rem; }
+    .strategy .varieties .varieties-box p.rt {
+      display: inline-block;
+      font-size: 0.32rem;
+      color: #dcdcdc;
+      vertical-align: middle;
+      margin-left: 0.7rem; }
+    .strategy .varieties .varieties-box .iconfont {
+      float: right;
+      color: #b5b5b5;
+      vertical-align: middle;
+      font-size: 0.32rem;
+      margin-top: 0.04rem; }
+
+.category {
+  padding: 0.32rem 0.3rem;
+  background: #fff;
+  cursor: pointer; }
+  .category .category-box {
+    position: relative; }
+    .category .category-box .lt {
+      font-size: 0.32rem;
+      color: #000;
+      position: absolute;
+      top: 0.04rem;
+      left: 0; }
+    .category .category-box .rt {
+      font-size: 0;
+      padding: 0rem 0rem 0rem 1.96rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .category .category-box .rt span {
+        display: inline-block;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        position: relative;
+        cursor: pointer; }
+        .category .category-box .rt span.active a {
+          color: #094290;
+          border-color: #094290; }
+        .category .category-box .rt span.active .strategy-arrow {
+          display: block; }
+        .category .category-box .rt span a {
+          padding: 0.08rem 0.24rem;
+          border: 0.02rem solid #e5e5e5;
+          -webkit-border-radius: 0.04rem;
+          -moz-border-radius: 0.04rem;
+          -ms-border-radius: 0.04rem;
+          -o-border-radius: 0.04rem;
+          border-radius: 0.04rem;
+          font-size: 0.32rem;
+          display: inline-block;
+          color: #959595; }
+        .category .category-box .rt span:nth-child(2) {
+          text-align: center; }
+        .category .category-box .rt span:nth-child(3) {
+          text-align: right; }
+        .category .category-box .rt span .strategy-arrow {
+          display: none;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0.18rem 0.18rem 0.18rem;
+          border-color: transparent transparent #e5e5e5 transparent;
+          bottom: -0.32rem;
+          left: 0.38rem; }
+          .category .category-box .rt span .strategy-arrow::before {
+            position: absolute;
+            content: '';
+            top: 0.02rem;
+            left: -0.18rem;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0.18rem 0.18rem 0.18rem;
+            border-color: transparent transparent #f5f5f5 transparent; }
+          .category .category-box .rt span .strategy-arrow.center {
+            left: 0.64rem; }
+          .category .category-box .rt span .strategy-arrow.right {
+            left: 0.88rem; }
+
+.data {
+  background: #fafafa;
+  padding: 0.4rem 0.3rem 0.4rem 0.3rem;
+  border-top: 1px solid #e5e5e5; }
+  .data ul li {
+    font-size: 0;
+    margin-bottom: 0.4rem; }
+    .data ul li:before, .data ul li:after {
+      content: "";
+      display: table; }
+    .data ul li:after {
+      clear: both; }
+    .data ul li.area {
+      display: none; }
+    .data ul li:last-child {
+      margin-bottom: 0; }
+    .data ul li .label {
+      font-size: 0.32rem;
+      line-height: 0.98rem;
+      color: #000; }
+    .data ul li .data-box {
+      display: inline-block;
+      font-size: 0;
+      float: right; }
+      .data ul li .data-box.focus a {
+        cursor: pointer; }
+        .data ul li .data-box.focus a.reduce-num span {
+          background: url("/images/personal/reduce-hover.svg") no-repeat;
+          background-size: 100%; }
+        .data ul li .data-box.focus a.add-num span {
+          background: url("/images/personal/add-hover.svg") no-repeat;
+          background-size: 100%; }
+      .data ul li .data-box a {
+        background: #fff;
+        width: 0.94rem;
+        height: 0.94rem;
+        display: inline-block;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 0.04rem;
+        -moz-border-radius: 0.04rem;
+        -ms-border-radius: 0.04rem;
+        -o-border-radius: 0.04rem;
+        border-radius: 0.04rem;
+        position: relative;
+        vertical-align: middle; }
+        .data ul li .data-box a.reduce-num {
+          border-right: 0; }
+          .data ul li .data-box a.reduce-num span {
+            width: 0.4rem;
+            height: 0.04rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -0.02rem;
+            margin-left: -0.2rem;
+            background: url("/images/personal/reduce.svg") no-repeat;
+            background-size: 100%; }
+        .data ul li .data-box a.add-num {
+          border-left: 0; }
+          .data ul li .data-box a.add-num span {
+            width: 0.4rem;
+            height: 0.4rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -0.2rem;
+            margin-left: -0.2rem;
+            background: url("/images/personal/add-icon.svg") no-repeat;
+            background-size: 100%; }
+      .data ul li .data-box input {
+        width: 3.68rem;
+        height: 0.98rem;
+        vertical-align: middle;
+        border: 1px solid #e5e5e5;
+        text-align: center;
+        font-size: 0.32rem; }
+        .data ul li .data-box input::-webkit-input-placeholder {
+          color: #dcdcdc; }
+
+.strategy-btn {
+  text-align: center;
+  margin-top: 0.6rem;
+  padding: 0rem 0.3rem;
+  font-size: 0; }
+  .strategy-btn button {
+    width: 100%;
+    height: 0.88rem;
+    -webkit-border-radius: 0.04rem;
+    -moz-border-radius: 0.04rem;
+    -ms-border-radius: 0.04rem;
+    -o-border-radius: 0.04rem;
+    border-radius: 0.04rem;
+    background-color: #094290;
+    box-shadow: 0 0.05rem 0.25rem 0 rgba(9, 66, 144, 0.3);
+    border: 0;
+    font-size: 0.32rem;
+    color: #fff;
+    cursor: pointer; }
+  .strategy-btn .tip {
+    color: #959595;
+    font-size: 0.24rem;
+    letter-spacing: -0.006rem;
+    text-align: left;
+    margin-top: 0.4rem; }

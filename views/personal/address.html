@@ -1,0 +1,38 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/common/iosSelect.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/address.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <div class="address country" id="country">
+        <span class="lblName">国家</span>
+        <input type="text" name="country" placeholder="选择国家" readonly value="" id="countryValue" data-val="" onfocus="this.blur()" />
+        <span class="icon iconfont nextIcon">&#xe720;</span>
+    </div>
+    <div class="address region" id="region">
+        <span class="lblName">所在地区</span>
+        <input type="text" name="region" placeholder="选择所在地区" readonly value="" id="regionValue" data-val="" onfocus="this.blur()" />
+        <span class="icon iconfont nextIcon">&#xe720;</span>
+    </div>
+    <div class="address street">
+        <span class="lblName">街道地址</span>
+        <input type="text" name="street" placeholder="输入街道地址" maxlength="60" value="" data-val="" id="street"/>
+        <a class="icon iconfont clearIcon">&#xe70e;</a>
+    </div>
+    <a class="submitAddressBtn">确定</a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/common/iscroll.js"></script>
+<script type="text/javascript" src="/js/common/iosSelect.js"></script>
+<script type="text/javascript" src="/js/personal/address.js"></script>
+{% endblock %}
+

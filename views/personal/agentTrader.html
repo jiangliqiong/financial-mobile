@@ -1,0 +1,96 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/personal/agentTrader.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <ul class="item" id="agentBrokerListBox">
+        <!--<li>-->
+            <!--<div class="head">-->
+                <!--<span class="icon iconfont necktieIcon">&#xe735;</span>-->
+                <!--<p class="title">VantageFX万致</p>-->
+                <!--<span class="cycle">7日返佣</span>-->
+                <!--<span class="rebate">8美元/手</span>-->
+            <!--</div>-->
+            <!--<div class="reward">-->
+                <!--<p class="rebate">投资人奖励：3美元/手</p>-->
+                <!--<dl>-->
+                    <!--<dt><i class="dot"></i><span>首次入金奖励10%</span></dt>-->
+                    <!--<dt><i class="dot"></i><span>XXXXXXXXXXXXXXXXX</span></dt>-->
+                <!--</dl>-->
+            <!--</div>-->
+            <!--<div class="accountCount">-->
+                <!--<span class="count">累计开户数：521</span>-->
+                <!--<span class="status">代理中</span>-->
+                <!--<div class="statusBtn open"><span class="dotBtn dotLeftDistance"></span></div>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="head">-->
+                <!--<span class="icon iconfont necktieIcon">&#xe735;</span>-->
+                <!--<p class="title">VantageFX万致</p>-->
+                <!--<span class="cycle">7日返佣</span>-->
+                <!--<span class="rebate">8美元/手</span>-->
+            <!--</div>-->
+            <!--<div class="reward">-->
+                <!--<p class="rebate">投资人奖励：3美元/手</p>-->
+                <!--<dl>-->
+                    <!--<dt><i class="dot"></i><span>首次入金奖励10%</span></dt>-->
+                    <!--<dt><i class="dot"></i><span>XXXXXXXXXXXXXXXXX</span></dt>-->
+                <!--</dl>-->
+            <!--</div>-->
+            <!--<div class="accountCount">-->
+                <!--<span class="count">累计开户数：521</span>-->
+                <!--<span class="status">代理中</span>-->
+                <!--<div class="statusBtn open"><span class="dotBtn dotLeftDistance"></span></div>-->
+            <!--</div>-->
+        <!--</li>-->
+    </ul>
+</div>
+{% include "../common/loading.html" %}
+{% include "../common/loadfail.html" %}
+{% include "../common/nodata.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/personal/agentTrader.js"></script>
+<script id="agentBrokerListTml" type="text/html">
+    <% for (var i = 0; i < list.length; i++) { %>
+        <li>
+            <a href="shopinfo.html?agents_id=<%= list[i].agents_id ?  list[i].agents_id : '' %>">
+            <div class="head">
+                <span class="icon iconfont necktieIcon">&#xe735;</span>
+                <p class="title"><%= list[i].chinese_name ?  list[i].chinese_name : '' %></p>
+                <span class="cycle"><%= list[i].period_days ?  list[i].period_days : '0' %>日返佣</span>
+                <span class="rebate"><%= list[i].customize_back ?  list[i].customize_back : '0' %>美元/手</span>
+            </div>
+            <div class="reward">
+                <p class="rebate">投资人奖励：<%= list[i].default_back ?  list[i].default_back : '' %>美元/手</p>
+                <dl>
+                    <% for (var j = 0; j < list[i].ibBrokerRewardList.length; j++) { %>
+                        <dt><i class="dot"></i><span><%= list[i].ibBrokerRewardList[j].reword_content ?  list[i].ibBrokerRewardList[j].reword_content : '' %></span></dt>
+                    <%}%>
+                </dl>
+            </div>
+            <div class="accountCount">
+                <span class="count">累积开户数：<%= list[i].total_open ?  list[i].total_open : '' %></span>
+                <% if( list[i].status == 1 ){ %>
+                    <span class="status">代理中</span>
+                    <div class="statusBtn open" data-agentid="<%= list[i].agents_id ?  list[i].agents_id : '' %>"><span class="dotBtn dotLeftDistance"></span></div>
+                <% }else if( list[i].status == 3 ){ %>
+                    <span class="status">暂停代理</span>
+                    <div class="statusBtn close" data-agentid="<%= list[i].agents_id ?  list[i].agents_id : '' %>"><span class="dotBtn dotLeftDistance"></span></div>
+                <% } %>
+            </div>
+            </a>
+        </li>
+    <%}%>
+</script>
+{% endblock %}
+

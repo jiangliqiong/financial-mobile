@@ -1,0 +1,38 @@
+body{
+    background-color: #ffffff;
+}
+.contentBox{
+    margin-top: 0.88rem;
+    padding: 0 0.3rem;
+}
+.contentBox .head{
+    padding: 0.3rem 0;
+    height: 0.7rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.contentBox .head >img{
+    float: left;
+    width: 1.3rem;
+    height: 0.7rem;
+    margin-right: 0.3rem;
+}
+.contentBox .head .title{
+    width: calc(100% - 1.6rem);
+    height: 0.7rem;
+    font-size: 0.46rem;
+    text-align: left;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 0.7rem;
+}
+.contentBox .content{
+    margin-top: 0.3rem;
+    font-size: 0.32rem;
+    line-height: 1.56;
+    letter-spacing: -0.008rem;
+    text-align: justify;
+    color: #000000;
+    overflow: hidden;
+}

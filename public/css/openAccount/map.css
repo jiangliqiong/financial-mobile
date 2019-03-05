@@ -1,0 +1,37 @@
+input {
+  margin: 0;
+  padding: 0;
+}
+.input_search {
+  margin-top: 0.88rem;
+  padding: 0.1rem;
+}
+.input_search div {
+  line-height: 0.56rem;
+  border-radius: 0.04rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+  padding: 0.05rem 0.1rem;
+  height: auto;
+  overflow: hidden;
+}
+.input_search div i {
+  font-size: 0.34rem;
+  position: relative;
+  float: left;
+  color: #ccc;
+}
+.input_search div input {
+  font-size: 0.28rem;
+  border: none;
+  line-height: 0.56rem;
+  float: left;
+  width: 90%;
+}
+.map {
+  height: 0.3rem;
+}
+.mapbot p {
+  line-height: 0.32rem;
+}

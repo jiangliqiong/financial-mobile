@@ -1,0 +1,147 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #efeff4;
+  @include px2rem(margin-top, 88);
+}
+.success-tip {
+  background: #fff;
+  width: 100%;
+  @include px2rem(padding-bottom, 60);
+  .success-ico {
+    width: 100%;
+    @include px2rem(height, 96);
+    @include px2rem(padding-top, 97.7);
+    text-align: center;
+    .iconfont {
+      @include px2rem(font-size, 96);
+      color: #1ec118;
+      &.icon-cuowutishi1 {
+        color: #ff0000;
+      }
+    }
+  }
+  p {
+    &.know-btn-box {
+      @include px2rem(margin-top, 60);
+      @include remCalc(padding, 0 30);
+      .know-btn {
+        display: block;
+        @include remCalc(padding, 22 0);
+        text-align: center;
+        background: #094290;
+        color: #fff;
+        @include px2rem(font-size, 32);
+        @include px2rem(letter-spacing, -0.8);
+      }
+    }
+  }
+  .success-tip-msg {
+    width: 100%;
+    @include px2rem(line-height, 59);
+    @include px2rem(font-size, 42);
+    @include px2rem(margin-top, 14);
+    letter-spacing: -1px;
+    text-align: center;
+    color: #0c0c0c;
+  }
+  .success-tip-msg2 {
+    @include px2rem(font-size, 28);
+    @include px2rem(line-height, 40);
+    @include px2rem(margin-top, 40);
+    @include remCalc(padding,0 42);
+    @include px2rem(letter-spacing, -0.7);
+    text-align: center;
+    color: #959595;
+  }
+}
+.hot-retail {
+  width: 100%;
+  border-bottom: solid 1px #e5e5e5;
+  background: #fff;
+  @include px2rem(margin-top, 20);
+  .hot-retail-title {
+    @include px2rem(font-size, 32);
+    @include px2rem(letter-spacing, -0.8);
+    @include px2rem(line-height, 100);
+    color: #000000;
+    span {
+      vertical-align: middle;
+    }
+  }
+  .hot-retail-ico {
+    @include px2rem(width, 8);
+    @include px2rem(height, 32);
+    @include px2rem(margin-right, 22);
+    background: #094290;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .hot-retail-list {
+    @include clearfix();
+    li {
+      width: 50%;
+      display: block;
+      float: left;
+      &:nth-child(odd){
+        .hot-retail-box {
+           @include remCalc(margin, 20 9 0 30);
+        }
+      }
+      &:nth-child(even){
+        .hot-retail-box {
+           @include remCalc(margin, 20 30 0 9);
+        }
+      }
+      .hot-retail-box {
+        .img {
+          @include px2rem(height, 138);
+          border: solid 1px #e5e5e5;
+          border-bottom: none;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .hot-retail-main {
+          border: solid 1px #e5e5e5;
+          .hot-retail-name {
+              @include px2rem(height, 42);
+              @include px2rem(font-size, 32);
+              @include px2rem(letter-spacing, -0.8);
+              @include px2rem(margin-top, 20);
+              @include px2rem(text-indent, 15);
+              color: #000000;
+              display:block;
+              white-space:nowrap;
+              overflow:hidden;
+              text-overflow:ellipsis;
+          }
+          .hot-retail-msg {
+            @include px2rem(margin-top, 20);
+            @include px2rem(text-indent, 10);
+            @include px2rem(padding-bottom, 20);
+            @include px2rem(font-size, 24);
+            @include px2rem(letter-spacing, -0.7);
+            p {
+              @include px2rem(margin-bottom, 10);
+            }
+            .hot-retail-msg-lt {
+              float: left;
+              color: #959595;
+            }
+            .hot-retail-msg-rt {
+              color: #000;
+              p {
+                @include px2rem(height, 32);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

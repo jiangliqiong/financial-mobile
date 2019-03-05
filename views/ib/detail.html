@@ -1,0 +1,129 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/ib/detail.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="detail-top">
+   <div class="detail-top-msg">
+     <p class="detail-logo"><img src="{{ broker.logo_url }}" alt=""></p>
+     <p class="detail-name">
+       {% if broker.broker_level == 'vip' %}
+       <span id="detail-ib-name">{{ broker.chinese_name }}</span><i>旗舰店</i>
+       {% else %}
+       <span id="detail-ib-name">{{ broker.chinese_name }}</span>
+       {% endif %}
+     </p>
+     <div class="detail-back">
+       <p>
+         <span>返佣金额</span>
+         <i></i>
+         <b>${{ broker.customer_back }}</b>
+       </p>
+     </div>
+   </div>
+   <div class="detail-ib-msg">
+      <div class="detail-ib-msg-lt">
+        <!-- {% if broker.broker_level == 'vip' %}
+        <p class="detail-ib-name"><span id="detail-ib-name">{{ broker.chinese_name }}</span><i>旗舰店</i></p>
+        {% else %}
+        <p class="detail-ib-name"><span id="detail-ib-name">{{ broker.chinese_name }}</span></p>
+        {% endif %} -->
+        <p class="detail-ib-other">
+          <i class="iconfont icon-tubiao-dizhi">&#xe711;</i><span>{{ broker.country }}</span><i class="iconfont icon-tubiao-jianguanjigou">&#xe712;</i><span>{{ regulator }}</span>
+        </p>
+      </div>
+      <!-- <div class="detail-ib-msg-rt detail-share-btn share-btn">
+          <i class="iconfont icon-tubiao-fenxiang">&#xe719;</i>
+          <p>分享</p>
+      </div> -->
+   </div>
+</section>
+<section class="detail-ib-describe show-detail-descr">
+   <p class="describe-title"><i></i><span>简介</span></p>
+   <div class="describe-content">
+     <p>{{ broker.brand_introduce }}</p>
+   </div>
+   <!-- <p class="describe-slightly">...</p> -->
+   <i class="iconfont icon-jiantou show-detail-descr">&#xe720;</i>
+</section>
+<section class="detail-field">
+   <ul>
+     <li>
+       <div class="">
+        <span>最高杠杆</span><span>{{ broker.max_leverage }}</span>
+       </div>
+       <div class="">
+        {% if broker.min_price %}
+        <span>最低入金</span><span>{{ broker.min_price }}</span>
+        {% else %}
+        <span>最低入金</span><span>0</span>
+        {% endif %}
+       </div>
+     </li>
+     <li>
+       <div class="">
+        <span>最小寸头</span><span>{{ broker.min_position }}</span>
+       </div>
+       <div class="">
+        <span>平均点差</span><span>{{ broker.min_point }}</span>
+       </div>
+     </li>
+     <li>
+       <div class="">
+         <span>EA交易</span>
+         {% if broker.ea_permission == '0' %}
+         <span>允许</span>
+         {% else %}
+         <span>不允许</span>
+         {% endif %}
+       </div>
+       <div class="">
+        <span>剥头皮</span><span>{{ broker.scalp }}</span>
+       </div>
+     </li>
+     <li>
+       <div class="">
+        <span>经营模式</span><span>{{ broker.managing_mode }}</span>
+       </div>
+       <div class=""></div>
+     </li>
+   </ul>
+</section>
+{% if caption %}
+<section class="ib-explain">
+   <p class="explain-title"><i></i><span>详细说明</span></p>
+   <div class="explain-content">
+     <p>{{ caption | safe }}</p>
+   </div>
+</section>
+{% endif %}
+<section class="ib-detail-btn">
+  {% if shareId %}
+  <a href="javascript:;" data-broker="{{ broker.broker_id }}" data-ib="{{ broker.ibId }}" data-href="/openAccount/check.html?ibId={{ ibId }}&brokerId={{ broker.broker_id }}&agId={{ agentId }}&type=IB&shareId={{ shareId }}">马上开户</a>
+  {% else %}
+  <a href="javascript:;" data-broker="{{ broker.broker_id }}" data-ib="{{ broker.ibId }}" data-href="/openAccount/check.html?ibId={{ ibId }}&brokerId={{ broker.broker_id }}&agId={{ agentId }}&type=IB">马上开户</a>
+  {% endif %}
+</section>
+<div class="qrcodeLayerBox">
+    <div class="qrcodeMask"></div>
+    <div class="qrcodeLayer">
+        <img src="/images/traders/qrcode.png" srcset="/images/traders/qrcode@2x.png 2x, /images/traders/qrcode@3x.png 3x" />
+        <div class="qrcode" id="qrcode"></div>
+        <a class="closeBtn"></a>
+        </div>
+    </div>
+</div>
+<a class="shop-top-share share-btn" href="javascript:;"><span class="icon iconfont shareIcon">&#xe773;</span></a>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/common/qrcode.min.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["IbDetail"]);
+</script>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/personal/restPwd.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="modiMob0">
+  <ul class="modiMinBox">
+   <li class="">
+     旧密码
+     <span class="fr">
+       <input type="password" id="userPass" placeholder="请输入登录密码" required name="password"/>
+       <em class="icon-clean"></em>
+     </span>
+   </li>
+  </ul>
+</div>
+<div id="modiMob1">
+  	 <ul class="modiMinBox">
+  	 	<li class="">
+  	 		新密码
+  	 		<span class="fr">
+  	 			<input type="password" id="password" placeholder="6-18位的数字和字母组合" required name="newpassword"/>
+  	 			<em class="icon-clean"></em>
+  	 		</span>
+  	 	</li>
+  	 	<li class="code">
+  	 		重复密码
+  	 		<span class="fr">
+  	 			<input type="password" id="confirmPass" placeholder="请再次输入密码" required name="confirmPassword"/>
+  	 			<em class="icon-clean"></em>
+  	 		</span>
+  	 	</li>
+  	 </ul>
+  	 <a href="javascript:;" id="clickSubmit" class="save disabled">确认修改</a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/personal/restPwd.js"></script>
+{% endblock %}

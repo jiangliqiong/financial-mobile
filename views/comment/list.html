@@ -1,0 +1,77 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/comment/list.css" />
+{% endblock %}
+
+{% block content %}
+{% set listLength = listData.length %}
+{% if listLength > 0 %}
+<section class="comment-list">
+ <ul>
+   {% for i in range(0, listLength) -%}
+   {% set data = listData[i] %}
+   <li>
+     <div class="comment-top">
+       <span class="comment-user">网友:{{ data.commentator }}</span>
+       <span class="comment-time">{{ data.dateStr }}</span>
+     </div>
+     <div class="comment-content">{{ data.content }}</div>
+   </li>
+   {%- endfor %}
+ </ul>
+</section>
+{% else %}
+<section class="no-comment">
+  <img src="/images/comment/no-comment.svg" />
+</section>
+{% endif %}
+{% if listLength > 0 %}
+{% if isIb == '1' %}
+<section class="comment-reply" style="display:none">
+{% else %}
+<section class="comment-reply">
+{% endif %}
+{% else %}
+{% if isIb == '1' %}
+<section class="comment-reply" style="display:none">
+{% else %}
+<section class="comment-reply focus">
+{% endif %}
+{% endif %}
+  {% if isIb == '1' %}
+  <div class="input">请理性发表评论</div>
+  {% else %}
+  <div class="input edit-comment">请理性发表评论</div>
+  {% endif %}
+  <div class="comment-reply-cover"></div>
+  <div class="comment-reply-box">
+    <div class="comment-reply-btn">
+      <a class="comment-reply-cancel" href="javascript:;">取消</a><a class="comment-reply-send" href="javascript:;">发送</a>
+    </div>
+    <textarea id="reply-area" placeholder="请理性发表评论"></textarea>
+    <div class="comment-bug"></div>
+  </div>
+</section>
+{% include 'common/header.html' %}
+<script id="ListTml" type="text/html">
+  <% if(list.length) { %>
+  <% for (var i = 0; i < list.length; i++) { %>
+  <li class="opacity">
+    <div class="comment-top">
+      <span class="comment-user">网友:<%= list[i].commentator %></span>
+      <span class="comment-time"><%= list[i].dateStr %></span>
+    </div>
+    <div class="comment-content"><%= list[i].content.replace(/</g,"&lt;").replace(/>/g,"&gt;") %></div>
+  </li>
+  <% } %>
+  <% } %>
+</script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript" src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+  seajs.use(["commentList"]);
+</script>
+{% endblock %}

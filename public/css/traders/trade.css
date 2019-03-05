@@ -1,0 +1,322 @@
+body{
+    background-color: #efeff4;
+}
+.abnormal{
+    margin-top: 1.96rem;
+    height: calc(100vh - 2.16rem);
+}
+/*******************分类按钮**********************/
+.contentBox{
+    margin-top: 2.05rem;
+}
+.btnBox{
+    position: fixed;
+    top: 0.88rem;
+    left: 0;
+    width: 100%;
+    height: 0.88rem;
+    background-color: #ffffff;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+}
+.btnBox ul li{
+    float: left;
+}
+.btnBox .spread{
+    text-align: left;
+    width: 33%;
+}
+.btnBox .inout{
+    text-align: center;
+    width: 34%;
+}
+.btnBox .type{
+    text-align: right;
+    width: 33%;
+}
+.btnBox .spread span,.btnBox .inout span,.btnBox .type span{
+    display: inline-block;
+    height: 0.82rem;
+    line-height: 0.82rem;
+    border-bottom: 0.06rem solid #ffffff;
+    cursor: pointer;
+}
+.btnBox .spread span{
+    margin-left: 0.3rem;
+    width: auto;
+}
+.btnBox .inout span{
+    width: auto;
+}
+.btnBox .type span{
+    margin-right: 0.3rem;
+    width: auto;
+}
+.btnBox .tradeActive{
+    border-bottom-color: #094290 !important;
+}
+/*********************点差表*********************/
+.spreadModule{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    margin-top: 0.3rem;
+    margin-bottom: 1.3rem;
+}
+.spreadModule .head{
+    width: 100%;
+    height: 0.6rem;
+    font-size: 0.24rem;
+    letter-spacing: -0.006rem;
+    color: #959595;
+    line-height: 0.6rem;
+}
+.spreadModule .head .left{
+    float: left;
+    margin-left: 0.3rem;
+}
+.spreadModule .head .right{
+    float: right;
+    margin-right: 0.3rem;
+}
+.spreadModule ul li{
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    color: #000000;
+    border-top: 1px solid #e5e5e5;
+}
+.spreadModule ul li .left{
+    float: left;
+    margin-left: 0.3rem;
+}
+.spreadModule ul li .right{
+    float: right;
+    margin-right: 0.3rem;
+}
+
+/*********************出入金类型**************************/
+.inoutModule{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.3rem;
+}
+.inoutModule .mode{
+    background-color: #ffffff;
+    margin-top: 0.3rem;
+}
+.inoutModule .mode .head{
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    color: #000000;
+}
+.inoutModule .mode .head .vLine{
+    float: left;
+    display: block;
+    width: 0.08rem;
+    height: 0.3rem;
+    background-color: #094290;
+    margin-top: 0.36rem;
+    margin-right:  0.2rem;
+}
+.inoutModule .mode table{
+    font-size: 0.24rem;
+    letter-spacing: -0.006rem;
+    color: #959595;
+}
+.inoutModule .mode table thead td{
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-align: left;
+    padding-left: 0.3rem;
+    border-top: 1px solid #e5e5e5;
+}
+.inoutModule .mode table thead .type{
+    width: 1.43rem
+}
+.inoutModule .mode table thead .currency{
+    width: 1.55rem
+}
+.inoutModule .mode table thead .cost{
+    width: 2.1rem
+}
+.inoutModule .mode table thead .date{
+    width: 1.25rem
+}
+
+.inoutModule .mode table tbody td{
+    text-align: left;
+    border-top: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    padding: 0.2rem 0.2rem 0.2rem 0.3rem;
+    vertical-align: top;
+    color: #000000;
+}
+.inoutModule .mode table tbody td:first-child{
+    border-left: none;
+}
+
+/*************************账户类型***************************/
+.typeModule{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.3rem;
+    overflow: scroll;
+    margin-top: 0.3rem;
+}
+.typeModule .leftHead{
+    position: fixed;
+    top: 1.76rem;
+    left:0;
+    display: inline-block;
+    margin-top: 0.3rem;
+    background-color: #ffffff;
+    width: 1.73rem;
+}
+.typeModule .leftHead tbody td{
+    width: 1.43rem;
+    padding: 0.2rem 0.2rem 0.2rem 0.3rem;
+    font-size: 0.24rem;
+    letter-spacing: -0.007rem;
+    text-align: left;
+    color: #000000;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5fbff !important;
+}
+.typeModule .leftHead thead td{
+    height: 0.6rem;
+    width: 1.43rem;
+    padding-left: 0.3rem;
+    font-size: 0.24rem;
+    letter-spacing: -0.006rem;
+    text-align: left;
+    color: #959595;
+    line-height: 0.6rem;
+    border-top: none;
+}
+
+.typeModule table{
+    table-layout:fixed;
+    width:100%;
+    /*margin-top: 0.3rem;*/
+    background-color: #ffffff;
+}
+.typeModule table thead td{
+    height: 0.6rem;
+    width: 1.43rem;
+    padding-left: 0.3rem;
+    font-size: 0.24rem;
+    text-align: left;
+    color: #959595;
+}
+.typeModule table tbody td{
+    width: 1.43rem;
+    padding: 0.2rem 0.2rem 0.2rem 0.3rem;
+    font-size: 0.24rem;
+    text-align: left;
+    color: #000000;
+    border-top: 1px solid #e5e5e5;
+    border-left:  1px solid #e5e5e5;
+}
+
+.typeModule table tbody td:nth-child(odd){
+    background-color: #fafafa;
+}
+.typeModule table tbody td:nth-child(even){
+     background-color: #ffffff;
+}
+
+.typeModule table tbody td:first-child{
+    border-left: none;
+}
+/***********************全局遮罩*******************************/
+.mask{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9;
+    cursor: pointer;
+}
+.mask img{
+    position: absolute;
+    top: 4.6rem;
+    left: 2rem;
+    cursor: pointer;
+    width: 0.86rem;
+    height: 0.95rem;
+}
+.mask span{
+    position: absolute;
+    top: 5.11rem;
+    left: 3.08rem;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    text-align: left;
+    color: #ffffff;
+}
+/**********************马上开户按钮****************************/
+.openAccountBtn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin-top: 0.4rem;
+    width:100%;
+    height: 0.98rem;
+    line-height: 0.98rem;
+    background-color: #f7ab09;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    color: #ffffff;
+}
+.tradeRebate{
+    /*position: fixed;
+    bottom: 1.08rem;
+    left: 2.25rem;
+    width:3rem;
+    height:0.57rem;*/
+    height:0.5rem;
+}
+/*.tradeRebate .rebateValue{
+    width:100%;
+    height:0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    background-color: #094494;
+    font-size: 0.24rem;
+    letter-spacing: -0.006rem;
+    color: #ffffff;
+    border-radius: 0.3rem;
+}
+.tradeRebate .triangle{
+    width: 0rem;
+    height: 0rem;
+    display: block;
+    margin-left: 1.38rem;
+    border-left: 0.12rem solid transparent;
+    border-right: 0.12rem solid transparent;
+    border-top: 0.07rem solid #094494;
+}*/
+/*******************没有记录*********************/
+.hasNoRecord{
+    text-align: center;
+}
+.hasNoRecord img {
+    display: inline-block;
+    width: 2.06rem;
+    height: 3.5rem;
+    margin-top: 2.4rem;
+    margin-bottom: 4.3rem;
+}

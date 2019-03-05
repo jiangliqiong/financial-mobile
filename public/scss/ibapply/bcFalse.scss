@@ -1,0 +1,58 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+    @include px2rem(margin-top, 88);
+}
+.fail-tip {
+  width: 100%;
+  .fail-ico {
+    width: 100%;
+    @include px2rem(height, 96);
+    @include px2rem(padding-top, 97.7);
+    text-align: center;
+    .icon-cuowutishi1 {
+      @include px2rem(font-size, 96);
+      color: #ff0000;
+    }
+  }
+  .fail-tip-msg {
+    width: 100%;
+    @include px2rem(line-height, 59);
+    @include px2rem(font-size, 42);
+    @include px2rem(margin-top, 14);
+    letter-spacing: -1px;
+    text-align: center;
+    color: #0c0c0c;
+  }
+  .fail-tip-msg2 {
+    @include px2rem(font-size, 28);
+    @include px2rem(line-height, 40);
+    @include px2rem(margin-top, 40);
+    @include remCalc(padding,0 42);
+    @include px2rem(letter-spacing, -0.7);
+    text-align: center;
+    color: #959595;
+    span {
+      color: #0257a1;
+    }
+  }
+  .fail-btn {
+    @include remCalc(padding,0 30);
+    .become-true-btn {
+        width: 100%;
+        @include px2rem(height, 88);
+        @include px2rem(line-height, 88);
+        @include px2rem(margin-top, 90);
+        @include css3(border-radius, 4);
+        background-color: #094290;
+        display: inline-block;
+        @include px2rem(letter-spacing, -0.8);
+        @include px2rem(font-size, 32);
+        color: #ffffff;
+        text-align: center;
+    }
+  }
+}

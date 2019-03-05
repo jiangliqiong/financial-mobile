@@ -1,0 +1,72 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/ibapply/success.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="success-tip">
+  <p class="success-ico"><span class="iconfont icon-chenggongtishi">&#xe725;</span></p>
+  <p class="success-tip-msg">恭喜！您已成功晋升为IB代理商</p>
+  <p class="success-tip-msg2">您已经是我们IB家族中的一员，选财外汇中的所有合作交易商都已为您打开VIP通道！</p>
+</section>
+<section class="success-banner"><a href="/ib/list.html"><img src="/images/ib/svg/success-banner.svg" class="banner" width="100%"></a></section>
+{% if list.length>0 %}
+<section class="hot-retail">
+   <p class="hot-retail-title"><i class="hot-retail-ico"></i><span>热门交易商</span></p>
+   <ul class="hot-retail-list">
+     {% set listLength = list.length %}
+     {% for i in range(0, listLength) -%}
+     {% set data = list[i] %}
+     <li>
+      <div class="hot-retail-box">
+        <a class="hot-hover" href="/traders/shop.html?brokerId={{ data.broker_id }}"></a>
+        {% if data.logo_url %}
+        <p class="img"><img src="{{ data.logo_url }}"/></p>
+        {% else %}
+        <p class="img"><img src="https://test-fm.oss-cn-hangzhou.aliyuncs.com/default/id_card/871503045981000.png"/></p>
+        {% endif %}
+        <div class="hot-retail-main">
+          <p class="hot-retail-name">{{ data.chinese_name }}</p>
+          <div class="hot-retail-msg">
+            <div class="hot-retail-msg-rt">
+              {% if data.min_point %}
+              <p><span>平均点差：</span>{{ data.min_point }}</P>
+              {% else %}
+              <p><span>平均点差：</span>&nbsp;</P>
+              {% endif %}
+              {% if data.max_leverage %}
+              <p><span>最高杠杆：</span>{{ data.max_leverage }}</P>
+              {% else %}
+              <p><span>最高杠杆：</span>&nbsp;</P>
+              {% endif %}
+               {% if data.min_price %}
+               <p><span>最低入金：</span>{{ data.min_price }}</P>
+               {% else %}
+               <p><span>最低入金：</span>&nbsp;</P>
+               {% endif %}
+               {% if data.managing_mode %}
+               <p><span>经营模式：</span>{{ data.managing_mode }}</P>
+               {% else %}
+               <p><span>经营模式：</span>&nbsp;</P>
+               {% endif %}
+               <p class="back-val" data-ib="{{ data.ib_back }}" data-customer="{{ data.customer_back }}"><span>代理返佣：</span></P>
+            </div>
+          </div>
+        </div>
+      </div>
+     </li>
+     {%- endfor %}
+   </ul>
+</section>
+{% endif %}
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["success"]);
+</script>
+{% endblock %}

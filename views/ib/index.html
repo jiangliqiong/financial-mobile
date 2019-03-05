@@ -1,0 +1,259 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/ib/index.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="index-banner {{ banner }}">
+  <div class="banner-cover"></div>
+  <div class="index-msg">
+    <div class="index-logo">
+      <div class="index-pic">
+         {% if data.logo_url %}
+         <img src="{{ data.logo_url }}" alt="" />
+         {% else %}
+         <img src="/images/ib/img/ib-default_logo.png" alt="" />
+         {% endif %}
+      </div>
+      {% if data.authentication_status == '已认证' %}
+      <div class="index-rz-icon">
+        <p><i class="iconfont icon-renzhengbaozhang">&#xe727;</i><span>认证机构</span></p>
+      </div>
+      <p class="index-arrow"></p>
+      {% endif %}
+    </div>
+     <div class="index-info">
+       <p class="index-info-name">{{ data.ib_name }}</p>
+       <div class="ib-score">
+         <ul>
+         {% if data.recommending_index %}
+         {% set start = data.recommending_index.split('.') %}
+         {% set empty = (5-data.recommending_index) | round(0, "floor")%}
+         {% for i in range(0, start[0]) -%}
+          <li class="score-full"></li>
+         {%- endfor %}
+         {% if start[1] %}
+           <li class="score-half"></li>
+         {% endif %}
+         {% for i in range(0, empty) -%}
+           <li class="score-empty"></li>
+         {%- endfor %}
+         {% else %}
+         <li class="score-empty"></li><li class="score-empty"></li><li class="score-empty"></li><li class="score-empty"></li><li class="score-empty"></li>
+         {% endif %}
+         </ul>
+         <span class="ib-score-total">{{ score }}</span>
+       </div>
+       <p>{{ data.service_mailbox }}</p>
+     </div>
+     <div class="commentBtn">
+         <p>
+             <span class="icon iconfont">&#xe774;</span>
+             <span class="text num">{{ data.count }}条评论</span>
+         </p>
+     </div>
+  </div>
+</section>
+<section class="index-concat">
+   <div class="">
+     <i class="qq-icon"></i>
+     <p>{{ data.service_telephone }}</p>
+     <p>客服电话</p>
+   </div>
+   <div class="">
+     <i class="mobile-icon"></i>
+     <p>{{ data.service_QQ }}</p>
+     <p>客服QQ</p>
+     {% if data.service_QQ %}
+     <a data-qq='{{ data.service_QQ }}' class="qq-link" href="javascript:;"></a>
+     {% endif %}
+   </div>
+</section>
+<section class="index-introduce">
+   <p class="introduce-title"><i></i><span>简介</span></p>
+   <div class="introduce-content">{{ data.ib_introduce }}</div>
+   <div class="introduce-area">
+     <span><i class="iconfont icon-tubiao-dizhi">&#xe711;</i>公司地址：</span><p>{{ data.ib_address }}</p>
+   </div>
+</section>
+<section class="strategy" style="display: none">
+  <img src="/images/ib/svg/strategy-icon.svg" alt="">
+  <div class="strategy-list">
+    <ul></ul>
+  </div>
+</section>
+<section class="ib-list">
+   <p class="ib-list-title"><i></i><span>代理交易商</span></p>
+   {% set listNum = list.length %}
+   {% set double = (listNum/2) | round(0, "floor")%}
+   {% set doubleList = double*2 %}
+   {% set single = listNum%2 %}
+   {% for i in range(0, double) -%}
+   {% set first = list[i*2]  %}
+   {% set last = list[i*2+1]  %}
+   <div class="ib-list-box">
+      <div class="">
+         <div class="ib-img">
+            <img src="{{ first.logo_url }}" alt="">
+         </div>
+         <p class="ib-rebate">每手返佣：${{ first.default_back }}</p>
+         {% if first.reword_content %}
+         {% set rewardFt = first.reword_content.split(',') %}
+         {% endif %}
+         <div class="ib-reward">
+           {% if rewardFt[0] %}
+           <p><i></i><span>{{ rewardFt[0] }}</span></p>
+           {% endif %}
+         </div>
+         <div class="ib-bottom">
+           {% if first.min_price %}
+           {% set minPriceFt = first.min_price %}
+           {% else %}
+           {% set minPriceFt = 0 %}
+           {% endif %}
+           {% if minPriceFt %}
+           <p class="ib-money">最低入金{{ minPriceFt }}</p>
+           {% else %}
+           <p class="ib-money">最低入金0</p>
+           {% endif %}
+           {% if shareId %}
+           <p class="ib-btn-box"><a href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ first.broker_id }}&agId={{ first.agents_id }}&shareId={{ shareId }}">马上开户</a></p>
+           {% else %}
+           <p class="ib-btn-box"><a href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ first.broker_id }}&agId={{ first.agents_id }}">马上开户</a></p>
+           {% endif %}
+         </div>
+         {% if shareId %}
+         <a class="ib-hover" href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ first.broker_id }}&agId={{ first.agents_id }}&shareId={{ shareId }}"></a>
+         {% else %}
+         <a class="ib-hover" href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ first.broker_id }}&agId={{ first.agents_id }}"></a>
+         {% endif %}
+      </div>
+      <div class="">
+        <div class="ib-img">
+           <img src="{{ last.logo_url }}" alt="">
+        </div>
+        <p class="ib-rebate">每手返佣：${{ last.default_back }}</p>
+        {% if last.reword_content %}
+        {% set rewardLt = last.reword_content.split(',') %}
+        {% endif %}
+        <div class="ib-reward">
+          {% if rewardLt[0] %}
+          <p><i></i><span>{{ rewardLt[0] }}</span></p>
+          {% endif %}
+        </div>
+        <div class="ib-bottom">
+          {% if last.min_price %}
+          {% set minPriceLt = last.min_price %}
+          {% else %}
+          {% set minPriceLt = 0 %}
+          {% endif %}
+          {% if minPriceLt %}
+          <p class="ib-money">最低入金{{ minPriceLt }}</p>
+          {% else %}
+          <p class="ib-money">最低入金0</p>
+          {% endif %}
+          {% if shareId %}
+          <p class="ib-btn-box"><a href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ last.broker_id }}&agId={{ last.agents_id }}&shareId={{ shareId }}">马上开户</a></p>
+          {% else %}
+          <p class="ib-btn-box"><a href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ last.broker_id }}&agId={{ last.agents_id }}">马上开户</a></p>
+          {% endif %}
+        </div>
+        {% if shareId %}
+        <a class="ib-hover" href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ last.broker_id }}&agId={{ last.agents_id }}&shareId={{ shareId }}"></a>
+        {% else %}
+        <a class="ib-hover" href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ last.broker_id }}&agId={{ last.agents_id }}"></a>
+        {% endif %}
+      </div>
+   </div>
+   {%- endfor %}
+   {% if single %}
+   {% set singleData = list[listNum-1] %}
+   <div class="ib-list-box">
+      <div class="">
+         <div class="ib-img">
+            <img src="{{ singleData.logo_url }}" alt="">
+         </div>
+         <p class="ib-rebate">每手返佣：${{ singleData.default_back }}</p>
+         {% if singleData.reword_content %}
+         {% set rewardSD = singleData.reword_content.split(',') %}
+         {% endif %}
+         <div class="ib-reward">
+           {% if rewardSD[0] %}
+           <p><i></i><span>{{ rewardSD[0] }}</span></p>
+           {% endif %}
+         </div>
+         <div class="ib-bottom">
+           {% if singleData.min_price %}
+           {% set minPrice = singleData.min_price %}
+           {% else %}
+           {% set minPrice = 0 %}
+           {% endif %}
+           {% if minPrice %}
+           <p class="ib-money">最低入金{{ minPrice }}</p>
+           {% else %}
+           <p class="ib-money">最低入金0</p>
+           {% endif %}
+           {% if shareId %}
+           <p class="ib-btn-box"><a href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ singleData.broker_id }}&agId={{ singleData.agents_id }}&shareId={{ shareId }}">马上开户</a></p>
+           {% else %}
+           <p class="ib-btn-box"><a href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ singleData.broker_id }}&agId={{ singleData.agents_id }}">马上开户</a></p>
+           {% endif %}
+         </div>
+         {% if shareId %}
+         <a class="ib-hover" href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ singleData.broker_id }}&agId={{ singleData.agents_id }}&shareId={{ shareId }}"></a>
+         {% else %}
+         <a class="ib-hover" href="/ib/detail.html?ibId={{ ibId }}&brokerId={{ singleData.broker_id }}&agId={{ singleData.agents_id }}"></a>
+         {% endif %}
+      </div>
+      <div class="" style="border:none"></div>
+   </div>
+   {% endif %}
+</section>
+<section class="ib-share share-btn">
+   <i></i><span>分享代理商</span>
+</section>
+<div class="qrcodeLayerBox">
+    <div class="qrcodeMask"></div>
+    <div class="qrcodeLayer">
+        <img src="/images/traders/qrcode.png" srcset="/images/traders/qrcode@2x.png 2x, /images/traders/qrcode@3x.png 3x" />
+        <div class="qrcode" id="qrcode"></div>
+        <a class="closeBtn"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block script %}
+<script id="strategyTml" type="text/html">
+  <% if(list.length) { %>
+  <% for (var i = 0; i < list.length; i++) { %>
+  <li>
+    <p>
+      <span><%= list[i].currencyValue%></span>
+      <% if(list[i].type == '0') { %>
+      <span class="more">做多</span>
+      <% }else if(list[i].type == '1'){ %>
+      <span class="empty">做空</span>
+      <% }else{ %>
+      <span class="area">区间</span>
+      <% } %>
+      <span><%= list[i].create_date%></span>
+    </p>
+    <% if(list[i].type == '2') { %>
+    <p class="area"><span><%= list[i].content.split('—')[0]%></span><b>—</b><span><%= list[i].content.split('—')[1].replace(/[\u4E00-\u9FA5]/g,'')%></span><span>高抛低吸</sapn></p>
+    <% }else{ %>
+    <p><span>入场:<%= list[i].content.split(',')[0].replace(/[\u4E00-\u9FA5]/g,'')%></span><span>止损:<%= list[i].content.split(',')[1].replace(/[\u4E00-\u9FA5]/g,'')%></span><span>止盈:<%= list[i].content.split(',')[2].replace(/[\u4E00-\u9FA5]/g,'')%></span></p>
+    <% } %>
+  </li>
+  <% } %>
+  <% } %>
+</script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/common/qrcode.min.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["ibIndex"]);
+</script>
+{% endblock %}

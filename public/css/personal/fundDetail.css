@@ -1,0 +1,72 @@
+body{
+    background-color: #efeff4;
+}
+/********************资金出入明细********************/
+.contentBox{
+    margin-top: 0.88rem;
+}
+.contentBox ul li{
+    width: calc(100% - 0.6rem);
+    margin-bottom: 0.2rem;
+    padding: 0 0.3rem;
+    background-color: #ffffff;
+}
+.contentBox ul li .head{
+    width: 100%;
+    height: 0.7rem;
+    font-size: 0.24rem;
+    color: #000000;
+}
+.contentBox ul li .head .date{
+    float: left;
+    margin-top: 0.19rem;
+}
+.contentBox ul li .head .status{
+    float: right;
+    margin-top: 0.19rem;
+}
+.contentBox ul li .head .green{
+    color: #31be23;
+}
+.contentBox ul li .head .red{
+    color: #ee0b00;
+}
+.contentBox ul li .head .yellow{
+    color: #eeb600;
+}
+.contentBox ul li .content{
+    width: 100%;
+    height: 1.4rem;
+    border-top: 0.01rem solid #e5e5e5;
+    border-bottom: 0.01rem solid #e5e5e5;
+}
+
+.contentBox ul li .content .sum{
+    float: left;
+    font-size: 0.72rem;
+    color: #000000;
+    margin-top: 0.2rem;
+}
+.contentBox ul li .content .balance{
+    float: right;
+    font-size: 0.28rem;
+    color: #000000;
+    margin-top: 0.5rem;
+}
+.contentBox ul li .remark{
+    width: 100%;
+    padding: 0.2rem 0;
+    font-size: 0.24rem;
+    color: #959595;
+}
+
+.contentBox .loadingMore{
+    margin-top: 0.3rem;
+    margin-bottom: 0.43rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    text-align: center;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    color: #959595;
+}

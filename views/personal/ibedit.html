@@ -1,0 +1,69 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/ibedit.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="ib-edit-content">
+  <div class="ib-edit-box ib-edit-name">
+     <div class="ib-edit-main">
+       <span class="ib-label">代理商名称</span><input class="ib-val-name" type="text" name="" value="" placeholder="输入代理商名称" maxlength='30'>
+     </div>
+     <a href="javascript:;" class="ib-edit-btn ib-disabled">确定</a>
+  </div>
+  <div class="ib-edit-box ib-edit-phone">
+     <div class="ib-edit-main">
+       <span class="ib-label">客服电话</span><input class="ib-val-phone" type="text" name="" value="" placeholder="输入客服电话">
+     </div>
+     <a href="javascript:;" class="ib-edit-btn ib-disabled">确定</a>
+  </div>
+  <div class="ib-edit-box ib-edit-email">
+     <div class="ib-edit-main">
+       <span class="ib-label">客服邮箱</span><input class="ib-val-email" type="email" name="" value="" placeholder="输入客服邮箱" maxlength='100'>
+     </div>
+     <a href="javascript:;" class="ib-edit-btn ib-disabled">确定</a>
+  </div>
+  <div class="ib-edit-box ib-edit-qq">
+     <div class="ib-edit-main">
+       <span class="ib-label">客服QQ</span><input class="ib-val-qq" type="number" name="" value="" placeholder="输入客服QQ" maxlength='30'>
+     </div>
+     <a href="javascript:;" class="ib-edit-btn ib-disabled">确定</a>
+  </div>
+  <div class="ib-edit-box ib-edit-url">
+     <div class="ib-edit-main">
+       <span class="ib-label">官方网址</span><input class="ib-val-url" type="text" name="" value="" placeholder="输入官方网址" maxlength='100'>
+     </div>
+     <a href="javascript:;" class="ib-edit-btn ib-disabled">确定</a>
+  </div>
+</section>
+<section class="ib-edit-pic">
+  <p>如您为机构代理商，请上传本机构营业执照图片</p>
+  <div class="ib-upload">
+    {% if picStatus == '2' %}
+    <span class="cover-pic"></span>
+    {% endif %}
+    <a class="ib-upload-btn"><i class="ib-upload-icon"></i><span>上传营业执照</span></a>
+    <form action="/api/upload" method="post" id="upload" target="uploadIframe" enctype="multipart/form-data">
+      <input type="file" name="file" class="file-pic" accept="image/gif, image/jpeg, image/jpg, image/png">
+    </form>
+    <img class="ib-upload-pic" src="" alt="">
+    <i class="img-loading"></i>
+  </div>
+  <div class="ib-upload-sure">
+    {% if picStatus != '2' %}
+    <a href="javascript:;" class="ib-edit-btn ib-disabled">确定</a>
+    {% endif %}
+  </div>
+</section>
+<iframe class="uploadIframeBox" id="uploadIframe" name="uploadIframe" style="display:none;"></iframe>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["perIbEdit"]);
+</script>
+{% endblock %}

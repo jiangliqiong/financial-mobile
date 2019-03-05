@@ -1,0 +1,131 @@
+body{
+    background-color: #efeff4;
+}
+.mildHintBox{
+    top: 10%;
+    z-index: 9999;
+}
+/**
+ * 资金提现
+ */
+.contentBox{
+    margin-top: 0.88rem;
+}
+.contentBox .bankCard{
+    padding: 0.4rem 0.3rem;
+    width: calc(100% - 0.68rem);
+    height: 0.68rem;
+    line-height: 0.68rem;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.bankCard .item{
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.bankCard .bankLogo{
+    display: block;
+    float: left;
+    width: 0.68rem;
+    height: 0.68rem;
+}
+.bankCard .bankName{
+    display: block;
+    float: left;
+    font-size: 0.32rem;
+    color: #2f2f2f;
+    margin-left: 0.1rem;
+}
+.bankCard .bankAccount{
+    display: block;
+    float: left;
+    font-size: 0.32rem;
+    color: #000000;
+    margin-left: 0.1rem;
+}
+.bankCard .defaultText{
+    display: block;
+    float: left;
+    font-size: 0.28rem;
+    color: #959595;
+    margin-left: 0.3rem;
+}
+.bankCard .nextIcon{
+    float: right;
+    font-size: 0.32rem;
+    color: #b5b5b5;
+}
+
+.contentBox .moneyBox {
+    padding: 0 0.3rem;
+    background-color: #ffffff;
+    margin-top: 0.2rem;
+    overflow: hidden;
+}
+.moneyBox .moneyInput{
+    width: 100%;
+    height: 0.78rem;
+    line-height: 0.78rem;
+    overflow: hidden;
+    padding: 0.3rem 0;
+}
+.moneyBox .moneyInput .unit{
+    float: left;
+    font-size: 0.56rem;
+    color: #000000;
+}
+.moneyBox .moneyInput .moneyVal{
+    float: left;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    margin-left: 0.15rem;
+    font-size: 0.36rem;
+    color: #000000;
+    width: 5rem;
+    border: none;
+    margin-top: 0.15rem;
+}
+.moneyBox .moneyInput .allWithdrawBtn{
+    float: right;
+    height: 0.78rem;
+    line-height: 0.78rem;
+    text-align: right;
+    font-size: 0.24rem;
+    color: #094290;
+}
+
+.moneyBox .balance{
+    width: 100%;
+    height: 0.33rem;
+    border-top: 1px solid #e5e5e5;
+    padding: 0.2rem 0;
+}
+.moneyBox .balance .balanceText{
+    font-size: 0.24rem;
+    color: #000000;
+}
+.moneyBox .balance .hintText{
+    display: none;
+    font-size: 0.24rem;
+    color: #fe3d36;
+}
+.contentBox .okBtn{
+    display: block;
+    width: calc(100% - 0.6rem);
+    height: 0.88rem;
+    border-radius: 0.04rem;
+    background-color: #d8d8d8;
+    line-height: 0.88rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-left: 0.3rem;
+    font-size: 0.32rem;
+    color: #ffffff;
+    margin-top: 0.6rem;
+}
+.contentBox .okBtn.on{
+    background-color: #094290;
+}

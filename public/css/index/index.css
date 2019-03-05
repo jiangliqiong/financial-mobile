@@ -1,0 +1,804 @@
+body {
+  background: #efeff4;
+  font-size: 0.32rem;
+  color: #000;
+}
+.search input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.swipe {
+  height: auto;
+  overflow: hidden;
+  visibility: hidden;
+  width: 100%;
+}
+.swipe-wrap {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap div {
+  height: auto;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.swipe-wrap img {
+  width: 100%;
+  display: inline-block;
+  padding-left: 0px;
+  height: 100%;
+}
+.swipe-wrap div a {
+  display: block;
+}
+#pager {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+}
+#pager em {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 8px;
+}
+#pager em.on {
+  background: #fb0a0a;
+}
+.banner {
+  position: relative;
+  background: #fff;
+}
+.banner .search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 0.14rem 0;
+}
+.banner .search div {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  border-radius: 2rem;
+  height: 0.6rem;
+  width: 84%;
+  margin-left: 0.32rem;
+  float: left;
+  text-align: center;
+}
+.banner .search div input {
+  line-height: 0.6rem;
+  border: none;
+  background: #ddd;
+  background: transparent;
+  font-size: 0.24rem;
+}
+.banner .search div i {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.24rem;
+}
+.banner .search span {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.28rem;
+  line-height: 0.6rem;
+  width: 8%;
+  text-align: center;
+  float: right;
+  margin-right: 0.12rem;
+}
+.banner .search span a {
+  color: #fff;
+}
+.banner .search .login {
+  font-size: 0.45rem;
+  color: #fff;
+  cursor: pointer;
+}
+.bannerlist {
+  background: #fff;
+  padding: 0 0 0.3rem;
+  position: relative;
+}
+.bannerradius {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 0;
+}
+.bannerlist ul {
+  overflow: hidden;
+}
+.bannerlist ul li {
+  float: left;
+  font-size: 0.28rem;
+  width: 25%;
+  text-align: center;
+}
+.bannerlist ul li a {
+  color: #000;
+  font-size: 0.28rem;
+}
+.bannerlist ul li h3 {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+}
+.bannerlist ul li h3 img {
+  width: 100%;
+}
+.hotlist {
+  background: #fff;
+  margin-top: 0.2rem;
+}
+.hottop {
+  padding: 0.27rem 0;
+  line-height: 0.45rem;
+  height: 0.45rem;
+  position: relative;
+  padding-left: 2.07rem;
+}
+.hottop span {
+  position: absolute;
+  left: 0;
+}
+.hottop i {
+  float: right;
+  padding-right: 0.1rem;
+  color: #d8d8d8;
+}
+.clear {
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  clear: both;
+}
+.hottop span ins {
+  display: inline-block;
+  width: 0.08rem;
+  height: 0.3rem;
+  background: #094290;
+  margin-right: 0.15rem;
+}
+.hottop div {
+  width: 5.5rem;
+  float: right;
+}
+.hottop div i {
+  float: right;
+  color: #f74a09;
+}
+.hottop div ul {
+  float: right;
+}
+.hottop div ul li {
+  letter-spacing: -0.5px;
+  font-size: 0.22rem;
+  color: #000;
+}
+.hottop div img {
+  float: right;
+  margin-left: 0.1rem;
+  width: 0.46rem;
+  height: 0.5rem;
+  margin-right: 0.2rem;
+}
+.hotlist .list {
+  overflow: hidden;
+}
+.hotlist .list li {
+  float: left;
+  width: 33.33%;
+  box-sizing: border-box;
+  border-left: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  position: relative;
+  padding: 0.34rem;
+}
+.hotlist .list li:first-child {
+  border-left: 0;
+}
+.hotlist .list li h3,
+.hotlist .list li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hotlist .list li h3 {
+  font-size: 0.24rem;
+  color: #000;
+  line-height: 0.4rem;
+}
+.hotlist .list li p {
+  color: #959595;
+  font-size: 0.22rem;
+  line-height: 0.3rem;
+}
+.hotlist .list img {
+  width: 1.8rem;
+  height: 0.72rem;
+}
+.hotlist .list li ins {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  font-size: 0.2rem;
+  display: inline-block;
+  background-image: linear-gradient(278deg, #fc8916, #f85009);
+  color: #fff;
+  line-height: 0.28rem;
+  padding: 0 0.1rem;
+}
+.ibad {
+  margin-top: 0.2rem;
+  font-size: 0;
+  cursor: pointer;
+}
+.adList {
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  padding: 0.3rem 0;
+}
+.adList li {
+  float: left;
+  width: 25%;
+  font-size: 0.24rem;
+  text-align: center;
+}
+.adList li p {
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 1.3rem;
+  background-color: #ffffff;
+  border: solid 1px #e4e4e4;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.adList li p img {
+  width: 100%;
+}
+.adList li h3 {
+  margin-top: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.24rem;
+  color: #000;
+}
+.video {
+  font-size: 0;
+  background: #fff;
+}
+.video .video-top {
+  padding-top: 0.27rem;
+  font-size: 0.32rem;
+  color: #000;
+  display: table-cell;
+}
+.video .video-top span {
+  width: 0.08rem;
+  height: 0.32rem;
+  margin-right: 0.22rem;
+  background: #094290;
+  display: inline-block;
+  vertical-align: middle;
+}
+.video .video-top p {
+  display: inline-block;
+  vertical-align: middle;
+}
+.video-box {
+  padding: 0 0.3rem;
+}
+.video-box p {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 0.3rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.video-box p:last-child {
+  border: 0;
+}
+.video-box p span {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.2rem 0 0.3rem 0;
+}
+.video-box p span del {
+  font-size: 0.32rem;
+  color: #000;
+  text-align: left;
+  text-decoration: none;
+}
+.video-box p img {
+  max-width: 100%;
+}
+.video-box p ins {
+  position: absolute;
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: #f7ab09;
+  right: 0.08rem;
+  bottom: 0.25rem;
+  border-radius: 0.35rem;
+  z-index: 1000;
+}
+.video-box p ins:after {
+  content: "";
+  display: inline-block;
+  border: 0.14rem solid transparent;
+  border-left: 0.18rem solid #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.14rem;
+  margin-left: -0.05rem;
+}
+.end-line {
+  background: #efeff4;
+  font-size: 0.24rem;
+  color: #959595;
+  margin-bottom: 0.98rem;
+  text-align: center;
+  padding: 0.4rem 0 0.2rem 0;
+}
+.end-line p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.2rem;
+}
+.end-line i {
+  width: 1.02rem;
+  height: 0.02rem;
+  background: #cfcfcf;
+  display: inline-block;
+  vertical-align: middle;
+}
+.searchdiv {
+  background: #fff;
+  padding-top: 0.88rem;
+}
+.search_s {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(99.6%);
+  padding: 0.14rem 0 0.14rem 0;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 9;
+}
+.search_s form {
+  position: absolute;
+  left: 0.2rem;
+  width: 78%;
+  height: 0.6rem;
+  border-radius: 2rem;
+  background-color: #f5f5f5;
+  border: none;
+  padding: 0 0.3rem;
+}
+.search_s form i {
+  color: #959595;
+  position: relative;
+  top: 0.02rem;
+}
+.search_s form i.clearsearch {
+  color: #c7c7c7;
+  cursor: pointer;
+  display: none;
+}
+.search_s form input {
+  border: none;
+  width: 84%;
+  line-height: 0.36rem;
+  background: transparent;
+  font-size: 0.24rem;
+  resize: none;
+  padding: 0.12rem 0;
+}
+.search_s ins {
+  text-decoration: none;
+  display: inline-block;
+  width: 12%;
+  text-align: center;
+  float: right;
+  line-height: 0.6rem;
+  cursor: pointer;
+}
+.history {
+  display: none;
+}
+.historylist {
+  padding: 0 0.25rem 0.5rem;
+  overflow: hidden;
+}
+.historylist a {
+  display: inline-block;
+  border-radius: 0.02rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+  font-size: 0.24rem;
+  padding: 0.14rem 0.1rem;
+  margin-right: 0.1rem;
+  margin-bottom: 0.1rem;
+  color: #000;
+}
+.hottrader {
+  border-top: 1px solid #e5e5e5;
+  padding: 0.2rem 0.3rem 0.4rem 0.3rem;
+}
+.hottrader div {
+  text-align: center;
+  width: 100%;
+  height: 1.36rem;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+}
+.hottrader div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.sResulthead {
+  height: auto;
+  overflow: hidden;
+}
+.sResulthead li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding: 0.3rem 0;
+  cursor: pointer;
+}
+.sResulthead li.on {
+  color: #094290;
+  position: relative;
+}
+.sResulthead li.on:after {
+  position: absolute;
+  width: 100%;
+  content: "";
+  height: 0.06rem;
+  left: 0;
+  bottom: 0;
+  background: #094290;
+}
+.sResultList {
+  background: #efeff4;
+  display: none;
+}
+.ibs {
+  padding: 0.2rem 0;
+}
+.ibslist {
+  background: #fff;
+  height: auto;
+  overflow: hidden;
+  padding: 0.2rem 0.3rem 0 1.8rem;
+}
+.ibslist li {
+  padding: 0.1rem 0;
+}
+.ibslist li div:first-child {
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  left: 0.3rem;
+  border-radius: 1.3rem;
+  overflow: hidden;
+  background: #ddd;
+}
+.ibslist li div:last-child {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+.ibslist li div:last-child:after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 0.18rem;
+  height: 0.18rem;
+  border-top: 1px solid #b5b5b5;
+  border-right: 1px solid #b5b5b5;
+  transform: rotate(45deg);
+  right: 0.3rem;
+  top: 0.15rem;
+}
+.ibslist li:last-child div:last-child {
+  border: none;
+}
+.ibslist li div h3 {
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 0.4rem;
+  padding-left: 1.78rem;
+  line-height: 0.5rem;
+  height: 0.5rem;
+}
+.ibslist li div h3 span {
+  position: absolute;
+  display: inline-block;
+  background: #31be23;
+  color: #fff;
+  font-size: 0.2rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  border-radius: 0.04rem;
+  padding: 0 0.1rem 0 0.5rem;
+  top: 0.1rem;
+  left: 0;
+}
+.ibslist li div h3 i {
+  position: absolute;
+  font-size: 0.4rem;
+  left: 0;
+  top: -0.05rem;
+}
+.ibslist li div .region {
+  color: #959595;
+  font-size: 0.24rem;
+  line-height: 0.52rem;
+  height: 0.52rem;
+}
+.ibslist li .tradershow {
+  line-height: 0.52rem;
+  height: 0.52rem;
+  font-size: 0.24rem;
+  overflow: hidden;
+}
+.iblist li div .tradershow p {
+  color: #959595;
+  font-size: 0.24rem;
+  height: auto;
+}
+.ibslist li div p span {
+  font-size: 0.2rem;
+  color: #ff6b40;
+  border: 1px solid #ff6b40;
+  padding: 2px 0.1rem;
+  line-height: 0.32rem;
+  border-radius: 2px;
+  margin-right: 0.1rem;
+}
+.ibslist li div p span.lable-ellipsis {
+  border: none;
+  font-size: 0.3rem;
+}
+.ibslist li div:first-child img {
+  max-width: 100%;
+}
+.traders {
+  padding: 0.2rem 0.3rem;
+}
+.trader li div {
+  height: 1.38rem;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.trader li div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.hottrader ul,
+.trader {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.hottrader li,
+.trader li {
+  background: #fff;
+  float: right;
+  width: 48%;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+.hottrader li a,
+.trader li a {
+  color: #959595;
+}
+.hottrader li:nth-child(odd),
+.trader li:nth-child(odd) {
+  float: left;
+}
+.hottrader li p,
+.trader li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hottrader li p,
+.trader li p {
+  padding: 0 0.1rem 0.1rem;
+  font-size: 0.24rem;
+  line-height: 0.34rem;
+}
+.hottrader li h3,
+.trader li h3 {
+  padding: 0.2rem 0.1rem;
+  color: #000;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 0.5rem;
+}
+.hottrader li p span,
+.trader li p span {
+  color: #000;
+}
+.trader li a.openbtn {
+  display: block;
+  background-color: #f7ab09;
+  border-radius: 0.04rem;
+  color: #fff;
+  text-align: center;
+  width: 80%;
+  margin: 0.2rem auto 0;
+  line-height: 0.6rem;
+  font-size: 0.22rem;
+}
+.searchnull {
+  display: none;
+  width: 100%;
+  padding: 0.6rem 0;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  color: #959595;
+  text-align: center;
+  font-size: 0.28rem;
+}
+.searchlink {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  padding-bottom: 0.8rem;
+  top: 0.88rem;
+}
+.searchlink li {
+  margin: 0.2rem;
+  line-height: 0.5rem;
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 0.2rem;
+  text-align: right;
+  cursor: pointer;
+}
+.searchlink li a {
+  color: #959596;
+  font-size: 0.28rem;
+}
+.searchlink li span {
+  font-size: 0.32rem;
+  color: #333;
+  float: left;
+  width: 80%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.searchlink p {
+  text-align: center;
+  color: #0a1f61;
+  padding-bottom: 0.8rem;
+  cursor: pointer;
+}
+.searchResult {
+  display: none;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.abnormal {
+  display: block;
+  margin-top: 0;
+  height: calc(98vh);
+}
+.ibback,
+.customerback {
+  display: none;
+}
+/*推荐策略start*/
+.strategy {
+  padding: 0.2rem 0;
+  background: #efeff4;
+}
+.strategy .strategy-box {
+  background: #fff;
+  padding: 0 0.3rem;
+  position: relative;
+}
+.strategy .strategy-box .strategy-lt {
+  font-size: 0;
+  position: absolute;
+  top: 0.32rem;
+  left: 0.3rem;
+}
+.strategy .strategy-box .strategy-lt img {
+  width: 0.84rem;
+  height: 0.94rem;
+}
+.strategy .strategy-box .strategy-lt i {
+  width: 0.02rem;
+  height: 0.94rem;
+  background-color: rgba(83, 151, 230, 0.4);
+  display: inline-block;
+  margin-left: 0.3rem;
+}
+.strategy .strategy-box .strategy-rt {
+  height: 1.58rem;
+  overflow: hidden;
+  position: relative;
+  padding-left: 1.46rem;
+}
+.strategy .strategy-box .strategy-rt ul {
+  position: relative;
+  top: 0;
+}
+.strategy .strategy-box .strategy-rt ul li {
+  height: 0.94rem;
+  overflow: hidden;
+  padding: 0.32rem 0;
+}
+.strategy .strategy-box .strategy-rt ul li div p:first-child {
+  font-size: 0;
+}
+.strategy .strategy-box .strategy-rt ul li div p:first-child span {
+  vertical-align: middle;
+}
+.strategy .strategy-box .strategy-rt ul li div p:first-child span:nth-child(1) {
+  color: #fd7b38;
+  padding: 0.02rem 0.04rem;
+  border-radius: 0.02rem;
+  border: solid 0.02rem #fd7b38;
+  font-size: 0.24rem;
+  margin-right: 0.1rem;
+}
+.strategy .strategy-box .strategy-rt ul li div p:first-child span:nth-child(2) {
+  color: #000;
+  font-size: 0.36rem;
+}
+.strategy .strategy-box .strategy-rt ul li div p:first-child span:nth-child(3) {
+  color: #094290;
+  font-size: 0.28rem;
+  float: right;
+  margin-top: 0.1rem;
+}
+.strategy .strategy-box .strategy-rt ul li div p:last-child {
+  margin-top: 0.13rem;
+  font-size: 0;
+}
+.strategy .strategy-box .strategy-rt ul li div p:last-child span {
+  font-size: 0.28rem;
+  color: #000;
+}
+.strategy .strategy-box .strategy-rt ul li div p:last-child i {
+  width: 0.02rem;
+  height: 0.18rem;
+  background-color: #d8d8d8;
+  display: inline-block;
+  margin: 0 0.1rem;
+}
+/*推荐策略end*/

@@ -1,0 +1,118 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #efeff4;
+  @include px2rem(margin-top, 88);
+  overflow-y: visible;
+}
+.ib-msg {
+  @include remCalc(padding, 0 30);
+  background: #fff;
+  @include px2rem(margin-bottom, 20);
+  .ib-msg-main {
+    .ib-msg-box {
+        @include remCalc(padding, 40 0);
+        position: relative;
+        .ib-link {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+        }
+        div {
+          vertical-align: middle;
+        }
+      .ib-icon-box {
+        @include px2rem(width, 45);
+        @include px2rem(margin-right, 15);
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        @include px2rem(top, 3);
+        .ib-icon {
+          display: inline-block;
+          background-size: 100%!important;
+          &.ib-icon-name {
+            @include px2rem(width, 32);
+            @include px2rem(height, 42);
+            background: url('/images/ib/svg/icon-name.svg') no-repeat;
+          }
+          &.ib-icon-area {
+            @include px2rem(width, 41);
+            @include px2rem(height, 49);
+            background: url('/images/ib/svg/icon-area.svg') no-repeat;
+          }
+          &.ib-icon-business {
+            @include px2rem(width, 40);
+            @include px2rem(height, 32);
+            background: url('/images/ib/svg/icon-business.svg') no-repeat;
+          }
+          &.ib-icon-phone {
+            @include px2rem(width, 41);
+            @include px2rem(height, 40);
+            background: url('/images/ib/svg/icon-phone.svg') no-repeat;
+          }
+          &.ib-icon-email {
+            @include px2rem(width, 40);
+            @include px2rem(height, 32);
+            background: url('/images/ib/svg/icon-email.svg') no-repeat;
+          }
+          &.ib-icon-qq {
+            @include px2rem(width, 40);
+            @include px2rem(height, 42);
+            background: url('/images/ib/svg/icon-qq.svg') no-repeat;
+          }
+          &.ib-icon-url {
+            @include px2rem(width, 43);
+            @include px2rem(height, 33);
+            background: url('/images/ib/svg/icon-url.svg') no-repeat;
+          }
+          &.ib-icon-introduce {
+            @include px2rem(width, 37);
+            @include px2rem(height, 38);
+            background: url('/images/ib/svg/icon-introduce.svg') no-repeat;
+          }
+        }
+      }
+      .ib-name {
+        @include px2rem(width, 160);
+        display: inline-block;
+        @include px2rem(font-size, 32);
+        @include px2rem(letter-spacing, -0.8);
+        color: #000000;
+        position: relative;
+      }
+      .ib-val {
+        display: inline-block;
+        float: right;
+        @include px2rem(font-size, 32);
+        @include px2rem(letter-spacing, -0.8);
+        color: #959595;
+        p {
+          display: inline-block;
+          @include px2rem(max-width, 350);
+          white-space:nowrap;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          vertical-align: middle;
+        }
+        i {
+          @include px2rem(font-size, 30);
+          vertical-align: middle;
+          color: #b5b5b5;
+        }
+      }
+    }
+    .line {
+      @include remCalc(margin, 0 0 0 75);
+      height: 0.021rem;
+      background: #e5e5e5;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/common/iosSelect.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/basicInfo.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <ul class="module module1">
+        <li>
+            <a href="/personal/restMobile.html">
+                <div class="left">
+                    <img src="/images/personal/phone.png" srcset="/images/personal/phone@2x.png 2x,/images/personal/phone@3x.png 3x" />
+                </div>
+                <div class="right">
+                    <p class="item">注册手机号</p>
+                    <p class="detail">
+                        <span class="hintText" id="telphone"></span>
+                        <span class="icon iconfont nextIcon">&#xe720;</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/personal/real.html">
+                <div class="left">
+                    <img src="/images/personal/realname.png" srcset="/images/personal/realname@2x.png 2x,/images/personal/realname@3x.png 3x" />
+                </div>
+                <div class="right">
+                    <p class="item">实名认证</p>
+                    <p class="detail">
+                        <span class="hintText" id="realName"></span>
+                        <span class="icon iconfont nextIcon">&#xe720;</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="/personal/identity.html">
+                <div class="left">
+                    <img src="/images/personal/certificate.png" srcset="/images/personal/certificate@2x.png 2x,/images/personal/certificate@3x.png 3x" />
+                </div>
+                <div class="right" style="border-bottom: none">
+                    <p class="item">证件照片</p>
+                    <p class="detail">
+                        <span class="hintText" id="certificate"></span>
+                        <span class="icon iconfont nextIcon">&#xe720;</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="module module2">
+        <li class="appellationLi">
+            <a>
+                <div class="left">
+                    <img src="/images/personal/appellation.png" srcset="/images/personal/appellation@2x.png 2x,/images/personal/appellation@3x.png 3x" />
+                </div>
+                <div class="right">
+                    <p class="item">称谓</p>
+                    <p class="detail">
+                        <span class="hintText" id="appellation"></span>
+                        <span class="icon iconfont nextIcon">&#xe720;</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li class="birthdayLi">
+            <a>
+                <div class="left">
+                    <img src="/images/personal/birthday.png" srcset="/images/personal/birthday@2x.png 2x,/images/personal/birthday@3x.png 3x" />
+                </div>
+                <div class="right">
+                    <p class="item">出生日期</p>
+                    <p class="detail">
+                        <span class="hintText" id="birthday" data-year="1980" data-month="1" data-date="1"></span>
+                        <span class="icon iconfont nextIcon">&#xe720;</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="ibedit.html?field=email&type=basic">
+                <div class="left">
+                    <img src="/images/personal/mailbox.png" srcset="/images/personal/mailbox@2x.png 2x,/images/personal/mailbox@3x.png 3x" />
+                </div>
+                <div class="right">
+                    <p class="item">邮箱</p>
+                    <p class="detail">
+                        <span class="hintText" id="email"></span>
+                        <span class="icon iconfont nextIcon">&#xe720;</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="address.html?type=basic">
+                <div class="left">
+                    <img src="/images/personal/address.png" srcset="/images/personal/address@2x.png 2x,/images/personal/address@3x.png 3x" />
+                </div>
+                <div class="right" style="border-bottom: none">
+                    <p class="item">地址</p>
+                    <p class="detail">
+                        <span class="hintText" id="address"></span>
+                        <span class="icon iconfont nextIcon">&#xe720;</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="module module1">
+        <li>
+            <a href="/personal/restPwd.html">
+                <div class="left">
+                    <img src="/images/personal/password.png" srcset="/images/personal/password@2x.png 2x,/images/personal/password@3x.png 3x" />
+                </div>
+                <div class="right" style="border-bottom: none">
+                    <p class="item">修改密码</p>
+                    <p class="detail">
+                        <span class="hintText"></span>
+                        <span class="icon iconfont nextIcon">&#xe720;</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <a class="safeExitBtn">安全退出</a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/common/iscroll.js"></script>
+<script type="text/javascript" src="/js/common/iosSelect.js"></script>
+<script type="text/javascript" src="/js/personal/basicInfo.js"></script>
+{% endblock %}

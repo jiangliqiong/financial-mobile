@@ -1,0 +1,88 @@
+body{
+  background: #efeff4;
+  font-size: 0.32rem;
+}
+.list{
+  padding:0.2rem;
+  margin-top: 0.86rem;
+}
+.item {
+  font-size: 0.32rem;
+  background: #fff;
+  border-radius:0.04rem;
+  padding:0.3rem 0.3rem 0.1rem 0.3rem;
+  margin-bottom:0.2rem;
+  border:1px solid #fff;
+  cursor: pointer;
+}
+.item dl {
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 0.3rem;
+  position: relative;
+  padding-left: 2.7rem;
+}
+.item dd {
+  position: absolute;
+  width: 2.6rem;
+  height: 1.04rem;
+  border: 1px solid #ddd;
+  left:0;
+}
+.item dd img{
+  width: 2.6rem;
+  height: 1.04rem;
+}
+.item dt {
+  padding: 0.1rem 0 0 0.2rem;
+  height:1rem;
+}
+.item dt p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item dt span {
+  color: #f7ab09;
+  font-size: 0.28rem;
+}
+.item table{
+  width:100%;
+  border-top:1px solid #e5e5e5;
+}
+.item table th{
+  padding-top: 0.2rem;
+  text-align:left;
+  color:#959595;
+  font-weight: normal;
+  font-size: 0.24rem;
+}
+.item table td{
+   font-size: 0.24rem;
+}
+.item.on{
+  position: relative;
+  border:1px solid #f7ab09;
+}
+.item.on:before {
+    bottom: 0;
+    border: 0.35rem solid transparent;
+    border-right: 0.35rem solid #f7ab09;
+    border-bottom: 0.35rem solid #f7ab09;
+}
+.item.on:after, .item.on:before {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    content: "";
+}
+.item.on:after{
+    bottom: 0.15rem;
+    width: 0.2rem;
+    height: 0.1rem;
+    border-left: 0.03rem solid #fff;
+    border-bottom: 0.03rem solid #fff;
+    -webkit-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+    right:0.1rem;
+}

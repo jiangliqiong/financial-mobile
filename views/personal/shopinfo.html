@@ -1,0 +1,105 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/shopinfo.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section id="shop-info"></section>
+<a class="shop-info-back" href="javascript:;"></a>
+{% endblock %}
+{% block script %}
+<script id="shop-info-tml" type="text/html">
+  <section class="ib-msg">
+    <div class="ib-msg-lt">
+      <i class="iconfont icon-dailijiaoyishang">&#xe735;</i><span><%= chinese_name%></span>
+    </div>
+    <div class="ib-msg-rt">
+      <span><%= customize_back %>美元/手</span><span><%= period_days %>日返佣</span>
+    </div>
+  </section>
+  <section class="ib-reward">
+     <div class="ib-invest-reward">
+        <span class="ib-label">投资人奖励</span>
+        <input type="number" class="default-val" name="" data-val="<%= default_back%>" value="<%= default_back%>" data-customize="<%= customize_back %>" placeholder="输入金额">
+        <span class="ib-unit">美元/手</span>
+     </div>
+     <div class="ib-reward-box">
+        <span class="ib-label">奖励信息</span>
+        <% if(ibBrokerRewardList.length>0) { %>
+        <% for(var i=0;i<ibBrokerRewardList.length;i++) { %>
+        <div class="ib-reward-list">
+          <div class="ib-reward-input no-border">
+              <input type="text" name="" data-val="<%= ibBrokerRewardList[i].reword_content %>" value="<%= ibBrokerRewardList[i].reword_content %>" placeholder="输入奖励信息">
+          </div>
+          <i class="close-reward iconfont icon-guanbi">&#xe726;</i>
+        </div>
+        <% } %>
+        <% }else{ %>
+          <div class="ib-reward-list">
+            <div class="ib-reward-input no-border">
+                <input type="text" name="" value="" placeholder="输入奖励信息">
+            </div>
+            <i class="close-reward iconfont icon-guanbi">&#xe726;</i>
+          </div>
+        <% } %>
+        <div class="ib-reward-btn-box">
+            <% if(ibBrokerRewardList.length<3) { %>
+              <a class="ib-add-reward">添加奖励</a>
+            <% }else { %>
+              <a class="ib-add-reward" style="display:none">添加奖励</a>
+            <% } %>
+        </div>
+     </div>
+  </section>
+  <% if(status == 1||status == 3) { %>
+  <section class="ib-stauts" style="display: none">
+    <span class="ib-status-lable">当前状态</span>
+    <div class="ib-status-msg">
+      <% if(status == 1) { %>
+      <span>代理中</span>
+      <span class="ib-status-switch on"><i></i></span>
+      <% }else { %>
+      <span>暂停代理</span>
+      <span class="ib-status-switch"><i></i></span>
+      <% } %>
+    </div>
+  </section>
+  <% } %>
+  <section class="ib-msg-detail">
+    <% if(total_open) { %>
+    <p>累积开户数：<%= total_open %></p>
+    <% }else{ %>
+    <p>累积开户数：0</p>
+    <% } %>
+    <% if(lateBackDate) { %>
+    <p>最近一次返佣时间：<%= lateBackDate %></p>
+    <% }else{ %>
+    <p>最近一次返佣时间：无</p>
+    <% } %>
+    <% if(recent_return_rmb) { %>
+    <p>最近一次返佣金额：<%= recent_return_rmb %></p>
+    <% }else{ %>
+    <p>最近一次返佣金额：0</p>
+    <% } %>
+  </section>
+  <section class="ib-shop-btn">
+    <button type="button" name="button" class="save-btn">保存</button>
+  </section>
+</script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["shopInfo"]);
+</script>
+<script type="text/html" id= "rewardTml">
+  <div class="ib-reward-list">
+    <div class="ib-reward-input no-border">
+        <input type="text" name="" value="" placeholder="输入奖励信息">
+    </div>
+    <i class="close-reward iconfont icon-guanbi">&#xe726;</i>
+  </div>
+</script>
+{% endblock %}

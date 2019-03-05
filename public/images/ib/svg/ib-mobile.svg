@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>A1B83785-03D9-4832-AAFF-B78F5ABA58B7</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="40" cy="40" r="40"></circle>
+        <filter x="-21.2%" y="-16.2%" width="142.5%" height="142.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="-25.4545639%" y1="138.337832%" x2="80.1051256%" y2="16.2773116%" id="linearGradient-3">
+            <stop stop-color="#2A8CBF" offset="0%"></stop>
+            <stop stop-color="#3CD9FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.1.1.代理商主页" transform="translate(-36.000000, -477.000000)">
+            <g id="Group-10-Copy" transform="translate(0.000000, 125.000000)">
+                <g id="客服服务-copy-2" transform="translate(0.000000, 330.000000)">
+                    <g id="客服电话" transform="translate(46.000000, 28.000000)">
+                        <g id="Group-3">
+                            <g id="Oval-11">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            </g>
+                            <path d="M24.0685105,28.5282062 C24.0685105,28.5282062 22.6641676,35.6918072 33.2318476,46.2847084 C33.3098667,46.3629136 33.3839848,46.4293881 33.4581029,46.5075933 C33.532221,46.5818883 33.6024381,46.6600936 33.6804571,46.7343885 C44.2442362,57.3233795 51.390781,55.915685 51.390781,55.915685 C51.8276876,55.857031 52.7483124,55.5950434 53.0603886,55.2822224 C53.0603886,55.2822224 54.6870857,53.9410024 55.6818286,52.2908716 C56.6765714,50.6407408 54.7963124,48.1538138 53.7118476,47.0667609 C51.5273143,44.8770138 49.5144229,44.446885 48.6289067,45.0568859 C48.2310095,45.3306043 46.6511238,47.039389 46.6511238,47.039389 C46.3390476,47.35221 45.7226971,47.6102874 45.2818895,47.6181079 C45.2818895,47.6181079 42.5200152,47.6454797 37.37856,42.5738692 C32.3190248,37.4240535 32.3463314,34.6516773 32.3463314,34.6516773 C32.3541333,34.2098177 32.6115962,33.5919962 32.9236724,33.2791752 C32.9236724,33.2791752 34.8858514,31.3162234 34.9014552,31.2966721 C35.6465371,30.3621193 34.4138362,28.0433337 32.8963657,26.2016 C31.9211276,25.0167905 31.1331352,24.324674 29.6546743,24.0431351 C27.6807924,23.6677499 24.1387276,26.2993566 24.0685105,28.5282062 Z" id="Shape" fill="url(#linearGradient-3)" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

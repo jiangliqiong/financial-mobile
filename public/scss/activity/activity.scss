@@ -1,0 +1,128 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  @include px2rem(padding-top, 88);
+  background: #f2f4f3;
+  section {
+    width: 100%;
+    font-size: 0;
+    &.list {
+      @include bg-image('/images/activity/activity-list', 'png');
+      background-size: 100%;
+      @include px2rem(height, 644);
+      background-color: #ff7e2b;
+      @include px2rem(padding-top, 113);
+      box-sizing: border-box;
+      .list-ul {
+        @include px2rem(padding-left, 30);
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: hidden;
+        overflow-x: auto;
+        &::-webkit-scrollbar {/*隐藏滚轮*/
+         display: none;
+        }
+        ul {
+          @include clearfix();
+          @include px2rem(height, 360);
+          overflow-y: hidden;
+          overflow-x: auto;
+          li {
+            @include px2rem(width, 240);
+            @include px2rem(height, 360);
+            background: #000;
+            @include css3(border-radius, 10);
+            @include px2rem(margin-right, 20);
+            text-align: center;
+            float: left;
+            position: relative;
+            a {
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             top: 0;
+             left: 0;
+             z-index: 3;
+            }
+            p {
+              display:block;
+              white-space:nowrap;
+              overflow:hidden;
+              text-overflow:ellipsis;
+            }
+            .top {
+              @include px2rem(padding-top, 20);
+              img {
+                @include px2rem(width, 200);
+                @include px2rem(height, 80);
+              }
+            }
+            .name {
+              color: #fef7c6;
+              @include px2rem(font-size, 30);
+              @include px2rem(margin-top, 20);
+            }
+            .back {
+              color: #fb8019;
+              @include px2rem(font-size, 24);
+              @include px2rem(margin-top, 20);
+              b {
+                @include px2rem(font-size, 40);
+                font-weight: normal;
+              }
+            }
+            .label {
+              color: #fef7c6;
+              @include px2rem(font-size, 20);
+              @include remCalc(padding, 0 5 25 5);
+            }
+            .line {
+              height: 1px;
+              background: #fef7c6;
+              @include remCalc(margin, 0 20 0 30);
+              opacity: 0.4;
+            }
+            .more-label {
+              color: #fb8019;
+              @include px2rem(font-size, 24);
+              @include px2rem(margin-top, 20);
+            }
+          }
+        }
+      }
+      .more {
+        width: 100%;
+        color: #000;
+        @include px2rem(font-size, 28);
+        text-align: center;
+        display: block;
+        @include px2rem(margin-top, 60);
+      }
+    }
+    &.time {
+      position: relative;
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0
+      }
+    }
+    &.banner {
+      position: relative;
+      a {
+        @include px2rem(width, 105);
+        @include px2rem(height, 130);
+        display: block;
+        position: absolute;
+        top: 0;
+        @include px2rem(right, 85);
+      }
+    }
+  }
+}

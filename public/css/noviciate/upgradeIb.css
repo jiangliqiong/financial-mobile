@@ -1,0 +1,65 @@
+body{
+    background-image: linear-gradient(178deg, #ffb131, #f6db9f);
+}
+.contentBox{}
+.contentBox .ibmsg{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.contentBox .friends{
+    width: calc(100% - 0.4rem);
+    margin: 0 0.2rem;
+    background-color: #fefcf2;
+}
+.contentBox .friends .title{
+    width: 6.07rem;
+    font-size: 0.22rem;
+    letter-spacing: -0.005rem;
+    text-align: left;
+    color: #fe9202;
+    padding: 0.18rem 0 0.3rem 0.5rem;
+}
+.contentBox .infoBox{
+    padding: 0 0.5rem 0.2rem 0.5rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.contentBox .more{
+    display: none;
+    font-size: 0.26rem;
+    color: #000000;
+    padding-top: 0.2rem;
+    text-align: center;
+}
+.contentBox .infoBox ul li{
+    padding: 0.1rem 0;
+    font-size: 0.24rem;
+    color: #000000;
+}
+.contentBox .infoBox .hidden{
+    display: none;
+}
+.contentBox .infoBox .tel{
+    display: inline-block;
+    width: 1.8rem;
+    padding-right: 0.2rem;
+    vertical-align: middle;
+}
+.contentBox .infoBox .name{
+    display: inline-block;
+    width: 2.25rem;
+    padding-right: 0.2rem;
+    vertical-align: middle;
+}
+.contentBox .infoBox .date{
+    display: inline-block;
+    width: 1.5rem;
+    vertical-align: middle;
+}
+.btn{
+    padding:0 0.75rem 0.2rem;
+    display: none;
+}
+.btn img{
+    width:100%;
+}

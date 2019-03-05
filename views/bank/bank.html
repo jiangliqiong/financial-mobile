@@ -1,0 +1,173 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/bank/bank.css" />
+<link type="text/css" rel="stylesheet" href="/css/bank/bindBank.css" />
+<link type="text/css" rel="stylesheet" href="/css/common/iosSelect.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<div class="my-con bank-list">
+    <ul class="banks" id="banks">
+
+    </ul>
+    <div class="add-con">
+        <a href="javascript:;" class="add add-bank-btn">+ 添加银行卡</a>
+    </div>
+    <div class="tips-alert">
+    </div>
+</div>
+<div class="my-con add-bank-edit" style="display:none">
+    <div class="card-address">
+        <div class="add-address">
+            <span class="add">+ 选择开户行</span>
+            <div class="show">
+            </div>
+        </div>
+        <p>
+            <i>*</i>
+            仅支持本人借记卡（不支持信用卡及存折）
+        </p>
+    </div>
+    <form>
+        <input type="hidden" name="main_key" value="f059b0284da834b3439fe01a309dd82a">
+        <!-- 默认给一个负值 -->
+        <input type="hidden" name="bank_id" id="bank_id" value="-1">
+        <!-- 登录之后会进行添加 -->
+        <input type="hidden" name="customer_id" value="" id="customer_id">
+        <ul>
+            <li class="input-container notBind">
+                <div>姓氏:</div>
+                <input type="text" placeholder="您的真实姓氏" maxlength="6" name="xing" required checked>
+                <i class="icon-clean"></i>
+            </li>
+            <li class="input-container notBind">
+                <div>名字:</div>
+                <input type="text" placeholder="您的真实名字" maxlength="10" name="ming" required checked>
+                <i class="icon-clean"></i>
+            </li>
+            <li class="input-container notBind">
+                <div>身份证号：</div>
+                <input type="number" placeholder="15或者18位身份证号" name="idnumber" required checked>
+                <i class="icon-clean"></i>
+            </li>
+            <li class="input-container hasRealNamed">
+                <div>持卡人姓名:</div>
+                <input type="text" readonly id="realNamed_name" class="realed" required>
+            </li>
+            <li class="input-container hasRealNamed">
+                <div>持卡人证件:</div>
+                <input type="text" readonly value="身份证" class="realed" required>
+            </li>
+            <li class="input-container hasRealNamed">
+                <div>证件号：</div>
+                <input type="text" readonly id="realNamed_id" class="realed" name="card" required>
+            </li>
+            <li class="input-container">
+                <div>银行卡号:</div>
+                <input type="number" placeholder="本人银行卡号码" name="bank_account" id="special_bank" required checked>
+                <i class="icon-clean"></i>
+            </li>
+            <li class="input-container province" id="selectArea">
+                <div>开户城市:</div>
+                <span class="holder no-chose">
+                    <span>选择银行开户城市</span>
+                    <i class="arrow">
+                        <img src="/images/personal/arrow-rt.png" srcset="/images/personal/arrow-rt@2x.png 2x, /images/personal/arrow-rt@3x.png 3x" >
+                    </i>
+                </span>
+                <input type="hidden" id="city-msg" name="city-name" class="hidden" required>
+                <input type="hidden" name="bank_id" id="bank_id" value="-1">
+            </li>
+            <li class="input-container">
+                <div>预留手机号:</div>
+                <input type="number" placeholder="银行卡预留手机号" id="reserved-phone" name="reserved_phone" class="protocol-donot-need" required checked>
+                <i class="icon-clean"></i>
+            </li>
+        </ul>
+        <div class="form-last">
+            <i class="icon-active protocol">
+            </i>我同意 <a href="javascript:void(0);">《银行转账授权协议》</a>
+            <span id="a_mask" class="agreement disabled"></span>
+        </div>
+        <div class="form-last">
+            <span class="save disabled">保存</span>
+        </div>
+    </form>
+    <div class="show-protocol">
+        <header>授权书</header>
+        <p>致杭州选财外汇投资管理咨询有限公司：</p>
+        <section>
+            <div class="indent">
+                本人（授权人）<span class="pro_name"></span> 身份证号码：<span class="pro_id"></span> 现就本人所开立的下述银行账户，授权贵公司（被授权人）通过贵公司指定的第三方支付机构及商业银行按照本人在贵公司交易平台上的交易申请金额从本人的银行账户主动进行交易资金的代收扣收，用于完成本人与贵公司基于贵公司交易平台所签订的相关合同的资金交付。
+            </div>
+            <div>
+                <p class="indent">本人银行账户信息如下：</p>
+                <ul>
+                    <li>账户姓名：<span class="pro_name"></span></li>
+                    <li>账户账号：<span class="pro_account"></span></li>
+                    <li>账户开户银行名称：<span class="pro_bankName"></span></li>
+                    <li>账户开户证件：身份证账户</li>
+                    <li>开户证件号码：<span class="pro_id"></span></li>
+                </ul>
+            </div>
+            <div class="indent">
+                本人在此声明已清楚知悉本次授权代收的性质和后果。贵公司根据本授权书所采取的在授权范围内的全部行动和措施的法律后果均由本人承担。
+            </div>
+            <div class="indent">
+                本人知晓并同意，受本人银行账户状态、银行、第三方支付机构及网络等原因所限, 本授权书项下交易申请可能会通过多次代扣交易方可完成，且贵公司无需对资金到账时间做任何承诺。贵公司或贵公司委托的第三方支付机构或银行仅根据本授权书所述的授权进行相关操作, 贵公司或贵公司委托的第三方支付机构或银行无义务对根据本授权书所采取的全部行动和措施的时效性和结果承担任何责任。
+            </div>
+            {% include "../common/regfooter.html" %}
+        </section>
+    </div>
+</div>
+<a href="javascript:;" class="back-cover"></a>
+{% endblock %}
+{% block script %}
+<script type="text/template" id="bankTpl">
+  <i class="icon-bank">
+      <img src="/images/personal/banks/gsyh.png" srcset="/images/personal/banks/gsyh@2x.png 2x, /images/personal/banks/gsyh@3x.png 3x">
+  </i>
+  <dl><dt><%= bankname%></dt><dd><span>单笔限额:<%= restrict_per%>万元</span><span>日限额:<%= restrict_day%>万元</span><span>月限额:<%= restrict_month%>万元</span></dd></dl>
+  <span class="arrow">
+      <img src="/images/personal/next.png" srcset="/images/personal/next@2x.png 2x, /images/personal/next@3x.png 3x">
+  </span>
+</script>
+<script type="text/template" id="tpl">
+    <% _.each(banks, function(bank){ %>
+        <li class=<%= bank.is_default ? 'active' : '' %>>
+            <div>
+                <i>
+                    <img src="/images/personal/banks/<%= bankMap[bank.bank_no] %>.png" serset="/images/personal/banks/<%= bankMap[bank.bank_no] %>@2x.png 2x,/images/personal/banks/<%= bankMap[bank.bank_no] %>@3x.png 3x" >
+                </i>
+                <dl>
+                    <dt>
+                        <span><%= bank.branch_name.length === 6 ? bank.branch_name.slice(2) : bank.branch_name %></span>
+                        <span><%= bank.bank_account %></span>
+                    </dt>
+                    <dd>
+                        <span class="boder-rt">单笔限额:<%= (bank.restrict_per / 10000).toFixed(0) %>万元</span
+                        ><span class="boder-rt">日限额:<%= (bank.restrict_day / 10000).toFixed(0) %>万元</span
+                        ><span>月限额:<%= (bank.restrict_month / 10000).toFixed(0) %>万元</span>
+                    </dd>
+                    <dd>预留手机号:<%= bank.reserved_phone %></dd>
+                </dl>
+            </div>
+            <p>
+                <span class="set-default-btn" data-json=<%= JSON.stringify({account_id: bank.account_id, customer_id: bank.customer_id}) %>><i></i><%= bank.is_default ? '默认' : '设为默认' %></span
+                ><span data-account="<%= bank.account_id %>" class="rest-mobile-btn">换预留手机号</span>
+            </p>
+        </li>
+    <% }) %>
+</script>
+<script src="/js/common/underscore-min.js"></script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript" src="/js/common/iscroll.js"></script>
+<script type="text/javascript" src="/js/common/iosSelect.js"></script>
+<script type="text/javascript">
+  seajs.use(["bank"]);
+</script>
+{% endblock %}

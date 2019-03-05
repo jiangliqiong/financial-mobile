@@ -1,0 +1,225 @@
+body {
+  background: #efeff4;
+  margin-top: 0.88rem; }
+
+.ib-msg {
+  padding: 0.3rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .ib-msg .ib-msg-lt {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    color: #094290; }
+    .ib-msg .ib-msg-lt span {
+      vertical-align: middle; }
+    .ib-msg .ib-msg-lt i {
+      font-size: 0.4rem;
+      margin-right: 0.16rem;
+      vertical-align: middle; }
+  .ib-msg .ib-msg-rt {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: right; }
+    .ib-msg .ib-msg-rt span {
+      padding: 0.03rem 0.15rem;
+      font-size: 0.2rem;
+      letter-spacing: -0.003rem;
+      margin-left: 0.1rem;
+      color: #f7ab09;
+      -webkit-border-radius: 1rem;
+      -moz-border-radius: 1rem;
+      -ms-border-radius: 1rem;
+      -o-border-radius: 1rem;
+      border-radius: 1rem;
+      border: solid 1px #f7ab09;
+      vertical-align: middle; }
+  .ib-msg:before, .ib-msg:after {
+    content: "";
+    display: table; }
+  .ib-msg:after {
+    clear: both; }
+
+.ib-reward {
+  margin-top: 0.2rem;
+  padding: 0.1rem 0.3rem 0.4rem;
+  background: #fff; }
+  .ib-reward span {
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    color: #000000; }
+  .ib-reward .ib-invest-reward {
+    padding: 0.4rem 0rem;
+    border-bottom: 1px solid #e5e5e5; }
+    .ib-reward .ib-invest-reward .ib-label {
+      width: 2rem;
+      vertical-align: middle;
+      display: inline-block; }
+    .ib-reward .ib-invest-reward input {
+      font-size: 0.32rem;
+      letter-spacing: -0.008rem;
+      width: 3rem;
+      border: none; }
+      .ib-reward .ib-invest-reward input::-webkit-input-placeholder {
+        color: #dcdcdc; }
+    .ib-reward .ib-invest-reward .ib-unit {
+      float: right;
+      vertical-align: middle; }
+  .ib-reward .ib-reward-box:before, .ib-reward .ib-reward-box:after {
+    content: "";
+    display: table; }
+  .ib-reward .ib-reward-box:after {
+    clear: both; }
+  .ib-reward .ib-reward-box .ib-label {
+    width: 2rem;
+    padding: 0.4rem 0rem;
+    vertical-align: middle;
+    display: inline-block; }
+  .ib-reward .ib-reward-box .ib-reward-list {
+    display: inline-block;
+    padding: 0.26rem 0rem;
+    width: 4.8rem;
+    border-bottom: 1px solid #e5e5e5;
+    float: right; }
+    .ib-reward .ib-reward-box .ib-reward-list.edit .ib-reward-input {
+      border-right: 1px solid #e5e5e5; }
+    .ib-reward .ib-reward-box .ib-reward-list.edit .close-reward {
+      cursor: pointer;
+      display: inline-block; }
+    .ib-reward .ib-reward-box .ib-reward-list .ib-reward-input {
+      padding: 0.15rem 0.28rem 0.15rem 0rem;
+      width: 4rem;
+      display: inline-block; }
+      .ib-reward .ib-reward-box .ib-reward-list .ib-reward-input input {
+        font-size: 0.32rem;
+        letter-spacing: -0.008rem;
+        width: 4rem;
+        border: none; }
+        .ib-reward .ib-reward-box .ib-reward-list .ib-reward-input input::-webkit-input-placeholder {
+          color: #dcdcdc; }
+    .ib-reward .ib-reward-box .ib-reward-list .close-reward {
+      cursor: pointer;
+      font-size: 0.26rem;
+      margin-left: 0.1rem;
+      color: #959595;
+      display: none; }
+  .ib-reward .ib-reward-btn-box {
+    display: inline-block;
+    float: right;
+    width: 4.8rem; }
+    .ib-reward .ib-reward-btn-box a {
+      margin-top: 0.2rem;
+      padding: 0.15rem 0.4rem;
+      -webkit-border-radius: 0.04rem;
+      -moz-border-radius: 0.04rem;
+      -ms-border-radius: 0.04rem;
+      -o-border-radius: 0.04rem;
+      border-radius: 0.04rem;
+      border: solid 1px #094290;
+      font-size: 0.28rem;
+      letter-spacing: -0.007rem;
+      background: #fff;
+      color: #094290;
+      display: inline-block; }
+      .ib-reward .ib-reward-btn-box a.no-reward {
+        margin-top: 0.25rem; }
+
+.ib-stauts {
+  font-size: 0.32rem;
+  letter-spacing: -0.008rem;
+  margin: 0.2rem 0rem 0rem 0rem;
+  background: #fff;
+  color: #000000;
+  padding: 0.5rem 0.3rem; }
+  .ib-stauts:before, .ib-stauts:after {
+    content: "";
+    display: table; }
+  .ib-stauts:after {
+    clear: both; }
+  .ib-stauts .ib-status-lable {
+    line-height: 0.62rem;
+    vertical-align: middle; }
+  .ib-stauts .ib-status-msg {
+    float: right;
+    text-align: right; }
+    .ib-stauts .ib-status-msg span {
+      vertical-align: middle;
+      display: table-cell; }
+      .ib-stauts .ib-status-msg span:first-child {
+        padding-right: 0.15rem; }
+      .ib-stauts .ib-status-msg span.ib-status-switch {
+        cursor: pointer;
+        width: 1.06rem;
+        height: 0.62rem;
+        display: table-cell;
+        -webkit-border-radius: 0.31rem;
+        -moz-border-radius: 0.31rem;
+        -ms-border-radius: 0.31rem;
+        -o-border-radius: 0.31rem;
+        border-radius: 0.31rem;
+        background: #e5e5e5; }
+        .ib-stauts .ib-status-msg span.ib-status-switch.on {
+          background: #44db5e; }
+          .ib-stauts .ib-status-msg span.ib-status-switch.on i {
+            margin-left: 0.44rem; }
+        .ib-stauts .ib-status-msg span.ib-status-switch i {
+          width: 0.56rem;
+          height: 0.56rem;
+          margin-left: 0.06rem;
+          display: block;
+          background: #fff;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          vertical-align: middle;
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          -ms-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          transition: all 0.2s; }
+
+.ib-msg-detail {
+  padding: 0.25rem 0.3rem 0.4rem;
+  margin-top: 0.2rem;
+  background: #fff;
+  font-size: 0.24rem;
+  letter-spacing: -0.006rem;
+  color: #959595; }
+  .ib-msg-detail p {
+    margin-top: 0.15rem; }
+
+.ib-shop-btn {
+  padding: 0.6rem 0.3rem 0.2rem; }
+  .ib-shop-btn button {
+    cursor: pointer;
+    width: 100%;
+    -webkit-border-radius: 0.04rem;
+    -moz-border-radius: 0.04rem;
+    -ms-border-radius: 0.04rem;
+    -o-border-radius: 0.04rem;
+    border-radius: 0.04rem;
+    height: 0.88rem;
+    font-size: 0.32rem;
+    letter-spacing: -0.008rem;
+    color: #fff;
+    background-color: #094290;
+    border: none;
+    outline: none; }
+
+.shop-info-back {
+  width: 0.9rem;
+  height: 0.88rem;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; }

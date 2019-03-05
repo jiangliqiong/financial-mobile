@@ -1,0 +1,41 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/supervision/list.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <ul class="supervisionList" id="supervisionListBox"></ul>
+    <div class="loadingMore" style="display: none;">正在加载，请稍后…</div>
+</div>
+{% include "../common/loading.html" %}
+{% include "../common/loadfail.html" %}
+{% include "../common/nodata.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/supervision/list.js"></script>
+<script id="supervisionListTml" type="text/html">
+    <% for (var i = 0; i < list.length; i++) { %>
+    <li>
+        <a href="details.html?id=<%= list[i].regulator_id ? list[i].regulator_id : '' %>">
+            <div class="left">
+                <img src="<%= list[i].regulator_logo ? list[i].regulator_logo : '' %>" />
+            </div>
+            <div class="right">
+                <div class="head">
+                    <span class="name"><%= list[i].regulator_name ? list[i].regulator_name : '' %></span>
+                    <span class="icon iconfont nextIcon">&#xe720;</span>
+                </div>
+                <div class="detail"><%= list[i].regulator_introduce ? list[i].regulator_introduce : '' %></div>
+            </div>
+        </a>
+    </li>
+    <% } %>
+</script>
+{% endblock %}

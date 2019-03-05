@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="750px" height="300px" viewBox="0 0 750 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>7C141269-1DED-4AF3-A1A9-7C4CF8283FA6</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <radialGradient cx="39.4426709%" cy="28.7478812%" fx="39.4426709%" fy="28.7478812%" r="79.3745668%" gradientTransform="translate(0.394427,0.287479),scale(0.400000,1.000000),rotate(20.244281),translate(-0.394427,-0.287479)" id="radialGradient-1">
+            <stop stop-color="#0A0385" offset="0%"></stop>
+            <stop stop-color="#191477" offset="40.2269315%"></stop>
+            <stop stop-color="#000A4E" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="0" y="0" width="750" height="300"></rect>
+        <linearGradient x1="100%" y1="30.9111253%" x2="86.9228322%" y2="48.466532%" id="linearGradient-4">
+            <stop stop-color="#315CFF" offset="0%"></stop>
+            <stop stop-color="#1E2992" offset="50.3706952%"></stop>
+            <stop stop-color="#1B1769" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1189.93291,495.817551 L381.603156,1268.11019 C360.81224,1287.9742 326.395489,1288.62338 304.731192,1269.56017 C297.106129,1262.8506 291.779101,1254.24882 289.401742,1244.80706 L1.97568633,103.284775 C-4.77885622,76.4588808 13.4631018,49.6915796 42.7202398,43.498334 C53.0177138,41.3185314 63.7848398,41.9377908 73.7045208,45.2803606 L1169.46033,414.510009 C1197.64409,424.006903 1212.09504,452.654501 1201.73744,478.496209 C1199.14863,484.955144 1195.12944,490.852695 1189.93291,495.817551 Z" id="path-5"></path>
+        <filter x="-3.7%" y="-3.4%" width="107.3%" height="107.1%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0229892107   0 0 0 0 0.00751933371   0 0 0 0 0.343989158  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="109.956037%" y1="41.5499985%" x2="36.6817926%" y2="64.8456964%" id="linearGradient-7">
+            <stop stop-color="#315CFF" offset="0%"></stop>
+            <stop stop-color="#1E2992" offset="39.8560099%"></stop>
+            <stop stop-color="#1B1769" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="32.4580866%" y1="92.6823296%" x2="69.7796524%" y2="27.3807862%" id="linearGradient-8">
+            <stop stop-color="#2D58FB" offset="0%"></stop>
+            <stop stop-color="#20288F" offset="45.4001254%"></stop>
+            <stop stop-color="#1A1666" offset="100%"></stop>
+        </linearGradient>
+        <path d="M757.289504,224.732152 L905.561305,25.3901704 C910.77696,18.3780549 921.083691,16.6475653 928.582032,21.5250138 C931.221182,23.2417025 933.268097,25.6404812 934.472386,28.4279175 L1040.93492,274.845142 C1044.35654,282.764794 1040.26498,291.778848 1031.79618,294.978595 C1028.81546,296.104792 1025.54836,296.394175 1022.39454,295.811346 L767.660213,248.736103 C758.699599,247.080169 752.871068,238.944788 754.641826,230.565221 C755.084413,228.470813 755.985891,226.484776 757.289504,224.732152 Z" id="path-9"></path>
+        <filter x="-2.1%" y="-1.4%" width="102.8%" height="102.9%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="-2" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0941176471   0 0 0 0 0.0745098039   0 0 0 0 0.411764706  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="97.9285449%" y1="32.6767948%" x2="86.9228322%" y2="48.466532%" id="linearGradient-11">
+            <stop stop-color="#315CFF" offset="0%"></stop>
+            <stop stop-color="#1E2992" offset="39.8560099%"></stop>
+            <stop stop-color="#1B1769" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.2外汇大课堂-视频详情-非WiFi" transform="translate(0.000000, -215.000000)">
+            <g id="底图-视频非wifi" transform="translate(0.000000, 215.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask" fill="url(#radialGradient-1)" xlink:href="#path-2"></use>
+                <g id="Group-2" mask="url(#mask-3)">
+                    <g transform="translate(328.060473, 396.439194) rotate(-345.000000) translate(-328.060473, -396.439194) translate(-274.939527, -245.560806)">
+                        <g id="Triangle-Copy-2" fill="none">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                            <use fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                        </g>
+                        <circle id="Oval" fill="url(#linearGradient-7)" fill-rule="evenodd" opacity="0.099999994" cx="669.963177" cy="435.823619" r="213.703709"></circle>
+                        <g id="Triangle-Copy" fill="none" opacity="0.399999976" transform="translate(898.234234, 157.429503) rotate(8.000000) translate(-898.234234, -157.429503) ">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                            <use fill="url(#linearGradient-8)" fill-rule="evenodd" xlink:href="#path-9"></use>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group" mask="url(#mask-3)" fill="url(#linearGradient-11)" opacity="0.299999982">
+                    <g transform="translate(-68.500000, 317.000000) rotate(-360.000000) translate(68.500000, -317.000000) translate(-512.000000, -140.000000)" id="Triangle-Copy-2">
+                        <path d="M875.65302,333.954875 L280.53063,902.545399 C265.223585,917.170022 239.884695,917.647972 223.934635,903.61293 C218.32078,898.673093 214.398824,892.340146 212.648524,885.38877 L1.03478633,44.9576649 C-3.93815878,25.2074455 9.49224823,5.50036416 31.03244,0.940666734 C38.6138227,-0.66418488 46.5409808,-0.208263159 53.8442185,2.25266092 L860.580346,274.093242 C881.330273,281.085209 891.9696,302.176634 884.343948,321.202259 C882.437975,325.957567 879.478898,330.299563 875.65302,333.954875 Z"></path>
+                    </g>
+                </g>
+                <path d="M265.125705,221.390075 L-81.8570959,448.263445 L-81.8570959,448.263445 C-82.3193415,448.565682 -82.9390774,448.43597 -83.2413149,447.973725 C-83.3476918,447.81103 -83.4043453,447.62086 -83.4043453,447.426475 L-83.4043453,-21.385717 L-83.4043453,-21.385717 C-83.4043453,-21.9380018 -82.95663,-22.385717 -82.4043453,-22.385717 C-82.2099607,-22.385717 -82.0197899,-22.3290635 -81.8570959,-22.2226867 L265.125705,204.650683 L265.125705,204.650683 C269.74816,207.673058 271.045282,213.870417 268.022907,218.492873 C267.267488,219.64822 266.281052,220.634656 265.125705,221.390075 Z" id="Triangle" fill="url(#linearGradient-7)" opacity="0.799999952" mask="url(#mask-3)" transform="translate(96.847433, 213.020436) rotate(-14.000000) translate(-96.847433, -213.020436) "></path>
+                <path d="M165.125705,231.390075 L-181.857096,458.263445 L-181.857096,458.263445 C-182.319341,458.565682 -182.939077,458.43597 -183.241315,457.973725 C-183.347692,457.81103 -183.404345,457.62086 -183.404345,457.426475 L-183.404345,-11.385717 L-183.404345,-11.385717 C-183.404345,-11.9380018 -182.95663,-12.385717 -182.404345,-12.385717 C-182.209961,-12.385717 -182.01979,-12.3290635 -181.857096,-12.2226867 L165.125705,214.650683 L165.125705,214.650683 C169.74816,217.673058 171.045282,223.870417 168.022907,228.492873 C167.267488,229.64822 166.281052,230.634656 165.125705,231.390075 Z" id="Triangle" fill="url(#linearGradient-7)" opacity="0.799999952" mask="url(#mask-3)" transform="translate(-3.152567, 223.020436) rotate(-14.000000) translate(3.152567, -223.020436) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

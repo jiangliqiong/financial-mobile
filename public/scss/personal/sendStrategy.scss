@@ -1,0 +1,242 @@
+@import '../mixin/mixin';
+$baseFontSize: 100;
+@function torem($px){
+    @return ($px / $baseFontSize) * 1rem;
+}
+body {
+  background: #efeff4;
+  @include px2rem(margin-top, 88);
+}
+input {
+	-webkit-appearance:none;
+	outline:none
+};
+.strategy {
+  .varieties {
+    @include remCalc(padding,0 30);
+    background: #fff;
+    cursor: pointer;
+    .varieties-box {
+      font-size: 0;
+      @include remCalc(padding,40 0);
+      border-bottom: torem(2) solid #e5e5e5;
+      span {
+        &.lt {
+          @include px2rem(font-size, 32);
+          color: #000;
+          @include px2rem(letter-spacing, -0.8);
+        }
+        vertical-align: middle;
+      }
+      p.rt {
+        display: inline-block;
+        @include px2rem(font-size, 32);
+        color: #dcdcdc;
+        vertical-align: middle;
+        @include px2rem(margin-left, 70);
+      }
+      .iconfont {
+        float: right;
+        color: #b5b5b5;
+        vertical-align: middle;
+        @include px2rem(font-size, 32);
+        @include px2rem(margin-top, 4);
+      }
+    }
+  }
+}
+.category {
+  @include remCalc(padding,32 30);
+  background: #fff;
+  cursor: pointer;
+  .category-box {
+    position: relative;
+    .lt {
+      @include px2rem(font-size, 32);
+      color: #000;
+      position: absolute;
+      @include px2rem(top, 4);
+      left: 0;
+    }
+    .rt {
+      font-size: 0;
+      @include remCalc(padding,0 0 0 196);
+      @include flexbox();
+      span {
+        display: inline-block;
+        @include flex();
+        position: relative;
+        cursor: pointer;
+        &.active {
+          a {
+            color: #094290;
+            border-color: #094290;
+          }
+          .strategy-arrow {
+            display: block;
+          }
+        }
+        a {
+          @include remCalc(padding,8 24);
+          border: torem(2) solid #e5e5e5;
+          @include css3(border-radius, 4);
+          @include px2rem(font-size, 32);
+          display: inline-block;
+          color: #959595;
+        }
+        &:nth-child(2) {
+          text-align: center;
+        }
+        &:nth-child(3) {
+          text-align: right;
+        }
+        .strategy-arrow {
+          display: none;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 torem(18) torem(18) torem(18);
+          border-color: transparent transparent #e5e5e5 transparent;
+          @include px2rem(bottom, -32);
+          @include px2rem(left, 38);
+          &::before {
+            position: absolute;
+            content: '';
+            top: torem(2);
+            left: torem(-18);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 torem(18) torem(18) torem(18);
+            border-color: transparent transparent #f5f5f5 transparent;
+          }
+          &.center {
+            @include px2rem(left, 64);
+          }
+          &.right {
+            @include px2rem(left, 88);
+          }
+        }
+      }
+    }
+  }
+}
+.data {
+  background: #fafafa;
+  @include remCalc(padding,40 30 40 30);
+  border-top: 1px solid #e5e5e5;
+  ul {
+    li {
+      font-size: 0;
+      @include clearfix();
+      @include px2rem(margin-bottom, 40);
+      &.area {
+        display: none;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .label {
+        @include px2rem(font-size, 32);
+        @include px2rem(line-height, 98);
+        color: #000;
+      }
+      .data-box {
+        display: inline-block;
+        font-size: 0;
+        float: right;
+        &.focus {
+          a {
+            cursor: pointer;
+            &.reduce-num {
+              span {
+                background: url('/images/personal/reduce-hover.svg') no-repeat;
+                background-size: 100%;
+              }
+            }
+            &.add-num {
+              span {
+                background: url('/images/personal/add-hover.svg') no-repeat;
+                background-size: 100%;
+              }
+            }
+          }
+        }
+        a {
+          background: #fff;
+          @include px2rem(width, 94);
+          @include px2rem(height, 94);
+          display: inline-block;
+          border: 1px solid #e5e5e5;
+          @include css3(border-radius, 4);
+          position: relative;
+          vertical-align: middle;
+          &.reduce-num {
+            border-right: 0;
+            span {
+              @include px2rem(width, 40);
+              @include px2rem(height, 4);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              @include px2rem(margin-top, -2);
+              @include px2rem(margin-left, -20);
+              background: url('/images/personal/reduce.svg') no-repeat;
+              background-size: 100%;
+            }
+          }
+          &.add-num {
+            border-left: 0;
+            span {
+              @include px2rem(width, 40);
+              @include px2rem(height, 40);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              @include px2rem(margin-top, -20);
+              @include px2rem(margin-left, -20);
+              background: url('/images/personal/add-icon.svg') no-repeat;
+              background-size: 100%;
+            }
+          }
+        }
+        input {
+          @include px2rem(width, 368);
+          @include px2rem(height, 98);
+          vertical-align: middle;
+          border: 1px solid #e5e5e5;
+          text-align: center;
+          @include px2rem(font-size, 32);
+          &::-webkit-input-placeholder {
+             color:#dcdcdc;
+          }
+        }
+      }
+    }
+  }
+}
+.strategy-btn {
+  text-align: center;
+  @include px2rem(margin-top, 60);
+  @include remCalc(padding,0 30);
+  font-size: 0;
+  button {
+    width: 100%;
+    @include px2rem(height, 88);
+    @include css3(border-radius, 4);
+    background-color: #094290;
+    box-shadow: 0 torem(5) torem(25) 0 rgba(9, 66, 144, 0.3);
+    border: 0;
+    @include px2rem(font-size, 32);
+    color: #fff;
+    cursor: pointer;
+  }
+  .tip {
+    color: #959595;
+    @include px2rem(font-size, 24);
+    @include px2rem(letter-spacing, -0.6);
+    text-align: left;
+    @include px2rem(margin-top, 40);
+  }
+}

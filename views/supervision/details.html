@@ -1,0 +1,28 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/supervision/details.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox" id="detailBox" style="display: none">
+</div>
+{% include "../common/loading.html" %}
+{% include "../common/loadfail.html" %}
+{% include "../common/nodata.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/supervision/details.js"></script>
+<script type="text/html" id="detailTml">
+    <div class="head">
+        <img src="<%= list.regulator_logo ? list.regulator_logo : '' %>" />
+        <p class="title"><%= list.regulator_name ? list.regulator_name : '' %></p>
+    </div>
+    <div class="content"><%= list.regulator_introduce ? list.regulator_introduce : '' %></div>
+</script>
+{% endblock %}

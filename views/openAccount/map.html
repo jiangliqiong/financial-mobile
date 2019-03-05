@@ -1,0 +1,97 @@
+{% extends '../common/layout.html' %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css" />
+<link rel="stylesheet" type="text/css" href="/css/openAccount/map.css"/>
+{% endblock %}
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content%}
+    <div class="input_search">
+    	<div>
+	    	<i class="icon iconfont">&#xe740;</i>
+	    	<input type="search" name="address" placeholder="搜索地点"/>
+    	</div>
+    </div>
+    <div class="mapbot">
+        <h3>附近地址</h3>
+
+    </div>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&key=72bfa3ee235677b7a7ef35cf0a91e72b"></script>
+<script type="text/javascript" src="/js/openAccount/map.js"></script>
+{% endblock %}
+
+
+
+<script type="text/javascript">
+// /***************************************
+// 由于Chrome、IOS10等已不再支持非安全域的浏览器定位请求，为保证定位成功率和精度，请尽快升级您的站点到HTTPS。
+// ***************************************/
+//     var map, geolocation;
+//     //加载地图，调用浏览器定位服务
+//     map = new AMap.Map('container', {
+//         resizeEnable: true
+//     });
+//     map.plugin('AMap.Geolocation', function() {
+//         geolocation = new AMap.Geolocation({
+//             enableHighAccuracy: true,//是否使用高精度定位，默认:true
+//             timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+//             buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+//             zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+//             buttonPosition:'RB'
+//         });
+//         map.addControl(geolocation);
+//         geolocation.getCurrentPosition();
+//         AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+//         AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+//     });
+//     //解析定位结果
+//     function onComplete(data) {
+//         var str=['定位成功'];
+//         str.push('经度：' + data.position.getLng());
+//         str.push('纬度：' + data.position.getLat());
+//         str.push('222'+data.formattedAddress);
+//         str.push("1111"+data.addressComponent.district+data.addressComponent.township+data.addressComponent.street)
+//         if(data.accuracy){
+//              str.push('精度：' + data.accuracy + ' 米');
+//         }//如为IP精确定位结果则没有精度信息
+//         str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+//         document.getElementById('tip').innerHTML = str.join('<br>');
+//     }
+//     //解析定位错误信息
+//     function onError(data) {
+//         document.getElementById('tip').innerHTML = '定位失败';
+//     }
+
+
+//       AMapUI.loadUI(['misc/PositionPicker'], function(PositionPicker) {
+//         var map = new AMap.Map('container', {
+//             zoom: 16,
+//             scrollWheel: false
+//         })
+//         var positionPicker = new PositionPicker({
+//             mode: 'dragMap',
+//             map: map
+//         });
+
+//         positionPicker.on('success', function(positionResult) {
+//             document.getElementById('lnglat').innerHTML = positionResult.position;
+//             document.getElementById('address').innerHTML = positionResult.address;
+//             document.getElementById('nearestJunction').innerHTML = positionResult.nearestJunction;
+//             document.getElementById('nearestRoad').innerHTML = positionResult.nearestRoad;
+//             document.getElementById('nearestPOI').innerHTML = positionResult.nearestPOI;
+//         });
+//         positionPicker.on('fail', function(positionResult) {
+//             document.getElementById('lnglat').innerHTML = ' ';
+//             document.getElementById('address').innerHTML = ' ';
+//             document.getElementById('nearestJunction').innerHTML = ' ';
+//             document.getElementById('nearestRoad').innerHTML = ' ';
+//             document.getElementById('nearestPOI').innerHTML = ' ';
+//         });
+//     })
+</script>
+</body>
+</html>

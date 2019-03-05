@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="53px" viewBox="0 0 64 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>63EA4AE5-61DE-4263-9CA9-3F0B0966E9B9</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="105.671675%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FFF6E2" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="57.3122608%"></stop>
+            <stop stop-color="#FFF8E1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M4.70475847,8.1062462 C4.79984042,12.3959569 4.79984042,24.4821865 4.70475847,44.364935 C13.5523051,39.5842184 21.6776264,39.5490803 29.0807224,44.259521 C29.0590777,44.39584 29.0590777,32.1826479 29.0807224,7.61994479 C18.753144,2.16607955 10.6278227,2.32818002 4.70475847,8.1062462 Z" id="path-2"></path>
+        <filter x="-26.7%" y="-13.5%" width="153.3%" height="131.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.985517645   0 0 0 0 0.686010997   0 0 0 0 0.0344526765  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M31.1420607,8.26889267 C31.2371426,12.5586034 31.2371426,24.644833 31.1420607,44.5275815 C40.0473751,39.8171409 48.2015804,39.8171409 55.6046763,44.5275815 C55.5830316,44.6639005 55.5830316,32.4507084 55.6046763,7.88800532 C45.2193301,2.36386404 37.0651249,2.49082649 31.1420607,8.26889267 Z" id="path-4"></path>
+        <filter x="-26.6%" y="-13.5%" width="153.1%" height="131.9%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.985517645   0 0 0 0 0.686010997   0 0 0 0 0.0344526765  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.1外汇大课堂首页" transform="translate(-39.000000, -927.000000)">
+            <g id="基本知识" transform="translate(0.000000, 882.000000)">
+                <g id="图标-书籍" transform="translate(40.000000, 46.000000)">
+                    <path d="M0.0558759913,6.8750258 L0.0558759913,47.5632358 L23.3237139,47.5632358 L23.3237139,50.6393744 L37.2895766,50.6393744 L37.2895766,47.027631 L61.2435869,47.027631 L61.2435869,7.00160668 C55.4126522,2.79955135 49.3722813,0.698523685 43.1224742,0.698523685 C33.7477635,0.698523685 33.8992962,3.65766241 29.896034,3.7981432 C25.8927717,3.93862399 23.5953723,0.170954105 16.105464,0.155017076 C11.1121917,0.144392391 5.76232909,2.3843953 0.0558759913,6.8750258 Z" id="Path-52" stroke="#D69200" stroke-width="2" fill="#FCC246" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <g id="Path-49">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                    <g id="Path-49-Copy">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

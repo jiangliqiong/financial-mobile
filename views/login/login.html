@@ -1,0 +1,64 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/login/login.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <div class="head">
+        <img class="headImg" src="/images/login/head.png"/>
+        <div class="loginType">
+            <a class="codeLogin">验证登录</a>
+            <span class="vline"></span>
+            <a class="passwordLogin">密码登录</a>
+        </div>
+        <span class="mark left"></span>
+    </div>
+    <form id="codeLogin" class="loginForm">
+        <h4 class="phoneBox">
+            <input type="tel" name="telephone" class="formInput telephone" id="telephone" placeholder="请输入手机号" maxlength="11"  oninput="if(value.length > 11)value=value.slice(0,11)" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false"/>
+            <a class="icon iconfont clearIcon">&#xe70e;</a>
+            <a class="codeBtn" id="codeBtn">获取验证码</a>
+        </h4>
+        <h4 class="codeBox" style="display: block;">
+            <input type="number" name="code" class="formInput code" id="code" placeholder="请输入验证码"  oninput="if(value.length > 6)value=value.slice(0,6)" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false"/>
+            <a class="icon iconfont clearIcon">&#xe70e;</a>
+        </h4>
+        <h4 class="passwordBox" style="display: none;">
+            <input type="password" name="password" class="formInput password" id="password" placeholder="请输入密码"  maxlength="18"/>
+            <a class="icon iconfont clearIcon">&#xe70e;</a>
+        </h4>
+        <h4 class="forgetBox">
+            <a class="icon iconfont keepIcon" style="display: none">&#xe70d;</a>
+            <a class="keepLogin" style="display: none">保持登录</a>
+            <span class="icon iconfont hintIcon">&#xe75a;</span>
+            <span class="loginHint">首次登录即默认注册</span>
+            <a class="forgetPassword" href="/forget.html">忘记密码？</a>
+        </h4>
+        <h4 class="btnBox">
+            <a class="loginBtn" data-type="1">登录</a>
+            <a class="registerBtn">注册</a>
+        </h4>
+    </form>
+    <div class="foot" style="display: none">
+        <h4 class="contactWayBox">
+            <span class="icon iconfont serviceHotLineIcon">&#xe717;</span>
+            <span class="text">客服热线:400-8713-007</span>
+            <span class="icon iconfont weixinIcon">&#xe723;</span>
+            <span class="text">微信公众号:选财外汇</span>
+        </h4>
+        <h4 class="copyrightBox">
+            <span>Copyright@2015-2018 www.fmtxt.com All Rights Reserved<br/>腾信堂版权所有 手机触屏版</span>
+        </h4>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/login/login.js"></script>
+{% endblock %}

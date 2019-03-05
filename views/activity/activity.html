@@ -1,0 +1,43 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/activity/activity.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="banner">
+  <img class="lazyload" data-img="/images/activity/activity-banner@2x.jpg" width="100%" alt="">
+  <a href="#rule"></a>
+</section>
+<section class="time">
+  <img class="lazyload" data-img="/images/activity/activity-time@2x.jpg" width="100%" alt="">
+  <a href="#rule"></a>
+</section>
+<section class="rule" id="rule" name="rule">
+  <img class="lazyload" data-img="/images/activity/activity-rule@2x.jpg" width="100%" alt="">
+  <img class="lazyload" data-img="/images/activity/activity-rule2@2x.jpg" width="100%" alt="">
+</section>
+<section class="list">
+  <div class="list-ul">
+   <ul></ul>
+  </div>
+  <a class="more" href="/traders/list.html">查看全部交易商 &gt;</a>
+</section>
+<section class="reward">
+  <img class="lazyload" data-img="/images/activity/activity-reward@2x.jpg" width="100%" alt="">
+</section>
+<section class="explain">
+  <img class="lazyload" data-img="/images/activity/activity-sm@2x.jpg" width="100%" alt="">
+</section>
+{% endblock %}
+{% block script %}
+
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/common/echo.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["activity"]);
+</script>
+{% endblock %}

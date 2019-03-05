@@ -1,0 +1,51 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/login/forget.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="my-con">
+            <form>
+                <ul>
+                    <li class="input-container has-btn">
+                        <div>手机号</div>
+                        <input type="tel" placeholder="11位手机号码" name="phoneNum" id="phoneNum" required maxlength="11" oninput="if(value.length > 11)value=value.slice(0,11)" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false">
+                        <i class="icon-clean iconfont">&#xe70e;</i>
+                        <span class="get-code disabled" id="getCode">获取验证码</span>
+                    </li>
+                </ul>
+                <div class="part2">
+                    <ul>
+                        <li class="input-container">
+                            <div>验证码</div>
+                            <input type="number" placeholder="请输入验证码" name="validateCode" id="smsCode" required oninput="if(value.length > 6)value=value.slice(0,6)" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false">
+                            <i class="icon-clean iconfont">&#xe70e;</i>
+                        </li>
+                        <li class="input-container">
+                            <div>新密码</div>
+                            <input type="password" placeholder="6~18位的数字和字母组合" name="password" id="password" required>
+                            <i class="icon-clean iconfont">&#xe70e;</i>
+                        </li>
+                        <li class="input-container">
+                            <div>确认密码</div>
+                            <input type="password" placeholder="请再次输入密码" name="confirmPassword" id="confirmPassword" required>
+                            <i class="icon-clean iconfont">&#xe70e;</i>
+                        </li>
+                    </ul>
+                    <div class="form-last">
+                        <p class="save disabled">确定</p>
+                    </div>
+                </div>
+                <div class="tips-alert"></div>
+            </form>
+        </div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/login/forget.js"></script>
+{% endblock %}

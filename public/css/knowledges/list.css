@@ -1,0 +1,90 @@
+body {
+  margin: 0.88rem 0rem 0rem 0rem;
+  background: #efeff4; }
+
+.article {
+  padding-top: 0.2rem; }
+  .article .article-box {
+    position: relative;
+    padding: 0.3rem 0.3rem 0rem 0.3rem;
+    margin-bottom: 0.15rem;
+    background: #fff; }
+    .article .article-box .article-title {
+      padding-bottom: 0.3rem;
+      border-bottom: 0.021rem solid #e5e5e5; }
+      .article .article-box .article-title span {
+        max-width: 6rem;
+        font-size: 0.36rem;
+        letter-spacing: -0.009rem;
+        color: #333333;
+        vertical-align: middle;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .article .article-box .article-title i {
+        font-size: 0.24rem;
+        vertical-align: middle;
+        float: right;
+        margin-top: 0.15rem;
+        color: #b5b5b5; }
+    .article .article-box .article-msg {
+      margin-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      position: relative; }
+      .article .article-box .article-msg:before, .article .article-box .article-msg:after {
+        content: "";
+        display: table; }
+      .article .article-box .article-msg:after {
+        clear: both; }
+      .article .article-box .article-msg .article-lt {
+        float: left;
+        max-width: 5.25rem;
+        font-size: 0.28rem;
+        letter-spacing: -0.007rem;
+        color: #959595; }
+        .article .article-box .article-msg .article-lt .article-introduce {
+          max-height: 0.76rem;
+          overflow: hidden;
+          text-overflow: clip;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; }
+          .article .article-box .article-msg .article-lt .article-introduce p {
+            line-height: 0.38rem; }
+      .article .article-box .article-msg .article-rt {
+        float: right;
+        width: 1.4rem;
+        height: 1.4rem; }
+        .article .article-box .article-msg .article-rt img {
+          width: 100%;
+          height: 100%; }
+  .article .no-data {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1.6rem;
+    margin-left: -1.16rem;
+    font-size: 0.36rem;
+    letter-spacing: -0.009rem;
+    color: #959595; }
+    .article .no-data .no-img {
+      width: 2.32rem;
+      height: 2.32rem;
+      display: inline-block;
+      margin-bottom: 0.3rem; }
+      .article .no-data .no-img i {
+        width: 100%;
+        height: 100%;
+        background: url("/images/ib/svg/no-data.svg") no-repeat;
+        background-size: 100%;
+        display: block; }
+  .article .article-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2; }

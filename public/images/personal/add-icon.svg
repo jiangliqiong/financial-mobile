@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>E485AD5B-E56E-4D36-8139-B2BE108F271B</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5.2发起喊单-做多做空" transform="translate(-652.000000, -538.000000)" fill="#D8D8D8">
+            <g id="策略信息" transform="translate(0.000000, 216.000000)">
+                <g id="入场点" transform="translate(30.000000, 294.000000)">
+                    <path d="M640,46 L624,46 L624,46 C622.895431,46 622,46.8954305 622,48 C622,49.1045695 622.895431,50 624,50 L640,50 L640,66 C640,67.1045695 640.895431,68 642,68 C643.104569,68 644,67.1045695 644,66 L644,50 L660,50 C661.104569,50 662,49.1045695 662,48 C662,46.8954305 661.104569,46 660,46 L644,46 L644,30 L644,30 C644,28.8954305 643.104569,28 642,28 L642,28 L642,28 C640.895431,28 640,28.8954305 640,30 L640,46 Z" id="加号"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

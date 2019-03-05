@@ -1,0 +1,92 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/activity/salon.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<body>
+    <div class="img">
+    	<a class="gotobottom"><img src="/images/activity/salon/activity01.jpg"/></a>
+    </div>
+    <div class="img">
+        <img src="/images/activity/salon/activity02.jpg"/>
+    </div>
+    <div class="img">
+        <img src="/images/activity/salon/activity03.jpg"/>
+    </div>
+    <div class="img">
+        <img src="/images/activity/salon/activity04.jpg"/>
+    </div>
+    <div class="img">
+        <img src="/images/activity/salon/activity05.jpg"/>
+    </div>
+    <div class="img">
+        <img src="/images/activity/salon/activity06.jpg"/>
+    </div>
+     <div class="img">
+        <img src="/images/activity/salon/activity07.jpg"/>
+    </div>
+     <div class="img">
+        <img src="/images/activity/salon/activity08.jpg"/>
+    </div>
+     <div class="img">
+        <img src="/images/activity/salon/activity09.png"/>
+    </div>
+     <div class="img">
+        <img src="/images/activity/salon/activity10.jpg"/>
+    </div>
+     <div class="img">
+			  <a href="http://j.map.baidu.com/tZYbN">
+        <img src="/images/activity/salon/activity11.jpg"/>
+				</a>
+    </div>
+    <div class="img">
+        <img src="/images/activity/salon/activity12.png"/>
+    </div>
+    <form class="form">
+        <label class="labeltip">姓名（必填）</label>
+        <div>
+        	<input type="text" placeholder="请输入您的姓名" name="name">
+        	<span></span>
+        </div>
+        <label class="labeltip">手机（必填）</label>
+        <div>
+        	<input type="tel" placeholder="请输入您的手机号" maxlength="11" name="mobile">
+        	<span></span>
+        </div>
+        <label class="labeltip">邀请人（选填）</label>
+        <div>
+        	<input type="text" placeholder="请输入您的邀请人姓名" name="introducer">
+            <span></span>
+        </div>
+        <label class="labeltip">您的参会身份</label>
+        <p class="p1">
+        	<label><input type="radio" name="identity" value="投资者" checked/><span></span>投资者</label>
+        	<label><input type="radio" name="identity" value="交易员"/><span></span>交易员</label>
+        	<label><input type="radio" name="identity" value="IB/居间"/><span></span>IB/居间</label>
+         </p>
+        <p>
+        	<label><input type="radio" name="identity" value="媒体"/><span></span>媒体　</label>
+        	<label><input type="radio" name="identity" value="其他"/><span></span>其他</label>
+        </p>
+    </form>
+    <div class="img">
+        <a class="submit"><img src="/images/activity/salon/activity14.png"/></a>
+    </div>
+		{% endblock %}
+		{% block script %}
+		<script type="text/javascript" src="/js/common/zepto.min.js"/></script>
+		<script type="text/javascript" src="/js/activity/salon.js"/></script>
+		<script type="text/javascript">
+				var _hmt = _hmt || [];
+				(function() {
+					var hm = document.createElement("script");
+					hm.src = "https://hm.baidu.com/hm.js?78cec5fbc65f42857aab3fcae8fe6290";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(hm, s);
+				})();
+		</script>
+		{% endblock %}

@@ -1,0 +1,70 @@
+{% extends '../common/layout.html' %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/openAccount/check.css" />
+{% endblock %}
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+
+{% if broker=="" %}
+   <div class="open_header">
+      <div class="nodata abnormal" style="display: block;">
+	    <img src="/images/common/nodata.png" srcset="/images/common/nodata@2x.png 2x, /images/common/nodata@3x.png 3x" />
+	    <span>当前交易商不存在！<br/>请退出重新选择其他的交易商</span>
+	</div>
+     </div>
+{% else %}
+<div class="open_header">
+	<dl>
+		<dd><img src="{{ broker.logo_url }}" alt="{{broker.chinese_name}}"/></dd>
+		<dt>
+			<p>{{broker.chinese_name}}</p>
+			<span class="customershow">外汇返佣：${% if broker.customer_back %}{{ broker.customer_back }}{% else %}0{% endif %}/手</span>
+			<span class="ibshow">代理返佣：${% if broker.ib_back %}{{ broker.ib_back }}{% else %}0{% endif %}/每手</span>
+		</dt>
+	</dl>
+        {% if reftype=="" %}
+    	<table>
+            <tbody><tr>
+                <th>平均点差</th>
+                <th>最高杠杆</th>
+                <th>最低入金</th>
+                <th>经营模式</th>
+            </tr>
+            <tr>
+                <td>{{ broker.min_point }}</td>
+                <td>{{ broker.max_leverage }}</td>
+                <td>{{ broker.min_price }}</td>
+                <td>{{ broker.managing_mode }}</td>
+            </tr>
+            </tbody>
+        </table>
+    {% else %}
+	<div class="agenttip">
+        <p>成为该交易商代理，享受代理返佣 ${% if broker.ib_back %}{{ broker.ib_back }}{% else %}0{% endif %}/手 <i class="icon iconfont close">&#xe726;</i></p>
+    </div>
+    {% endif %}
+</div>
+<form class="open_form">
+    <div class="opencont">
+    	<h4>
+            <span>手机号码</span>
+            <input type="tel" class="tel" maxlength="11" placeholder="11位手机号" oninput="if(value.length > 11)value=value.slice(0,11)" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false"/>
+            <a class="getcheckcode">获取验证码</a>
+            <i class="icon iconfont deleteicon">&#xe70e;</i>
+        </h4>
+        <h4 style="display: none;">
+            <span>验证码</span>
+            <input type="tel" class="checkcode" oninput="if(value.length > 6)value=value.slice(0,6)" onkeydown="if(event.keyCode==13)event.keyCode=9" onKeypress="if((event.keyCode<48 || event.keyCode>57)) event.returnValue=false"/>
+            <i class="icon iconfont deleteicon" style="margin-right: 0.1rem;top:0.05rem">&#xe70e;</i>
+        </h4>
+    </div>
+</form>
+<a class="next-step">下一步</a>
+{% endif %}
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/openAccount/check.js"></script>
+{% endblock %}

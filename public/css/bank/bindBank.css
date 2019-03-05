@@ -1,0 +1,351 @@
+.container{
+    padding-top: 0.88rem;
+}
+
+.my-con *{
+    box-sizing: border-box;
+}
+.my-con i{
+    font-style: normal;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #dcdcdc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #dcdcdc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #dcdcdc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #dcdcdc;
+}
+
+.card-address{
+    padding: 0.2rem;
+    padding-bottom: 0;
+    background: #fff;
+    cursor: pointer;
+}
+.add-address{
+    display: block;
+    background-image: linear-gradient(97deg, #3fa9ff, #257aea);
+    color: #fff;
+    border-radius: 0.12rem;
+    text-align: center;
+    cursor: pointer;
+}
+.add-address .add{
+    display: block;
+    text-align: center;
+    font-size: 0.32rem;
+    line-height: 0.88rem;
+    cursor: pointer;
+    /* display: none; */
+}
+.add-address .show{
+    height: 2rem;
+    font-size: 0.24rem;
+    text-align: left;
+    padding-left: 1.28rem;
+    padding-top: 0.6rem;
+    position: relative;
+    display: none;
+}
+.add-address .show .icon-bank{
+    position: absolute;
+    top: 0.6rem;
+    left: 0.35rem;
+}
+.add-address .show .arrow{
+    position: absolute;
+    right: 0.35rem;
+    top: 50%;
+    height: 0.24rem;
+    transform: translateY(-50%);
+    webkitTransform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.add-address .show .arrow img{
+    height: 100%;
+}
+.add-address .show dt{
+    font-size: 0.36rem;
+}
+.add-address .show dd{
+    line-height: 0.33rem;
+}
+.add-address .show dd span{
+    padding-right: 0.1rem;
+    margin-right: 0.1rem;
+    position: relative;
+}
+.add-address .show dd span:not(:last-child):after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 80%;
+    width: 1px;
+    transform: scaleX(0.5);
+    webkitTransform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+    background: #fff;
+}
+.card-address p{
+    font-size: 0.2rem;
+    color: #959595;
+    line-height: 0.4rem;
+}
+
+
+form ul{
+    background: #fff;
+    padding:0 0.3rem;
+    font-size: 0.32rem;
+}
+form input{
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 0 0 0 1.94rem;
+}
+.input-container{
+    position: relative;
+    line-height: 1.24rem;
+    height: 1.24rem;
+    cursor: pointer;
+}
+.input-container:not(:last-child):after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: #e5e5e5;
+    transform: scaleY(0.5);
+    webkitTransform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+}
+.input-container>div {
+    position: absolute;
+    width: 1.94rem;
+    display: inline-block;
+    font-family: PingFang-SC-Regular;
+    text-align: left;
+}
+.input-container input{
+    font-size: 0.32rem;
+}
+.input-container .holder{
+    display: inline-block;
+    position: relative;
+    padding-left: 1.94rem;
+    padding-right: 0.3rem;
+    line-height: 0.36rem;
+    height: 0.36rem;
+    vertical-align: middle;
+    width: 100%;
+}
+.input-container .holder.no-chose{
+    color: #dcdcdc;
+}
+.input-container .holder .arrow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.input-container .holder .arrow img{
+    height: 100%;
+}
+.icon-clean{
+    position: absolute;
+    width: 1rem;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url(/images/personal/icon-clean.png) no-repeat center center;
+    background-size: 0.34rem 0.34rem;
+    display: none;
+}
+.form-last{
+    padding: 0 0.3rem;
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    margin-top: 0.3rem;
+    position: relative;
+}
+.input-container.hasRealNamed{
+    display: none;
+}
+.input-container.hasRealNamed input{
+    color: #959595;
+}
+
+#a_mask{
+    position: absolute;
+    width: 2.5rem;
+    height: 100%;
+    left: 1.6rem;
+    top: 0;
+    cursor: pointer;
+}
+.form-last:last-child{
+    height: auto;
+}
+.form-last i{
+    display: inline-block;
+    height: 0.36rem;
+    width: 0.36rem;
+    vertical-align: top;
+    margin-right: 0.2rem;
+    background: url(/images/personal/icon-default.png) no-repeat;
+    background-size: 100%;
+}
+.form-last i.icon-active{
+    background-image: url(/images/personal/agree.png);
+}
+.form-last a{
+    color: #1d4ab1;
+    text-decoration: underline;
+}
+.save{
+    background: #1d4ab1;
+    color: #fff;
+    line-height: 0.88rem;
+    display: block;
+    text-align: center;
+    border-radius: 0.04rem;
+    font-size: 0.32rem;
+    margin-top: 0.6rem;
+    cursor: pointer;
+}
+.save.disabled{
+    background: #D8D8D8;
+}
+
+/*
+弹出的选择模态框
+改写插件的样式
+ */
+.mobileSelect .grayLayer{
+    background: rgba(0,0,0,0.3);
+}
+.mobileSelect .content{
+    padding-top: 0.3rem;
+}
+.mobileSelect .content .btnBar{
+    line-height: 0.45rem;
+    font-size: 0.32rem;
+    height: 0.45rem;
+    border-bottom: none;
+    padding: 0 0.3rem;
+}
+.mobileSelect .content .fixWidth{
+    width: 100%;
+}
+.mobileSelect .content .btnBar .cancel, .mobileSelect .content .btnBar .ensure{
+    width: auto;
+    height: auto;
+    color: #2e4480;
+}
+.mobileSelect .content .panel{
+    margin-top: 0.13rem;
+}
+.mobileSelect .content .panel .wheels{
+    height: 4.59rem;
+}
+.mobileSelect .content .panel .wheel{
+    height: 4.59rem;
+}
+.one-level-box li{
+    height: 47px!important;
+    font-size: 16px!important;
+    border: none;
+    cursor: pointer;
+}
+.mobileSelect .content .panel .selectLine{
+    height: 0.94rem;
+    top: 1.88rem;
+    background: #efeff4;
+    z-index: -1;
+    border: none;
+}
+.mobileSelect .content .panel .selectLine i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0.1rem;
+    background: #1d4ab1;
+}
+.mobileSelect .content .panel .shadowMask{
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(250,250,250,0.5), transparent 47%, transparent 68%, rgba(250,250,250,0.5));
+}
+/* 里面的具体内容 */
+
+.one-level-box li dl{
+    padding-top: 5px;
+    padding-left: 0.58rem;
+    text-align: left;
+}
+.one-level-box li dt{
+    height: 22.5px;
+    line-height: 22px;
+}
+.one-level-box li dd{
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #959595;
+}
+.one-level-box li dd span{
+    padding-right: 5px;
+    margin-right: 5px;
+    position: relative;
+}
+.one-level-box li dd span:not(:last-child):after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 80%;
+    width: 1px;
+    transform: scaleX(0.5);
+    webkitTransform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+    background: #959595;
+}
+
+/* 展示协议 */
+.show-protocol{
+    padding: 0.3rem 0.3rem 0;
+    line-height: 0.4rem;
+    font-size: 0.28rem;
+    position: absolute;
+    top: 0.88rem;
+    left: 0;
+    background: #fff;
+    z-index: 50;
+    display: none;
+}
+.show-protocol header{
+    text-align: center;
+    font-size: 0.32rem;
+}
+.show-protocol .indent{
+    text-indent:0.56rem
+}
+.show-protocol section>div{
+    margin-top: 0.1rem;
+}
+
+.bottomTip{
+    display: none;
+}

@@ -1,0 +1,272 @@
+body {
+  overflow-x: hidden;
+  margin-top: 0.88rem; }
+
+.tip-important {
+  margin-top: 0.2rem;
+  font-size: 0.28rem;
+  letter-spacing: -0.007rem;
+  color: #ee0b00; }
+
+.back-cover {
+  cursor: pointer;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000; }
+
+.ib-top {
+  position: fixed;
+  z-index: 10;
+  width: 100%; }
+
+.ib-list .ib-condition-box {
+  border-bottom: 0.021rem solid #e5e5e5; }
+  .ib-list .ib-condition-box .ib-condition {
+    padding: 0rem 0.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    font-size: 0; }
+    .ib-list .ib-condition-box .ib-condition div.ib-condition-block {
+      cursor: pointer;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      font-size: 0.28rem;
+      letter-spacing: -0.007rem;
+      padding: 0.28rem 0rem;
+      color: #959595; }
+      .ib-list .ib-condition-box .ib-condition div.ib-condition-block.active, .ib-list .ib-condition-box .ib-condition div.ib-condition-block.height {
+        color: #000; }
+        .ib-list .ib-condition-box .ib-condition div.ib-condition-block.active p .ib-down-icon, .ib-list .ib-condition-box .ib-condition div.ib-condition-block.height p .ib-down-icon {
+          border-top: 0.14rem solid #094290 !important; }
+      .ib-list .ib-condition-box .ib-condition div.ib-condition-block:nth-child(2) {
+        text-align: center; }
+      .ib-list .ib-condition-box .ib-condition div.ib-condition-block:nth-child(3) {
+        text-align: right; }
+      .ib-list .ib-condition-box .ib-condition div.ib-condition-block p:first-child span {
+        vertical-align: middle; }
+      .ib-list .ib-condition-box .ib-condition div.ib-condition-block p:first-child .ib-down-icon {
+        width: 0;
+        height: 0;
+        border-left: 0.14rem solid transparent;
+        border-right: 0.14rem solid transparent;
+        border-top: 0.14rem solid #d8d8d8;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0.1rem; }
+
+.ib-list .ib-plat-list, .ib-list .ib-area-list {
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  -ms-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  transition: height 0.2s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000; }
+  .ib-list .ib-plat-list.no, .ib-list .ib-area-list.no {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s; }
+  .ib-list .ib-plat-list .ib-list-box, .ib-list .ib-area-list .ib-list-box {
+    padding: 0rem 0.05rem 0.5rem 0.3rem;
+    max-height: 3.72rem;
+    overflow-y: scroll; }
+    .ib-list .ib-plat-list .ib-list-box.ib-list-box-area span.active, .ib-list .ib-area-list .ib-list-box.ib-list-box-area span.active {
+      background: none; }
+      .ib-list .ib-plat-list .ib-list-box.ib-list-box-area span.active::after, .ib-list .ib-area-list .ib-list-box.ib-list-box-area span.active::after {
+        background: none; }
+    .ib-list .ib-plat-list .ib-list-box span, .ib-list .ib-area-list .ib-list-box span {
+      cursor: pointer;
+      margin: 0.4rem 0.25rem 0rem 0rem;
+      font-size: 0.32rem;
+      letter-spacing: -0.009rem;
+      color: #959595;
+      padding: 0.08rem 0.15rem;
+      display: inline-block;
+      border: 1px solid #e5e5e5;
+      -webkit-border-radius: 0.04rem;
+      -moz-border-radius: 0.04rem;
+      -ms-border-radius: 0.04rem;
+      -o-border-radius: 0.04rem;
+      border-radius: 0.04rem; }
+      .ib-list .ib-plat-list .ib-list-box span.active, .ib-list .ib-area-list .ib-list-box span.active {
+        border-color: #094290;
+        color: #094290;
+        background: #f0fcff;
+        position: relative; }
+        .ib-list .ib-plat-list .ib-list-box span.active:first-child::after, .ib-list .ib-area-list .ib-list-box span.active:first-child::after {
+          background: none; }
+        .ib-list .ib-plat-list .ib-list-box span.active::after, .ib-list .ib-area-list .ib-list-box span.active::after {
+          content: ' ';
+          width: 0.33rem;
+          height: 0.33rem;
+          background: url("/images/ib/svg/ib-list-ico.svg");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          display: block;
+          position: absolute;
+          bottom: -1px;
+          right: -1px; }
+  .ib-list .ib-plat-list .ib-plat-btn, .ib-list .ib-area-list .ib-plat-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff; }
+    .ib-list .ib-plat-list .ib-plat-btn div, .ib-list .ib-area-list .ib-plat-btn div {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+      .ib-list .ib-plat-list .ib-plat-btn div button, .ib-list .ib-area-list .ib-plat-btn div button {
+        cursor: pointer;
+        width: 100%;
+        height: 0.98rem;
+        font-size: 0.32rem;
+        letter-spacing: -0.009rem;
+        border: none;
+        outline: none;
+        background: #fff;
+        border-top: 0.021rem solid #e5e5e5; }
+        .ib-list .ib-plat-list .ib-plat-btn div button.ib-plat-ok, .ib-list .ib-area-list .ib-plat-btn div button.ib-plat-ok {
+          background: #094290;
+          color: #fff;
+          border-color: #094290; }
+
+.ib-list .ib-list-tab {
+  padding: 0.94rem 0.3rem 0rem;
+  margin-top: 0.2rem;
+  background: #fff; }
+  .ib-list .ib-list-tab .no-data {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1.6rem;
+    margin-left: -1.16rem;
+    font-size: 0.36rem;
+    letter-spacing: -0.009rem;
+    color: #959595; }
+    .ib-list .ib-list-tab .no-data .no-img {
+      width: 2.32rem;
+      height: 2.32rem;
+      display: inline-block;
+      margin-bottom: 0.3rem; }
+      .ib-list .ib-list-tab .no-data .no-img i {
+        width: 100%;
+        height: 100%;
+        background: url("/images/ib/svg/no-data.svg") no-repeat;
+        background-size: 100%;
+        display: block; }
+  .ib-list .ib-list-tab .ib-list-box {
+    position: relative;
+    padding: 0.3rem 0rem 0rem 0rem; }
+    .ib-list .ib-list-tab .ib-list-box:last-child .ib-detail-msg {
+      border-bottom: none; }
+    .ib-list .ib-list-tab .ib-list-box .ib-link {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      left: 0;
+      top: 0;
+      z-index: 2; }
+    .ib-list .ib-list-tab .ib-list-box .ib-detail-icon {
+      display: inline-block;
+      width: 1.3rem;
+      height: 1.3rem;
+      float: left;
+      border: 1px solid #e5e5e5;
+      border-radius: 50%;
+      overflow: hidden; }
+      .ib-list .ib-list-tab .ib-list-box .ib-detail-icon img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%; }
+    .ib-list .ib-list-tab .ib-list-box .ib-detail-msg {
+      width: auto;
+      margin-left: 1.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 0.021rem solid #e5e5e5;
+      position: relative; }
+      .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .ib-detail-arrow {
+        color: #b5b5b5;
+        position: absolute;
+        right: 0;
+        top: 0rem;
+        display: block;
+        font-size: 0.36rem; }
+      .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .ib-msg-title {
+        line-height: 0.45rem;
+        padding-right: 0.4rem; }
+        .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .ib-msg-title .rz-icon {
+          width: 1.1rem;
+          height: 0.3rem;
+          margin-right: 0.1rem;
+          display: inline-block;
+          background: url("/images/ib/svg/rz-icon.svg") no-repeat;
+          background-size: 100%;
+          vertical-align: middle;
+          margin-bottom: 0.04rem; }
+        .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .ib-msg-title .ib-msg-name {
+          font-size: 0.32rem;
+          letter-spacing: -0.009rem;
+          color: #000000;
+          vertical-align: middle;
+          word-break: break-all; }
+        .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .ib-msg-title .ib-msg-rt {
+          float: right;
+          color: #b5b5b5;
+          vertical-align: middle; }
+      .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .ib-msg-lable-box {
+        height: 0.5rem;
+        padding-right: 0.55rem;
+        overflow: hidden; }
+        .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .ib-msg-lable-box .ib-msg-lable {
+          width: 100%; }
+          .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .ib-msg-lable-box .ib-msg-lable span {
+            font-size: 0.2rem;
+            letter-spacing: -0.005rem;
+            color: #ff6b40;
+            display: inline-block;
+            background-color: #fff2e4;
+            border: solid 1px #ff6b40;
+            -webkit-border-radius: 0.02rem;
+            -moz-border-radius: 0.02rem;
+            -ms-border-radius: 0.02rem;
+            -o-border-radius: 0.02rem;
+            border-radius: 0.02rem;
+            padding: 0.02rem 0.1rem;
+            margin-right: 0.1rem;
+            margin-top: 0.1rem; }
+            .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .ib-msg-lable-box .ib-msg-lable span.ib-lable-ellipsis {
+              width: 0.2rem;
+              text-align: center;
+              padding: 0rem;
+              position: relative;
+              background: none;
+              border: none;
+              top: 0.05rem; }
+      .ib-list .ib-list-tab .ib-list-box .ib-detail-msg .im-msg-area {
+        font-size: 0.24rem;
+        letter-spacing: -0.007rem;
+        margin-top: 0.1rem;
+        color: #959595; }

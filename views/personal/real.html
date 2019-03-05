@@ -1,0 +1,53 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/personal/real.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="modi">
+  <ul class="modiMinBox">
+   <li class="list0">
+     姓氏
+     <span class="fr">
+       <input type="text" id="userFirName" placeholder="您的真实姓氏" maxlength="6" required name="ft"/>
+       <em class="icon-clean"></em>
+     </span>
+   </li>
+ <li>
+   名字
+   <span class="fr">
+     <input type="text" id="userLasName" placeholder="您的真实名字" maxlength="10" required name="last"/>
+     <em class="icon-clean"></em>
+   </span>
+ </li>
+ <li>
+   身份证号
+   <span class="fr">
+     <input type="text" id="userIdCard" placeholder="15或18位身份证号" maxlength="18" required name="card"/>
+     <em class="icon-clean"></em>
+   </span>
+ </li>
+  </ul>
+  <a id="clickToReal" href="javascript:;" class="disabled">认证</a>
+</div>
+<div id="show">
+  <div class="up">
+    <img src="/images/personal/real.png" alt="" title=""/>
+    <p>已通过实名认证</p>
+  </div>
+  <ul class="down">
+    <li class="list0">姓氏<span class="fr">--</span></li>
+    <li>名字<span class="fr">--</span></li>
+    <li>身份证号<span class="fr">--</span></li>
+  </ul>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/personal/real.js"></script>
+{% endblock %}

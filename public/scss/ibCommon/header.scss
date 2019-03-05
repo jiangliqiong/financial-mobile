@@ -1,0 +1,34 @@
+@import '../mixin/mixin';
+.icon-fanhuianniu {
+  @include px2rem(font-size, 46);
+  float: left;
+  @include px2rem(line-height, 88);
+  @include px2rem(margin-left, 26);
+}
+.icon-gengduo {
+  @include px2rem(font-size, 32);
+  float: right;
+  @include px2rem(line-height, 88);
+  @include px2rem(margin-right, 19);
+}
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  @include px2rem(height, 88);
+  background: -webkit-linear-gradient(left, #094494 , #0a1f61);
+  background: -o-linear-gradient(right, #094494, #0a1f61);
+  background: -moz-linear-gradient(right, #094494, #0a1f61);
+  background: linear-gradient(to right, #094494 , #0a1f61);
+  color: #fff;
+  text-align:center;
+  @include px2rem(line-height, 88);
+}
+.title {
+  @include px2rem(font-size, 36);
+}
+body {
+  @include px2rem(margin-top, 88);
+}

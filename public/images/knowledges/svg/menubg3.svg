@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="365px" height="188px" viewBox="0 0 365 188" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>D67CF873-4A7C-4A9E-ABD4-D38D28D0EC39</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="92.798382%" y2="86.0695195%" id="linearGradient-1">
+            <stop stop-color="#FFA100" offset="0%"></stop>
+            <stop stop-color="#FF7200" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="337" height="160" rx="4"></rect>
+        <filter x="-7.7%" y="-8.8%" width="116.6%" height="135.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="2" dy="14" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.977811437   0 0 0 0 0.919543302   0 0 0 0 0.836139894  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="外汇移动web1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.1外汇大课堂首页" transform="translate(-18.000000, -692.000000)">
+            <g id="技术面" transform="translate(30.000000, 692.000000)">
+                <g id="底图-技术面">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <g id="Mask-Copy">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                    <g id="Group" mask="url(#mask-3)" fill="#FFFFFF">
+                        <g transform="translate(2.500000, 76.500000) rotate(-270.000000) translate(-2.500000, -76.500000) translate(-157.000000, -25.000000)">
+                            <rect id="Rectangle-3" opacity="0.099999994" transform="translate(99.232742, 99.432048) rotate(-45.000000) translate(-99.232742, -99.432048) " x="-5.32754789" y="64.4320477" width="209.120581" height="70"></rect>
+                            <rect id="Rectangle-3-Copy" opacity="0.199999988" transform="translate(219.439710, 104.000000) rotate(-315.000000) translate(-219.439710, -104.000000) " x="114.879419" y="69" width="209.120581" height="70"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

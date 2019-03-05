@@ -1,0 +1,167 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/common/iosSelect.css" />
+<link type="text/css" rel="stylesheet" href="/css/calendar/index.css" />
+{% endblock %}
+
+{% block header %}
+<div class="headerNavavigation">
+    <div class="topbar">
+        <span>{{ title }}</span>
+        <i class="icon iconfont dateicon">&#xe74a;</i>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <div class="date">
+        <div class="switchNav">
+            <span class="icon iconfont prevIcon switchIcon">&#xe73c;</span>
+            <span class="yearMonth"></span>
+            <span class="icon iconfont nextIcon switchIcon">&#xe73d;</span>
+        </div>
+        <div class="weekText">
+            <span class="weekName weekend">周日</span>
+            <span class="weekName">周一</span>
+            <span class="weekName">周二</span>
+            <span class="weekName">周三</span>
+            <span class="weekName">周四</span>
+            <span class="weekName">周五</span>
+            <span class="weekName weekend widthLast">周六</span>
+        </div>
+        <ul class="week" id="weekCalendarBox">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="selectDate"></div>
+    </div>
+    <ul class="content {{ contentClass }}" id="calendarInfoBox">
+        {% for item in itemList %}
+        <li>
+            <div class="topBox">
+                <img src="{{ item.financeflagClass }}" />
+                <span class="time">{{ item.time }}</span>
+                <div class="star">
+                    {% if item.importanceImgUrl == '1' %}
+                    <span class="icon iconfont gradeIcon">&#xe73f;</span>
+                    {% elif item.importanceImgUrl == '2' %}
+                    <span class="icon iconfont gradeIcon">&#xe73f;</span>
+                    <span class="icon iconfont gradeIcon">&#xe73f;</span>
+                    {% elif item.importanceImgUrl == '3' %}
+                    <span class="icon iconfont gradeIcon">&#xe73f;</span>
+                    <span class="icon iconfont gradeIcon">&#xe73f;</span>
+                    <span class="icon iconfont gradeIcon">&#xe73f;</span>
+                    {% else %}
+                    {% endif %}
+                </div>
+                {% if item.profitMore == '利多' %}
+                <span class="status green">利多 欧元 日元</span>
+                {% elif item.profitMore == '利空' %}
+                <span class="status red">利空 欧元 日元</span>
+                {% else %}
+                    {% if item.profitMore %}
+                    <span class="status gray">{{ item.profitMore }}</span>
+                    {% else %}
+                    <span class="status gray">---</span>
+                    {% endif %}
+                {% endif %}
+            </div>
+            <div class="centerBox">{{ item.target }}</div>
+            <div class="bottomBox">
+                <img src="/images/calendar/previousValue.png" srcset="/images/calendar/previousValue@2x.png 2x,/images/calendar/previousValue@3x.png 3x" />
+                <div class="text">
+                    <span class="title">前值</span><br>
+                    {% if item.beforeVal %}
+                    <span class="value">{{ item.beforeVal }}</span>
+                    {% else %}
+                    <span class="value">---</span>
+                    {% endif %}
+                </div>
+                <img src="/images/calendar/predictedValue.png" srcset="/images/calendar/predictedValue@2x.png 2x,/images/calendar/predictedValue@3x.png 3x" />
+                <div class="text">
+                    <span class="title">预测值</span><br>
+                    {% if item.predictionVal %}
+                    <span class="value">{{ item.predictionVal }}</span>
+                    {% else %}
+                    <span class="value">---</span>
+                    {% endif %}
+                </div>
+                <img src="/images/calendar/publishValue.png" srcset="/images/calendar/publishValue@2x.png 2x,/images/calendar/publishValue@3x.png 3x" />
+                <div class="text">
+                    <span class="title">公布值</span><br>
+                    {% if item.publishVal %}
+                    <span class="value">{{ item.publishVal }}</span>
+                    {% else %}
+                    <span class="value">---</span>
+                    {% endif %}
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% include "../common/loading.html" %}
+{% include "../common/loadfail.html" %}
+{% include "../common/nodata.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "../common/footer.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/common/iscroll.js"></script>
+<script type="text/javascript" src="/js/common/iosSelect.js"></script>
+<script type="text/javascript" src="/js/calendar/index.js"></script>
+<script id="weekCalendarTml" type="text/html">
+       <% for(var i = 0; i < weekdays.length; i++) { %>
+       <div data-date="<%= weekdays[i].date %>">
+           <span class="day <%= weekdays[i].style %>"><%= weekdays[i].day %></span>
+       </div>
+       <% } %>
+</script>
+
+<script id="calendarInfoTml" type="text/html">
+    <% for(var i = 0; i < list.length ; i++) { %>
+    <li>
+        <div class="topBox">
+            <img src="<%= list[i].financeflagClass ? list[i].financeflagClass : '' %>" />
+            <span class="time"><%= list[i].time ? list[i].time : '' %></span>
+            <div class="star">
+                <% for( var j = 0; j < list[i].importanceImgUrl; j++){ %>
+                    <span class="icon iconfont gradeIcon">&#xe73f;</span>
+                <% } %>
+            </div>
+            <% if( list[i].profitMore == '利多' ){ %>
+            <span class="status green">利多 欧元 日元</span>
+            <% }else if( list[i].profitMore == '利空' ){ %>
+            <span class="status red">利空 欧元 日元</span>
+            <% }else{ %>
+            <span class="status gray"><%= list[i].profitMore ? list[i].profitMore : '---' %></span>
+            <% } %>
+        </div>
+        <div class="centerBox"><%= list[i].target ? list[i].target : '' %></div>
+        <div class="bottomBox">
+            <img src="/images/calendar/previousValue.png" srcset="/images/calendar/previousValue@2x.png 2x,/images/calendar/previousValue@3x.png 3x" />
+            <div class="text">
+                <span class="title">前值</span><br>
+                <span class="value"><%= list[i].beforeVal ? list[i].beforeVal : '---' %></span>
+            </div>
+            <img src="/images/calendar/predictedValue.png" srcset="/images/calendar/predictedValue@2x.png 2x,/images/calendar/predictedValue@3x.png 3x" />
+            <div class="text">
+                <span class="title">预测值</span><br>
+                <span class="value"><%= list[i].predictionVal ? list[i].predictionVal : '---' %></span>
+            </div>
+            <img src="/images/calendar/publishValue.png" srcset="/images/calendar/publishValue@2x.png 2x,/images/calendar/publishValue@3x.png 3x" />
+            <div class="text">
+                <span class="title">公布值</span><br>
+                <span class="value"><%= list[i].publishVal ? list[i].publishVal : '---' %></span>
+            </div>
+        </div>
+    </li>
+    <% } %>
+</script>
+{% endblock %}

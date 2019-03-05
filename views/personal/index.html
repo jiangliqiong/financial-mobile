@@ -1,0 +1,161 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/personal/index.css">
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <div class="module1">
+        <img class="bgImg" src="/images/personal/personalBg.png" srcset="/images/personal/personalBg@2x.png 2x,/images/personal/personalBg@3x.png 3x" />
+        <div class="content">
+            <p class="title">个人中心</p>
+            <div class="customer">
+                <span class="phone"></span><span class="identity"></span>
+            </div>
+            <p class="balanceText">当前余额</p>
+            <div class="balanceBox">
+                <span class="balance" id="balance"></span>
+                <a class="withdrawBtn" id="withdrawBtn">提现</a>
+            </div>
+            <div class="commissionBox">
+                <div class="cumulativeTradeRebate">
+                    <p class="commissionTitle">累积交易佣金(元)</p>
+                    <p class="value" id="cumulativeTradeRebate"></p>
+                </div>
+                <div class="cumulativeAgentRebate">
+                    <p class="commissionTitle">累积代理佣金(元)</p>
+                    <p class="value" id="cumulativeAgentRebate"></p>
+                </div>
+            </div>
+            <p class="hint">
+                <img src="/images/personal/hintIcon.png" srcset="/images/personal/hintIcon@2x.png 2x,/images/personal/hintIcon@3x.png 3x" />
+                <span>显示的金额按结算日人民币兑美元计算</span>
+            </p>
+        </div>
+    </div>
+    <ul class="module2">
+        <li id="agentTraderLi" style="display: none;">
+            <a href="agentTrader.html">
+                <div class="item">
+                    <div class="itemImg">
+                        <img src="/images/personal/agentTraders.png" srcset="/images/personal/agentTraders@2x.png 2x,/images/personal/agentTraders@3x.png 3x" />
+                    </div>
+                    <div class="itemContent">
+                        <p class="name">代理交易商</p>
+                        <p class="detail"><span class="hintText" id="agentTraderCount"></span><span class="icon iconfont nextIcon">&#xe720;</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li id="openAccountLi">
+            <a href="tradingAccount.html">
+                <div class="item">
+                    <div class="itemImg" style="margin-top: 0">
+                        <img src="/images/personal/account.png" srcset="/images/personal/account@2x.png 2x,/images/personal/account@3x.png 3x" />
+                    </div>
+                    <div class="itemContent">
+                        <p class="name">交易账户</p>
+                        <p class="detail"><span class="hintText" id="openAccountCount"></span><span class="icon iconfont nextIcon">&#xe720;</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li id="recentlyRebateLi">
+            <a href="fundDetail.html">
+                <div class="item">
+                    <div class="itemImg" style="margin-top: 0.03rem">
+                        <img src="/images/personal/inoutDetail.png" srcset="/images/personal/inoutDetail@2x.png 2x,/images/personal/inoutDetail@3x.png 3x" />
+                    </div>
+                    <div class="itemContent">
+                        <p class="name">资金出入明细</p>
+                        <p class="detail"><span class="hintText" id="recentlyRebate"></span><span class="icon iconfont nextIcon">&#xe720;</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li id="strategy" class="strategy-li" style="display: none;">
+            <a href="strategy.html">
+                <div class="item">
+                    <div class="itemImg" style="margin-top: 0.03rem">
+                        <img src="/images/personal/strategy.svg" />
+                    </div>
+                    <div class="itemContent">
+                        <p class="name">策略信息</p>
+                        <p class="detail"><span class="hintText" id="strategyNum"></span><span class="icon iconfont nextIcon">&#xe720;</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="menu-line strategy-li" style="display: none;"></li>
+        <li id="basicInfoLi">
+            <a href="basicInfo.html">
+                <div class="item">
+                    <div class="itemImg" style="margin-top: 0.01rem">
+                        <img src="/images/personal/baseInfo.png" srcset="/images/personal/baseInfo@2x.png 2x,/images/personal/baseInfo@3x.png 3x" />
+                    </div>
+                    <div class="itemContent">
+                        <p class="name">基本信息</p>
+                        <p class="detail"><span class="hintText" id="basicInfoComplete"></span><span class="icon iconfont nextIcon">&#xe720;</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li id="agentInfoLi" style="display: none;">
+            <a href="ibmsg.html">
+                <div class="item">
+                    <div class="itemImg" style="margin-top: 0.01rem">
+                        <img src="/images/personal/agentInfo.png" srcset="/images/personal/agentInfo@2x.png 2x,/images/personal/agentInfo@3x.png 3x" />
+                    </div>
+                    <div class="itemContent">
+                        <p class="name">代理信息</p>
+                        <p class="detail"><span class="hintText" id="agentInfoComplete"></span><span class="icon iconfont nextIcon">&#xe720;</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li id="bankCardLi">
+            <a href="bank.html">
+                <div class="item">
+                    <div class="itemImg" style="margin-top: 0.02rem">
+                        <img src="/images/personal/bankCard.png" srcset="/images/personal/bankCard@2x.png 2x,/images/personal/bankCard@3x.png 3x" />
+                    </div>
+                    <div class="itemContent">
+                        <p class="name">银行卡管理</p>
+                        <p class="detail"><span class="hintText" id="bankCardCount"></span><span class="icon iconfont nextIcon">&#xe720;</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="feedback.html">
+                <div class="item">
+                    <div class="itemImg">
+                        <img src="/images/personal/feedback.png" srcset="/images/personal/feedback@2x.png 2x,/images/personal/feedback@3x.png 3x" />
+                    </div>
+                    <div class="itemContent" style="border-bottom: none">
+                        <p class="name">意见反馈</p>
+                        <p class="detail"><span class="hintText"></span><span class="icon iconfont nextIcon">&#xe720;</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="contactWay">
+        <span class="icon iconfont serviceHotLineIcon">&#xe717;</span>
+        <span class="text">客服热线:400-8713-007</span>
+        <span class="icon iconfont weixinIcon">&#xe723;</span>
+        <span class="text">微信公众号:选财外汇</span>
+    </div>
+    <div class="copyright">
+        <span>Copyright@2015-2018 www.fmtxt.com All Rights Reserved<br/>腾信堂版权所有 手机触屏版</span>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+{% include "../common/footer.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/personal/index.js"></script>
+{% endblock %}

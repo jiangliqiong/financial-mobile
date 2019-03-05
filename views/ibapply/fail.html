@@ -1,0 +1,36 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/ibapply/fail.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="banner">
+  <div class="fail-msg">
+    <p>对不起，您尚未达到IB申请资格</p>
+    <p>无法代理交易商！</p>
+  </div>
+</section>
+{% if data.ruleHtml.length>1 %}
+<section class="condition-more">
+   <p class="condition-more-title"><i></i><span>申请IB代理商要求</span></p>
+    <ul>
+    {% for item in data.ruleHtml %}
+     <li>{{ item | safe }}</li>
+    {% endfor %}
+    </ul>
+   <p class="condition-tip">{{ data.tip }}</p>
+</section>
+{% else %}
+<section class="condition">
+   <p class="condition-title">申请IB代理商要求</p>
+   <div class="condition-msg">
+      <p>{{ data.ruleHtml | safe }}</p>
+      <p class="condition-ico"><i></i></p>
+   </div>
+</section>
+{% endif %}
+<section class="condition-img"></section>
+{% endblock %}

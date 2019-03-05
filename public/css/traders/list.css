@@ -1,0 +1,266 @@
+body{
+    background-color: #efeff4;
+}
+.abnormal{
+    margin-top: 0.2rem;
+    height: calc(100vh - 2.16rem);
+}
+.loading{
+    margin-top: 0.2rem;
+}
+.filtration{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:0.89rem;
+    font-size: 0.28rem;
+    color: #000000;
+    background-color: #ffffff;
+    margin-top: 0.88rem;
+    z-index:9;
+}
+.defaultIndex{
+    text-align: left;
+    margin-left: 0.3rem;
+    line-height: 0.89rem;
+    margin-right: 0.45rem;
+    cursor: pointer;
+}
+.filtration h4{
+    padding: 0 2.4%;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 0.4rem;
+}
+.list{
+    width:100%;
+    overflow: hidden;
+    margin-top: 1.77rem;
+    margin-bottom: 0.4rem;
+}
+.listItem{
+    position: relative;
+    width: calc(50% - 0.4rem);
+    background-color: #ffffff;
+    border: solid 1px #e5e5e5;
+    margin-top: 0.2rem;
+}
+.listItem >a{
+    display: block;
+    height:100%;
+}
+.list .listItem:nth-child(odd){
+    float: left;
+    margin-left: 0.3rem;
+}
+.list .listItem:nth-child(even){
+    float: right;
+    margin-right: 0.3rem;
+}
+.listLogo{
+    width: 100%;
+    height:1.38rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.listLogo > img{
+    width: 100%;
+    height:1.38rem;
+}
+.listCont{
+    margin-left: 0.15rem;
+}
+
+.listCont .title{
+    font-size: 0.32rem;
+    text-align: left;
+    color: #000000;
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
+    width: calc(100% - 0.15rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 0.45rem;
+    line-height: 0.45rem;
+}
+.listCont ul{
+    display: block;
+    overflow: hidden;
+}
+.listCont ul li{
+    margin-top: 0.1rem;
+    font-size: 0.24rem;
+    letter-spacing: -0.007rem;
+    text-align: left;
+    color: #959595;
+}
+.listCont ul li .liValue{
+    letter-spacing: -0.006rem;
+    color: #000000;
+}
+.btn{
+    display: block;
+    width: 2.2rem;
+    height: 0.6rem;
+    border-radius: 0.04rem;
+    background-color: #f7ab09;
+    font-size: 0.22rem;
+    text-align: center;
+    color: #ffffff;
+    line-height: 0.6rem;
+    outline: none;
+    margin: 0.2rem auto;
+}
+/*****************筛选条件*********************/
+.filterDiv{
+    position: absolute;
+    width:100%;
+    max-height: 6.41rem;
+    background-color: #ffffff;
+    border-top: 0.01rem solid #e5e5e5;
+    z-index: 9;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 0;
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    -ms-transition: height 0.2s;
+    -o-transition: height 0.2s;
+    transition: height 0.2s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+.downIcon{
+    float: right;
+    display: inline-block;
+    font-size: 0.4rem;
+    cursor: pointer;
+}
+
+.filterActive{
+    color: #094290;
+}
+.filtration .on{
+    color: #094290;
+}
+.mask{
+    position: fixed;
+    display: none;
+    top: 0.88rem;
+    left: 0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    cursor: pointer;
+}
+.filterDiv ul{
+    display: none;
+    padding-left: 0.05rem;
+    padding-right: 0.2rem;
+    width: calc(100% - 0.25rem);
+    overflow: hidden;
+    padding-bottom: 0.4rem;
+}
+.filterDiv ul#leixingUl{
+    padding-bottom: 0.5rem;
+}
+.filterDiv ul li{
+    float: left;
+    display: block;
+    border-radius: 0.04rem;
+    border: solid 1px #e5e5e5;
+    font-size: 0.32rem;
+    color: #959595;
+    text-align: center;
+    margin-left: 0.25rem;
+    margin-top: 0.4rem;
+    height: 0.58rem;
+    line-height: 0.58rem;
+}
+.filterDiv .quanbu{
+    width: 0.91rem;
+}
+.filterDiv .dianchaW{
+    padding: 0 0.2424rem;
+}
+.filterDiv .gangganW{
+    padding: 0 0.125rem;
+}
+.filterDiv .guojiaW{
+    padding: 0 0.15rem;
+}
+.filterDiv .leixingW{
+    padding: 0 0.19rem;
+}
+.filterDiv ul#dianchaUl li.liactive,.filterDiv ul#gangganUl li.liactive,.filterDiv ul#guojiaUl li.liactive{
+    border-color: #094290;
+    color: #094290;
+}
+.filterDiv ul#leixingUl li.liactive{
+    position: relative;
+    background-color: #f0fcff;
+    border: solid 1px #094290;
+}
+.filterDiv ul#leixingUl li.liactive::after{
+    content: ' ';
+    width: 0.33rem;
+    height: 0.33rem;
+    background: url("/images/ib/svg/ib-list-ico.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    bottom: -0.01rem;
+    right: -0.01rem;
+}
+.filterDiv ul#leixingUl li:first-child{
+    background-color: #ffffff;
+}
+.filterDiv ul#leixingUl li:first-child::after{
+    background: none;
+}
+
+.filterDiv .btnBox{
+    display: none;
+    width: 100%;
+    height: 0.98rem;
+    border-top: 1px solid #e5e5e5;
+}
+.filterDiv .btnBox.show {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+.filterDiv .btnBox .resetBtn{
+    display: block;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    height: 0.98rem;
+    line-height: 0.98rem;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #000000;
+    border-right: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+}
+.filterDiv .btnBox .finishBtn{
+    display: block;
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    height: 0.98rem;
+    line-height: 0.98rem;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #ffffff;
+    background-color: #094290;
+    border: none;
+    outline: none;
+}

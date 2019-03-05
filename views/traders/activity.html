@@ -1,0 +1,57 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/traders/activity.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <div class="activityContent" style="display: none;">
+        <img class="staticImg" src="/images/traders/activity.png" srcset="/images/traders/activity@2x.png 2x,/images/traders/activity@3x.png 3x"/>
+        <ul id="activityListBox"></ul>
+    </div>
+    <div class="showRebate">
+        <div class="tradeAndIbRebate" style="display: none;">
+            <span class="traderRebate">外汇返佣: $<i class="val"></i>/手</span>
+            <i class="vLine"></i>
+            <span class="ibRebate">代理返佣: $<i class="val"></i>/手</span>
+            <i class="triangle"></i>
+        </div>
+        <div class="tradeRebate" style="display: none;">
+            <p class="rebateValue">
+                <span>外汇返佣: </span>
+                <span class="rebateVal">$<i class="val"></i>/手</span>
+            </p>
+            <span class="triangle"></span>
+        </div>
+    </div>
+    <a class="openAccountBtn">马上开户</a>
+</div>
+{% include "../common/loading.html" %}
+{% include "../common/loadfail.html" %}
+{% include "../common/nodata.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/traders/activity.js"></script>
+<script id="activityListTml" type="text/html">
+    <% for (var i = 0; i < list.length; i++) { %>
+    <li>
+        <% if( list[i].image ){ %>
+        <div class="activityImg">
+            <img src="<%= list[i].image %>">
+        </div>
+        <%}%>
+        <p class="title"><%= list[i].title ?  list[i].title : '' %></p>
+        <div class="content">
+            <span><%= list[i].description ?  list[i].description : '' %></span>
+        </div>
+        <p class="upDown"> <i class="icon iconfont upDownIcon down">&#xe64b;</i></p>
+    </li>
+    <%}%>
+</script>
+{% endblock %}

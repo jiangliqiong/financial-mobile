@@ -1,0 +1,26 @@
+{% extends "../common/layout.html" %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="/css/bank/failure.css" />
+{% endblock %}
+
+{% block header %}
+{% include "../common/header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="contentBox">
+    <span class="icon iconfont failIcon">&#xe71b;</span>
+    <span class="hintText1">提现失败</span>
+    <span class="hintText2">您的可提现余额不足</span>
+    <div class="doubt">
+        <span class="doubtText">如有疑问请咨询相关银行或拨打客服热线</span><br>
+        <span class="telephone">400-8713-007</span>
+    </div>
+    <a class="failBackBtn" href="../personal/index.html">返回</a>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/js/bank/failure.js"></script>
+{% endblock %}

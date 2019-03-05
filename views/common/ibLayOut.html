@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ tdk.title }}</title>
+    <meta name="description" content="{{ tdk.description }}" />
+    <meta name="Keywords" content="{{ tdk.keywords }}" />
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="/js/common/flexible.debug.js"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+    {% block foot %}{% endblock %}
+    <script type="text/javascript" src="/js/common/zepto.min.js"></script>
+    <script type="text/javascript" src="/js/common/base64.js"></script>
+    <script type="text/javascript" src="/js/common/api.js"></script>
+    <script type="text/javascript" src="/js/common/common.js"></script>
+    {% block script %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,66 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/personal/iblist.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="ib-top">
+  <div class="ib-search">
+    <i class="iconfont icon-sousuo">&#xe740;</i>
+    <input class="keyword" type="text" name="" value="" placeholder="交易商名称、代理商名词">
+  </div><span class="ib-search-btn">搜索</span>
+</section>
+<section class="ib-msg">
+  <i class="iconfont icon-dailijiaoyishang">&#xe735;</i><span class="ib-msg-name"></span><span class="ib-msg-count"></span>
+</section>
+<section class="no-result">
+   很抱歉，没有找到匹配结果
+</section>
+<section class="ib-list-top">
+  <p class="ib-list-title"><i></i><span>推荐代理商IB</span></p>
+</section>
+<section class="ib-list"></section>
+{% endblock %}
+{% block script %}
+<script id="ibListTml" type="text/html">
+  <% for (var i = 0; i < list.length; i++) { %>
+  <div class="ib-box">
+    <div class="ib-box-img">
+       <% if(!list[i].logo_url || list[i].logo_url == '') { %>
+         <img src="https://test-fm.oss-cn-hangzhou.aliyuncs.com/default/id_card/871503045981000.png" alt="">
+       <% }else { %>
+         <img src="<%= list[i].logo_url%>" alt="">
+       <% } %>
+    </div>
+    <div class="ib-box-msg">
+        <p><%= list[i].ib_name %></p>
+        <p>地区：<%= list[i].provinceName %></p>
+        <p>交易返佣：$<%= list[i].default_back %>/每手</p>
+        <p>
+          <span>推荐指数：</span>
+          <span class="star-span">
+            <% for (var j = 0; j < score[i].full; j++) { %><i class="star score-full"></i><% } %>
+            <% if(score[i].half) { %><i class="star score-half"></i><% } %>
+            <% for (var j = 0; j < score[i].empty; j++) { %><i class="star score-empty"></i><% } %>
+          </span>
+        </p>
+    </div>
+    <div class="ib-box-btn">
+          <% if(list[i].ib_id == id) { %>
+           <a href="javascript:;" class="ib-is-btn">当前代理</a>
+          <% }else { %>
+            <a href="javascript:;" class="ib-set-btn" data-name="<%= list[i].ib_name %>" data-ib-id="<%= list[i].ib_id %>">设为代理</a>
+          <% } %>
+    </div>
+  </div>
+  <% } %>
+</script>
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript">
+  seajs.use(["perIbList"]);
+</script>
+{% endblock %}

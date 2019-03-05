@@ -1,0 +1,86 @@
+/**
+ * Created by Administrator on 2017/8/22.
+ */
+body{
+    background-color: #ffffff;
+}
+.contentBox{
+    margin-top: 1.08rem;
+}
+.address{
+    width: calc(100% - 0.6rem);
+    padding: 0.4rem 0 0.39rem 0;
+    margin: 0 0.3rem;
+    height: 0.45rem;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+.address .lblName{
+    float: left;
+    display: block;
+    width: 1.96rem;
+    text-align: left;
+    font-size: 0.32rem;
+    color: #000000;
+}
+.address input{
+    float: left;
+    width: 4.5rem;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    border: none;
+    font-size: 0.32rem;
+    text-align: left;
+    color: #000000;
+    cursor: pointer;
+}
+.address .nextIcon{
+    display: block;
+    float: right;
+    font-size: 0.26rem;
+    color: #b5b5b5;
+    margin-top: 0.04rem;
+}
+
+.address .clearIcon{
+    display: none;
+    float: right;
+    margin-top: 0.04rem;
+    font-size: 0.34rem;
+    color: #b6b6b6;
+    cursor: pointer;
+}
+.submitAddressBtn{
+    display: block;
+    width: calc(100% - 0.6rem);
+    margin: 0.6rem 0.3rem 0 0.3rem;
+    height: 0.88rem;
+    border-radius: 0.04rem;
+    background-color: #d8d8d8;
+    line-height: 0.88rem;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+.submitAddressBtn.active{
+    background-color: #094290;
+}
+
+
+::-webkit-input-placeholder {
+    color: #dcdcdc;
+}
+:-moz-placeholder {
+    color: #dcdcdc;
+}
+::-moz-placeholder {
+    color: #dcdcdc;
+}
+:-ms-input-placeholder {
+    color: #dcdcdc;
+}
+
+.mildHintBox{
+    top: 1.8rem !important;
+}

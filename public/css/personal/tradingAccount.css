@@ -1,0 +1,224 @@
+body{
+    background-color: #efeff4;
+}
+/*******************头部导航按钮隐藏******************/
+.topbar i.backicon,.topbar i.itemicon{
+    display: none;
+}
+.topbar span{
+    margin-left: 0.71rem;
+}
+/********************账户项目***********************/
+.contentBox{
+    margin-top: 0.88rem;
+    margin-bottom: 1.18rem;
+}
+.contentBox ul li{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.2rem;
+    overflow: hidden;
+}
+.contentBox ul li .head{
+    width: calc(100% - 0.6rem);
+    background-color: #ffffff;
+    height: 0.45rem;
+    padding: 0.28rem 0.3rem 0.26rem 0.3rem;
+}
+.contentBox ul li .bottomBorder{
+    border-bottom: 1px solid #e5e5e5;
+}
+.contentBox ul li .head .necktieIcon{
+    float: left;
+    display: block;
+    margin-top: 0.03rem;
+    font-size: 0.4rem;
+    color: #3564a4;
+}
+.contentBox ul li .head .title{
+    float: left;
+    line-height: 0.45rem;
+    margin-left: 0.08rem;
+    font-size: 0.32rem;
+    text-align: left;
+    color: #094290;
+}
+.contentBox ul li .head .account{
+    float: right;
+    line-height: 0.45rem;
+    font-size: 0.28rem;
+    color: #000000;
+}
+.contentBox ul li .head .rebate{
+    float: right;
+    padding: 0.04rem 0.15rem;
+    font-size: 0.20rem;
+    text-align: center;
+    color: #f7ab09;
+    border: 1px solid #f7ab09;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+}
+.contentBox ul li .head .account .label{
+    color: #959595;
+}
+
+.contentBox ul li .content{
+    width: calc(100% - 0.6rem);
+    padding: 0.3rem;
+    background-color: #ffffff;
+    height: 1.8rem;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.contentBox ul li .content .left{
+    float: left;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 0.01rem solid #0984ea;
+    border-radius: 0.04rem;
+}
+.contentBox ul li .content .right{
+    float: left;
+    width: calc(100% - 2.2rem);
+    margin-left: 0.3rem;
+}
+
+.contentBox ul li .content .right>p{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.28rem;
+    text-align: left;
+    color: #959595;
+    margin-bottom: 0.05rem;
+}
+.contentBox ul li .content .right>p .rightVal{
+    float: right;
+}
+
+.contentBox ul li .content .left .rebate{
+    height: 1.1rem;
+    line-height: 1.1rem;
+    font-size: 0.34rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #0984ea;
+}
+.contentBox ul li .content .left .cycle{
+    height: 0.7rem;
+    line-height: 0.7rem;
+    font-size: 0.24rem;
+    text-align: center;
+    color: #0984ea;
+}
+.contentBox ul li .agent{
+    width: calc(100% - 0.6rem);
+    padding: 0.15rem 0.3rem;
+    background-color: #ffffff;
+    font-size: 0.28rem;
+    color: #959595;
+    overflow: hidden;
+}
+.contentBox ul li .agent .text{
+    float: left;
+    margin-top: 0.15rem;
+}
+.contentBox ul li .agent .name{
+    float: left;
+    color: #000000;
+    width: 2.25rem;
+    height: 0.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0.15rem;
+}
+.contentBox ul li .agent >a{
+    display: block;
+    float: right;
+    height:0.66rem;
+    line-height: 0.66rem;
+    width: 1.31rem;
+    border-radius: 0.04rem;
+    border: solid 0.03rem #094290;
+    font-size: 0.28rem;
+    text-align: center;
+    color: #094290;
+    cursor: pointer;
+}
+.contentBox ul li .agent .changeBtn{
+    margin-left: 0.15rem;
+    cursor: pointer;
+}
+.contentBox ul li .agent .disabled{
+    border-color: #e5e5e5;
+    color: #959595;
+}
+.contentBox ul li .agent .applying{
+    display: block;
+    float: right;
+    font-size: 0.28rem;
+    color: #959595;
+    margin-top: 0.15rem;
+}
+.contentBox ul li .agent .failure{
+    display: block;
+    float: right;
+    font-size: 0.28rem;
+    color: #ff0000;
+    margin-top: 0.15rem;
+}
+.contentBox ul li .stauts13{
+    padding: 0.15rem 0.3rem 0.3rem 0.3rem;
+}
+
+.contentBox ul li .hintBox{
+    width: calc(100% - 0.6rem);
+    padding: 0.28rem 0.3rem 0.27rem 0.3rem;
+    background-color: #fafafa;
+    overflow: hidden;
+}
+.contentBox ul li .hintBox .hintImg{
+    float: left;
+    width: 0.2rem;
+    height: 0.2rem;
+    margin-right: 0.08rem;
+    margin-top: 0.05rem;
+}
+.contentBox ul li .hintBox .hintText{
+    float: left;
+    width: calc(100% - 0.3rem);
+    white-space: normal;
+    word-break: break-all;
+    font-size: 0.22rem;
+    color: #959595;
+}
+
+/********************个人中心底部导航当前导航块颜色设置*******************/
+.footerNav ul li .accountLink{
+    color: #0a1f61;
+}
+/********************弹框信息********************/
+.confirmBox .hintMessage1 .hintMsg{
+    text-align: justify;
+}
+.confirmBox .hintMessage1 .rebate{
+    text-align: center;
+    margin-top: 0.15rem;
+    font-size: 0.28rem;
+    color: #ff8803;
+}
+/***********************没数据是去开户***************************/
+.gotoOpenAccountBtn{
+    display: inline-block;
+    width: 2.10rem;
+    height: 0.70rem;
+    border-radius: 0.04rem;
+    border: solid 0.021rem #094290;
+    margin-top: 0.9rem;
+    font-size: 0.28rem;
+    text-align: center;
+    color: #094290;
+    line-height: 0.7rem;
+}

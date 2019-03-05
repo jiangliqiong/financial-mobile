@@ -1,0 +1,78 @@
+{% extends 'common/ibLayOut.html' %}
+
+{% block head %}
+<link type="text/css" rel="stylesheet" href="/css/common/reset.css" />
+<link type="text/css" rel="stylesheet" href="/css/common/swiper.min.css" />
+<link type="text/css" rel="stylesheet" href="/css/knowledges/home.css" />
+{% endblock %}
+
+{% block content %}
+{% include 'common/header.html' %}
+<section class="banner">
+    <div id="pager">
+        <em class="on"></em>
+        <em></em>
+    </div>
+    <div id="mySwipe" class="swipe" style="visibility: visible;">
+        <div class="swipe-wrap">
+         <div class="">
+           <a href="javascript:;"><img src="/images/knowledges/banner@2x.jpg" srcset="/images/knowledges/banner@3x.jpg 3x"></a>
+         </div>
+         <div class="">
+           <a href="javascript:;"><img src="/images/knowledges/banner2@2x.jpg" srcset="/images/knowledges/banner2@3x.jpg 3x"></a>
+         </div>
+        </div>
+    </div>
+</section>
+{% set typeLength = kgType.length %}
+<section class="menu">
+  <ul>
+    {% for i in range(0, typeLength) -%}
+    {% set data = kgType[i] %}
+    {% if data.dict_key != 1 %}
+    <li>
+      <div class="">
+        <a href="/knowledges/list.html?dict_key={{ data.dict_key }}&name={{ data.dict_value }}">{{ data.dict_value }}<i class="iconfont">&#xe73b;</i></a>
+      </div>
+    </li>
+    {% endif %}
+    {%- endfor %}
+  </ul>
+</section>
+{% for i in range(0, typeLength) -%}
+{% set data = kgType[i] %}
+{% if data.dict_key == 1 %}
+<section class="novice-box">
+  <div class="novice">
+    <i class="novice-icon"></i><span class="title">外汇入门基本知识</span><span class="icon-red">新手必看</span><i class="iconfont">&#xe659;</i>
+  </div>
+  <a href="/knowledges/list.html?dict_key={{ data.dict_key }}&name={{ data.dict_value }}"></a>
+</section>
+{% endif %}
+{%- endfor %}
+<section class="video">
+  {% set videoLength = video.length %}
+  {% for i in range(0, videoLength) -%}
+  {% set data = video[i] %}
+   {% if data.recommend_image %}
+   <div class="" style="background-image:url('{{ data.recommend_image }}')">
+   {% else %}
+   <div class="" style="background-image:url('/images/knowledges/default-video.png')">
+   {% endif %}
+     <div class="msg-cover">
+       <p class="msg">{{ data.recommend_title }}</p>
+     </div>
+     <ins class="play-icon"></ins>
+     <a class="video-link" href="/knowledges/detail.html?educationId={{ data.recommended_id }}"></a>
+   </div>
+  {%- endfor %}
+</section>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" src="/js/common/sea.js"></script>
+<script type="text/javascript" src="/js/ibCommon/sea.base.js"></script>
+<script type="text/javascript" src="/js/ibCommon/swiper.js"></script>
+<script type="text/javascript">
+  seajs.use(["KGhome"]);
+</script>
+{% endblock %}
