@@ -1,4 +1,4 @@
-npm install 或者 cnpm install  安装依赖
-npm install -g supervisor  
+npm install 禄cnpm install  //瀹夎渚濊禆
+npm install -g supervisor  //瀹夎supervisor
 
-supervisor ./bin/www 启动
+supervisor ./bin/www  //鍚姩椤圭洰
